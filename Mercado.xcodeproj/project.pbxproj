@@ -16,6 +16,9 @@
 		2F4533E82629F7FB000FE74E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4533E62629F7FB000FE74E /* LaunchScreen.storyboard */; };
 		2F4533F32629F7FC000FE74E /* MercadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533F22629F7FC000FE74E /* MercadoTests.swift */; };
 		2F4533FE2629F7FC000FE74E /* MercadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533FD2629F7FC000FE74E /* MercadoUITests.swift */; };
+		2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */; };
+		2F8A8B26262F2EAB00128FCD /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */; };
+		2F8A8B2B262F423000128FCD /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A8B2A262F423000128FCD /* StyleSheet.swift */; };
 		30141B01D6C5927ABE1D5E35 /* libPods-Mercado.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */; };
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
@@ -55,6 +58,9 @@
 		2F4533F92629F7FC000FE74E /* MercadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4533FD2629F7FC000FE74E /* MercadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoUITests.swift; sourceTree = "<group>"; };
 		2F4533FF2629F7FC000FE74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LindaStoryboard.storyboard; sourceTree = "<group>"; };
+		2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		2F8A8B2A262F423000128FCD /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.release.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.release.xcconfig"; sourceTree = "<group>"; };
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
@@ -114,11 +120,12 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
+				2F8A8B2F262F424500128FCD /* Style */,
+				2F8A8B21262F291D00128FCD /* StoryBoards */,
+				2F8A8B20262F290100128FCD /* ViewControllers */,
 				96603625262E39A900653D91 /* GoogleService-Info.plist */,
 				2F4533D82629F7FB000FE74E /* AppDelegate.swift */,
 				2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */,
-				2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */,
-				2F4533DE2629F7FB000FE74E /* Main.storyboard */,
 				2F4533E42629F7FB000FE74E /* Assets.xcassets */,
 				2F4533E62629F7FB000FE74E /* LaunchScreen.storyboard */,
 				2F4533E92629F7FB000FE74E /* Info.plist */,
@@ -145,6 +152,32 @@
 				2F4533FF2629F7FC000FE74E /* Info.plist */,
 			);
 			path = MercadoUITests;
+			sourceTree = "<group>";
+		};
+		2F8A8B20262F290100128FCD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */,
+				2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2F8A8B21262F291D00128FCD /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */,
+				2F4533DE2629F7FB000FE74E /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		2F8A8B2F262F424500128FCD /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				2F8A8B2A262F423000128FCD /* StyleSheet.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		77703BC71335E2C1B20171DA /* Pods */ = {
@@ -273,6 +306,7 @@
 				2F4533E82629F7FB000FE74E /* LaunchScreen.storyboard in Resources */,
 				96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */,
 				2F4533E52629F7FB000FE74E /* Assets.xcassets in Resources */,
+				2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */,
 				2F4533E02629F7FB000FE74E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,11 +374,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
+
+				2F8A8B26262F2EAB00128FCD /* SignUpTableViewController.swift in Sources */,
+ c734bc00be4d7dd31291150a95f323f3be7e1e39
 				2F4533DD2629F7FB000FE74E /* LoginTableViewController.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
 				2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */,
+				2F8A8B2B262F423000128FCD /* StyleSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +562,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Mercado/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -542,6 +582,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Mercado/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

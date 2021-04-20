@@ -2,6 +2,8 @@
 
 target 'Mercado' do
  pod 'Firebase/Auth'
-pod 'GoogleSignIn'
+ pod 'GoogleSignIn'
+ pod 'Firebase/Firestore'
+ 
 
 end
