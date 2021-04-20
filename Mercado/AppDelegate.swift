@@ -30,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
         }
         else
         {
-            GIDSignIn.sharedInstance()?.signIn()
+//            GIDSignIn.sharedInstance()?.signIn()
+            print("login already")
         }
       
     }
@@ -46,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
        //firebase google signin
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        
         
         return true
     }
