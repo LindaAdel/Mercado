@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533D82629F7FB000FE74E /* AppDelegate.swift */; };
 		2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */; };
-		2F4533DD2629F7FB000FE74E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533DC2629F7FB000FE74E /* ViewController.swift */; };
+		2F4533DD2629F7FB000FE74E /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */; };
 		2F4533E02629F7FB000FE74E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4533DE2629F7FB000FE74E /* Main.storyboard */; };
 		2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533E12629F7FB000FE74E /* Mercado.xcdatamodeld */; };
 		2F4533E52629F7FB000FE74E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4533E42629F7FB000FE74E /* Assets.xcassets */; };
@@ -41,7 +41,7 @@
 		2F4533D52629F7FB000FE74E /* Mercado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4533D82629F7FB000FE74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2F4533DC2629F7FB000FE74E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		2F4533DF2629F7FB000FE74E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F4533E22629F7FB000FE74E /* Mercado.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mercado.xcdatamodel; sourceTree = "<group>"; };
 		2F4533E42629F7FB000FE74E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				96603625262E39A900653D91 /* GoogleService-Info.plist */,
 				2F4533D82629F7FB000FE74E /* AppDelegate.swift */,
 				2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */,
-				2F4533DC2629F7FB000FE74E /* ViewController.swift */,
+				2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */,
 				2F4533DE2629F7FB000FE74E /* Main.storyboard */,
 				2F4533E42629F7FB000FE74E /* Assets.xcassets */,
 				2F4533E62629F7FB000FE74E /* LaunchScreen.storyboard */,
@@ -333,7 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4533DD2629F7FB000FE74E /* ViewController.swift in Sources */,
+				2F4533DD2629F7FB000FE74E /* LoginTableViewController.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
 				2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */,
