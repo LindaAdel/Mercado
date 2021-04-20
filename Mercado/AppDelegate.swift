@@ -10,45 +10,17 @@ import CoreData
 import Firebase
 import GoogleSignIn
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
-
-  //handle google signin process
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?)
-    {
-        if(GIDSignIn.sharedInstance()?.currentUser != nil)
-        {
-            guard let authentication = user.authentication else { return }
-              let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
-               Auth.auth().signIn(with: credential) { (authResult, error) in
-               if let error = error {
-               print(error.localizedDescription)
-               } else {
-               print("Login Successful.")
-               
-               }
-               }
-        }
-        else
-        {
-//            GIDSignIn.sharedInstance()?.signIn()
-            print("login already")
-        }
-      
-    }
-
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
-    }
-
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
+  
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        print("app deleagate")
+       
         // firebase
         FirebaseApp.configure()
        //firebase google signin
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
-        
-        
+        signOutOldUser()
         return true
     }
     //handle url of google signin
@@ -120,6 +92,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
             }
         }
     }
+    // handle if user uninstall the app logout from firebase
+    func signOutOldUser()
+    {
 
+        let userDefaults = UserDefaults.standard
+        if userDefaults.value(forKey: "appFirstTimeOpend") == nil {
+            //if app is first time opened then it will be nil
+            userDefaults.setValue(true, forKey: "appFirstTimeOpend")
+            // signOut from firebase
+            
+                try! Auth.auth().signOut()
+           
+            // go to beginning of app
+        } else {
+            //go to where you want
+            print("not first time")
+        }
+    }
 }
 

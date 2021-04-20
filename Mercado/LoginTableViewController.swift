@@ -8,7 +8,7 @@
 import UIKit
 import GoogleSignIn
 import Firebase
-class LoginTableViewController: UITableViewController
+class LoginTableViewController: UITableViewController,GIDSignInDelegate
 {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -16,6 +16,14 @@ class LoginTableViewController: UITableViewController
     {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController=self
+        GIDSignIn.sharedInstance().delegate = self
+        print(Auth.auth().currentUser?.email!)
+       
+        //add padding to the textfields
+        emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(7, 0, 0)
+        passwordTextField.layer.sublayerTransform = CATransform3DMakeTranslation(7, 0, 0)
+       
+        
        
     }
     //sigin with email
@@ -34,18 +42,31 @@ class LoginTableViewController: UITableViewController
                        case .wrongPassword:
                          // Error: The password is invalid or the user does not have a password.
                            print("wrong pass")
-                       
+                        self.passwordTextField.text?.removeAll()
+                        self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "Wrong Password!", attributes: [
+                            .foregroundColor: UIColor.red,
+                            .font: UIFont.boldSystemFont(ofSize: 15.0),
+                        ])
+                              
                                break;
                        case .invalidEmail:
                            print("wrong mail")
+                        
                                break;
                          // Error: Indicates the email address is malformed.
                        default:
                            print("Error: \(error.localizedDescription)")
                            print("mail not found")
+                        self.emailTextField.text?.removeAll()
+                        self.emailTextField.attributedPlaceholder = NSAttributedString(string: "not found!", attributes: [
+                            .foregroundColor: UIColor.red,
+                            .font: UIFont.boldSystemFont(ofSize: 15.0),
+                        ])
                        }
                      } else {
                        print("User signs in successfully")
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "first") as! ViewController
+                        self.present(vc, animated: true, completion: nil)
                        let userInfo = Auth.auth().currentUser
                        let email = userInfo?.email
                      }
@@ -56,10 +77,29 @@ class LoginTableViewController: UITableViewController
     @IBAction func googleSignIn(_ sender: Any)
     {
         GIDSignIn.sharedInstance()?.signIn()
+        
     }
     
     
+    //handle google signin process
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?)
+    {
 
+            guard let authentication = user.authentication else { return }
+              let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
+               Auth.auth().signIn(with: credential) { (authResult, error) in
+               if let error = error {
+               print(error.localizedDescription)
+               } else {
+               print("Login Successful.")
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "first") as! ViewController
+                self.present(vc, animated: true, completion: nil)
+               
+               }
+           
+        }
+
+    }
 
 }
 
