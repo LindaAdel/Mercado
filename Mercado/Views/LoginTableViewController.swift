@@ -10,6 +10,13 @@ import GoogleSignIn
 import Firebase
 class LoginTableViewController: UITableViewController,GIDSignInDelegate
 {
+    @IBAction func signupButton(_ sender: Any)
+    {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "signup") as! SignUpTableViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad()
