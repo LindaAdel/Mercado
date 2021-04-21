@@ -10,6 +10,23 @@ import GoogleSignIn
 import Firebase
 class LoginTableViewController: UITableViewController,GIDSignInDelegate
 {
+    
+    @IBAction func forgotPasswordButton(_ sender: Any)
+    {
+        
+        Auth.auth().sendPasswordReset(withEmail: emailTextField.text!, completion: { (error) in
+                    if error != nil{
+                        print("\(String(describing: error!.localizedDescription) )")
+                        let resetFailedAlert = UIAlertController(title: "Reset Failed", message: "\( String(describing: error!.localizedDescription))", preferredStyle: .alert)
+                        resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(resetFailedAlert, animated: true, completion: nil)
+                    }else {
+                        let resetEmailSentAlert = UIAlertController(title: "Reset email sent successfully", message: "Check your email", preferredStyle: .alert)
+                        resetEmailSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(resetEmailSentAlert, animated: true, completion: nil)
+                    }
+                })
+    }
     @IBAction func signupButton(_ sender: Any)
     {
         
