@@ -122,7 +122,8 @@
 			children = (
 				2F8A8B2F262F424500128FCD /* Style */,
 				2F8A8B21262F291D00128FCD /* StoryBoards */,
-				2F8A8B20262F290100128FCD /* ViewControllers */,
+				2F8A8B20262F290100128FCD /* Views */,
+				2F4533DE2629F7FB000FE74E /* Main.storyboard */,
 				96603625262E39A900653D91 /* GoogleService-Info.plist */,
 				2F4533D82629F7FB000FE74E /* AppDelegate.swift */,
 				2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */,
@@ -154,20 +155,19 @@
 			path = MercadoUITests;
 			sourceTree = "<group>";
 		};
-		2F8A8B20262F290100128FCD /* ViewControllers */ = {
+		2F8A8B20262F290100128FCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */,
 				2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2F8A8B21262F291D00128FCD /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
 				2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */,
-				2F4533DE2629F7FB000FE74E /* Main.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -374,11 +374,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
-
 				2F8A8B26262F2EAB00128FCD /* SignUpTableViewController.swift in Sources */,
- c734bc00be4d7dd31291150a95f323f3be7e1e39
 				2F4533DD2629F7FB000FE74E /* LoginTableViewController.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
