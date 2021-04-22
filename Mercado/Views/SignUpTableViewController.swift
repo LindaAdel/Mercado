@@ -34,6 +34,7 @@ class SignUpTableViewController: UITableViewController {
         
         if let logInVC = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LoginTableViewController{
             logInVC.modalTransitionStyle = .flipHorizontal
+            logInVC.modalPresentationStyle = .fullScreen
             self.present(logInVC, animated: true, completion: nil)}
     }
     @IBAction func SignUpTapped(_ sender: Any) {
