@@ -10,6 +10,43 @@ import GoogleSignIn
 import Firebase
 class LoginTableViewController: UITableViewController,GIDSignInDelegate
 {
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
+//    {
+//        print(self.tableView.frame.height)
+//        print(UIScreen.main.fixedCoordinateSpace.bounds.height)
+//        if (self.tableView.frame.height >= UIScreen.main.fixedCoordinateSpace.bounds.height) {
+//            print("bigger")
+//            self.tableView.isScrollEnabled = true;
+//         }
+//        else {
+//            print("smaller")
+//            self.tableView.isScrollEnabled = false;
+//         }
+//    }
+    
+    @IBAction func forgotPasswordButton(_ sender: Any)
+    {
+        
+        Auth.auth().sendPasswordReset(withEmail: emailTextField.text!, completion: { (error) in
+                    if error != nil{
+                        print("\(String(describing: error!.localizedDescription) )")
+                        let resetFailedAlert = UIAlertController(title: "Reset Failed", message: "\( String(describing: error!.localizedDescription))", preferredStyle: .alert)
+                        resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(resetFailedAlert, animated: true, completion: nil)
+                    }else {
+                        let resetEmailSentAlert = UIAlertController(title: "Reset email sent successfully", message: "Check your email", preferredStyle: .alert)
+                        resetEmailSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(resetEmailSentAlert, animated: true, completion: nil)
+                    }
+                })
+    }
+    @IBAction func signupButton(_ sender: Any)
+    {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "signup") as! SignUpTableViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad()
@@ -18,6 +55,8 @@ class LoginTableViewController: UITableViewController,GIDSignInDelegate
         GIDSignIn.sharedInstance()?.presentingViewController=self
         GIDSignIn.sharedInstance().delegate = self
         print(Auth.auth().currentUser?.email!)
+        //self.tableView.alwaysBounceVertical=false
+//        self.tableView.isScrollEnabled = self.tableView.contentSize.height > self.tableView.frame.size.height;
        
         //add padding to the textfields
         emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(7, 0, 0)

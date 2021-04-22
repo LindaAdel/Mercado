@@ -11,7 +11,7 @@
         <!--Sign Up Table View Controller-->
         <scene sceneID="S1v-6R-EKY">
             <objects>
-                <tableViewController id="eDG-Py-tFk" customClass="SignUpTableViewController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="signup" id="eDG-Py-tFk" customClass="SignUpTableViewController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xl6-CV-sHZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
