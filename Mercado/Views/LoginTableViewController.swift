@@ -10,6 +10,19 @@ import GoogleSignIn
 import Firebase
 class LoginTableViewController: UITableViewController,GIDSignInDelegate
 {
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
+//    {
+//        print(self.tableView.frame.height)
+//        print(UIScreen.main.fixedCoordinateSpace.bounds.height)
+//        if (self.tableView.frame.height >= UIScreen.main.fixedCoordinateSpace.bounds.height) {
+//            print("bigger")
+//            self.tableView.isScrollEnabled = true;
+//         }
+//        else {
+//            print("smaller")
+//            self.tableView.isScrollEnabled = false;
+//         }
+//    }
     
     @IBAction func forgotPasswordButton(_ sender: Any)
     {
@@ -42,6 +55,8 @@ class LoginTableViewController: UITableViewController,GIDSignInDelegate
         GIDSignIn.sharedInstance()?.presentingViewController=self
         GIDSignIn.sharedInstance().delegate = self
         print(Auth.auth().currentUser?.email!)
+        //self.tableView.alwaysBounceVertical=false
+//        self.tableView.isScrollEnabled = self.tableView.contentSize.height > self.tableView.frame.size.height;
        
         //add padding to the textfields
         emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(7, 0, 0)
