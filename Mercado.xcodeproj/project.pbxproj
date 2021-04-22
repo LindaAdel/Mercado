@@ -23,6 +23,7 @@
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
 		96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8F9FC262F4C9E001984A2 /* ViewController.swift */; };
+		A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
 		96E8F9FC262F4C9E001984A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
 		DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercado.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D2DAF69F251E5AD25A9C5A /* Pods-Mercado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.debug.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */,
+				A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */,
 				2F4533E82629F7FB000FE74E /* LaunchScreen.storyboard in Resources */,
+				A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */,
 				96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */,
 				2F4533E52629F7FB000FE74E /* Assets.xcassets in Resources */,
 				2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */,
