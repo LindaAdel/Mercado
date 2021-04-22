@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8O-kN-ysf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -220,7 +220,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="first" storyboardName="mayar" referencedIdentifier="first" id="7H8-eI-Mh3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HE3-GI-2L2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-124" y="129"/>
+            <point key="canvasLocation" x="-1304" y="279"/>
         </scene>
         <!--signup-->
         <scene sceneID="Aj8-xs-cOZ">
@@ -228,7 +228,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="signup" storyboardName="LindaStoryboard" referencedIdentifier="signup" id="HQ4-hG-PJc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnA-xa-k4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-149" y="249"/>
+            <point key="canvasLocation" x="-1304" y="326"/>
         </scene>
     </scenes>
     <resources>
