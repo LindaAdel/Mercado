@@ -214,6 +214,14 @@
             </objects>
             <point key="canvasLocation" x="-636.23188405797111" y="96.428571428571431"/>
         </scene>
+        <!--getStarted-->
+        <scene sceneID="3pb-xP-b7x">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="getStarted" storyboardName="DinaStoryboard" referencedIdentifier="getStarted" id="fGZ-3l-kmI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQg-bs-oFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1401" y="206"/>
+        </scene>
         <!--first-->
         <scene sceneID="ELY-n3-mOq">
             <objects>

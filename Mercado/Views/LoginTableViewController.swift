@@ -43,8 +43,9 @@ class LoginTableViewController: UITableViewController,GIDSignInDelegate
     @IBAction func signupButton(_ sender: Any)
     {
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "signup") as! SignUpTableViewController
-        self.present(vc, animated: true, completion: nil)
+        let signUpView = self.storyboard?.instantiateViewController(withIdentifier: "signup") as! SignUpTableViewController
+        signUpView.modalPresentationStyle = .fullScreen
+        self.present(signUpView, animated: true, completion: nil)
     }
     
     @IBOutlet weak var passwordTextField: UITextField!

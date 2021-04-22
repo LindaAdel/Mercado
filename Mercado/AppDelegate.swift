@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         FirebaseApp.configure()
        //firebase google signin
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        signOutOldUser()
+        //handling user uninstallation
+        userUninstallation()
         return true
     }
     //handle url of google signin
@@ -92,22 +93,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             }
         }
     }
-    // handle if user uninstall the app logout from firebase
-    func signOutOldUser()
+    // handle if user uninstall the app
+    func userUninstallation()
     {
 
         let userDefaults = UserDefaults.standard
         if userDefaults.value(forKey: "appFirstTimeOpend") == nil {
             //if app is first time opened then it will be nil
             userDefaults.setValue(true, forKey: "appFirstTimeOpend")
+            //to open getstarted view
+            userDefaults.setValue(true, forKey: "getStarted")
             // signOut from firebase
-            
                 try! Auth.auth().signOut()
-           
+            print("getstarted true")
             // go to beginning of app
         } else {
             //go to where you want
             print("not first time")
+            print("getstarted false")
+            //to open getstarted only in the first time
+            userDefaults.setValue(false, forKey: "getStarted")
         }
     }
 }
