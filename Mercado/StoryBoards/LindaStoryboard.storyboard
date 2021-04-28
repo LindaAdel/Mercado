@@ -21,7 +21,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZjW-F7-mS9">
-                                    <rect key="frame" x="40" y="192" width="334" height="593"/>
+                                    <rect key="frame" x="40" y="192" width="334" height="556.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66t-wf-iLP">
                                             <rect key="frame" x="0.0" y="0.0" width="334" height="54.5"/>
@@ -37,7 +37,7 @@
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-7K-2qL">
                                             <rect key="frame" x="0.0" y="115" width="334" height="54.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
@@ -57,7 +57,7 @@
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzT-mU-e6y">
                                             <rect key="frame" x="0.0" y="230" width="334" height="54.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
@@ -77,7 +77,7 @@
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtG-Dm-JTt">
                                             <rect key="frame" x="0.0" y="345" width="334" height="54.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
@@ -90,13 +90,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-JT-bfR">
-                                            <rect key="frame" x="0.0" y="419.5" width="334" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="419.5" width="334" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" systemColor="systemRedColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9r-Eh-i5q">
-                                            <rect key="frame" x="0.0" y="494" width="334" height="44"/>
+                                            <rect key="frame" x="0.0" y="457.5" width="334" height="44"/>
                                             <color key="backgroundColor" red="0.32549019607843138" green="0.69411764705882351" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                             <state key="normal" title="SignUp">
@@ -113,7 +113,7 @@
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-hB-L2t">
-                                            <rect key="frame" x="0.0" y="558" width="334" height="35"/>
+                                            <rect key="frame" x="0.0" y="521.5" width="334" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already Have  an account ?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgC-mA-XJf">
                                                     <rect key="frame" x="0.0" y="0.0" width="206.5" height="35"/>
@@ -137,7 +137,7 @@
                                     <constraints>
                                         <constraint firstItem="tXd-7K-2qL" firstAttribute="height" secondItem="66t-wf-iLP" secondAttribute="height" id="7fI-uZ-p7r"/>
                                         <constraint firstItem="V9r-Eh-i5q" firstAttribute="height" secondItem="66t-wf-iLP" secondAttribute="height" priority="100" id="DVE-en-VDf"/>
-                                        <constraint firstItem="JHg-JT-bfR" firstAttribute="height" secondItem="66t-wf-iLP" secondAttribute="height" id="NBn-bO-zxH"/>
+                                        <constraint firstItem="JHg-JT-bfR" firstAttribute="height" secondItem="66t-wf-iLP" secondAttribute="height" priority="100" id="NBn-bO-zxH"/>
                                         <constraint firstItem="OtG-Dm-JTt" firstAttribute="height" secondItem="66t-wf-iLP" secondAttribute="height" id="gJh-wo-3nH"/>
                                         <constraint firstItem="wzT-mU-e6y" firstAttribute="height" secondItem="66t-wf-iLP" secondAttribute="height" id="k2P-D8-1OF"/>
                                     </constraints>
@@ -180,8 +180,8 @@
         <!--login-->
         <scene sceneID="Fei-pz-UpN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tJr-wX-zLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Main" referencedIdentifier="login" id="cgL-e0-hLd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJr-wX-zLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1312" y="318"/>
         </scene>

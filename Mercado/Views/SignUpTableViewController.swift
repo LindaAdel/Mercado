@@ -10,7 +10,9 @@ import Firebase
 
 
 class SignUpTableViewController: UITableViewController {
-
+    
+    var ref : DatabaseReference! = Database.database().reference()
+   
     @IBOutlet weak var UserNameTextField: UITextField!
     
     @IBOutlet weak var E_mailTextField: UITextField!
@@ -33,7 +35,6 @@ class SignUpTableViewController: UITableViewController {
     @IBAction func navigateToLogIn(_ sender: Any) {
         
         if let logInVC = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LoginTableViewController{
-//            logInVC.modalTransitionStyle = .flipHorizontal
             logInVC.modalPresentationStyle = .fullScreen
             self.present(logInVC, animated: true, completion: nil)}
     }
@@ -49,24 +50,43 @@ class SignUpTableViewController: UITableViewController {
             let userName = UserNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let userMail = E_mailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let userPassword = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-          
+            
+            // email authentication action code settings
+            
+            let actionCodeSettings = ActionCodeSettings()
+            actionCodeSettings.url = URL(string: "iti.Mercado.firebaseapp.com")
+            // The sign-in operation has to always be completed in the app.
+            actionCodeSettings.handleCodeInApp = true
+            actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
+          //  actionCodeSettings.setAndroidPackageName("com.example.android",installIfNotAvailable: false, minimumVersion: "12")
+            //Send the authentication link to the user's email, and save the user's email in case the user completes the email sign-in on the same device.
+            Auth.auth().sendSignInLink(toEmail: userMail,
+                                       actionCodeSettings: actionCodeSettings) { error in
+              // ...
+                if let error = error {
+                    self.showError(error.localizedDescription)
+                  return
+                }
+                // The link was successfully sent. Inform the user.
+                // Save the email locally so you don't need to ask the user for it again
+                // if they open the link on the same device.
+                UserDefaults.standard.set( userMail , forKey: "Email")
+                self.showError("Check your email for link")
+                // ...
+            }
             //there is no error than create user
            
-            Auth.auth().createUser(withEmail: userMail , password: userPassword ) { authResult, authError in
+           Auth.auth().createUser(withEmail: userMail , password: userPassword ) { authResult, authError in
               // check for authError
               if authError != nil {
                     //there is an error
                 self.showError("USER ALREADY EXISTE")
                 }
               else{
-                // user is created successfully & storing user data
-                let db = Firestore.firestore()
-                db.collection("users").addDocument(data: ["username":userName,"uid":authResult!.user.uid ]) {(error) in
-                    if error != nil{
-                        //show error method
-                        self.showError("COULD NOT SAVE YOUR USERNAME")
-                    }
-                }
+               
+                let userID = Auth.auth().currentUser?.uid
+                self.ref.child("users").child(userID! ).setValue(["username": userName])
+                
               }
             }
         }
@@ -114,6 +134,14 @@ class SignUpTableViewController: UITableViewController {
         ErrorLabel.text = message
         ErrorLabel.alpha = 1
     }
-
+/*      // user is created successfully & storing user data
+     let db = Firestore.firestore()
+     db.collection("users").addDocument(data: ["username":userName,"uid":authResult!.user.uid ]) {(error) in
+         if error != nil{
+  
+             //show error method
+             self.showError("COULD NOT SAVE YOUR USERNAME")
+         }
+     }*/
    
 }

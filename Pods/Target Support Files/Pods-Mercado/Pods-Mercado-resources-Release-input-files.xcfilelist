@@ -1,3 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-resources.sh
 ${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle
-${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle
