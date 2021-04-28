@@ -73,7 +73,7 @@ class LoginTableViewController: UITableViewController,GIDSignInDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance()?.presentingViewController=self
+       GIDSignIn.sharedInstance()?.presentingViewController=self
         GIDSignIn.sharedInstance().delegate = self
         print(Auth.auth().currentUser?.email!)
         

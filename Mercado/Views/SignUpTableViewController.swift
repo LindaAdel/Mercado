@@ -53,7 +53,7 @@ class SignUpTableViewController: UITableViewController {
             
             // email authentication action code settings
             
-            let actionCodeSettings = ActionCodeSettings()
+         /*   let actionCodeSettings = ActionCodeSettings()
             actionCodeSettings.url = URL(string: "iti.Mercado.firebaseapp.com")
             // The sign-in operation has to always be completed in the app.
             actionCodeSettings.handleCodeInApp = true
@@ -73,7 +73,7 @@ class SignUpTableViewController: UITableViewController {
                 UserDefaults.standard.set( userMail , forKey: "Email")
                 self.showError("Check your email for link")
                 // ...
-            }
+            }*/
             //there is no error than create user
            
            Auth.auth().createUser(withEmail: userMail , password: userPassword ) { authResult, authError in
@@ -134,6 +134,30 @@ class SignUpTableViewController: UITableViewController {
         ErrorLabel.text = message
         ErrorLabel.alpha = 1
     }
+    func handleError(error: Error) {
+            
+            // the user is not registered
+            // user not found
+            
+            let errorAuthStatus = AuthErrorCode.init(rawValue: error._code)!
+            switch errorAuthStatus {
+            case .wrongPassword:
+                print("wrongPassword")
+            case .invalidEmail:
+                print("invalidEmail")
+            case .operationNotAllowed:
+                print("operationNotAllowed")
+            case .userDisabled:
+                print("userDisabled")
+            case .userNotFound:
+                print("userNotFound")
+                //self.register(auth: Auth.auth())
+            case .tooManyRequests:
+                print("tooManyRequests, oooops")
+            default: fatalError("error not supported here")
+            }
+            
+        }
 /*      // user is created successfully & storing user data
      let db = Firestore.firestore()
      db.collection("users").addDocument(data: ["username":userName,"uid":authResult!.user.uid ]) {(error) in
