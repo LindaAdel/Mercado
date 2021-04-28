@@ -13,7 +13,7 @@
         <scene sceneID="u7p-eY-GYq">
             <objects>
                 <tableViewController storyboardIdentifier="login" id="a8O-kN-ysf" customClass="LoginTableViewController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1wm-jk-utv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1wm-jk-utv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -157,6 +157,13 @@
                                         <action selector="forgotPasswordButton:" destination="a8O-kN-ysf" eventType="touchUpInside" id="azg-qG-QSz"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9m-dG-iHZ">
+                                    <rect key="frame" x="339" y="364" width="24" height="24"/>
+                                    <state key="normal" image="securePassword"/>
+                                    <connections>
+                                        <action selector="showPasswordButton:" destination="a8O-kN-ysf" eventType="touchUpInside" id="6D9-Fc-o1C"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="iv0-ES-SUa"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -165,11 +172,13 @@
                                 <constraint firstItem="PVX-c2-mKZ" firstAttribute="top" secondItem="iv0-ES-SUa" secondAttribute="top" constant="84" id="1XT-jg-LE9"/>
                                 <constraint firstItem="9xO-Eg-miw" firstAttribute="leading" secondItem="iv0-ES-SUa" secondAttribute="leading" constant="170" id="2af-R0-1xf"/>
                                 <constraint firstItem="kth-FR-ChH" firstAttribute="leading" secondItem="iv0-ES-SUa" secondAttribute="leading" constant="51" id="4ze-Oa-iCS"/>
+                                <constraint firstItem="b9m-dG-iHZ" firstAttribute="top" secondItem="YSB-TC-vFY" secondAttribute="bottom" constant="-37" id="8d1-yh-tAO"/>
                                 <constraint firstItem="QOg-kC-s9B" firstAttribute="leading" secondItem="kth-FR-ChH" secondAttribute="trailing" constant="-3" id="8kI-Fm-qwB"/>
                                 <constraint firstItem="QOg-kC-s9B" firstAttribute="top" secondItem="j51-vD-v2R" secondAttribute="bottom" constant="70" id="Aeh-Gv-xJy"/>
                                 <constraint firstItem="ktJ-ye-pDR" firstAttribute="leading" secondItem="iv0-ES-SUa" secondAttribute="leading" constant="33" id="Dn9-8k-jGb"/>
                                 <constraint firstItem="AJP-v2-BFO" firstAttribute="top" secondItem="iv0-ES-SUa" secondAttribute="top" constant="44" id="Dwd-h8-5cm"/>
                                 <constraint firstItem="OZh-RY-uqI" firstAttribute="top" secondItem="9xO-Eg-miw" secondAttribute="bottom" constant="28" id="Fas-6V-SUa"/>
+                                <constraint firstItem="b9m-dG-iHZ" firstAttribute="leading" secondItem="YSB-TC-vFY" secondAttribute="trailing" constant="-42" id="Fi6-Ey-veK"/>
                                 <constraint firstItem="jke-Bg-MQZ" firstAttribute="leading" secondItem="iv0-ES-SUa" secondAttribute="leading" constant="33" id="FtR-8N-Vdz"/>
                                 <constraint firstItem="j51-vD-v2R" firstAttribute="top" secondItem="0t6-m1-Apk" secondAttribute="bottom" constant="40" id="Gtf-BV-GQo"/>
                                 <constraint firstItem="5kA-KZ-gyX" firstAttribute="leading" secondItem="iv0-ES-SUa" secondAttribute="leading" constant="33" id="GxB-PG-9Tm"/>
@@ -208,6 +217,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="ktJ-ye-pDR" id="4ii-xO-FF1"/>
                         <outlet property="passwordTextField" destination="YSB-TC-vFY" id="nEb-M8-y7i"/>
+                        <outlet property="showPasswordButton" destination="b9m-dG-iHZ" id="RFZ-9i-2jr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVl-gy-EXO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -241,6 +251,7 @@
     </scenes>
     <resources>
         <image name="google" width="18" height="18"/>
+        <image name="securePassword" width="24" height="24"/>
         <image name="shopping" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

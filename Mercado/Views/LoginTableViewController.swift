@@ -10,7 +10,27 @@ import GoogleSignIn
 import Firebase
 class LoginTableViewController: UITableViewController,GIDSignInDelegate
 {
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
+
+    @IBOutlet weak var showPasswordButton: UIButton!
+    
+    @IBAction func showPasswordButton(_ sender: Any)
+    {
+        if !passwordTextField.text!.isEmpty
+        {
+          passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        //check if user show password
+        if(!passwordTextField.isSecureTextEntry)
+        {
+            showPasswordButton.setImage(UIImage(named: "showPassword"),for: .normal)
+        }
+        //hide password
+        else
+        {
+            showPasswordButton.setImage(UIImage(named: "securePassword"),for: .normal)
+        }
+        }
+    }
+    //    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
 //    {
 //        print(self.tableView.frame.height)
 //        print(UIScreen.main.fixedCoordinateSpace.bounds.height)
@@ -56,6 +76,7 @@ class LoginTableViewController: UITableViewController,GIDSignInDelegate
         GIDSignIn.sharedInstance()?.presentingViewController=self
         GIDSignIn.sharedInstance().delegate = self
         print(Auth.auth().currentUser?.email!)
+        
         //self.tableView.alwaysBounceVertical=false
 //        self.tableView.isScrollEnabled = self.tableView.contentSize.height > self.tableView.frame.size.height;
        
@@ -63,42 +84,92 @@ class LoginTableViewController: UITableViewController,GIDSignInDelegate
         emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(7, 0, 0)
         passwordTextField.layer.sublayerTransform = CATransform3DMakeTranslation(7, 0, 0)
        
-        
+//        passwordTextField.rightView = UIImageView(image: UIImage(named: "vision"))
+//        passwordTextField.rightViewMode = .always
        
     }
+   
     //sigin with email
     @IBAction func emailSignIn(_ sender: Any)
     {
+        if ((passwordTextField.text!.isEmpty) &&  (emailTextField.text!.isEmpty  ) )
+        {
+            print("emty fields")
+            self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "required!", attributes: [
+                .foregroundColor: UIColor.red,
+                .font: UIFont.boldSystemFont(ofSize: 15.0),
+            ])
+            self.emailTextField.attributedPlaceholder = NSAttributedString(string: "required!", attributes: [
+                .foregroundColor: UIColor.red,
+                .font: UIFont.boldSystemFont(ofSize: 15.0),
+            ])
+        }
+        else{
+        if (passwordTextField.text!.isEmpty){
+            print("emty pass")
+            self.passwordTextField.text?.removeAll()
+            self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "required!", attributes: [
+                .foregroundColor: UIColor.red,
+                .font: UIFont.boldSystemFont(ofSize: 15.0),
+            ])
+            return
+        }
+        if (emailTextField.text!.isEmpty )
+        {
+            print("empty maill")
+            self.emailTextField.text?.removeAll()
+            self.emailTextField.attributedPlaceholder = NSAttributedString(string: "required!", attributes: [
+                .foregroundColor: UIColor.red,
+                .font: UIFont.boldSystemFont(ofSize: 15.0),
+            ])
+            return
+        }
+        else{
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
                    if let error = error as NSError? {
-                       switch AuthErrorCode(rawValue: error.code) {
+                    let er = AuthErrorCode(rawValue: error.code)
+                   
+                       switch AuthErrorCode(rawValue: error.code)
+                       {
                        case .operationNotAllowed:print("error")
-                           break;
+                          // break;
                          // Error: Indicates that email and password accounts are not enabled. Enable them in the Auth section of the Firebase console.
                        case .userDisabled:
                            print("error")
-                               break;
+                          //     break;
                          // Error: The user account has been disabled by an administrator.
-                       case .wrongPassword:
-                         // Error: The password is invalid or the user does not have a password.
-                           print("wrong pass")
-                        self.passwordTextField.text?.removeAll()
-                        self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "Wrong Password!", attributes: [
+                       
+                       case.userNotFound:print("not found")
+                        self.emailTextField.text?.removeAll()
+                        self.emailTextField.attributedPlaceholder = NSAttributedString(string: "Email not found!", attributes: [
                             .foregroundColor: UIColor.red,
                             .font: UIFont.boldSystemFont(ofSize: 15.0),
                         ])
-                              
-                               break;
-                       case .invalidEmail:
-                           print("wrong mail")
-                        
-                               break;
+                       case .wrongPassword:
+                         // Error: The password is invalid or the user does not have a password.
+                           print("wrong pass")
+//                        if ((self.passwordTextField.text?.isEmpty) != nil)
+//                        {
+//                            print("empty")
+//                         //   break;
+//                        }
+//                        else{
+                        self.passwordTextField.text?.removeAll()
+                        self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "Incorrect Password!", attributes: [
+                            .foregroundColor: UIColor.red,
+                            .font: UIFont.boldSystemFont(ofSize: 15.0),
+                        ])
+                          //  break;
+               //dd         }
+                       
+                      
+                              // break;
                          // Error: Indicates the email address is malformed.
                        default:
                            print("Error: \(error.localizedDescription)")
-                           print("mail not found")
+                           print("Email not found")
                         self.emailTextField.text?.removeAll()
-                        self.emailTextField.attributedPlaceholder = NSAttributedString(string: "not found!", attributes: [
+                        self.emailTextField.attributedPlaceholder = NSAttributedString(string: "Invalid Email!", attributes: [
                             .foregroundColor: UIColor.red,
                             .font: UIFont.boldSystemFont(ofSize: 15.0),
                         ])
@@ -111,7 +182,9 @@ class LoginTableViewController: UITableViewController,GIDSignInDelegate
                        let email = userInfo?.email
                      }
                }
-        
+        }
+        }
+       
     }
     //sigin with google
     @IBAction func googleSignIn(_ sender: Any)

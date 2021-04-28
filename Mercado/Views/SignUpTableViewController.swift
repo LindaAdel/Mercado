@@ -33,7 +33,7 @@ class SignUpTableViewController: UITableViewController {
     @IBAction func navigateToLogIn(_ sender: Any) {
         
         if let logInVC = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LoginTableViewController{
-            logInVC.modalTransitionStyle = .flipHorizontal
+//            logInVC.modalTransitionStyle = .flipHorizontal
             logInVC.modalPresentationStyle = .fullScreen
             self.present(logInVC, animated: true, completion: nil)}
     }
