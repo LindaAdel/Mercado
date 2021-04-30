@@ -46,53 +46,16 @@ class SignUpTableViewController: UITableViewController {
            showError(error!)
         }
         else {
-            // create clean version of data
-            let userName = UserNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let userMail = E_mailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let userPassword = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            // email authentication action code settings
-            
-         /*   let actionCodeSettings = ActionCodeSettings()
-            actionCodeSettings.url = URL(string: "iti.Mercado.firebaseapp.com")
-            // The sign-in operation has to always be completed in the app.
-            actionCodeSettings.handleCodeInApp = true
-            actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
-          //  actionCodeSettings.setAndroidPackageName("com.example.android",installIfNotAvailable: false, minimumVersion: "12")
-            //Send the authentication link to the user's email, and save the user's email in case the user completes the email sign-in on the same device.
-            Auth.auth().sendSignInLink(toEmail: userMail,
-                                       actionCodeSettings: actionCodeSettings) { error in
-              // ...
-                if let error = error {
-                    self.showError(error.localizedDescription)
-                  return
-                }
-                // The link was successfully sent. Inform the user.
-                // Save the email locally so you don't need to ask the user for it again
-                // if they open the link on the same device.
-                UserDefaults.standard.set( userMail , forKey: "Email")
-                self.showError("Check your email for link")
-                // ...
-            }*/
-            //there is no error than create user
-           
-           Auth.auth().createUser(withEmail: userMail , password: userPassword ) { authResult, authError in
-              // check for authError
-              if authError != nil {
-                    //there is an error
-                self.showError("USER ALREADY EXISTE")
-                }
-              else{
-               
-                let userID = Auth.auth().currentUser?.uid
-                self.ref.child("users").child(userID! ).setValue(["username": userName])
-                
-              }
-            }
+            guard let user = Auth.auth().currentUser else {
+                      return self.signin(auth: Auth.auth())
+                   }
+                   
+                   user.reload { (error) in
+                      
+                   }
+         
         }
-        UserNameTextField.text = ""
-        E_mailTextField.text = ""
-        PasswordTextField.text = ""
+   
     }
     //validate fields if correct return nill else return error message
     func validateFields() -> String? {
@@ -151,13 +114,76 @@ class SignUpTableViewController: UITableViewController {
                 print("userDisabled")
             case .userNotFound:
                 print("userNotFound")
-                //self.register(auth: Auth.auth())
+                self.register(auth: Auth.auth())
             case .tooManyRequests:
                 print("tooManyRequests, oooops")
             default: fatalError("error not supported here")
             }
             
         }
+    func register(auth: Auth) {
+        // create clean version of data
+        let userName = UserNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let userMail = E_mailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let userPassword = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        //there is no error than create user
+        Auth.auth().createUser(withEmail: userMail , password: userPassword ) { authResult, authError in
+           // check for authError
+           if authError != nil {
+                 //there is an error
+             self.showError("USER ALREADY EXISTE")
+             }
+           else{
+            
+             let userID = Auth.auth().currentUser?.uid
+             self.ref.child("users").child(userID! ).setValue(["username": userName])
+            switch Auth.auth().currentUser?.isEmailVerified {
+            case true:
+                print("users email is verified")
+                break
+            case false:
+                
+                Auth.auth().currentUser?.sendEmailVerification { (error) in
+                    
+                    guard let error = error else {
+                        self.UserNameTextField.text = ""
+                        self.E_mailTextField.text = ""
+                        self.PasswordTextField.text = ""
+                        return print("user email verification sent")
+                    
+                    }
+                    
+                    self.handleError(error: error)
+                }
+                
+                print("verify it now")
+                break
+            default: break
+            }
+            
+           }
+         }
+    }
+    func signin(auth: Auth) {
+     
+        let userMail = E_mailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let userPassword = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+           
+           auth.signIn(withEmail: userMail, password: userPassword) { (result, error) in
+               
+               guard error == nil else {
+                   return self.handleError(error: error!)
+               }
+               
+               guard let user = result?.user else{
+                   fatalError("Not user do not know what went wrong")
+               }
+               
+            print("Signed in user: \(String(describing: user.email))")
+               
+           }
+           
+       }
 /*      // user is created successfully & storing user data
      let db = Firestore.firestore()
      db.collection("users").addDocument(data: ["username":userName,"uid":authResult!.user.uid ]) {(error) in
