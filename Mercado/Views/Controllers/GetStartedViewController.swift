@@ -16,6 +16,8 @@ class GetStartedViewController: UIViewController {
 
     @IBAction func getStartedBtn(_sender: UIButton)
     {
+        //to open getstarted view only in the first time when the user using the app
+        UserDefaults.standard.setValue(false, forKey: "getStarted")
 
         let loginView = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginTableViewController
         loginView.modalPresentationStyle = .fullScreen
