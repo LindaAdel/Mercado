@@ -24,13 +24,14 @@ class SignUpTableViewController: UITableViewController {
     
     @IBOutlet weak var SignUpButton: UIButton!
     
+    let passwordVisibiltyButton = UIButton(type: .custom)
+    var passwordVisibiltyButtonColor = UIButton(type: .custom)
     
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // hide error label
-        ErrorLabel.alpha = 0
-        
+       setUpElements()
+       setUpPasswordSecurityIcon()
     }
     @IBAction func navigateToLogIn(_ sender: Any) {
         
@@ -57,22 +58,52 @@ class SignUpTableViewController: UITableViewController {
         }
    
     }
+    func setUpElements()  {
+        // hide error label
+        ErrorLabel.alpha = 0
+        // style text field
+        StyleSheet.styleTextField(UserNameTextField)
+        StyleSheet.styleTextField(E_mailTextField)
+        StyleSheet.styleTextField(PasswordTextField)
+    }
+    func setUpPasswordSecurityIcon()  {
+        
+        PasswordTextField.rightViewMode = .unlessEditing
+               
+        passwordVisibiltyButton.setImage(UIImage(named: "lock"), for: .normal)
+        passwordVisibiltyButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: -24, bottom: 5, right: 15)
+        passwordVisibiltyButton.frame = CGRect(x: CGFloat(PasswordTextField.frame.size.width - 25), y: CGFloat(5), width: CGFloat(15), height: CGFloat(25))
+        passwordVisibiltyButton.addTarget(self, action: #selector(self.passwordVisibiltyButtonClicked), for: .touchUpInside)
+        PasswordTextField.rightView = passwordVisibiltyButton
+        PasswordTextField.rightViewMode = .always
+       }
+    @IBAction func passwordVisibiltyButtonClicked(_ sender: Any) {
+        
+           (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
+           if (sender as! UIButton).isSelected {
+               self.PasswordTextField.isSecureTextEntry = false
+            passwordVisibiltyButton.setImage(UIImage(named: "unlock"), for: .normal)
+           } else {
+               self.PasswordTextField.isSecureTextEntry = true
+            passwordVisibiltyButton.setImage(UIImage(named: "lock"), for: .normal)
+           }
+       }
     //validate fields if correct return nill else return error message
     func validateFields() -> String? {
         //check if all fields are filled
         if UserNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || E_mailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             PasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
-            return "PLEASE MAKE SURE ALL FIELDS ARE FILLED"
+            return "all fields are required to sign up"
         }
         // check password for validation checks
         let userPassword = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if isPasswordValid(userPassword) == false {
-            return "PLEASE MAKE SURE YOUR PASSWORD CONTAIN AT LEAST 8 CHARACTERS , CONTAINS SPEACIAL CHARACTER AND NUMBER"
+            return "Your password should contain at least 8 characters including numbers and speacial characters"
         }
         // check email for validation checks
         let userMail = E_mailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if isValidEmail(userMail) == false {
-            return "PLEASE MAKE SURE YOUR EMAIL IS WRITTEN CORRECTLY"
+            return "Enter a valid email address to sign up "
         }
         
         return nil
@@ -94,6 +125,12 @@ class SignUpTableViewController: UITableViewController {
     }
     func showError(_ message:String){
         
+        ErrorLabel.text = message
+        ErrorLabel.alpha = 1
+    }
+    func showToast(_ message:String)  {
+        
+        ErrorLabel.textColor = UIColor.init(red: 83/255, green: 177/255, blue: 117/255, alpha: 1)
         ErrorLabel.text = message
         ErrorLabel.alpha = 1
     }
@@ -127,11 +164,11 @@ class SignUpTableViewController: UITableViewController {
         let userMail = E_mailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let userPassword = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         //there is no error than create user
-        Auth.auth().createUser(withEmail: userMail , password: userPassword ) { authResult, authError in
+        Auth.auth().createUser(withEmail: userMail , password: userPassword ) { [self] authResult, authError in
            // check for authError
            if authError != nil {
                  //there is an error
-             self.showError("USER ALREADY EXISTE")
+             self.showError("User already exist")
              }
            else{
             
@@ -140,6 +177,7 @@ class SignUpTableViewController: UITableViewController {
             switch Auth.auth().currentUser?.isEmailVerified {
             case true:
                 print("users email is verified")
+                self.showToast(" email is verified")
                 break
             case false:
                 
@@ -149,7 +187,9 @@ class SignUpTableViewController: UITableViewController {
                         self.UserNameTextField.text = ""
                         self.E_mailTextField.text = ""
                         self.PasswordTextField.text = ""
+                        showToast("a verification mail was sent please verify your email address")
                         return print("user email verification sent")
+                    
                     
                     }
                     
