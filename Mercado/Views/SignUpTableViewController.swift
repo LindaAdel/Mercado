@@ -27,11 +27,16 @@ class SignUpTableViewController: UITableViewController {
     let passwordVisibiltyButton = UIButton(type: .custom)
     var passwordVisibiltyButtonColor = UIButton(type: .custom)
     
+    let emailCheckMark = UIImage(named: "CheckMark")
+   
+    
   
     override func viewDidLoad() {
         super.viewDidLoad()
        setUpElements()
        setUpPasswordSecurityIcon()
+        addEmailCheckSign(image: emailCheckMark!)
+       
     }
     @IBAction func navigateToLogIn(_ sender: Any) {
         
@@ -56,6 +61,7 @@ class SignUpTableViewController: UITableViewController {
                    }
          
         }
+      
    
     }
     func setUpElements()  {
@@ -65,6 +71,16 @@ class SignUpTableViewController: UITableViewController {
         StyleSheet.styleTextField(UserNameTextField)
         StyleSheet.styleTextField(E_mailTextField)
         StyleSheet.styleTextField(PasswordTextField)
+       
+    }
+    func addEmailCheckSign(image : UIImage){
+        let emailCheckSign = UIImageView(frame: CGRect(x: CGFloat(E_mailTextField.frame.size.width - 25), y: CGFloat(5), width: CGFloat(15), height: CGFloat(25)))
+        emailCheckSign.image = image
+        emailCheckSign.alpha = 0
+        E_mailTextField.rightView = emailCheckSign
+        E_mailTextField.rightViewMode = .always
+    
+        
     }
     func setUpPasswordSecurityIcon()  {
         
@@ -76,6 +92,7 @@ class SignUpTableViewController: UITableViewController {
         passwordVisibiltyButton.addTarget(self, action: #selector(self.passwordVisibiltyButtonClicked), for: .touchUpInside)
         PasswordTextField.rightView = passwordVisibiltyButton
         PasswordTextField.rightViewMode = .always
+        
        }
     @IBAction func passwordVisibiltyButtonClicked(_ sender: Any) {
         
@@ -88,6 +105,7 @@ class SignUpTableViewController: UITableViewController {
             passwordVisibiltyButton.setImage(UIImage(named: "lock"), for: .normal)
            }
        }
+   
     //validate fields if correct return nill else return error message
     func validateFields() -> String? {
         //check if all fields are filled
@@ -187,6 +205,11 @@ class SignUpTableViewController: UITableViewController {
                         self.UserNameTextField.text = ""
                         self.E_mailTextField.text = ""
                         self.PasswordTextField.text = ""
+                        let verifyAlert = UIAlertController(title: "Alert", message: "a verification mail was sent please verify your email address", preferredStyle: .alert)
+                        verifyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+                            natigateToHome()
+                        }))
+                        self.present(verifyAlert, animated: true, completion: nil)
                         showToast("a verification mail was sent please verify your email address")
                         return print("user email verification sent")
                     
@@ -203,6 +226,11 @@ class SignUpTableViewController: UITableViewController {
             
            }
          }
+    }
+    func natigateToHome(){
+        if let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeTabBarController{
+             HomeVC.modalPresentationStyle = .fullScreen
+             self.present(HomeVC, animated: true, completion: nil)}
     }
     func signin(auth: Auth) {
      
@@ -224,14 +252,6 @@ class SignUpTableViewController: UITableViewController {
            }
            
        }
-/*      // user is created successfully & storing user data
-     let db = Firestore.firestore()
-     db.collection("users").addDocument(data: ["username":userName,"uid":authResult!.user.uid ]) {(error) in
-         if error != nil{
-  
-             //show error method
-             self.showError("COULD NOT SAVE YOUR USERNAME")
-         }
-     }*/
+
    
 }
