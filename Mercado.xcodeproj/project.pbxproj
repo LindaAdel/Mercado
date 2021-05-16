@@ -16,6 +16,9 @@
 		2F4533F32629F7FC000FE74E /* MercadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533F22629F7FC000FE74E /* MercadoTests.swift */; };
 		2F4533FE2629F7FC000FE74E /* MercadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533FD2629F7FC000FE74E /* MercadoUITests.swift */; };
 		2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */; };
+		2FE74B4226519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
+		2FE74B4326519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
+		2FE74B4426519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */; };
 		30141B01D6C5927ABE1D5E35 /* libPods-Mercado.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */; };
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
@@ -62,15 +65,16 @@
 		2F4533FD2629F7FC000FE74E /* MercadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoUITests.swift; sourceTree = "<group>"; };
 		2F4533FF2629F7FC000FE74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LindaStoryboard.storyboard; sourceTree = "<group>"; };
+		2FE74B4126519400005D6AEA /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.release.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.release.xcconfig"; sourceTree = "<group>"; };
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
 		96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
 		96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldErrors.swift; sourceTree = "<group>"; };
-		96CD373B2651B7CA007B945F /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetStartedViewController.swift; path = Controllers/GetStartedViewController.swift; sourceTree = "<group>"; };
-		96CD37402651B7D4007B945F /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTableViewController.swift; path = Controllers/LoginTableViewController.swift; sourceTree = "<group>"; };
-		96CD37452651B7DC007B945F /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpTableViewController.swift; path = Controllers/SignUpTableViewController.swift; sourceTree = "<group>"; };
+		96CD373B2651B7CA007B945F /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		96CD37402651B7D4007B945F /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		96CD37452651B7DC007B945F /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		96E8F9FC262F4C9E001984A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
 		DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercado.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,7 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
+				2FE74B4E26519532005D6AEA /* POJOS */,
 				2F8A8B20262F290100128FCD /* Views */,
 				96B8C1C2263B6C2D008CCA50 /* Constants */,
 				96B8C1BC263B6A04008CCA50 /* Extensions */,
@@ -165,16 +170,19 @@
 		2F8A8B20262F290100128FCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				96CD37452651B7DC007B945F /* SignUpTableViewController.swift */,
-				96CD37402651B7D4007B945F /* LoginTableViewController.swift */,
-				96CD373B2651B7CA007B945F /* GetStartedViewController.swift */,
-				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
-				96B8C1C9263B769A008CCA50 /* Controllers */,
-				2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */,
 				A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */,
+				2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */,
 				2F4533DE2629F7FB000FE74E /* Main.storyboard */,
+				96B8C1C9263B769A008CCA50 /* Controllers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2FE74B4E26519532005D6AEA /* POJOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = POJOS;
 			sourceTree = "<group>";
 		};
 		77703BC71335E2C1B20171DA /* Pods */ = {
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */,
+				2FE74B4126519400005D6AEA /* StyleSheet.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -205,6 +214,10 @@
 		96B8C1C9263B769A008CCA50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				96CD37402651B7D4007B945F /* LoginTableViewController.swift */,
+				96CD373B2651B7CA007B945F /* GetStartedViewController.swift */,
+				96CD37452651B7DC007B945F /* SignUpTableViewController.swift */,
+				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -402,6 +415,7 @@
 				96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
+				2FE74B4226519400005D6AEA /* StyleSheet.swift in Sources */,
 				2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */,
 				96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */,
 				2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */,
@@ -413,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F4533F32629F7FC000FE74E /* MercadoTests.swift in Sources */,
+				2FE74B4326519400005D6AEA /* StyleSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F4533FE2629F7FC000FE74E /* MercadoUITests.swift in Sources */,
+				2FE74B4426519400005D6AEA /* StyleSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

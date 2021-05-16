@@ -33,9 +33,9 @@ class SignUpTableViewController: UITableViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-//       setUpElements()
-//       setUpPasswordSecurityIcon()
-//        addEmailCheckSign(image: emailCheckMark!)
+       setUpElements()
+       setUpPasswordSecurityIcon()
+        addEmailCheckSign(image: emailCheckMark!)
        
     }
     @IBAction func navigateToLogIn(_ sender: Any) {
@@ -46,69 +46,31 @@ class SignUpTableViewController: UITableViewController {
     }
     @IBAction func SignUpTapped(_ sender: Any) {
         //validate fields
-     //   let  error = validateFields()
-//        if error != nil{
-//            //there is an error
-//   //        showError(error!)
-//        }
-
-    //    else {
-            // create clean version of data
-            let userName = UserNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let userMail = E_mailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let userPassword = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            // email authentication action code settings
-            
-         /*   let actionCodeSettings = ActionCodeSettings()
-            actionCodeSettings.url = URL(string: "iti.Mercado.firebaseapp.com")
-            // The sign-in operation has to always be completed in the app.
-            actionCodeSettings.handleCodeInApp = true
-            actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
-          //  actionCodeSettings.setAndroidPackageName("com.example.android",installIfNotAvailable: false, minimumVersion: "12")
-            //Send the authentication link to the user's email, and save the user's email in case the user completes the email sign-in on the same device.
-            Auth.auth().sendSignInLink(toEmail: userMail,
-                                       actionCodeSettings: actionCodeSettings) { error in
-              // ...
-                if let error = error {
-                    self.showError(error.localizedDescription)
-                  return
-                }
-                // The link was successfully sent. Inform the user.
-                // Save the email locally so you don't need to ask the user for it again
-                // if they open the link on the same device.
-                UserDefaults.standard.set( userMail , forKey: "Email")
-                self.showError("Check your email for link")
-                // ...
-            }*/
-            //there is no error than create user
-           
-           Auth.auth().createUser(withEmail: userMail , password: userPassword ) { authResult, authError in
-              // check for authError
-              if authError != nil {
-                    //there is an error
-           //     self.showError("USER ALREADY EXISTE")
-                }
-              else{
-               
-                let userID = Auth.auth().currentUser?.uid
-                self.ref.child("users").child(userID! ).setValue(["username": userName])
-                
-              }
-            }
-       // }
-
-        UserNameTextField.text = ""
-        E_mailTextField.text = ""
-        PasswordTextField.text = ""
-
+        let  error = validateFields()
+        if error != nil{
+            //there is an error
+           showError(error!)
+        }
+        else {
+            guard let user = Auth.auth().currentUser else {
+                      return self.signin(auth: Auth.auth())
+                   }
+                   
+                   user.reload { (error) in
+                      
+                   }
+         
+        }
+      
+   
+    }
     func setUpElements()  {
         // hide error label
         ErrorLabel.alpha = 0
         // style text field
-//        StyleSheet.styleTextField(UserNameTextField)
-//        StyleSheet.styleTextField(E_mailTextField)
-//        StyleSheet.styleTextField(PasswordTextField)
+        StyleSheet.styleTextField(UserNameTextField)
+        StyleSheet.styleTextField(E_mailTextField)
+        StyleSheet.styleTextField(PasswordTextField)
        
     }
     func addEmailCheckSign(image : UIImage){
@@ -127,22 +89,22 @@ class SignUpTableViewController: UITableViewController {
         passwordVisibiltyButton.setImage(UIImage(named: "lock"), for: .normal)
         passwordVisibiltyButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: -24, bottom: 5, right: 15)
         passwordVisibiltyButton.frame = CGRect(x: CGFloat(PasswordTextField.frame.size.width - 25), y: CGFloat(5), width: CGFloat(15), height: CGFloat(25))
-//        passwordVisibiltyButton.addTarget(self, action: #selector(self.passwordVisibiltyButtonClicked), for: .touchUpInside)
+        passwordVisibiltyButton.addTarget(self, action: #selector(self.passwordVisibiltyButtonClicked), for: .touchUpInside)
         PasswordTextField.rightView = passwordVisibiltyButton
         PasswordTextField.rightViewMode = .always
         
        }
-//    @IBAction func passwordVisibiltyButtonClicked(_ sender: Any) {
-//
-//           (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
-//           if (sender as! UIButton).isSelected {
-//               self.PasswordTextField.isSecureTextEntry = false
-//            passwordVisibiltyButton.setImage(UIImage(named: "unlock"), for: .normal)
-//           } else {
-//               self.PasswordTextField.isSecureTextEntry = true
-//            passwordVisibiltyButton.setImage(UIImage(named: "lock"), for: .normal)
-//           }
-//       }
+    @IBAction func passwordVisibiltyButtonClicked(_ sender: Any) {
+        
+           (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
+           if (sender as! UIButton).isSelected {
+               self.PasswordTextField.isSecureTextEntry = false
+            passwordVisibiltyButton.setImage(UIImage(named: "unlock"), for: .normal)
+           } else {
+               self.PasswordTextField.isSecureTextEntry = true
+            passwordVisibiltyButton.setImage(UIImage(named: "lock"), for: .normal)
+           }
+       }
    
     //validate fields if correct return nill else return error message
     func validateFields() -> String? {
@@ -207,14 +169,13 @@ class SignUpTableViewController: UITableViewController {
                 print("userDisabled")
             case .userNotFound:
                 print("userNotFound")
-                //self.register(auth: Auth.auth())
+                self.register(auth: Auth.auth())
             case .tooManyRequests:
                 print("tooManyRequests, oooops")
             default: fatalError("error not supported here")
             }
             
         }
-
     func register(auth: Auth) {
         // create clean version of data
         let userName = UserNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -225,7 +186,7 @@ class SignUpTableViewController: UITableViewController {
            // check for authError
            if authError != nil {
                  //there is an error
-          //   self.showError("User already exist")
+             self.showError("User already exist")
              }
            else{
             
@@ -234,7 +195,7 @@ class SignUpTableViewController: UITableViewController {
             switch Auth.auth().currentUser?.isEmailVerified {
             case true:
                 print("users email is verified")
-             //   self.showToast(" email is verified")
+                self.showToast(" email is verified")
                 break
             case false:
                 
@@ -255,7 +216,7 @@ class SignUpTableViewController: UITableViewController {
                     
                     }
                     
-             //       self.handleError(error: error)
+                    self.handleError(error: error)
                 }
                 
                 print("verify it now")
@@ -278,9 +239,9 @@ class SignUpTableViewController: UITableViewController {
            
            auth.signIn(withEmail: userMail, password: userPassword) { (result, error) in
                
-//               guard error == nil else {
-//               //    return self.handleError(error: error!)
-//               }
+               guard error == nil else {
+                   return self.handleError(error: error!)
+               }
                
                guard let user = result?.user else{
                    fatalError("Not user do not know what went wrong")
@@ -292,16 +253,6 @@ class SignUpTableViewController: UITableViewController {
            
        }
 
-
-/*      // user is created successfully & storing user data
-     let db = Firestore.firestore()
-     db.collection("users").addDocument(data: ["username":userName,"uid":authResult!.user.uid ]) {(error) in
-         if error != nil{
-  
-             //show error method
-             self.showError("COULD NOT SAVE YOUR USERNAME")
-         }
-     }*/
-    }
    
 }
+
