@@ -101,6 +101,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F11560B26516697009AE03D /* POJO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = POJO;
+			sourceTree = "<group>";
+		};
 		2F4533CC2629F7FB000FE74E = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +133,7 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
+				2F11560B26516697009AE03D /* POJO */,
 				2F8A8B2F262F424500128FCD /* Style */,
 				2F8A8B21262F291D00128FCD /* StoryBoards */,
 				2F8A8B20262F290100128FCD /* Views */,

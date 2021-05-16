@@ -198,14 +198,23 @@
                     <view key="view" contentMode="scaleToFill" id="wB6-PT-TmF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-zL-Mj6">
+                                <rect key="frame" x="20" y="70" width="198" height="757"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="FJa-dI-THb" kind="embed" id="9qN-nE-Lf1"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ylP-Be-GL5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" id="hZa-lX-wmC"/>
+                    <tabBarItem key="tabBarItem" title="Explore" selectedImage="mail.and.text.magnifyingglass.rtl" catalog="system" id="hZa-lX-wmC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kll-Dl-h0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784" y="727"/>
+            <point key="canvasLocation" x="782.60869565217399" y="726.5625"/>
         </scene>
         <!--Cart-->
         <scene sceneID="tFM-JF-UWx">
@@ -217,13 +226,13 @@
                         <viewLayoutGuide key="safeArea" id="UOF-SC-gNk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cart" id="baq-en-wMM"/>
+                    <tabBarItem key="tabBarItem" title="Cart" selectedImage="cart.fill.badge.plus" catalog="system" id="baq-en-wMM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62w-3Z-g8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1657" y="727"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite-->
         <scene sceneID="yFd-gV-tHU">
             <objects>
                 <viewController id="Sq1-Te-WZz" sceneMemberID="viewController">
@@ -233,7 +242,7 @@
                         <viewLayoutGuide key="safeArea" id="Uzo-RB-6kZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="VGd-Ml-Z0x"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" selectedImage="suit.heart.fill" catalog="system" id="VGd-Ml-Z0x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGa-XO-5DW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,7 +258,7 @@
                         <viewLayoutGuide key="safeArea" id="jCs-89-2qv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="57u-N1-f9j"/>
+                    <tabBarItem key="tabBarItem" title="Account" selectedImage="person.fill" catalog="system" id="57u-N1-f9j"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4L-bX-jIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,7 +274,7 @@
                         <viewLayoutGuide key="safeArea" id="l4K-5n-a10"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shop" id="nFG-EW-mDe"/>
+                    <tabBarItem key="tabBarItem" title="Shop" selectedImage="house.circle.fill" catalog="system" id="nFG-EW-mDe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCf-9F-2gA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,6 +289,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="hqH-td-cfp" kind="relationship" relationship="viewControllers" id="A3n-cb-Wlz"/>
@@ -301,9 +311,28 @@
             </objects>
             <point key="canvasLocation" x="-1312" y="318"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0jP-U1-n6y">
+            <objects>
+                <viewController id="FJa-dI-THb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sdG-up-6vM">
+                        <rect key="frame" x="0.0" y="0.0" width="198" height="757"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuR-kO-wBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191" y="1306"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="cart.fill.badge.plus" catalog="system" width="128" height="106"/>
         <image name="carts" width="512" height="512"/>
+        <image name="house.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="mail.and.text.magnifyingglass.rtl" catalog="system" width="128" height="83"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
