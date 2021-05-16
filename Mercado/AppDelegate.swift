@@ -111,8 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             //go to where you want
             print("not first time")
             print("getstarted false")
-            //to open getstarted only in the first time
-            userDefaults.setValue(false, forKey: "getStarted")
+          
         }
     }
 }

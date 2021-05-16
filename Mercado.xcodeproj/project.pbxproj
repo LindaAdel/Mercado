@@ -18,11 +18,16 @@
 		2F4533FE2629F7FC000FE74E /* MercadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533FD2629F7FC000FE74E /* MercadoUITests.swift */; };
 		2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */; };
 		2F8A8B26262F2EAB00128FCD /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */; };
+
 		2F8A8B2B262F423000128FCD /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A8B2A262F423000128FCD /* StyleSheet.swift */; };
 		2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */; };
+
+ 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 		30141B01D6C5927ABE1D5E35 /* libPods-Mercado.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */; };
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
+		96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */; };
+		96B8C1C4263B6C53008CCA50 /* TextFieldErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */; };
 		96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8F9FC262F4C9E001984A2 /* ViewController.swift */; };
 		A910D9D32631767500482E17 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910D9D22631767500482E17 /* GetStartedViewController.swift */; };
 		A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */; };
@@ -63,11 +68,16 @@
 		2F4533FF2629F7FC000FE74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LindaStoryboard.storyboard; sourceTree = "<group>"; };
 		2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+
 		2F8A8B2A262F423000128FCD /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+
+ 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 		7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.release.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.release.xcconfig"; sourceTree = "<group>"; };
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
+		96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
+		96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldErrors.swift; sourceTree = "<group>"; };
 		96E8F9FC262F4C9E001984A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A910D9D22631767500482E17 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
@@ -133,11 +143,16 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
+
 				2F11560B26516697009AE03D /* POJO */,
 				2F8A8B2F262F424500128FCD /* Style */,
 				2F8A8B21262F291D00128FCD /* StoryBoards */,
+
+ 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 				2F8A8B20262F290100128FCD /* Views */,
-				2F4533DE2629F7FB000FE74E /* Main.storyboard */,
+				96B8C1C2263B6C2D008CCA50 /* Constants */,
+				96B8C1BC263B6A04008CCA50 /* Extensions */,
+				2F8A8B21262F291D00128FCD /* StoryBoards */,
 				96603625262E39A900653D91 /* GoogleService-Info.plist */,
 				2F4533D82629F7FB000FE74E /* AppDelegate.swift */,
 				2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */,
@@ -172,10 +187,17 @@
 		2F8A8B20262F290100128FCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+
 				2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */,
 				2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */,
 				A910D9D22631767500482E17 /* GetStartedViewController.swift */,
 				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
+
+				96B8C1C9263B769A008CCA50 /* Controllers */,
+				2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */,
+				A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */,
+				2F4533DE2629F7FB000FE74E /* Main.storyboard */,
+ 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,18 +205,8 @@
 		2F8A8B21262F291D00128FCD /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */,
-				A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */,
 			);
 			path = StoryBoards;
-			sourceTree = "<group>";
-		};
-		2F8A8B2F262F424500128FCD /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				2F8A8B2A262F423000128FCD /* StyleSheet.swift */,
-			);
-			path = Style;
 			sourceTree = "<group>";
 		};
 		77703BC71335E2C1B20171DA /* Pods */ = {
@@ -204,6 +216,32 @@
 				7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		96B8C1BC263B6A04008CCA50 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96B8C1C2263B6C2D008CCA50 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		96B8C1C9263B769A008CCA50 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A910D9D22631767500482E17 /* GetStartedViewController.swift */,
+				2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */,
+				2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		AE3342E7556D3C940EBFB5FB /* Frameworks */ = {
@@ -393,13 +431,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
+				96B8C1C4263B6C53008CCA50 /* TextFieldErrors.swift in Sources */,
 				2F8A8B26262F2EAB00128FCD /* SignUpTableViewController.swift in Sources */,
 				2F4533DD2629F7FB000FE74E /* LoginTableViewController.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
+
 				2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */,
+
+				96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */,
+ 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 				2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */,
-				2F8A8B2B262F423000128FCD /* StyleSheet.swift in Sources */,
 				A910D9D32631767500482E17 /* GetStartedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
