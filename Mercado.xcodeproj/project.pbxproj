@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533D82629F7FB000FE74E /* AppDelegate.swift */; };
 		2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */; };
-		2F4533DD2629F7FB000FE74E /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */; };
 		2F4533E02629F7FB000FE74E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4533DE2629F7FB000FE74E /* Main.storyboard */; };
 		2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533E12629F7FB000FE74E /* Mercado.xcdatamodeld */; };
 		2F4533E52629F7FB000FE74E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4533E42629F7FB000FE74E /* Assets.xcassets */; };
@@ -17,19 +16,16 @@
 		2F4533F32629F7FC000FE74E /* MercadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533F22629F7FC000FE74E /* MercadoTests.swift */; };
 		2F4533FE2629F7FC000FE74E /* MercadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533FD2629F7FC000FE74E /* MercadoUITests.swift */; };
 		2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */; };
-		2F8A8B26262F2EAB00128FCD /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */; };
-
-		2F8A8B2B262F423000128FCD /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A8B2A262F423000128FCD /* StyleSheet.swift */; };
 		2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */; };
-
- 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 		30141B01D6C5927ABE1D5E35 /* libPods-Mercado.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */; };
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
 		96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */; };
 		96B8C1C4263B6C53008CCA50 /* TextFieldErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */; };
+		96CD373C2651B7CA007B945F /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD373B2651B7CA007B945F /* GetStartedViewController.swift */; };
+		96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD37402651B7D4007B945F /* LoginTableViewController.swift */; };
+		96CD37462651B7DC007B945F /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD37452651B7DC007B945F /* SignUpTableViewController.swift */; };
 		96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8F9FC262F4C9E001984A2 /* ViewController.swift */; };
-		A910D9D32631767500482E17 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A910D9D22631767500482E17 /* GetStartedViewController.swift */; };
 		A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +50,6 @@
 		2F4533D52629F7FB000FE74E /* Mercado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4533D82629F7FB000FE74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		2F4533DF2629F7FB000FE74E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F4533E22629F7FB000FE74E /* Mercado.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mercado.xcdatamodel; sourceTree = "<group>"; };
 		2F4533E42629F7FB000FE74E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,19 +62,16 @@
 		2F4533FD2629F7FC000FE74E /* MercadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoUITests.swift; sourceTree = "<group>"; };
 		2F4533FF2629F7FC000FE74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LindaStoryboard.storyboard; sourceTree = "<group>"; };
-		2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
-
-		2F8A8B2A262F423000128FCD /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
-
- 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 		7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.release.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.release.xcconfig"; sourceTree = "<group>"; };
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
 		96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
 		96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldErrors.swift; sourceTree = "<group>"; };
+		96CD373B2651B7CA007B945F /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetStartedViewController.swift; path = Controllers/GetStartedViewController.swift; sourceTree = "<group>"; };
+		96CD37402651B7D4007B945F /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTableViewController.swift; path = Controllers/LoginTableViewController.swift; sourceTree = "<group>"; };
+		96CD37452651B7DC007B945F /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpTableViewController.swift; path = Controllers/SignUpTableViewController.swift; sourceTree = "<group>"; };
 		96E8F9FC262F4C9E001984A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A910D9D22631767500482E17 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
 		DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercado.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D2DAF69F251E5AD25A9C5A /* Pods-Mercado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.debug.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,13 +103,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F11560B26516697009AE03D /* POJO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = POJO;
-			sourceTree = "<group>";
-		};
 		2F4533CC2629F7FB000FE74E = {
 			isa = PBXGroup;
 			children = (
@@ -143,16 +128,9 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
-
-				2F11560B26516697009AE03D /* POJO */,
-				2F8A8B2F262F424500128FCD /* Style */,
-				2F8A8B21262F291D00128FCD /* StoryBoards */,
-
- 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 				2F8A8B20262F290100128FCD /* Views */,
 				96B8C1C2263B6C2D008CCA50 /* Constants */,
 				96B8C1BC263B6A04008CCA50 /* Extensions */,
-				2F8A8B21262F291D00128FCD /* StoryBoards */,
 				96603625262E39A900653D91 /* GoogleService-Info.plist */,
 				2F4533D82629F7FB000FE74E /* AppDelegate.swift */,
 				2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */,
@@ -187,26 +165,16 @@
 		2F8A8B20262F290100128FCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-
-				2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */,
-				2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */,
-				A910D9D22631767500482E17 /* GetStartedViewController.swift */,
+				96CD37452651B7DC007B945F /* SignUpTableViewController.swift */,
+				96CD37402651B7D4007B945F /* LoginTableViewController.swift */,
+				96CD373B2651B7CA007B945F /* GetStartedViewController.swift */,
 				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
-
 				96B8C1C9263B769A008CCA50 /* Controllers */,
 				2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */,
 				A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */,
 				2F4533DE2629F7FB000FE74E /* Main.storyboard */,
- 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		2F8A8B21262F291D00128FCD /* StoryBoards */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 		77703BC71335E2C1B20171DA /* Pods */ = {
@@ -237,9 +205,6 @@
 		96B8C1C9263B769A008CCA50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A910D9D22631767500482E17 /* GetStartedViewController.swift */,
-				2F8A8B25262F2EAB00128FCD /* SignUpTableViewController.swift */,
-				2F4533DC2629F7FB000FE74E /* LoginTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -430,19 +395,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CD373C2651B7CA007B945F /* GetStartedViewController.swift in Sources */,
+				96CD37462651B7DC007B945F /* SignUpTableViewController.swift in Sources */,
 				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
 				96B8C1C4263B6C53008CCA50 /* TextFieldErrors.swift in Sources */,
-				2F8A8B26262F2EAB00128FCD /* SignUpTableViewController.swift in Sources */,
-				2F4533DD2629F7FB000FE74E /* LoginTableViewController.swift in Sources */,
+				96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
-
 				2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */,
-
 				96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */,
- 013e5a9b2708fc1f23d44ca559e479f2a49d49c6
 				2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */,
-				A910D9D32631767500482E17 /* GetStartedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
