@@ -132,6 +132,7 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
+				96CD37542651C8BF007B945F /* ViewModels */,
 				96CD37532651C114007B945F /* POJOs */,
 				2F8A8B20262F290100128FCD /* Views */,
 				96B8C1C2263B6C2D008CCA50 /* Constants */,
@@ -220,6 +221,13 @@
 			children = (
 			);
 			path = POJOs;
+			sourceTree = "<group>";
+		};
+		96CD37542651C8BF007B945F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		AE3342E7556D3C940EBFB5FB /* Frameworks */ = {
