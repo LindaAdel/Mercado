@@ -132,7 +132,7 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
-				2FE74B4E26519532005D6AEA /* POJOS */,
+				96CD37532651C114007B945F /* POJOs */,
 				2F8A8B20262F290100128FCD /* Views */,
 				96B8C1C2263B6C2D008CCA50 /* Constants */,
 				96B8C1BC263B6A04008CCA50 /* Extensions */,
@@ -178,13 +178,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		2FE74B4E26519532005D6AEA /* POJOS */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = POJOS;
-			sourceTree = "<group>";
-		};
 		77703BC71335E2C1B20171DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +213,13 @@
 				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96CD37532651C114007B945F /* POJOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = POJOs;
 			sourceTree = "<group>";
 		};
 		AE3342E7556D3C940EBFB5FB /* Frameworks */ = {
