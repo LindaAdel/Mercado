@@ -18,33 +18,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     {
         print("scene delegate")
         guard let windowScnen = (scene as? UIWindowScene) else { return }
-        //initialize window
-        self.window = UIWindow(windowScene: windowScnen)
-        //initialize main storyboard
-        mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-      //check getstarted state in userdeafult
-        if (UserDefaults.standard.bool(forKey: "getStarted"))
-        {
-            //open getstarted view in the first time
-            initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "getStarted")as! GetStartedViewController
-        }
-        else{
-            //check if user already signed in
-            if Auth.auth().currentUser != nil
-            {
-                print(Auth.auth().currentUser?.email!)
-                //open home screen
-                initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "first")as! ViewController
-                  
-                } else {
-                    initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "login")as! LoginTableViewController
-                }
-        }
-            
-         //set initial view controller
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
-    }
+//        //initialize window
+//        self.window = UIWindow(windowScene: windowScnen)
+//        //initialize main storyboard
+//        mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//      //check getstarted state in userdeafult
+//        if (UserDefaults.standard.bool(forKey: "getStarted"))
+//        {
+//            //open getstarted view in the first time
+//            initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "getStarted")as! GetStartedViewController
+//        }
+//        else{
+//            //check if user already signed in
+//            if Auth.auth().currentUser != nil
+//            {
+//                print(Auth.auth().currentUser?.email!)
+//                //open home screen
+//                initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "first")as! ViewController
+//
+//                } else {
+//                    initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "login")as! LoginTableViewController
+//                }
+//        }
+//
+//         //set initial view controller
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
+   }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

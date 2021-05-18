@@ -1,4 +1,4 @@
-module Pods_Mercado {
+framework module Pods_Mercado {
   umbrella header "Pods-Mercado-umbrella.h"
 
   export *

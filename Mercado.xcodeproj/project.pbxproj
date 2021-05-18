@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F3C594B2653DA7C00D704D5 /* itemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C594A2653DA7C00D704D5 /* itemTableViewCell.swift */; };
+		2F3C59542653DDEA00D704D5 /* itemTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */; };
+		2F3C59552653DDEA00D704D5 /* itemTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */; };
+		2F3C59562653DDEA00D704D5 /* itemTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */; };
+		2F3C59842653E06F00D704D5 /* itemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59832653E06F00D704D5 /* itemsService.swift */; };
+		2F3C59BC2653F47C00D704D5 /* testURLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59BB2653F47C00D704D5 /* testURLS.swift */; };
+		2F3C59C12653F5D600D704D5 /* homeAppliancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59C02653F5D600D704D5 /* homeAppliancesViewModel.swift */; };
+		2F3C59C22653F5D600D704D5 /* homeAppliancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59C02653F5D600D704D5 /* homeAppliancesViewModel.swift */; };
+		2F3C59C32653F5D600D704D5 /* homeAppliancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59C02653F5D600D704D5 /* homeAppliancesViewModel.swift */; };
 		2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533D82629F7FB000FE74E /* AppDelegate.swift */; };
 		2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */; };
 		2F4533E02629F7FB000FE74E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4533DE2629F7FB000FE74E /* Main.storyboard */; };
@@ -16,11 +25,47 @@
 		2F4533F32629F7FC000FE74E /* MercadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533F22629F7FC000FE74E /* MercadoTests.swift */; };
 		2F4533FE2629F7FC000FE74E /* MercadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4533FD2629F7FC000FE74E /* MercadoUITests.swift */; };
 		2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */; };
+		2FA30F972652CAAC00E59A77 /* homeAppliancesPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30F962652CAAC00E59A77 /* homeAppliancesPojo.swift */; };
+		2FA30F982652CAAC00E59A77 /* homeAppliancesPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30F962652CAAC00E59A77 /* homeAppliancesPojo.swift */; };
+		2FA30F992652CAAC00E59A77 /* homeAppliancesPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30F962652CAAC00E59A77 /* homeAppliancesPojo.swift */; };
+		2FA30F9E2652D03100E59A77 /* personalCarePojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30F9D2652D03100E59A77 /* personalCarePojo.swift */; };
+		2FA30F9F2652D03100E59A77 /* personalCarePojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30F9D2652D03100E59A77 /* personalCarePojo.swift */; };
+		2FA30FA02652D03100E59A77 /* personalCarePojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30F9D2652D03100E59A77 /* personalCarePojo.swift */; };
+		2FA30FA52652D1E800E59A77 /* womenBagsPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FA42652D1E800E59A77 /* womenBagsPojo.swift */; };
+		2FA30FA62652D1E800E59A77 /* womenBagsPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FA42652D1E800E59A77 /* womenBagsPojo.swift */; };
+		2FA30FA72652D1E800E59A77 /* womenBagsPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FA42652D1E800E59A77 /* womenBagsPojo.swift */; };
+		2FA30FAF2652D4AB00E59A77 /* womenClothingPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FAE2652D4AB00E59A77 /* womenClothingPojo.swift */; };
+		2FA30FB02652D4AB00E59A77 /* womenClothingPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FAE2652D4AB00E59A77 /* womenClothingPojo.swift */; };
+		2FA30FB12652D4AB00E59A77 /* womenClothingPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FAE2652D4AB00E59A77 /* womenClothingPojo.swift */; };
+		2FA30FB62652D79300E59A77 /* skinCarePojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FB52652D79300E59A77 /* skinCarePojo.swift */; };
+		2FA30FB72652D79300E59A77 /* skinCarePojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FB52652D79300E59A77 /* skinCarePojo.swift */; };
+		2FA30FB82652D79300E59A77 /* skinCarePojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FB52652D79300E59A77 /* skinCarePojo.swift */; };
+		2FA30FBD2652DA9C00E59A77 /* makeUpPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FBC2652DA9C00E59A77 /* makeUpPojo.swift */; };
+		2FA30FBE2652DA9C00E59A77 /* makeUpPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FBC2652DA9C00E59A77 /* makeUpPojo.swift */; };
+		2FA30FBF2652DA9C00E59A77 /* makeUpPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FBC2652DA9C00E59A77 /* makeUpPojo.swift */; };
+		2FA30FC42652E00900E59A77 /* tabletsAndMobilesPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FC32652E00900E59A77 /* tabletsAndMobilesPojo.swift */; };
+		2FA30FC52652E00900E59A77 /* tabletsAndMobilesPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FC32652E00900E59A77 /* tabletsAndMobilesPojo.swift */; };
+		2FA30FC62652E00900E59A77 /* tabletsAndMobilesPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FC32652E00900E59A77 /* tabletsAndMobilesPojo.swift */; };
+		2FA30FCB2652E6F400E59A77 /* laptopsPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FCA2652E6F400E59A77 /* laptopsPojo.swift */; };
+		2FA30FCC2652E6F400E59A77 /* laptopsPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FCA2652E6F400E59A77 /* laptopsPojo.swift */; };
+		2FA30FCD2652E6F400E59A77 /* laptopsPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FCA2652E6F400E59A77 /* laptopsPojo.swift */; };
+		2FA30FD82652F07000E59A77 /* laptopBagsPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FD72652F07000E59A77 /* laptopBagsPojo.swift */; };
+		2FA30FD92652F07000E59A77 /* laptopBagsPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FD72652F07000E59A77 /* laptopBagsPojo.swift */; };
+		2FA30FDA2652F07000E59A77 /* laptopBagsPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FD72652F07000E59A77 /* laptopBagsPojo.swift */; };
+		2FA30FDF2652F7A400E59A77 /* kidsClothingPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FDE2652F7A400E59A77 /* kidsClothingPojo.swift */; };
+		2FA30FE02652F7A400E59A77 /* kidsClothingPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FDE2652F7A400E59A77 /* kidsClothingPojo.swift */; };
+		2FA30FE12652F7A400E59A77 /* kidsClothingPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FDE2652F7A400E59A77 /* kidsClothingPojo.swift */; };
+		2FA30FE62652F86600E59A77 /* kidsShoesPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FE52652F86600E59A77 /* kidsShoesPojo.swift */; };
+		2FA30FE72652F86600E59A77 /* kidsShoesPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FE52652F86600E59A77 /* kidsShoesPojo.swift */; };
+		2FA30FE82652F86600E59A77 /* kidsShoesPojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FE52652F86600E59A77 /* kidsShoesPojo.swift */; };
+		2FA30FF62652FB7D00E59A77 /* itemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FF52652FB7D00E59A77 /* itemsTableViewController.swift */; };
+		2FA30FF72652FB7D00E59A77 /* itemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FF52652FB7D00E59A77 /* itemsTableViewController.swift */; };
+		2FA30FF82652FB7D00E59A77 /* itemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA30FF52652FB7D00E59A77 /* itemsTableViewController.swift */; };
 		2FE74B4226519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FE74B4326519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FE74B4426519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */; };
-		30141B01D6C5927ABE1D5E35 /* libPods-Mercado.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */; };
+		6C22F0AAFC1B2BDCAE8C5CEA /* Pods_Mercado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2F99DCD2538BF1DE002AAA /* Pods_Mercado.framework */; };
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
 		96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */; };
@@ -50,6 +95,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F3C594A2653DA7C00D704D5 /* itemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemTableViewCell.swift; sourceTree = "<group>"; };
+		2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemTableExtension.swift; sourceTree = "<group>"; };
+		2F3C59832653E06F00D704D5 /* itemsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemsService.swift; sourceTree = "<group>"; };
+		2F3C59BB2653F47C00D704D5 /* testURLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testURLS.swift; sourceTree = "<group>"; };
+		2F3C59C02653F5D600D704D5 /* homeAppliancesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeAppliancesViewModel.swift; sourceTree = "<group>"; };
 		2F4533D52629F7FB000FE74E /* Mercado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4533D82629F7FB000FE74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4533DA2629F7FB000FE74E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,8 +115,21 @@
 		2F4533FD2629F7FC000FE74E /* MercadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoUITests.swift; sourceTree = "<group>"; };
 		2F4533FF2629F7FC000FE74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LindaStoryboard.storyboard; sourceTree = "<group>"; };
+		2FA30F962652CAAC00E59A77 /* homeAppliancesPojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = homeAppliancesPojo.swift; path = Mercado/POJOS/homeAppliancesPojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30F9D2652D03100E59A77 /* personalCarePojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = personalCarePojo.swift; path = Mercado/POJOS/personalCarePojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FA42652D1E800E59A77 /* womenBagsPojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = womenBagsPojo.swift; path = Mercado/POJOS/womenBagsPojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FAE2652D4AB00E59A77 /* womenClothingPojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = womenClothingPojo.swift; path = Mercado/POJOS/womenClothingPojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FB52652D79300E59A77 /* skinCarePojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = skinCarePojo.swift; path = Mercado/POJOS/skinCarePojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FBC2652DA9C00E59A77 /* makeUpPojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = makeUpPojo.swift; path = Mercado/POJOS/makeUpPojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FC32652E00900E59A77 /* tabletsAndMobilesPojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = tabletsAndMobilesPojo.swift; path = Mercado/POJOS/tabletsAndMobilesPojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FCA2652E6F400E59A77 /* laptopsPojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = laptopsPojo.swift; path = Mercado/POJOS/laptopsPojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FD72652F07000E59A77 /* laptopBagsPojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = laptopBagsPojo.swift; path = Mercado/POJOS/laptopBagsPojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FDE2652F7A400E59A77 /* kidsClothingPojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = kidsClothingPojo.swift; path = Mercado/POJOS/kidsClothingPojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FE52652F86600E59A77 /* kidsShoesPojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = kidsShoesPojo.swift; path = Mercado/POJOS/kidsShoesPojo.swift; sourceTree = SOURCE_ROOT; };
+		2FA30FF52652FB7D00E59A77 /* itemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemsTableViewController.swift; sourceTree = "<group>"; };
 		2FE74B4126519400005D6AEA /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		5C2F99DCD2538BF1DE002AAA /* Pods_Mercado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.release.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.release.xcconfig"; sourceTree = "<group>"; };
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
@@ -77,7 +140,6 @@
 		96CD37452651B7DC007B945F /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		96E8F9FC262F4C9E001984A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
-		DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercado.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D2DAF69F251E5AD25A9C5A /* Pods-Mercado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.debug.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30141B01D6C5927ABE1D5E35 /* libPods-Mercado.a in Frameworks */,
+				6C22F0AAFC1B2BDCAE8C5CEA /* Pods_Mercado.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +169,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F3C59822653E04E00D704D5 /* lindaModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F3C59B72653F3A600D704D5 /* Network */,
+			);
+			path = lindaModel;
+			sourceTree = "<group>";
+		};
+		2F3C59B72653F3A600D704D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2F3C59832653E06F00D704D5 /* itemsService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		2F4533CC2629F7FB000FE74E = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +210,7 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
+				2F3C59822653E04E00D704D5 /* lindaModel */,
 				96CD37542651C8BF007B945F /* ViewModels */,
 				96CD37532651C114007B945F /* POJOs */,
 				2F8A8B20262F290100128FCD /* Views */,
@@ -192,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */,
+				2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +281,7 @@
 			children = (
 				96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */,
 				2FE74B4126519400005D6AEA /* StyleSheet.swift */,
+				2F3C59BB2653F47C00D704D5 /* testURLS.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -212,6 +293,8 @@
 				96CD373B2651B7CA007B945F /* GetStartedViewController.swift */,
 				96CD37452651B7DC007B945F /* SignUpTableViewController.swift */,
 				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
+				2FA30FF52652FB7D00E59A77 /* itemsTableViewController.swift */,
+				2F3C594A2653DA7C00D704D5 /* itemTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +302,17 @@
 		96CD37532651C114007B945F /* POJOs */ = {
 			isa = PBXGroup;
 			children = (
+				2FA30F962652CAAC00E59A77 /* homeAppliancesPojo.swift */,
+				2FA30F9D2652D03100E59A77 /* personalCarePojo.swift */,
+				2FA30FA42652D1E800E59A77 /* womenBagsPojo.swift */,
+				2FA30FAE2652D4AB00E59A77 /* womenClothingPojo.swift */,
+				2FA30FB52652D79300E59A77 /* skinCarePojo.swift */,
+				2FA30FBC2652DA9C00E59A77 /* makeUpPojo.swift */,
+				2FA30FC32652E00900E59A77 /* tabletsAndMobilesPojo.swift */,
+				2FA30FCA2652E6F400E59A77 /* laptopsPojo.swift */,
+				2FA30FD72652F07000E59A77 /* laptopBagsPojo.swift */,
+				2FA30FDE2652F7A400E59A77 /* kidsClothingPojo.swift */,
+				2FA30FE52652F86600E59A77 /* kidsShoesPojo.swift */,
 			);
 			path = POJOs;
 			sourceTree = "<group>";
@@ -226,6 +320,7 @@
 		96CD37542651C8BF007B945F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2F3C59C02653F5D600D704D5 /* homeAppliancesViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -233,7 +328,7 @@
 		AE3342E7556D3C940EBFB5FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */,
+				5C2F99DCD2538BF1DE002AAA /* Pods_Mercado.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,6 +345,7 @@
 				2F4533D22629F7FB000FE74E /* Frameworks */,
 				2F4533D32629F7FB000FE74E /* Resources */,
 				B2094FB2981251DD309C9285 /* [CP] Copy Pods Resources */,
+				66AB7D5D8BAFCBE03492ACC6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,6 +466,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		66AB7D5D8BAFCBE03492ACC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B2094FB2981251DD309C9285 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,17 +529,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3C59842653E06F00D704D5 /* itemsService.swift in Sources */,
+				2F3C59BC2653F47C00D704D5 /* testURLS.swift in Sources */,
 				96CD373C2651B7CA007B945F /* GetStartedViewController.swift in Sources */,
+				2FA30FC42652E00900E59A77 /* tabletsAndMobilesPojo.swift in Sources */,
+				2FA30F9E2652D03100E59A77 /* personalCarePojo.swift in Sources */,
 				96CD37462651B7DC007B945F /* SignUpTableViewController.swift in Sources */,
+				2F3C59542653DDEA00D704D5 /* itemTableExtension.swift in Sources */,
+				2FA30FCB2652E6F400E59A77 /* laptopsPojo.swift in Sources */,
 				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
 				96B8C1C4263B6C53008CCA50 /* TextFieldErrors.swift in Sources */,
+				2FA30FB62652D79300E59A77 /* skinCarePojo.swift in Sources */,
+				2FA30FF62652FB7D00E59A77 /* itemsTableViewController.swift in Sources */,
+				2FA30FE62652F86600E59A77 /* kidsShoesPojo.swift in Sources */,
+				2FA30F972652CAAC00E59A77 /* homeAppliancesPojo.swift in Sources */,
 				96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */,
+				2F3C594B2653DA7C00D704D5 /* itemTableViewCell.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
+				2FA30FDF2652F7A400E59A77 /* kidsClothingPojo.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
+				2FA30FD82652F07000E59A77 /* laptopBagsPojo.swift in Sources */,
+				2FA30FBD2652DA9C00E59A77 /* makeUpPojo.swift in Sources */,
 				2FE74B4226519400005D6AEA /* StyleSheet.swift in Sources */,
 				2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */,
 				96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */,
 				2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */,
+				2F3C59C12653F5D600D704D5 /* homeAppliancesViewModel.swift in Sources */,
+				2FA30FAF2652D4AB00E59A77 /* womenClothingPojo.swift in Sources */,
+				2FA30FA52652D1E800E59A77 /* womenBagsPojo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,8 +564,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA30F9F2652D03100E59A77 /* personalCarePojo.swift in Sources */,
+				2FA30FC52652E00900E59A77 /* tabletsAndMobilesPojo.swift in Sources */,
+				2FA30FE72652F86600E59A77 /* kidsShoesPojo.swift in Sources */,
 				2F4533F32629F7FC000FE74E /* MercadoTests.swift in Sources */,
+				2F3C59552653DDEA00D704D5 /* itemTableExtension.swift in Sources */,
+				2FA30FD92652F07000E59A77 /* laptopBagsPojo.swift in Sources */,
+				2FA30F982652CAAC00E59A77 /* homeAppliancesPojo.swift in Sources */,
+				2FA30FA62652D1E800E59A77 /* womenBagsPojo.swift in Sources */,
+				2FA30FB02652D4AB00E59A77 /* womenClothingPojo.swift in Sources */,
+				2FA30FF72652FB7D00E59A77 /* itemsTableViewController.swift in Sources */,
 				2FE74B4326519400005D6AEA /* StyleSheet.swift in Sources */,
+				2FA30FCC2652E6F400E59A77 /* laptopsPojo.swift in Sources */,
+				2FA30FBE2652DA9C00E59A77 /* makeUpPojo.swift in Sources */,
+				2F3C59C22653F5D600D704D5 /* homeAppliancesViewModel.swift in Sources */,
+				2FA30FB72652D79300E59A77 /* skinCarePojo.swift in Sources */,
+				2FA30FE02652F7A400E59A77 /* kidsClothingPojo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,8 +587,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA30FA02652D03100E59A77 /* personalCarePojo.swift in Sources */,
+				2FA30FC62652E00900E59A77 /* tabletsAndMobilesPojo.swift in Sources */,
+				2FA30FE82652F86600E59A77 /* kidsShoesPojo.swift in Sources */,
 				2F4533FE2629F7FC000FE74E /* MercadoUITests.swift in Sources */,
+				2F3C59562653DDEA00D704D5 /* itemTableExtension.swift in Sources */,
+				2FA30FDA2652F07000E59A77 /* laptopBagsPojo.swift in Sources */,
+				2FA30F992652CAAC00E59A77 /* homeAppliancesPojo.swift in Sources */,
+				2FA30FA72652D1E800E59A77 /* womenBagsPojo.swift in Sources */,
+				2FA30FB12652D4AB00E59A77 /* womenClothingPojo.swift in Sources */,
+				2FA30FF82652FB7D00E59A77 /* itemsTableViewController.swift in Sources */,
 				2FE74B4426519400005D6AEA /* StyleSheet.swift in Sources */,
+				2FA30FCD2652E6F400E59A77 /* laptopsPojo.swift in Sources */,
+				2FA30FBF2652DA9C00E59A77 /* makeUpPojo.swift in Sources */,
+				2F3C59C32653F5D600D704D5 /* homeAppliancesViewModel.swift in Sources */,
+				2FA30FB82652D79300E59A77 /* skinCarePojo.swift in Sources */,
+				2FA30FE12652F7A400E59A77 /* kidsClothingPojo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,7 +774,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iti.Mercado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -637,7 +795,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iti.Mercado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

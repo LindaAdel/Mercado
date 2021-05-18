@@ -1,6 +1,14 @@
 platform:ios, '13.0'
 
 target 'Mercado' do
+  use_frameworks!
+
+
+
+
+
+
+
 
  pod 'Firebase/Auth'
  pod 'GoogleSignIn'
