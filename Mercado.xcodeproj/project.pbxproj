@@ -20,7 +20,6 @@
 		2FE74B4326519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FE74B4426519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */; };
-		30141B01D6C5927ABE1D5E35 /* libPods-Mercado.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */; };
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
 		96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */; };
@@ -30,6 +29,15 @@
 		96CD37462651B7DC007B945F /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD37452651B7DC007B945F /* SignUpTableViewController.swift */; };
 		96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8F9FC262F4C9E001984A2 /* ViewController.swift */; };
 		A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */; };
+		A9916B8E265419050030ADDA /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8D265419050030ADDA /* CategoriesService.swift */; };
+		A9916B9026542C720030ADDA /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */; };
+		A9FE6DE326532EBB00C6624C /* ExploreTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DE226532EBB00C6624C /* ExploreTabBarController.swift */; };
+		A9FE6DE52653371600C6624C /* ExploreExtention+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DE42653371600C6624C /* ExploreExtention+CollectionView.swift */; };
+		A9FE6DE7265341B700C6624C /* ExploreExtension+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DE6265341B700C6624C /* ExploreExtension+TableView.swift */; };
+		A9FE6DEB265349B800C6624C /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DEA265349B800C6624C /* CategoriesCollectionViewCell.swift */; };
+		A9FE901A2653FF1800B039D2 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE90192653FF1800B039D2 /* URLs.swift */; };
+		A9FE901D2654005000B039D2 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE901C2654005000B039D2 /* Categories.swift */; };
+		F7045B99ABF90F9063F28534 /* Pods_Mercado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A187EB75BBECBA90F988E3 /* Pods_Mercado.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +75,7 @@
 		2F8A8B1B262F28F400128FCD /* LindaStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LindaStoryboard.storyboard; sourceTree = "<group>"; };
 		2FE74B4126519400005D6AEA /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		71A187EB75BBECBA90F988E3 /* Pods_Mercado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.release.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.release.xcconfig"; sourceTree = "<group>"; };
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
@@ -77,7 +86,15 @@
 		96CD37452651B7DC007B945F /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		96E8F9FC262F4C9E001984A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
-		DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercado.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9916B8D265419050030ADDA /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		A9A7C21A26540DE700F8B214 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9FE6DE226532EBB00C6624C /* ExploreTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTabBarController.swift; sourceTree = "<group>"; };
+		A9FE6DE42653371600C6624C /* ExploreExtention+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExploreExtention+CollectionView.swift"; sourceTree = "<group>"; };
+		A9FE6DE6265341B700C6624C /* ExploreExtension+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExploreExtension+TableView.swift"; sourceTree = "<group>"; };
+		A9FE6DEA265349B800C6624C /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		A9FE90192653FF1800B039D2 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		A9FE901C2654005000B039D2 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = Mercado/Constants/Categories.swift; sourceTree = SOURCE_ROOT; };
 		E8D2DAF69F251E5AD25A9C5A /* Pods-Mercado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.debug.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30141B01D6C5927ABE1D5E35 /* libPods-Mercado.a in Frameworks */,
+				F7045B99ABF90F9063F28534 /* Pods_Mercado.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +149,7 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE901B2654001F00B039D2 /* DinaModel */,
 				96CD37542651C8BF007B945F /* ViewModels */,
 				96CD37532651C114007B945F /* POJOs */,
 				2F8A8B20262F290100128FCD /* Views */,
@@ -192,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */,
+				A9FE6DE42653371600C6624C /* ExploreExtention+CollectionView.swift */,
+				A9FE6DE6265341B700C6624C /* ExploreExtension+TableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +221,7 @@
 			children = (
 				96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */,
 				2FE74B4126519400005D6AEA /* StyleSheet.swift */,
+				A9FE90192653FF1800B039D2 /* URLs.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -212,6 +233,8 @@
 				96CD373B2651B7CA007B945F /* GetStartedViewController.swift */,
 				96CD37452651B7DC007B945F /* SignUpTableViewController.swift */,
 				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
+				A9FE6DE226532EBB00C6624C /* ExploreTabBarController.swift */,
+				A9FE6DEA265349B800C6624C /* CategoriesCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +242,7 @@
 		96CD37532651C114007B945F /* POJOs */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE901C2654005000B039D2 /* Categories.swift */,
 			);
 			path = POJOs;
 			sourceTree = "<group>";
@@ -226,14 +250,32 @@
 		96CD37542651C8BF007B945F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */,
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		A9916B88265417CC0030ADDA /* NetworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9916B8D265419050030ADDA /* CategoriesService.swift */,
+			);
+			path = NetworkModel;
+			sourceTree = "<group>";
+		};
+		A9FE901B2654001F00B039D2 /* DinaModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9916B88265417CC0030ADDA /* NetworkModel */,
+			);
+			path = DinaModel;
 			sourceTree = "<group>";
 		};
 		AE3342E7556D3C940EBFB5FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DFA6BFAF1E1D44C2606A4D45 /* libPods-Mercado.a */,
+				A9A7C21A26540DE700F8B214 /* libSDWebImage.a */,
+				71A187EB75BBECBA90F988E3 /* Pods_Mercado.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,6 +292,7 @@
 				2F4533D22629F7FB000FE74E /* Frameworks */,
 				2F4533D32629F7FB000FE74E /* Resources */,
 				B2094FB2981251DD309C9285 /* [CP] Copy Pods Resources */,
+				C22E018F740873CA58157338 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,6 +430,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C22E018F740873CA58157338 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E140DC3D4048B41DD311B112 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,13 +480,21 @@
 				96CD37462651B7DC007B945F /* SignUpTableViewController.swift in Sources */,
 				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
 				96B8C1C4263B6C53008CCA50 /* TextFieldErrors.swift in Sources */,
+				A9FE901D2654005000B039D2 /* Categories.swift in Sources */,
 				96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */,
+				A9FE6DE52653371600C6624C /* ExploreExtention+CollectionView.swift in Sources */,
+				A9FE6DE7265341B700C6624C /* ExploreExtension+TableView.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
+				A9FE6DEB265349B800C6624C /* CategoriesCollectionViewCell.swift in Sources */,
 				2FE74B4226519400005D6AEA /* StyleSheet.swift in Sources */,
+				A9FE901A2653FF1800B039D2 /* URLs.swift in Sources */,
 				2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */,
 				96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */,
 				2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */,
+				A9FE6DE326532EBB00C6624C /* ExploreTabBarController.swift in Sources */,
+				A9916B9026542C720030ADDA /* CategoriesViewModel.swift in Sources */,
+				A9916B8E265419050030ADDA /* CategoriesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,13 @@ import UIKit
 
 class GetStartedViewController: UIViewController {
 
+    var subCategoryObj = SubCategory(subcategoryAPI: "", subcategoryName: "")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(subCategoryObj)
     }
     
 

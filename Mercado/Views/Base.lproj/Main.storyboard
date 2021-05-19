@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8O-kN-ysf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8O-kN-ysf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +14,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1wm-jk-utv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="mEX-un-EjZ">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +56,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZh-RY-uqI">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZh-RY-uqI">
                                     <rect key="frame" x="33" y="477" width="348" height="56"/>
                                     <color key="backgroundColor" red="0.3241435587" green="0.69462406639999996" blue="0.45845073460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -125,7 +123,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kth-FR-ChH">
-                                    <rect key="frame" x="51" y="745" width="239" height="28"/>
+                                    <rect key="frame" x="51" y="745" width="237.5" height="28"/>
                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="23"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -137,8 +135,8 @@
                                         <constraint firstAttribute="width" constant="153" id="JVj-vh-qqm"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOg-kC-s9B">
-                                    <rect key="frame" x="287" y="735" width="108" height="40"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOg-kC-s9B">
+                                    <rect key="frame" x="285.5" y="735" width="109.5" height="40"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                     <state key="normal" title="SignUp">
                                         <color key="titleColor" red="0.30784919859999998" green="0.68311303850000005" blue="0.45849901440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,7 +145,7 @@
                                         <action selector="signupButton:" destination="a8O-kN-ysf" eventType="touchUpInside" id="UJp-wy-5T0"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xO-Eg-miw">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xO-Eg-miw">
                                     <rect key="frame" x="170" y="409" width="234" height="40"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                     <state key="normal" title="Forgot Password?">
@@ -165,8 +163,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <viewLayoutGuide key="safeArea" id="iv0-ES-SUa"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="PVX-c2-mKZ" firstAttribute="leading" secondItem="iv0-ES-SUa" secondAttribute="leading" constant="8" id="07i-2P-nJU"/>
                                 <constraint firstItem="PVX-c2-mKZ" firstAttribute="top" secondItem="iv0-ES-SUa" secondAttribute="top" constant="84" id="1XT-jg-LE9"/>
@@ -207,6 +204,7 @@
                                 <constraint firstItem="jke-Bg-MQZ" firstAttribute="top" secondItem="PVX-c2-mKZ" secondAttribute="bottom" constant="39" id="yFp-RW-kFH"/>
                                 <constraint firstItem="YSB-TC-vFY" firstAttribute="top" secondItem="5kA-KZ-gyX" secondAttribute="bottom" constant="12" id="ye6-3M-7tF"/>
                             </constraints>
+                            <viewLayoutGuide key="safeArea" id="iv0-ES-SUa"/>
                         </view>
                         <sections/>
                         <connections>
@@ -253,8 +251,5 @@
         <image name="google" width="18" height="18"/>
         <image name="securePassword" width="24" height="24"/>
         <image name="shopping" width="64" height="64"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
