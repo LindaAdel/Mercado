@@ -210,10 +210,14 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
+
 				2F3C59822653E04E00D704D5 /* lindaModel */,
+
+				960DCEEE2652CEDD006412DF /* Models */,
+				2F8A8B20262F290100128FCD /* Views */,
+ b677c8b8908a76bfbfdcf862cbad7b4af9824d61
 				96CD37542651C8BF007B945F /* ViewModels */,
 				96CD37532651C114007B945F /* POJOs */,
-				2F8A8B20262F290100128FCD /* Views */,
 				96B8C1C2263B6C2D008CCA50 /* Constants */,
 				96B8C1BC263B6A04008CCA50 /* Extensions */,
 				96603625262E39A900653D91 /* GoogleService-Info.plist */,
@@ -265,6 +269,13 @@
 				7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		960DCEEE2652CEDD006412DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		96B8C1BC263B6A04008CCA50 /* Extensions */ = {
