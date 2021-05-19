@@ -76,6 +76,7 @@
 		A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */; };
 		A9916B8E265419050030ADDA /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8D265419050030ADDA /* CategoriesService.swift */; };
 		A9916B9026542C720030ADDA /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */; };
+		A9C28EE72655A840005CC194 /* ShopTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C28EE62655A840005CC194 /* ShopTabBarController.swift */; };
 		A9FE6DE326532EBB00C6624C /* ExploreTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DE226532EBB00C6624C /* ExploreTabBarController.swift */; };
 		A9FE6DE52653371600C6624C /* ExploreExtention+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DE42653371600C6624C /* ExploreExtention+CollectionView.swift */; };
 		A9FE6DE7265341B700C6624C /* ExploreExtension+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DE6265341B700C6624C /* ExploreExtension+TableView.swift */; };
@@ -150,6 +151,7 @@
 		A9916B8D265419050030ADDA /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		A9A7C21A26540DE700F8B214 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C28EE62655A840005CC194 /* ShopTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTabBarController.swift; sourceTree = "<group>"; };
 		A9FE6DE226532EBB00C6624C /* ExploreTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTabBarController.swift; sourceTree = "<group>"; };
 		A9FE6DE42653371600C6624C /* ExploreExtention+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExploreExtention+CollectionView.swift"; sourceTree = "<group>"; };
 		A9FE6DE6265341B700C6624C /* ExploreExtension+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExploreExtension+TableView.swift"; sourceTree = "<group>"; };
@@ -186,20 +188,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F3C59822653E04E00D704D5 /* lindaModel */ = {
+		2F3C59822653E04E00D704D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2F3C59B72653F3A600D704D5 /* Network */,
+				2F3C59B72653F3A600D704D5 /* NetworkModels */,
 			);
-			path = lindaModel;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		2F3C59B72653F3A600D704D5 /* Network */ = {
+		2F3C59B72653F3A600D704D5 /* NetworkModels */ = {
 			isa = PBXGroup;
 			children = (
+				A9916B8D265419050030ADDA /* CategoriesService.swift */,
 				2F3C59832653E06F00D704D5 /* itemsService.swift */,
 			);
-			path = Network;
+			path = NetworkModels;
 			sourceTree = "<group>";
 		};
 		2F4533CC2629F7FB000FE74E = {
@@ -227,9 +230,8 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
-				2F3C59822653E04E00D704D5 /* lindaModel */,
+				2F3C59822653E04E00D704D5 /* Models */,
 				2F8A8B20262F290100128FCD /* Views */,
-				A9FE901B2654001F00B039D2 /* DinaModel */,
 				96CD37542651C8BF007B945F /* ViewModels */,
 				96CD37532651C114007B945F /* POJOs */,
 				96B8C1C2263B6C2D008CCA50 /* Constants */,
@@ -318,6 +320,7 @@
 				2F3C594A2653DA7C00D704D5 /* itemTableViewCell.swift */,
 				A9FE6DE226532EBB00C6624C /* ExploreTabBarController.swift */,
 				A9FE6DEA265349B800C6624C /* CategoriesCollectionViewCell.swift */,
+				A9C28EE62655A840005CC194 /* ShopTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -348,22 +351,6 @@
 				A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */,
 			);
 			name = ViewModels;
-			sourceTree = "<group>";
-		};
-		A9916B88265417CC0030ADDA /* NetworkModel */ = {
-			isa = PBXGroup;
-			children = (
-				A9916B8D265419050030ADDA /* CategoriesService.swift */,
-			);
-			path = NetworkModel;
-			sourceTree = "<group>";
-		};
-		A9FE901B2654001F00B039D2 /* DinaModel */ = {
-			isa = PBXGroup;
-			children = (
-				A9916B88265417CC0030ADDA /* NetworkModel */,
-			);
-			path = DinaModel;
 			sourceTree = "<group>";
 		};
 		AE3342E7556D3C940EBFB5FB /* Frameworks */ = {
@@ -588,6 +575,7 @@
 				96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */,
 				2F3C594B2653DA7C00D704D5 /* itemTableViewCell.swift in Sources */,
 				A9FE901D2654005000B039D2 /* Categories.swift in Sources */,
+				A9C28EE72655A840005CC194 /* ShopTabBarController.swift in Sources */,
 				96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */,
 				A9FE6DE52653371600C6624C /* ExploreExtention+CollectionView.swift in Sources */,
 				A9FE6DE7265341B700C6624C /* ExploreExtension+TableView.swift in Sources */,

@@ -15,7 +15,7 @@ struct homeAppliances : Codable{
     var item_Features : String?
     var item_brand : String?
     var item_capacity :String?
-    var item_details : String?
+    var item_title : String?
     var item_image: String?
     var item_price : String?
     var item_type :String?

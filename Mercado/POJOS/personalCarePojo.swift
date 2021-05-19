@@ -13,7 +13,7 @@ struct personalCare : Codable {
     var color : String?
     var item_features : String?
     var item_brand : String?
-    var item_details : String?
+    var item_title : String?
     var item_image: String?
     var item_price : String?
     var item_type :String?

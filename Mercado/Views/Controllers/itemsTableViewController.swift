@@ -10,11 +10,13 @@ import UIKit
 
 class itemsTableViewController: UIViewController {
 
+    var subCategoryObj = SubCategory(subcategoryAPI: "", subcategoryName: "")
+    var categoryName : String?
     
     @IBOutlet weak var itemsTableView: UITableView!
     
     var itemsList:[homeAppliances] = [homeAppliances]()
-    let itemsViewModel = homeAppliancesViewModel()
+    var itemsViewModel : homeAppliancesViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,8 @@ class itemsTableViewController: UIViewController {
         itemsTableView.delegate = self
         itemsTableView.dataSource = self
         
+        print(categoryName!)
+        itemsViewModel = homeAppliancesViewModel()
         
         itemsViewModel.bindhomeAppliancesViewModelToView = {
                     

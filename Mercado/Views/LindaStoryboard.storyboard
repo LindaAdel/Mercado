@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T9b-l3-GJT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T9b-l3-GJT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +14,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xl6-CV-sHZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Lbc-rP-1Tq">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="906"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -33,7 +31,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your crendentials to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rut-GA-rla">
                                             <rect key="frame" x="0.0" y="90.5" width="334" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX1-Th-UIe">
@@ -45,7 +43,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jr-2W-qeE">
                                             <rect key="frame" x="0.0" y="171.5" width="334" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-7K-2qL">
@@ -65,7 +63,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E_mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-DX-yZh">
                                             <rect key="frame" x="0.0" y="274" width="334" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzT-mU-e6y">
@@ -85,7 +83,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ya-4N-l0i">
                                             <rect key="frame" x="0.0" y="376.5" width="334" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtG-Dm-JTt">
@@ -105,10 +103,10 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-JT-bfR">
                                             <rect key="frame" x="0.0" y="479.5" width="334" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" systemColor="systemRedColor"/>
+                                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9r-Eh-i5q">
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9r-Eh-i5q">
                                             <rect key="frame" x="0.0" y="521" width="334" height="42"/>
                                             <color key="backgroundColor" red="0.32549019607843138" green="0.69411764705882351" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -129,13 +127,13 @@
                                             <rect key="frame" x="0.0" y="583" width="334" height="35"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already Have  an account ?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgC-mA-XJf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="206.5" height="35"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="207.5" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cn-s0-xs8">
-                                                    <rect key="frame" x="206.5" y="0.0" width="127.5" height="35"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cn-s0-xs8">
+                                                    <rect key="frame" x="207.5" y="0.0" width="126.5" height="35"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                     <state key="normal" title="  LogIn">
                                                         <color key="titleColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,7 +161,7 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="qbx-Kf-RS5" firstAttribute="centerX" secondItem="Lbc-rP-1Tq" secondAttribute="centerX" id="3SL-bD-FDm"/>
                                 <constraint firstAttribute="bottom" secondItem="ZjW-F7-mS9" secondAttribute="bottom" constant="100" id="5XU-4n-gez"/>
@@ -191,15 +189,15 @@
             </objects>
             <point key="canvasLocation" x="-636.23188405797111" y="106.47321428571428"/>
         </scene>
-        <!--Explore-->
+        <!--ExploreScreen-->
         <scene sceneID="ehL-xk-pDr">
             <objects>
-                <viewControllerPlaceholder storyboardName="DinaStoryboard" referencedIdentifier="Explore" id="9ho-dA-09R" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="DinaStoryboard" referencedIdentifier="ExploreScreen" id="9ho-dA-09R" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="6aX-9b-VOi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg1-bp-mBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="398"/>
+            <point key="canvasLocation" x="930" y="406"/>
         </scene>
         <!--Cart-->
         <scene sceneID="tFM-JF-UWx">
@@ -208,8 +206,8 @@
                     <view key="view" contentMode="scaleToFill" id="Q9G-Ff-ma6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UOF-SC-gNk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cart" selectedImage="cart.fill.badge.plus" catalog="system" id="baq-en-wMM"/>
                 </viewController>
@@ -224,8 +222,8 @@
                     <view key="view" contentMode="scaleToFill" id="JUb-5q-CfG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Uzo-RB-6kZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite" selectedImage="suit.heart.fill" catalog="system" id="VGd-Ml-Z0x"/>
                 </viewController>
@@ -240,26 +238,26 @@
                     <view key="view" contentMode="scaleToFill" id="Ln9-hN-QUF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jCs-89-2qv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" selectedImage="person.fill" catalog="system" id="57u-N1-f9j"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4L-bX-jIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3201" y="715"/>
+            <point key="canvasLocation" x="3217" y="727"/>
         </scene>
         <!--Items Table View Controller-->
         <scene sceneID="Dh3-L9-FBI">
             <objects>
-                <viewController storyboardIdentifier="itemsTable" id="zRm-I4-gYR" customClass="itemsTableViewController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryItems" id="zRm-I4-gYR" customClass="itemsTableViewController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jwJ-iD-GGd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jCx-u6-YMj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="156" id="4nr-6C-yF9" customClass="itemTableViewCell" customModule="Mercado" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="156"/>
@@ -351,14 +349,14 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="IZF-fZ-PF9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="jCx-u6-YMj" secondAttribute="bottom" id="2nS-J1-pBo"/>
                             <constraint firstItem="jCx-u6-YMj" firstAttribute="leading" secondItem="IZF-fZ-PF9" secondAttribute="leading" id="3TT-iL-eaX"/>
                             <constraint firstItem="jCx-u6-YMj" firstAttribute="top" secondItem="jwJ-iD-GGd" secondAttribute="top" id="gYZ-sK-rTc"/>
                             <constraint firstItem="jCx-u6-YMj" firstAttribute="trailing" secondItem="IZF-fZ-PF9" secondAttribute="trailing" id="ueU-DE-ilZ"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="IZF-fZ-PF9"/>
                     </view>
                     <connections>
                         <outlet property="itemsTableView" destination="jCx-u6-YMj" id="zBq-G2-jzQ"/>
@@ -366,23 +364,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3O-dH-bPI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1678.2608695652175" y="766.74107142857144"/>
+            <point key="canvasLocation" x="-636" y="783"/>
         </scene>
         <!--Shop-->
         <scene sceneID="Hlm-f2-C3i">
             <objects>
-                <viewController id="hqH-td-cfp" sceneMemberID="viewController">
+                <viewController id="hqH-td-cfp" customClass="ShopTabBarController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xDv-ns-iLj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="l4K-5n-a10"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shop" selectedImage="house" catalog="system" id="nFG-EW-mDe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCf-9F-2gA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="727"/>
+            <point key="canvasLocation" x="251" y="783"/>
         </scene>
         <!--Home Tab Bar Controller-->
         <scene sceneID="5RT-gB-9eg">
@@ -397,9 +395,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="hqH-td-cfp" kind="relationship" relationship="viewControllers" id="A3n-cb-Wlz"/>
-                        <segue destination="9ho-dA-09R" kind="relationship" relationship="viewControllers" id="wri-Wv-r0W"/>
-                        <segue destination="ojF-xH-ITH" kind="relationship" relationship="viewControllers" id="4WC-Ap-yXt"/>
+                        <segue destination="9ho-dA-09R" kind="relationship" relationship="viewControllers" id="OvN-Jm-hnw"/>
                         <segue destination="Sq1-Te-WZz" kind="relationship" relationship="viewControllers" id="C0A-jK-v9n"/>
+                        <segue destination="ojF-xH-ITH" kind="relationship" relationship="viewControllers" id="4WC-Ap-yXt"/>
                         <segue destination="FrI-ap-v4W" kind="relationship" relationship="viewControllers" id="xgD-e7-451"/>
                     </connections>
                 </tabBarController>
@@ -418,20 +416,11 @@
     </scenes>
     <resources>
         <image name="add-to-cart-B" width="24" height="24"/>
-        <image name="cart.fill.badge.plus" catalog="system" width="128" height="106"/>
+        <image name="cart.fill.badge.plus" catalog="system" width="64" height="48"/>
         <image name="carts" width="512" height="512"/>
         <image name="heart-2" width="24" height="24"/>
-        <image name="house" catalog="system" width="128" height="106"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="suit.heart.fill" catalog="system" width="64" height="54"/>
     </resources>
 </document>
