@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P3f-d7-BfW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rkg-Df-FtI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hip-5b-kYM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hip-5b-kYM">
                                 <rect key="frame" x="33" y="730" width="349" height="62"/>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
@@ -61,7 +63,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ImA-zm-P4v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hip-5b-kYM" firstAttribute="leading" secondItem="ImA-zm-P4v" secondAttribute="leading" constant="33" id="95b-by-gBJ"/>
                             <constraint firstItem="3aF-T5-2RB" firstAttribute="top" secondItem="mAa-Hc-ylR" secondAttribute="top" id="A2o-S2-QyX"/>
@@ -82,7 +85,6 @@
                             <constraint firstItem="ImA-zm-P4v" firstAttribute="bottom" secondItem="hip-5b-kYM" secondAttribute="bottom" constant="70" id="zA8-Sl-y75"/>
                             <constraint firstItem="YU8-Jy-J1l" firstAttribute="top" secondItem="ImA-zm-P4v" secondAttribute="top" constant="492" id="zgt-cT-zcZ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ImA-zm-P4v"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G95-V3-qrF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -92,7 +94,7 @@
         <!--Explore Tab Bar Controller-->
         <scene sceneID="NMp-WS-N8Q">
             <objects>
-                <viewController id="ehL-uO-9Ok" customClass="ExploreTabBarController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Explore" id="ehL-uO-9Ok" customClass="ExploreTabBarController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HW0-bA-Tkz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +109,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-Lb-qgF">
-                                <rect key="frame" x="20" y="167" width="158" height="695"/>
+                                <rect key="frame" x="20" y="167" width="158" height="646"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dPU-1D-MEx">
                                     <size key="itemSize" width="154" height="125"/>
@@ -153,8 +155,8 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agV-QD-SGi">
-                                <rect key="frame" x="186" y="167" width="208" height="695"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="186" y="167" width="208" height="646"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="pmO-tV-bnv">
                                         <rect key="frame" x="0.0" y="28" width="208" height="44"/>
@@ -169,7 +171,8 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="W0L-io-bQo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fT1-IV-TGR" firstAttribute="top" secondItem="W0L-io-bQo" secondAttribute="top" constant="30" id="0Uk-3A-mnr"/>
                             <constraint firstItem="agV-QD-SGi" firstAttribute="leading" secondItem="JLF-Lb-qgF" secondAttribute="trailing" constant="8" id="5Mt-Jp-UjH"/>
@@ -184,7 +187,6 @@
                             <constraint firstItem="JLF-Lb-qgF" firstAttribute="centerX" secondItem="fT1-IV-TGR" secondAttribute="centerX" id="vvM-kQ-yIb"/>
                             <constraint firstItem="JLF-Lb-qgF" firstAttribute="leading" secondItem="W0L-io-bQo" secondAttribute="leading" constant="20" id="y8z-3q-vxQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="W0L-io-bQo"/>
                     </view>
                     <navigationItem key="navigationItem" id="GQO-Eg-Rfx"/>
                     <connections>
@@ -196,11 +198,13 @@
             </objects>
             <point key="canvasLocation" x="1524.6376811594205" y="6.6964285714285712"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Explore-->
         <scene sceneID="vmu-oJ-atr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3f-d7-BfW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" selectedImage="doc.text.magnifyingglass" catalog="system" id="C42-d4-P4B"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1WO-qf-FfN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -216,6 +220,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.text.magnifyingglass" catalog="system" width="113" height="128"/>
         <image name="get_started_background" width="325.33334350585938" height="210.66667175292969"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -12,7 +12,7 @@ class itemsService{
     
     func fetchItemsData(completion :@escaping ([homeAppliances]?, Error?)->()){
     
-    AF.request(URLs.gethomeAppliancesURL)
+    AF.request(testURLs.gethomeAppliancesURL)
         .validate()
         .responseDecodable(of: [homeAppliances].self) { (response) in
             switch response.result {

@@ -16,49 +16,15 @@ These instructions apply to minor and patch version updates. Major versions need
 a customized adaptation.
 
 After the CI is green:
-* Update the version in the podspec to match the latest entry in the [CHANGELOG.md](CHANGELOG.md)
-* Checkout the `main` branch and ensure it is up to date.
-  ```console
-  git checkout main
-  git pull
-  ```
-* Add the CocoaPods tag (`{version}` will be the latest version in the [podspec](GoogleUtilities.podspec#L3))
-  ```console
-  git tag CocoaPods-{version}
-  git push origin CocoaPods-{version}
-  ```
-* Push the podspec to the designated repo
-  * If this version of GoogleUtilities is intended to launch **before or with** the next Firebase release:
-    <details>
-    <summary>Push to <b>SpecsStaging</b></summary>
-
-    ```console
-    pod repo push --skip-tests staging GoogleUtilities.podspec
-    ```
-
-    If the command fails with `Unable to find the 'staging' repo.`, add the staging repo with:
-    ```console
-    pod repo add staging git@github.com:firebase/SpecsStaging.git
-    ```
-    </details>
-  * Otherwise:
-    <details>
-    <summary>Push to <b>SpecsDev</b></summary>
-
-    ```console
-    pod repo push --skip-tests dev GoogleUtilities.podspec
-    ```
-
-    If the command fails with `Unable to find the 'dev' repo.`, add the dev repo with:
-    ```console
-    pod repo add dev git@github.com:firebase/SpecsDev.git
-    ```
-    </details>
-* Run Firebase CI by waiting until next nightly or adding a PR that touches `Gemfile`.
-* On google3, create a workspace. Then copybara and run a global TAP.
-  ```console
-  third_party/firebase/ios/Releases/run_copy_bara.py --directory GoogleUtilities --branch main
-  ```
+  * Update the version in the podspec
+  * Add the CocoaPods tag
+    * `git tag CocoaPods-{version}`
+    * `git push origin CocoaPods-{version}`
+  * Push the podspec to SpecsStaging
+    * `pod repo push staging GoogleUtilities.podspec`
+  * Run Firebase CI by waiting until next nightly or adding a PR that touches `Gemfile`
+  * On google3, copybara and run a global TAP
+    * `third_party/firebase/ios/Releases/run_copy_bara.py --directory GoogleUtilities`
 
 ## Publishing
   * Add a version tag for Swift PM
@@ -110,8 +76,8 @@ before creating a PR.
 GitHub Actions will verify that any code changes are done in a style compliant
 way. Install `clang-format` and `mint`:
 
-```console
-brew install clang-format@12
+```
+brew install clang-format@11
 brew install mint
 ```
 
