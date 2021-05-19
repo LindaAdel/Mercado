@@ -15,5 +15,5 @@ target 'Mercado' do
  pod 'Firebase/Database'
  pod 'Alamofire'
  pod 'SDWebImage'
-
+ pod 'ImageSlideshow'
 end

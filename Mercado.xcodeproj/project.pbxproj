@@ -68,6 +68,8 @@
 		6C22F0AAFC1B2BDCAE8C5CEA /* Pods_Mercado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2F99DCD2538BF1DE002AAA /* Pods_Mercado.framework */; };
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
+		968F2AA52655AD3200441252 /* ScrollableProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */; };
+		96A2F3502655833900255A63 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F34F2655833900255A63 /* ProductDetailsViewController.swift */; };
 		96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */; };
 		96B8C1C4263B6C53008CCA50 /* TextFieldErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */; };
 		96CD373C2651B7CA007B945F /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD373B2651B7CA007B945F /* GetStartedViewController.swift */; };
@@ -133,6 +135,8 @@
 		7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.release.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.release.xcconfig"; sourceTree = "<group>"; };
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
+		968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableProductDetailsViewController.swift; sourceTree = "<group>"; };
+		96A2F34F2655833900255A63 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
 		96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldErrors.swift; sourceTree = "<group>"; };
 		96CD373B2651B7CA007B945F /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +271,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		968F2AAC2655C19000441252 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				96A2F34F2655833900255A63 /* ProductDetailsViewController.swift */,
+				968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
 		96B8C1BC263B6A04008CCA50 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +302,7 @@
 		96B8C1C9263B769A008CCA50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				968F2AAC2655C19000441252 /* ProductDetails */,
 				96CD37402651B7D4007B945F /* LoginTableViewController.swift */,
 				96CD373B2651B7CA007B945F /* GetStartedViewController.swift */,
 				96CD37452651B7DC007B945F /* SignUpTableViewController.swift */,
@@ -544,6 +558,7 @@
 				2FA30FE62652F86600E59A77 /* kidsShoesPojo.swift in Sources */,
 				2FA30F972652CAAC00E59A77 /* homeAppliancesPojo.swift in Sources */,
 				96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */,
+				96A2F3502655833900255A63 /* ProductDetailsViewController.swift in Sources */,
 				2F3C594B2653DA7C00D704D5 /* itemTableViewCell.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				2FA30FDF2652F7A400E59A77 /* kidsClothingPojo.swift in Sources */,
@@ -554,6 +569,7 @@
 				2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */,
 				96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */,
 				2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */,
+				968F2AA52655AD3200441252 /* ScrollableProductDetailsViewController.swift in Sources */,
 				2F3C59C12653F5D600D704D5 /* homeAppliancesViewModel.swift in Sources */,
 				2FA30FAF2652D4AB00E59A77 /* womenClothingPojo.swift in Sources */,
 				2FA30FA52652D1E800E59A77 /* womenBagsPojo.swift in Sources */,
