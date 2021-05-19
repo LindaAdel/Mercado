@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct URLs{
+struct testURLs{
     public static var gethomeAppliancesURL = "https://us-central1-mercado-fafa6.cloudfunctions.net/blendersAndMixers"
 }

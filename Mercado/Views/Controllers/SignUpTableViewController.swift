@@ -207,10 +207,10 @@ class SignUpTableViewController: UITableViewController {
                         self.PasswordTextField.text = ""
                         let verifyAlert = UIAlertController(title: "Alert", message: "a verification mail was sent please verify your email address", preferredStyle: .alert)
                         verifyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-                            natigateToHome()
+                            self.natigateToHome()
                         }))
                         self.present(verifyAlert, animated: true, completion: nil)
-                        showToast("a verification mail was sent please verify your email address")
+                        self.showToast("a verification mail was sent please verify your email address")
                         return print("user email verification sent")
                     
                     

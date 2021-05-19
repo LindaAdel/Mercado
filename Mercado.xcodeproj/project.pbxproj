@@ -65,7 +65,6 @@
 		2FE74B4326519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FE74B4426519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */; };
-		6C22F0AAFC1B2BDCAE8C5CEA /* Pods_Mercado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2F99DCD2538BF1DE002AAA /* Pods_Mercado.framework */; };
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
 		968F2AA52655AD3200441252 /* ScrollableProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */; };
@@ -77,6 +76,16 @@
 		96CD37462651B7DC007B945F /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD37452651B7DC007B945F /* SignUpTableViewController.swift */; };
 		96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8F9FC262F4C9E001984A2 /* ViewController.swift */; };
 		A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */; };
+		A9916B8E265419050030ADDA /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8D265419050030ADDA /* CategoriesService.swift */; };
+		A9916B9026542C720030ADDA /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */; };
+		A9C28EE72655A840005CC194 /* ShopTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C28EE62655A840005CC194 /* ShopTabBarController.swift */; };
+		A9FE6DE326532EBB00C6624C /* ExploreTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DE226532EBB00C6624C /* ExploreTabBarController.swift */; };
+		A9FE6DE52653371600C6624C /* ExploreExtention+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DE42653371600C6624C /* ExploreExtention+CollectionView.swift */; };
+		A9FE6DE7265341B700C6624C /* ExploreExtension+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DE6265341B700C6624C /* ExploreExtension+TableView.swift */; };
+		A9FE6DEB265349B800C6624C /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6DEA265349B800C6624C /* CategoriesCollectionViewCell.swift */; };
+		A9FE901A2653FF1800B039D2 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE90192653FF1800B039D2 /* URLs.swift */; };
+		A9FE901D2654005000B039D2 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE901C2654005000B039D2 /* Categories.swift */; };
+		EEF6FFB14E692BACE6C70B78 /* Pods_Mercado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE9257348F58865C07322CD /* Pods_Mercado.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,8 +140,7 @@
 		2FA30FF52652FB7D00E59A77 /* itemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemsTableViewController.swift; sourceTree = "<group>"; };
 		2FE74B4126519400005D6AEA /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
-		5C2F99DCD2538BF1DE002AAA /* Pods_Mercado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.release.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.release.xcconfig"; sourceTree = "<group>"; };
+		41444C1DBE14A501F8108FFA /* Pods-Mercado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.debug.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.debug.xcconfig"; sourceTree = "<group>"; };
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
 		968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableProductDetailsViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +152,18 @@
 		96CD37452651B7DC007B945F /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		96E8F9FC262F4C9E001984A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
-		E8D2DAF69F251E5AD25A9C5A /* Pods-Mercado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.debug.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.debug.xcconfig"; sourceTree = "<group>"; };
+		A9916B8D265419050030ADDA /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		A9A7C21A26540DE700F8B214 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C28EE62655A840005CC194 /* ShopTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTabBarController.swift; sourceTree = "<group>"; };
+		A9FE6DE226532EBB00C6624C /* ExploreTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTabBarController.swift; sourceTree = "<group>"; };
+		A9FE6DE42653371600C6624C /* ExploreExtention+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExploreExtention+CollectionView.swift"; sourceTree = "<group>"; };
+		A9FE6DE6265341B700C6624C /* ExploreExtension+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExploreExtension+TableView.swift"; sourceTree = "<group>"; };
+		A9FE6DEA265349B800C6624C /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		A9FE90192653FF1800B039D2 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		A9FE901C2654005000B039D2 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = Mercado/Constants/Categories.swift; sourceTree = SOURCE_ROOT; };
+		ACE9257348F58865C07322CD /* Pods_Mercado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mercado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25EDD5FC8C8D356244DF46A /* Pods-Mercado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.release.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C22F0AAFC1B2BDCAE8C5CEA /* Pods_Mercado.framework in Frameworks */,
+				EEF6FFB14E692BACE6C70B78 /* Pods_Mercado.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,20 +192,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F3C59822653E04E00D704D5 /* lindaModel */ = {
+		2F3C59822653E04E00D704D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2F3C59B72653F3A600D704D5 /* Network */,
+				2F3C59B72653F3A600D704D5 /* NetworkModels */,
 			);
-			path = lindaModel;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		2F3C59B72653F3A600D704D5 /* Network */ = {
+		2F3C59B72653F3A600D704D5 /* NetworkModels */ = {
 			isa = PBXGroup;
 			children = (
+				A9916B8D265419050030ADDA /* CategoriesService.swift */,
 				2F3C59832653E06F00D704D5 /* itemsService.swift */,
 			);
-			path = Network;
+			path = NetworkModels;
 			sourceTree = "<group>";
 		};
 		2F4533CC2629F7FB000FE74E = {
@@ -214,7 +234,7 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
-				2F3C59822653E04E00D704D5 /* lindaModel */,
+				2F3C59822653E04E00D704D5 /* Models */,
 				2F8A8B20262F290100128FCD /* Views */,
 				96CD37542651C8BF007B945F /* ViewModels */,
 				96CD37532651C114007B945F /* POJOs */,
@@ -265,8 +285,8 @@
 		77703BC71335E2C1B20171DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E8D2DAF69F251E5AD25A9C5A /* Pods-Mercado.debug.xcconfig */,
-				7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */,
+				41444C1DBE14A501F8108FFA /* Pods-Mercado.debug.xcconfig */,
+				C25EDD5FC8C8D356244DF46A /* Pods-Mercado.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -285,6 +305,8 @@
 			children = (
 				96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */,
 				2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */,
+				A9FE6DE42653371600C6624C /* ExploreExtention+CollectionView.swift */,
+				A9FE6DE6265341B700C6624C /* ExploreExtension+TableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,6 +317,7 @@
 				96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */,
 				2FE74B4126519400005D6AEA /* StyleSheet.swift */,
 				2F3C59BB2653F47C00D704D5 /* testURLS.swift */,
+				A9FE90192653FF1800B039D2 /* URLs.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -309,6 +332,9 @@
 				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
 				2FA30FF52652FB7D00E59A77 /* itemsTableViewController.swift */,
 				2F3C594A2653DA7C00D704D5 /* itemTableViewCell.swift */,
+				A9FE6DE226532EBB00C6624C /* ExploreTabBarController.swift */,
+				A9FE6DEA265349B800C6624C /* CategoriesCollectionViewCell.swift */,
+				A9C28EE62655A840005CC194 /* ShopTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,6 +353,7 @@
 				2FA30FD72652F07000E59A77 /* laptopBagsPojo.swift */,
 				2FA30FDE2652F7A400E59A77 /* kidsClothingPojo.swift */,
 				2FA30FE52652F86600E59A77 /* kidsShoesPojo.swift */,
+				A9FE901C2654005000B039D2 /* Categories.swift */,
 			);
 			path = POJOs;
 			sourceTree = "<group>";
@@ -335,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				2F3C59C02653F5D600D704D5 /* homeAppliancesViewModel.swift */,
+				A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -342,7 +370,8 @@
 		AE3342E7556D3C940EBFB5FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5C2F99DCD2538BF1DE002AAA /* Pods_Mercado.framework */,
+				A9A7C21A26540DE700F8B214 /* libSDWebImage.a */,
+				ACE9257348F58865C07322CD /* Pods_Mercado.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -354,12 +383,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F4534022629F7FC000FE74E /* Build configuration list for PBXNativeTarget "Mercado" */;
 			buildPhases = (
-				E140DC3D4048B41DD311B112 /* [CP] Check Pods Manifest.lock */,
+				81CE8A8E5FD450F54DBAF605 /* [CP] Check Pods Manifest.lock */,
 				2F4533D12629F7FB000FE74E /* Sources */,
 				2F4533D22629F7FB000FE74E /* Frameworks */,
 				2F4533D32629F7FB000FE74E /* Resources */,
-				B2094FB2981251DD309C9285 /* [CP] Copy Pods Resources */,
-				66AB7D5D8BAFCBE03492ACC6 /* [CP] Embed Pods Frameworks */,
+				CC5D1061DA47D40F9514D26F /* [CP] Embed Pods Frameworks */,
+				7BCEEFB7412F7B87131734E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -480,24 +509,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		66AB7D5D8BAFCBE03492ACC6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B2094FB2981251DD309C9285 /* [CP] Copy Pods Resources */ = {
+		7BCEEFB7412F7B87131734E4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -514,7 +526,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E140DC3D4048B41DD311B112 /* [CP] Check Pods Manifest.lock */ = {
+		81CE8A8E5FD450F54DBAF605 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -534,6 +546,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC5D1061DA47D40F9514D26F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -560,12 +589,19 @@
 				96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */,
 				96A2F3502655833900255A63 /* ProductDetailsViewController.swift in Sources */,
 				2F3C594B2653DA7C00D704D5 /* itemTableViewCell.swift in Sources */,
+				A9FE901D2654005000B039D2 /* Categories.swift in Sources */,
+				A9C28EE72655A840005CC194 /* ShopTabBarController.swift in Sources */,
+				96CD37412651B7D5007B945F /* LoginTableViewController.swift in Sources */,
+				A9FE6DE52653371600C6624C /* ExploreExtention+CollectionView.swift in Sources */,
+				A9FE6DE7265341B700C6624C /* ExploreExtension+TableView.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				2FA30FDF2652F7A400E59A77 /* kidsClothingPojo.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
 				2FA30FD82652F07000E59A77 /* laptopBagsPojo.swift in Sources */,
 				2FA30FBD2652DA9C00E59A77 /* makeUpPojo.swift in Sources */,
+				A9FE6DEB265349B800C6624C /* CategoriesCollectionViewCell.swift in Sources */,
 				2FE74B4226519400005D6AEA /* StyleSheet.swift in Sources */,
+				A9FE901A2653FF1800B039D2 /* URLs.swift in Sources */,
 				2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */,
 				96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */,
 				2F4533E32629F7FB000FE74E /* Mercado.xcdatamodeld in Sources */,
@@ -573,6 +609,9 @@
 				2F3C59C12653F5D600D704D5 /* homeAppliancesViewModel.swift in Sources */,
 				2FA30FAF2652D4AB00E59A77 /* womenClothingPojo.swift in Sources */,
 				2FA30FA52652D1E800E59A77 /* womenBagsPojo.swift in Sources */,
+				A9FE6DE326532EBB00C6624C /* ExploreTabBarController.swift in Sources */,
+				A9916B9026542C720030ADDA /* CategoriesViewModel.swift in Sources */,
+				A9916B8E265419050030ADDA /* CategoriesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +814,7 @@
 		};
 		2F4534032629F7FC000FE74E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8D2DAF69F251E5AD25A9C5A /* Pods-Mercado.debug.xcconfig */;
+			baseConfigurationReference = 41444C1DBE14A501F8108FFA /* Pods-Mercado.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -796,7 +835,7 @@
 		};
 		2F4534042629F7FC000FE74E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CB54C10A701AFDDAA9A7F0C /* Pods-Mercado.release.xcconfig */;
+			baseConfigurationReference = C25EDD5FC8C8D356244DF46A /* Pods-Mercado.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
