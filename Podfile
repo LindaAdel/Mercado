@@ -1,7 +1,6 @@
 platform:ios, '13.0'
 
 target 'Mercado' do
-  
   use_frameworks!
 
  pod 'Firebase/Auth'
@@ -9,5 +8,6 @@ target 'Mercado' do
  pod 'Firebase/Database'
  pod 'Alamofire'
  pod 'SDWebImage'
+ pod 'ImageSlideshow'
 
 end

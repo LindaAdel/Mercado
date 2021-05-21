@@ -107,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-Lb-qgF">
-                                <rect key="frame" x="20" y="167" width="158" height="695"/>
+                                <rect key="frame" x="20" y="167" width="158" height="646"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dPU-1D-MEx">
                                     <size key="itemSize" width="154" height="125"/>
@@ -153,7 +153,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agV-QD-SGi">
-                                <rect key="frame" x="186" y="167" width="208" height="695"/>
+                                <rect key="frame" x="186" y="167" width="208" height="646"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="pmO-tV-bnv">
@@ -196,11 +196,21 @@
             </objects>
             <point key="canvasLocation" x="1524.6376811594205" y="6.6964285714285712"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--CategoryItems-->
+        <scene sceneID="m5U-kA-A2A">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CategoryItems" storyboardName="LindaStoryboard" referencedIdentifier="CategoryItems" id="Mw5-h2-rzw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBo-wH-WHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102" y="-133"/>
+        </scene>
+        <!--Explore-->
         <scene sceneID="vmu-oJ-atr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3f-d7-BfW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ExploreScreen" automaticallyAdjustsScrollViewInsets="NO" id="P3f-d7-BfW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" selectedImage="doc.text.magnifyingglass" catalog="system" id="C42-d4-P4B"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1WO-qf-FfN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -216,6 +226,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.text.magnifyingglass" catalog="system" width="58" height="64"/>
         <image name="get_started_background" width="325.33334350585938" height="210.66667175292969"/>
     </resources>
 </document>

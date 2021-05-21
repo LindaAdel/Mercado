@@ -26,6 +26,7 @@ extension ExploreTabBarController: UICollectionViewDelegate, UICollectionViewDat
         cell.categoryIcon.sd_setImage(with: URL(string: categoriesArray[indexPath.row].categoryIcon))
 
         cell.categoryName.text = categoriesArray[indexPath.row].categoryName
+       
         
         return cell
     }
@@ -37,6 +38,8 @@ extension ExploreTabBarController: UICollectionViewDelegate, UICollectionViewDat
         
         subCatgeoryArray = categoriesArray[indexPath.row].subCategories
         subCategoriesTableView.reloadData()
+        categoryName = categoriesArray[indexPath.row].categoryName
+        print("hh \(categoryName!)")
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath){

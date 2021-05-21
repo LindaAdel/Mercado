@@ -26,6 +26,13 @@ class StyleSheet {
         textfield.layer.addSublayer(bottomLine)
         
     }
+static func showTextFieldError(placeholderValue:String)->NSAttributedString?
+    {
+        return NSAttributedString(string: placeholderValue, attributes: [
+            .foregroundColor: UIColor.red,
+            .font: UIFont.boldSystemFont(ofSize: 15.0),
+        ])
+    }
   
         
 }

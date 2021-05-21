@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EACE50AAD47C3753C7334BC1B6AF9DFA"
-               BuildableName = "libPods-Mercado.a"
+               BuildableName = "Pods_Mercado.framework"
                BlueprintName = "Pods-Mercado"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

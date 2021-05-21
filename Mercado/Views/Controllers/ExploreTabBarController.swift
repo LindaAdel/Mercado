@@ -14,7 +14,8 @@ class ExploreTabBarController: UIViewController{
     
     var categoriesArray : [Categories] = [Categories]()
     var subCatgeoryArray : [SubCategory] = [SubCategory]()
-    var categoriesViewModel = CategoriesViewModel()
+    var categoriesViewModel : CategoriesViewModel!
+    var categoryName : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class ExploreTabBarController: UIViewController{
         
         subCategoriesTableView.dataSource = self
         subCategoriesTableView.delegate = self
+        
+        categoriesViewModel = CategoriesViewModel()
         
         categoriesViewModel.bindCategoriesViewModelToView = {
                     
