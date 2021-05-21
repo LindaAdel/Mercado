@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JVu-JC-zvp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8O-kN-ysf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -224,6 +224,14 @@
             </objects>
             <point key="canvasLocation" x="-636.23188405797111" y="96.428571428571431"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="mtD-Le-JWp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="LindaStoryboard" referencedIdentifier="Home" id="PMh-Iq-aGy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grl-N5-a3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901" y="429"/>
+        </scene>
         <!--Product Details View Controller-->
         <scene sceneID="jLW-pQ-hbj">
             <objects>
@@ -339,7 +347,6 @@
         <!--View Controller-->
         <scene sceneID="eIm-j5-Rw2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0DV-P2-cGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="f7S-vM-SNa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4cc-iO-ISG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -631,6 +638,7 @@ item_id: "-M_gOTLhSna-TZ6VwPpH"
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0DV-P2-cGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1358" y="-1043"/>
         </scene>

@@ -6,10 +6,18 @@
 //
 
 import Foundation
+protocol ItemProtocol {
+    var item_title : String? {get}
+    var item_image: String?{get}
+    var item_price : String?{get}
+}
+//class mode{
+//    var arr:[ItemProtocol]
+//    arr = [HomeAppliances]
+//    print(arr.item_title)
+//}
 
-
-struct homeAppliances : Codable{
-    
+struct HomeAppliances :Codable,ItemProtocol{
     var color : String?
     var country : String?
     var item_Features : String?

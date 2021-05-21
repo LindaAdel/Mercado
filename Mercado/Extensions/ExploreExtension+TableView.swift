@@ -30,9 +30,12 @@ extension ExploreTabBarController: UITableViewDataSource, UITableViewDelegate {
         let itemsVC = self.storyboard?.instantiateViewController(withIdentifier: "CategoryItems") as! itemsTableViewController
         itemsVC.modalPresentationStyle = .fullScreen
         itemsVC.subCategoryObj = subCatgeoryArray[indexPath.row]
-        itemsVC.categoryName = categoriesArray[indexPath.row].categoryName
+        itemsVC.categoryName = self.categoryName!
+        print("from home \(categoriesArray[indexPath.row].categoryName)")
+        print(categoriesArray[indexPath.row])
         self.navigationController!.pushViewController(itemsVC, animated: true)
         
     }
+    
     
 }

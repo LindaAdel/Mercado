@@ -9,29 +9,41 @@ import UIKit
 
 
 class itemsTableViewController: UIViewController {
-
     var subCategoryObj = SubCategory(subcategoryAPI: "", subcategoryName: "")
     var categoryName : String?
     
     @IBOutlet weak var itemsTableView: UITableView!
     
-    var itemsList:[homeAppliances] = [homeAppliances]()
-    var itemsViewModel : homeAppliancesViewModel!
+    var itemsList: [ItemProtocol] = []
+    var itemsViewModel : ItemsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         itemsTableView.delegate = self
         itemsTableView.dataSource = self
+        itemsViewModel = ItemsViewModel(subCategoryObj: self.subCategoryObj)
         
-        print(categoryName!)
-        itemsViewModel = homeAppliancesViewModel()
+        print("items view category name = \(categoryName!)")
+        print("items view subCategory =\(subCategoryObj.subcategoryName)")
+        itemsViewModel.fetchItemsDataFromAPI()
+//        itemsService().fetchItemsData(of: [personalCare].self,url:subCategoryObj.subcategoryAPI)
+//        itemsViewModel = homeAppliancesViewModel()
+      //  checkName()
         
-        itemsViewModel.bindhomeAppliancesViewModelToView = {
-                    
-            self.onSuccessUpdateView()
+
+        itemsViewModel.bindItemsToView = {
+                    (items) in
+            self.itemsList = items
+            self.itemsTableView.reloadData()
+            print("reloaded")
+            print(self.itemsList.count)
             
+       
+       
     }
+    
+    
        
         itemsViewModel.bindViewModelErrorToView = {
         
@@ -39,23 +51,19 @@ class itemsTableViewController: UIViewController {
         }
     }
   
-   func onSuccessUpdateView(){
-            itemsList = itemsViewModel.itemsData
-            self.itemsTableView.reloadData()
-            
-        }
-        
         
         func onFailUpdateView(){
             let alert = UIAlertController(title: "Error", message: itemsViewModel.showError, preferredStyle: .alert)
-            
+
             let okAction  = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
-                
-                
+
+
             }
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
- 
+
  }
     
 }
+
+

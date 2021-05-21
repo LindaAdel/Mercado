@@ -1,24 +1,25 @@
 //
-//  womenFashinePojo.swift
+//  makeUpPojo.swift
 //  Mercado
 //
 //  Created by Linda adel on 5/17/21.
 //
 
 import Foundation
-import UIKit
+import  UIKit
 
-struct womenBags: Codable {
+struct MakeUp : Codable,ItemProtocol {
     
-    var item_id: String?
-    var brand : String?
-    var color : String?
     var item_image: String?
     var item_price :String?
     var item_rating :String?
     var item_title : String?
-    var material : String?
+    var item_id: String?
+    var brand : String?
+    var item_description : String?
+    var color : String?
     var slider_images :[String?]
-    var type :String?
+    var weight : String?
+    var dimensions : String?
     
 }

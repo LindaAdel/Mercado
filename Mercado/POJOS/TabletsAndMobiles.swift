@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct tablets : Codable {
+struct TabletsAndMobiles : Codable,ItemProtocol {
     
     var item_image: String?
     var item_price :String?

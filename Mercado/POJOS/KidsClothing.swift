@@ -1,5 +1,5 @@
 //
-//  mobilesPojo.swift
+//  girlsClothing.swift
 //  Mercado
 //
 //  Created by Linda adel on 5/17/21.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct laptops : Codable {
+struct KidsClothing : Codable ,ItemProtocol {
     
     var item_image: String?
     var item_price :String?
@@ -16,13 +16,9 @@ struct laptops : Codable {
     var item_id: String?
     var color : String?
     var brand : String?
-    var slider_images :[String?]
-    var display_size :String?
-    var model : String?
-    var processor : String?
-    var operating_system : String?
-    var ram : String?
-    var storage :String?
-   
-
+    var slider_image :[String?]
+    var quality : String?
+    var size : String?
+  
+ 
 }
