@@ -24,8 +24,8 @@ class itemsTableViewController: UIViewController {
         itemsTableView.dataSource = self
         itemsViewModel = ItemsViewModel(subCategoryObj: self.subCategoryObj)
         
-        print("items view category name = \(categoryName!)")
-        print("items view subCategory =\(subCategoryObj.subcategoryName)")
+//        print("items view category name = \(categoryName!)")
+//        print("items view subCategory =\(subCategoryObj.subcategoryName)")
         itemsViewModel.fetchItemsDataFromAPI()
 //        itemsService().fetchItemsData(of: [personalCare].self,url:subCategoryObj.subcategoryAPI)
 //        itemsViewModel = homeAppliancesViewModel()
@@ -36,8 +36,8 @@ class itemsTableViewController: UIViewController {
                     (items) in
             self.itemsList = items
             self.itemsTableView.reloadData()
-            print("reloaded")
-            print(self.itemsList.count)
+          //  print("reloaded")
+          //  print(self.itemsList.count)
             
        
        

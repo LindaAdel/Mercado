@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct WomenBags: Codable,ItemProtocol{
+class WomenBags: ItemProtocol,Codable{
     
     var item_id: String?
     var brand : String?
@@ -18,7 +18,7 @@ struct WomenBags: Codable,ItemProtocol{
     var item_rating :String?
     var item_title : String?
     var material : String?
-    var slider_images :[String?]
+    var slider_images :[String]?
     var type :String?
     
 }

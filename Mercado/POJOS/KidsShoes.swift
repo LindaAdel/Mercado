@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-struct KidsShoes : Codable ,ItemProtocol{
+class KidsShoes : Codable ,ItemProtocol{
+ //   var type: String?//to conform
+    
     
     var item_image: String?
     var item_price :String?
@@ -16,8 +18,13 @@ struct KidsShoes : Codable ,ItemProtocol{
     var item_id: String?
     var color : String?
     var brand : String?
-    var slider_image :[String?]
+   // var slider_image :[String]?
     var size : String?
     var material : String?
+    var slider_images: [String]?
+    enum CodingKeys: String, CodingKey {
+           case slider_images = "slider_image"
+        case item_image,item_price,item_title,item_id,color,brand,size,material
+       }
  
 }

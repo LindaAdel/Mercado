@@ -9,5 +9,6 @@ target 'Mercado' do
  pod 'Alamofire'
  pod 'SDWebImage'
  pod 'ImageSlideshow'
+ pod "ImageSlideshow/Alamofire"
 
 end

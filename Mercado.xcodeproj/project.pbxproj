@@ -69,6 +69,7 @@
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
 		968F2AA52655AD3200441252 /* ScrollableProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */; };
 		96A2F3502655833900255A63 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F34F2655833900255A63 /* ProductDetailsViewController.swift */; };
+		96B5DEEF2658198D00B598CF /* ItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5DEEE2658198D00B598CF /* ItemProtocol.swift */; };
 		96B8C1BE263B6A7B008CCA50 /* LoginExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */; };
 		96B8C1C4263B6C53008CCA50 /* TextFieldErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */; };
 		96CD373C2651B7CA007B945F /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD373B2651B7CA007B945F /* GetStartedViewController.swift */; };
@@ -145,6 +146,7 @@
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
 		968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableProductDetailsViewController.swift; sourceTree = "<group>"; };
 		96A2F34F2655833900255A63 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		96B5DEEE2658198D00B598CF /* ItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProtocol.swift; sourceTree = "<group>"; };
 		96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtension.swift; sourceTree = "<group>"; };
 		96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldErrors.swift; sourceTree = "<group>"; };
 		96CD373B2651B7CA007B945F /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		2F4533D72629F7FB000FE74E /* Mercado */ = {
 			isa = PBXGroup;
 			children = (
+				96B5DEED2658197100B598CF /* Contracts */,
 				2F3C59822653E04E00D704D5 /* Models */,
 				2F8A8B20262F290100128FCD /* Views */,
 				96CD37542651C8BF007B945F /* ViewModels */,
@@ -298,6 +301,14 @@
 				968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */,
 			);
 			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		96B5DEED2658197100B598CF /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				96B5DEEE2658198D00B598CF /* ItemProtocol.swift */,
+			);
+			path = Contracts;
 			sourceTree = "<group>";
 		};
 		96B8C1BC263B6A04008CCA50 /* Extensions */ = {
@@ -572,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B5DEEF2658198D00B598CF /* ItemProtocol.swift in Sources */,
 				2F3C59842653E06F00D704D5 /* itemsService.swift in Sources */,
 				2F3C59BC2653F47C00D704D5 /* testURLS.swift in Sources */,
 				96CD373C2651B7CA007B945F /* GetStartedViewController.swift in Sources */,

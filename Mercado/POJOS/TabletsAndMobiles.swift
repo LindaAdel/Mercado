@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-struct TabletsAndMobiles : Codable,ItemProtocol {
+class TabletsAndMobiles : ItemProtocol,Codable {
+   // var type: String?// to conform
+    
     
     var item_image: String?
     var item_price :String?
@@ -24,6 +26,28 @@ struct TabletsAndMobiles : Codable,ItemProtocol {
     var rear_camera : String?
     var display : String?
     var battery_capacity : String?
-    var slider_images :[String?]
+    var slider_images :[String]?
+    
+    
+    
+//    enum CodingKeys: String, CodingKey {
+//
+//                   case
+//                        item_price ,
+//                        item_image,
+//                        item_title,
+//                        item_id,
+//                        color,
+//                        brand,
+//                        memory,
+//                        model,
+//                        processor ,
+//                        front_camera ,
+//                        connectivity,
+//                        rear_camera,
+//                        display ,
+//                        battery_capacity,
+//                        slider_images
+//    }
     
 }
