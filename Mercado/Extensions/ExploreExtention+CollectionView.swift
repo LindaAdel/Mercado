@@ -28,10 +28,14 @@ extension ExploreTabBarController: UICollectionViewDelegate, UICollectionViewDat
         cell.categoryName.text = categoriesArray[indexPath.row].categoryName
        
         
+        self.collectionView(categoriesCollectionView, didSelectItemAt: IndexPath(row: 0, section: 0))
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.collectionView(categoriesCollectionView, didDeselectItemAt: IndexPath(row: 0, section: 0))
         
          let cell = collectionView.cellForItem(at: indexPath)
          cell?.isSelected = true
