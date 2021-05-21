@@ -187,7 +187,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVX-l1-bMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-636.23188405797111" y="106.47321428571428"/>
+            <point key="canvasLocation" x="-596" y="-94"/>
         </scene>
         <!--ExploreScreen-->
         <scene sceneID="ehL-xk-pDr">
@@ -197,7 +197,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg1-bp-mBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="406"/>
+            <point key="canvasLocation" x="935" y="492"/>
         </scene>
         <!--Cart-->
         <scene sceneID="tFM-JF-UWx">
@@ -209,11 +209,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UOF-SC-gNk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cart" selectedImage="cart.fill.badge.plus" catalog="system" id="baq-en-wMM"/>
+                    <tabBarItem key="tabBarItem" title="Cart" image="cart.fill" catalog="system" selectedImage="cart.fill" id="baq-en-wMM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62w-3Z-g8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="727"/>
+            <point key="canvasLocation" x="1633" y="783"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="yFd-gV-tHU">
@@ -225,11 +225,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Uzo-RB-6kZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorite" selectedImage="suit.heart.fill" catalog="system" id="VGd-Ml-Z0x"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="suit.heart.fill" catalog="system" selectedImage="suit.heart.fill" id="VGd-Ml-Z0x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGa-XO-5DW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2452" y="727"/>
+            <point key="canvasLocation" x="2428" y="783"/>
         </scene>
         <!--Account-->
         <scene sceneID="lHy-1Z-bZj">
@@ -241,11 +241,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jCs-89-2qv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" selectedImage="person.fill" catalog="system" id="57u-N1-f9j"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="person.fill" catalog="system" selectedImage="person.fill" id="57u-N1-f9j"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4L-bX-jIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3217" y="727"/>
+            <point key="canvasLocation" x="3239" y="783"/>
         </scene>
         <!--Items Table View Controller-->
         <scene sceneID="Dh3-L9-FBI">
@@ -364,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3O-dH-bPI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-636" y="783"/>
+            <point key="canvasLocation" x="-597" y="783"/>
         </scene>
         <!--Shop-->
         <scene sceneID="Hlm-f2-C3i">
@@ -376,7 +376,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="l4K-5n-a10"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shop" selectedImage="house" catalog="system" id="nFG-EW-mDe"/>
+                    <tabBarItem key="tabBarItem" title="Shop" image="house" catalog="system" selectedImage="house" id="nFG-EW-mDe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCf-9F-2gA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -416,7 +416,7 @@
     </scenes>
     <resources>
         <image name="add-to-cart-B" width="24" height="24"/>
-        <image name="cart.fill.badge.plus" catalog="system" width="64" height="48"/>
+        <image name="cart.fill" catalog="system" width="64" height="50"/>
         <image name="carts" width="512" height="512"/>
         <image name="heart-2" width="24" height="24"/>
         <image name="house" catalog="system" width="64" height="54"/>

@@ -208,7 +208,7 @@
         <scene sceneID="vmu-oJ-atr">
             <objects>
                 <navigationController storyboardIdentifier="ExploreScreen" automaticallyAdjustsScrollViewInsets="NO" id="P3f-d7-BfW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" selectedImage="doc.text.magnifyingglass" catalog="system" id="C42-d4-P4B"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="doc.text.magnifyingglass" catalog="system" selectedImage="doc.text.magnifyingglass" id="C42-d4-P4B"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1WO-qf-FfN">
