@@ -7,19 +7,36 @@
 
 import UIKit
 import ImageSlideshow
-class ProductDetailsViewController: UIViewController {
+class ProductDetailsViewController: UIViewController
+{
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var slideShow: ImageSlideshow!
-    
+    @IBOutlet weak var itemTitleLabel: UILabel!
+    @IBOutlet weak var itemPriceLabel: UILabel!
+
+    var itemDetails : ItemProtocol!
+    var images = [InputSource]()
+    var categoryName : String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemPriceLabel.text = itemDetails.item_price!
+        itemTitleLabel.text = itemDetails.item_title!
+        
+        itemDetails.slider_images?.forEach{
+            image in
+          let img =  AlamofireSource(urlString: image)
+           
+            images.append(img!)
+        
+        }
+        slideShow.setImageInputs(images)
+        //Images Slide show
         slideShow.slideshowInterval = 5
-        slideShow.setImageInputs([
-            ImageSource(image: UIImage(named: "carts")!),
-            ImageSource(image: UIImage(named: "shopping")!),
-        ])
-        pageControl.numberOfPages = 2
+        pageControl.numberOfPages = images.count
         slideShow.pageIndicator = pageControl
+        
+        
+        NotificationCenter.default.post(name:NSNotification.Name(rawValue: "notify"),object:nil,userInfo:["items":itemDetails!,"categoryName":categoryName!])
     }
     
 

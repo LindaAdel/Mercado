@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (5.4.3)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
   - AppAuth (1.4.0):
     - AppAuth/Core (= 1.4.0)
     - AppAuth/ExternalUserAgent (= 1.4.0)
@@ -59,6 +61,9 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - ImageSlideshow (1.9.2):
     - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Alamofire (1.9.2):
+    - AlamofireImage (~> 4.0)
+    - ImageSlideshow/Core
   - ImageSlideshow/Core (1.9.2)
   - leveldb-library (1.22.1)
   - nanopb (2.30908.0):
@@ -77,11 +82,13 @@ DEPENDENCIES:
   - Firebase/Database
   - GoogleSignIn
   - ImageSlideshow
+  - ImageSlideshow/Alamofire
   - SDWebImage
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireImage
     - AppAuth
     - Firebase
     - FirebaseAuth
@@ -101,6 +108,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   Firebase: fffddd0bab8677d07376538365faa93ff3889b39
   FirebaseAuth: 675f2c4eb4426e7c58a78a89965a6530e7863535
@@ -118,6 +126,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 10c447778e8e4573f6da19efc79e19dd9f772f73
+PODFILE CHECKSUM: e1fafa2a71142ebf47564ebb48b9aca6f502e9ee
 
 COCOAPODS: 1.10.1
