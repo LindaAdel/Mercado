@@ -33,7 +33,7 @@ extension ExploreTabBarController: UITableViewDataSource, UITableViewDelegate {
         itemsVC.categoryName = self.categoryName!
         print("from home \(categoriesArray[indexPath.row].categoryName)")
         print(categoriesArray[indexPath.row])
-        self.present(itemsVC, animated: true, completion: nil)
+        self.navigationController!.pushViewController(itemsVC, animated: true)
         
     }
     

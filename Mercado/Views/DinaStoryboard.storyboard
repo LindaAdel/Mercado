@@ -89,16 +89,16 @@
             </objects>
             <point key="canvasLocation" x="-168.11594202898553" y="7.3660714285714279"/>
         </scene>
-        <!--Explore-->
+        <!--Explore Tab Bar Controller-->
         <scene sceneID="NMp-WS-N8Q">
             <objects>
-                <viewController storyboardIdentifier="ExploreScreen" id="ehL-uO-9Ok" customClass="ExploreTabBarController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ehL-uO-9Ok" customClass="ExploreTabBarController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HW0-bA-Tkz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT1-IV-TGR">
-                                <rect key="frame" x="20" y="74" width="158" height="29"/>
+                                <rect key="frame" x="20" y="118" width="158" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="k0J-1u-x5T"/>
                                 </constraints>
@@ -107,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-Lb-qgF">
-                                <rect key="frame" x="20" y="123" width="158" height="690"/>
+                                <rect key="frame" x="20" y="167" width="158" height="646"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dPU-1D-MEx">
                                     <size key="itemSize" width="154" height="125"/>
@@ -153,7 +153,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agV-QD-SGi">
-                                <rect key="frame" x="186" y="123" width="208" height="690"/>
+                                <rect key="frame" x="186" y="167" width="208" height="646"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="pmO-tV-bnv">
@@ -186,9 +186,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W0L-io-bQo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="doc.text.magnifyingglass" catalog="system" selectedImage="doc.text.magnifyingglass" id="C42-d4-P4B"/>
                     <navigationItem key="navigationItem" id="GQO-Eg-Rfx"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="JLF-Lb-qgF" id="lUx-x9-kNE"/>
                         <outlet property="subCategoriesTableView" destination="agV-QD-SGi" id="Fcu-Sj-HtI"/>
@@ -206,10 +204,11 @@
             </objects>
             <point key="canvasLocation" x="2102" y="-133"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Explore-->
         <scene sceneID="vmu-oJ-atr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3f-d7-BfW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ExploreScreen" automaticallyAdjustsScrollViewInsets="NO" id="P3f-d7-BfW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" image="doc.text.magnifyingglass" catalog="system" selectedImage="doc.text.magnifyingglass" id="C42-d4-P4B"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1WO-qf-FfN">
@@ -217,6 +216,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ehL-uO-9Ok" kind="relationship" relationship="rootViewController" id="ioW-gz-Phz"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SvI-I5-kPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
