@@ -65,6 +65,8 @@
 		2FE74B4326519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FE74B4426519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */; };
+		965C5CE2265899F300615A01 /* ProductDetailsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C5CE1265899F300615A01 /* ProductDetailsExtension.swift */; };
+		965C5CE826589B6E00615A01 /* ScrollableDetailsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C5CE726589B6E00615A01 /* ScrollableDetailsExtension.swift */; };
 		96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96603625262E39A900653D91 /* GoogleService-Info.plist */; };
 		966B2F82262F20D800667FF4 /* mayar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B2F81262F20D800667FF4 /* mayar.storyboard */; };
 		968F2AA52655AD3200441252 /* ScrollableProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */; };
@@ -142,6 +144,8 @@
 		2FE74B4126519400005D6AEA /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
 		2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		41444C1DBE14A501F8108FFA /* Pods-Mercado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.debug.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.debug.xcconfig"; sourceTree = "<group>"; };
+		965C5CE1265899F300615A01 /* ProductDetailsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsExtension.swift; sourceTree = "<group>"; };
+		965C5CE726589B6E00615A01 /* ScrollableDetailsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableDetailsExtension.swift; sourceTree = "<group>"; };
 		96603625262E39A900653D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966B2F81262F20D800667FF4 /* mayar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mayar.storyboard; sourceTree = "<group>"; };
 		968F2AA42655AD3200441252 /* ScrollableProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableProductDetailsViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +298,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		965C5CE626589B3D00615A01 /* ProductDetailsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				965C5CE1265899F300615A01 /* ProductDetailsExtension.swift */,
+				965C5CE726589B6E00615A01 /* ScrollableDetailsExtension.swift */,
+			);
+			path = ProductDetailsExtension;
+			sourceTree = "<group>";
+		};
 		968F2AAC2655C19000441252 /* ProductDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +327,7 @@
 		96B8C1BC263B6A04008CCA50 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				965C5CE626589B3D00615A01 /* ProductDetailsExtension */,
 				96B8C1BD263B6A7B008CCA50 /* LoginExtension.swift */,
 				2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */,
 				A9FE6DE42653371600C6624C /* ExploreExtention+CollectionView.swift */,
@@ -589,6 +603,7 @@
 				96CD373C2651B7CA007B945F /* GetStartedViewController.swift in Sources */,
 				2FA30FC42652E00900E59A77 /* TabletsAndMobiles.swift in Sources */,
 				2FA30F9E2652D03100E59A77 /* PersonalCare.swift in Sources */,
+				965C5CE2265899F300615A01 /* ProductDetailsExtension.swift in Sources */,
 				96CD37462651B7DC007B945F /* SignUpTableViewController.swift in Sources */,
 				2F3C59542653DDEA00D704D5 /* itemTableExtension.swift in Sources */,
 				2FA30FCB2652E6F400E59A77 /* Laptops.swift in Sources */,
@@ -610,6 +625,7 @@
 				2FA30FDF2652F7A400E59A77 /* KidsClothing.swift in Sources */,
 				2F4533DB2629F7FB000FE74E /* SceneDelegate.swift in Sources */,
 				2FA30FD82652F07000E59A77 /* LaptopBags.swift in Sources */,
+				965C5CE826589B6E00615A01 /* ScrollableDetailsExtension.swift in Sources */,
 				2FA30FBD2652DA9C00E59A77 /* MakeUp.swift in Sources */,
 				A9FE6DEB265349B800C6624C /* CategoriesCollectionViewCell.swift in Sources */,
 				2FE74B4226519400005D6AEA /* StyleSheet.swift in Sources */,

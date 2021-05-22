@@ -21,4 +21,28 @@ import Foundation
     @objc optional  var color : String? {get}
     @objc optional var type : String? {get}
     @objc optional var size : String?{get}
+    //home appliances
+    @objc optional var country : String?{get}
+    @objc optional var power :String?{get}
+    @objc optional var item_capacity :String?{get}
+    
+    //mobiles and tablets
+    @objc optional var memory : String? {get}
+    @objc optional var processor : String?{get}
+    @objc optional var front_camera : String?{get}
+    @objc optional var connectivity : String?{get}
+    @objc optional var battery_capacity : String?{get}
+    @objc optional var rear_camera : String?{get}
+    
+    //laptops
+    @objc optional var display_size :String?{get}
+    @objc optional var model : String?{get}
+    @objc optional var operating_system : String?{get}
+    @objc optional var ram : String?{get}
+    @objc optional var storage :String?{get}
+    
+    //laptops bags
+    @objc optional var compatible_with : String?{get}
+    @objc optional var warranty_years : String?{get}
+    @objc optional var water_resistant : String?{get}
 }
