@@ -61,7 +61,7 @@ extension ScrollableProductDetailsViewController
             }
             switch data["categoryName"] as! String{
             case "Personal Care":
-                itemSizeLabel.text = "Featue"
+                itemSizeLabel.text = "Features"
                 itemTypeLabel.text = "Model Number"
                 itemSizeLabelValue.text = item.item_features as? String
                 itemTypeLabelValue.text = item.model_number as? String
