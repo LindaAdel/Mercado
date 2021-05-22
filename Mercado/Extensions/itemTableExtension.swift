@@ -35,8 +35,8 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
         let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "productDetails") as! ProductDetailsViewController
         detailsVC.categoryName = self.categoryName
         detailsVC.itemDetails=itemsList[indexPath.row]
-        detailsVC.subCategoryName = subCategoryObj.subcategoryName
-        self.navigationController!.pushViewController(detailsVC, animated: true)
+        detailsVC.modalPresentationStyle = .fullScreen
+        self.present(detailsVC, animated: true, completion: nil)
         
     }
 }
