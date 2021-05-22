@@ -10,7 +10,7 @@ import UIKit
 
 class TabletsAndMobiles : ItemProtocol,Codable {
    // var type: String?// to conform
-    
+
     
     var item_image: String?
     var item_price :String?

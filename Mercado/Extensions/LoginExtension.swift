@@ -9,24 +9,61 @@ import Foundation
 import UIKit
 import GoogleSignIn
 import Firebase
+class PasswordTextField: UITextField {
+
+    override var isSecureTextEntry: Bool {
+        didSet {
+            if isFirstResponder {
+                _ = becomeFirstResponder()
+            }
+        }
+    }
+
+    override func becomeFirstResponder() -> Bool {
+
+        let success = super.becomeFirstResponder()
+        if isSecureTextEntry, let text = self.text {
+            self.text?.removeAll()
+            insertText(text)
+        }
+        return success
+    }
+
+}
 extension LoginTableViewController
 {
     func showAndHidePasswordIcon()
     {
+        print("outsidedd\(passwordTextField.clearsOnBeginEditing)")
         if !passwordTextField.text!.isEmpty
         {
+            print("inside\(passwordTextField.clearsOnBeginEditing)")
           passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+            
         //check if user show password
         if(!passwordTextField.isSecureTextEntry)
         {
+//            if passwordTextField.isSecureTextEntry
+//            {
+//                passwordTextField.clearsOnBeginEditing = false;
+//                passwordTextField.clearsOnInsertion = false
+//            }
+            print("show\(passwordTextField.clearsOnBeginEditing)")
             showPasswordButton.setImage(UIImage(named: "showPassword"),for: .normal)
         }
         //hide password
         else
         {
+//            if passwordTextField.isSecureTextEntry
+//            {
+//                passwordTextField.clearsOnBeginEditing = false;
+//                passwordTextField.clearsOnInsertion = false
+//            }
+            print("hide \(passwordTextField.clearsOnBeginEditing)")
             showPasswordButton.setImage(UIImage(named: "securePassword"),for: .normal)
         }
         }
+
     }
     //alert dialog
     func showAlert(title:String,message:String){

@@ -19,7 +19,7 @@ class HomeAppliances :ItemProtocol ,Codable{
     var type: String?
     var color : String?
     var country : String?
-    var item_Features : String?
+    var item_features : String?
    // var item_brand : String?
     var item_capacity :String?
     var item_title : String?
@@ -34,7 +34,8 @@ class HomeAppliances :ItemProtocol ,Codable{
     enum CodingKeys: String, CodingKey {
            case brand = "item_brand"
         case type = "item_type"
-        case country,item_image,item_price,item_title,item_id,color,item_capacity,item_Features,model_number,power,
+        case item_features = "item_Features"
+        case country,item_image,item_price,item_title,item_id,color,item_capacity,model_number,power,
              slider_images
         
        }
