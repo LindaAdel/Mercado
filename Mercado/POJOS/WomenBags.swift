@@ -20,5 +20,6 @@ class WomenBags: ItemProtocol,Codable{
     var material : String?
     var slider_images :[String]?
     var type :String?
+    var price_afterSale : String?
     
 }

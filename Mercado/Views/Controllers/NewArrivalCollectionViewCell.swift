@@ -1,30 +1,27 @@
 //
-//  CategoriesCollectionViewCell.swift
+//  NewArrivalCollectionViewCell.swift
 //  Mercado
 //
-//  Created by Dina ElShabassy on 5/18/21.
+//  Created by Dina ElShabassy on 5/23/21.
 //
 
 import UIKit
 
-class CategoriesCollectionViewCell: UICollectionViewCell {
-   
-    @IBOutlet weak var categoryIcon: UIImageView!
-    @IBOutlet weak var categoryName: UILabel!
+class NewArrivalCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemPrice: UILabel!
+    @IBOutlet weak var itemTitle: UILabel!
+    @IBOutlet weak var price_beforeSale: UILabel!
     
-    
-    override var isSelected: Bool {
-        
-        didSet {
-            if self.isSelected{
-                categoryName.textColor = UIColor(red: 69/255, green: 165/255, blue: 98/255, alpha: 1.0)
-                self.backgroundColor? = .white
-                
-            }
-            else{
-                self.backgroundColor? = UIColor(red: 224/255, green: 255/255, blue: 225/255, alpha: 1.0)
-                categoryName.textColor = .black
-            }
+    @IBOutlet weak var favBtn: UIButton!
+    var isFavourite : Bool = false
+    @IBAction func favBtnAction(_ sender: UIButton) {
+        if isFavourite{
+            favBtn.setImage(UIImage(named: "heart-2"), for: .normal)
+            isFavourite = false
+        }else{
+            favBtn.setImage(UIImage(named: "heart"), for: .normal)
+            isFavourite = true
         }
     }
     
@@ -48,6 +45,5 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
     }
-    
     
 }

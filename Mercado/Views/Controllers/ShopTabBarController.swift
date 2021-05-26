@@ -6,16 +6,107 @@
 //
 
 import UIKit
+import ImageSlideshow
+import Firebase
 
 class ShopTabBarController: UIViewController {
+
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var imageSlider: ImageSlideshow!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var newArrivalCollectionView: UICollectionView!
+    @IBOutlet weak var exclusiveOffersCollectionView: UICollectionView!
+    var images = [InputSource]()
+    
+    var newArrival_array : [ItemProtocol]!
+    var newArrival_infoArray : [NewArrival]!
+    var exclusive0ffers_infoArray : [NewArrival]!
+    var exclusiveOffers_array : [ItemProtocol]!
+    var newArrivalViewModel : NewArrivalViewModel!
+    var exclusiveViewModel : ExclusiveOffersViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print("ahlan")
+        newArrivalViewModel = NewArrivalViewModel()
+        exclusiveViewModel = ExclusiveOffersViewModel()
+
+        scrollView.isScrollEnabled = true
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
+
+        showSliderImages()
+
+        newArrivalCollectionView.delegate = self
+        newArrivalCollectionView.dataSource = self
+
+        exclusiveOffersCollectionView.delegate = self
+        exclusiveOffersCollectionView.dataSource = self
+
+        newArrivalViewModel.fetchAllNewArrivalItems()
+        newArrival_array = [ItemProtocol]()
+        newArrival_infoArray = [NewArrival]()
+        exclusive0ffers_infoArray = [NewArrival]()
+
+        newArrivalViewModel.bindItemsToView = {
+                (newArrrivalInfo,data) in
+            if let itemData = data{
+                //print(itemData.item_price)
+                self.newArrival_array.append(itemData)
+                DispatchQueue.main.async {
+                    self.newArrivalCollectionView.reloadData()
+                }
+            }
+
+            if let itemDetails = newArrrivalInfo{
+                self.newArrival_infoArray.append(itemDetails)
+            }
+
+       }
+
+        exclusiveViewModel.fetchAllExclusiveOffersItems()
+        exclusiveOffers_array = [ItemProtocol]()
+
+         exclusiveViewModel.bindItemsToView = {
+                 (exclusiveOffersInfo,item) in
+             if let itemData = item{
+                 //print(itemData.item_price)
+                 self.exclusiveOffers_array.append(itemData)
+                 DispatchQueue.main.async {
+                     self.exclusiveOffersCollectionView.reloadData()
+                 }
+             }
+
+            if let itemInfo = exclusiveOffersInfo{
+                self.exclusive0ffers_infoArray.append(itemInfo)
+            }
+        }
+
+
+               
     }
     
+    func showSliderImages() {
+        
+        //loop in images slider array and get it from alamofire
+        URLs.flashSaleImages.forEach{
+            image in
+          let img =  AlamofireSource(urlString: image)
+           
+            images.append(img!)
+        
+        }
+        //fit size of image
+        imageSlider.contentScaleMode = UIViewContentMode.scaleAspectFill
+        //set image to slider
+        imageSlider.setImageInputs(images)
+        //Images Slide show
+        imageSlider.slideshowInterval = 5
+        pageControl.numberOfPages = images.count
+        imageSlider.pageIndicator = pageControl
+    }
 
     /*
     // MARK: - Navigation
