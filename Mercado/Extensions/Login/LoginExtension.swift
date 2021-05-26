@@ -65,24 +65,26 @@ extension LoginTableViewController
         }
 
     }
-    //alert dialog
-    func showAlert(title:String,message:String){
-        let resetFailedAlert = UIAlertController(title: title, message: "\( String(describing: message))", preferredStyle: .alert)
-        resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(resetFailedAlert, animated: true, completion: nil)
-    }
+//    //alert dialog
+//    func showAlert(title:String,message:String){
+//        let resetFailedAlert = UIAlertController(title: title, message: "\( String(describing: message))", preferredStyle: .alert)
+//        resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//        self.present(resetFailedAlert, animated: true, completion: nil)
+//    }
 //firebase resetpassword
 func firebaseResetPassword()
 {
+    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
     Auth.auth().sendPasswordReset(withEmail: emailTextField.text!, completion: { (error) in
                 if error != nil{
                     print("\(String(describing: error!.localizedDescription) )")
                     //display alert with error message
-                    self.showAlert(title: "Reset Failed",message: error!.localizedDescription)
+                    Alert().showAlert(alertTitle: "Reset Failed", alertMessage: error!.localizedDescription, alertActionOne: okAction, alertActionTwo: nil, Self: self)
                     
                 }else {
                     //display error with successfull message
-                    self.showAlert(title:"Reset email sent successfully",message: "Check your email")
+                    Alert().showAlert(alertTitle: "Reset email sent successfully", alertMessage: "Check your email", alertActionOne: okAction, alertActionTwo: nil, Self: self)
+                    
                 }
             })
  }
@@ -97,7 +99,9 @@ func firebaseResetPassword()
                print(error.localizedDescription)
                } else {
                print("Login Successful.")
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
+//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
+//                self.present(vc, animated: true, completion: nil)
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "account") as! AccountViewController
                 self.present(vc, animated: true, completion: nil)
                
                }
@@ -158,7 +162,9 @@ func firebaseResetPassword()
                        }
                      } else {
                        print("User signs in successfully")
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
+//                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
+//                        self.present(vc, animated: true, completion: nil)
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "account") as! AccountViewController
                         self.present(vc, animated: true, completion: nil)
                       // let userInfo = Auth.auth().currentUser
                     //   let email = userInfo?.email

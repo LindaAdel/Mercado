@@ -10,5 +10,6 @@ target 'Mercado' do
  pod 'SDWebImage'
  pod 'ImageSlideshow'
  pod "ImageSlideshow/Alamofire"
+ pod 'Firebase/Storage'
 
 end
