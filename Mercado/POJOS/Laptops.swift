@@ -25,7 +25,6 @@ class Laptops : Codable ,ItemProtocol {
     var operating_system : String?
     var ram : String?
     var storage :String?
-    var price_afterSale : String?
    
 //    enum CodingKeys: String, CodingKey {
 //

@@ -27,7 +27,6 @@ class SkinCare : ItemProtocol,Codable {
     var size : String?
     var recommended_use : String?
     var texture : String?
-    var price_afterSale : String?
     
 //    enum CodingKeys: String, CodingKey {
 //

@@ -14,7 +14,6 @@ import Foundation
     var item_id: String? {get}
     var brand : String? {get}
     @objc optional var item_description : String?{get}
-    @objc optional var price_afterSale : String?{get}
     @objc optional var texture : String?{get}
     @objc optional var item_features : String?{get}
     @objc optional var model_number : String?{get}
