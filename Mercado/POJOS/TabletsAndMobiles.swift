@@ -27,6 +27,7 @@ class TabletsAndMobiles : ItemProtocol,Codable {
     var display : String?
     var battery_capacity : String?
     var slider_images :[String]?
+    var price_afterSale : String?
     
     
     
