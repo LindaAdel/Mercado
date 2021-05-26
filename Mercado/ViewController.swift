@@ -9,9 +9,7 @@ import UIKit
 import Firebase
 class ViewController: UIViewController {
 
-    @IBAction func logout(_ sender: Any) {
-        try! Auth.auth().signOut()
-    }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
