@@ -9,46 +9,37 @@ import UIKit
 
 
 class itemsTableViewController: UIViewController {
-    
-    var subCategoryObj = SubCategory(subcategoryAPI: "", subcategoryName: "" ,itemSubCategoryName: "" )
-  //  var CategoryObj =
+    var subCategoryObj = SubCategory(subcategoryAPI: "", subcategoryName: "")
     var categoryName : String?
-    var itemcategoryName : String?
-    //var item_id : String?
-    var searchingItem = [ItemProtocol]()
-    var isSearching : Bool = false
-    var favoriteItem = Favorite()
     
-    var itemIsFavorite : Bool = false
-    
-    
-    @IBOutlet weak var itemsSearchBar: UISearchBar!
     @IBOutlet weak var itemsTableView: UITableView!
     
-    var itemsList: [ItemProtocol]!
+    var itemsList: [ItemProtocol] = []
     var itemsViewModel : ItemsViewModel!
-    var itemService : itemsService!
-  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     //   print(itemcategoryName)
-        
+
         itemsTableView.delegate = self
         itemsTableView.dataSource = self
-        
         itemsViewModel = ItemsViewModel(subCategoryObj: self.subCategoryObj)
-        itemsList = [ItemProtocol]()
-        itemService = itemsService()
+        
+//        print("items view category name = \(categoryName!)")
+//        print("items view subCategory =\(subCategoryObj.subcategoryName)")
         itemsViewModel.fetchItemsDataFromAPI()
-       
+//        itemsService().fetchItemsData(of: [personalCare].self,url:subCategoryObj.subcategoryAPI)
+//        itemsViewModel = homeAppliancesViewModel()
+      //  checkName()
         
 
         itemsViewModel.bindItemsToView = {
                     (items) in
             self.itemsList = items
             self.itemsTableView.reloadData()
-     
+          //  print("reloaded")
+          //  print(self.itemsList.count)
+            
+       
        
     }
     
@@ -58,9 +49,6 @@ class itemsTableViewController: UIViewController {
         
             self.onFailUpdateView()
         }
-        
-        
-        
     }
   
         

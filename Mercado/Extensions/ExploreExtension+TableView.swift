@@ -17,7 +17,7 @@ extension ExploreTabBarController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        tableView.layer.cornerRadius = 15
+        tableView.layer.cornerRadius = 7
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = subCatgeoryArray[indexPath.row].subcategoryName
@@ -31,7 +31,6 @@ extension ExploreTabBarController: UITableViewDataSource, UITableViewDelegate {
         itemsVC.modalPresentationStyle = .fullScreen
         itemsVC.subCategoryObj = subCatgeoryArray[indexPath.row]
         itemsVC.categoryName = self.categoryName!
-        itemsVC.itemcategoryName = self.itemcategoryName!
         print("from home \(categoriesArray[indexPath.row].categoryName)")
         print(categoriesArray[indexPath.row])
         self.navigationController!.pushViewController(itemsVC, animated: true)

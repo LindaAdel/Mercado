@@ -20,7 +20,8 @@ extension ExploreTabBarController: UICollectionViewDelegate, UICollectionViewDat
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CategoriesCollectionViewCell
         
-     
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.layer.cornerRadius = 7.0
         
         cell.categoryIcon.sd_setImage(with: URL(string: categoriesArray[indexPath.row].categoryIcon))
 
@@ -42,8 +43,7 @@ extension ExploreTabBarController: UICollectionViewDelegate, UICollectionViewDat
         subCatgeoryArray = categoriesArray[indexPath.row].subCategories
         subCategoriesTableView.reloadData()
         categoryName = categoriesArray[indexPath.row].categoryName
-        itemcategoryName = categoriesArray[indexPath.row].itemsCategoryName
-        print("hh \(itemcategoryName!)")
+        print("hh \(categoryName!)")
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath){
