@@ -44,13 +44,14 @@ class LoginTableViewController: UITableViewController,GIDSignInDelegate
         signUpView.modalPresentationStyle = .fullScreen
         self.present(signUpView, animated: true, completion: nil)
     }
-    
+   
  
     override func viewDidLoad()
     {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController=self
         GIDSignIn.sharedInstance().delegate = self
+       
      //   print(Auth.auth().currentUser?.email!)
         
         //self.tableView.alwaysBounceVertical=false
