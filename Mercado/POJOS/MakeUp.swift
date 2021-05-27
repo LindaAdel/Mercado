@@ -23,6 +23,7 @@ class MakeUp :ItemProtocol , Codable{
     var slider_images :[String]?
     var weight : String?
     var dimensions : String?
+    var price_afterSale : String?
     
 //    enum CodingKeys: String, CodingKey {
 //

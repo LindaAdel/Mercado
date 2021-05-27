@@ -22,13 +22,14 @@ class KidsClothing : Codable ,ItemProtocol {
     var item_id: String?
     var color : String?
     var brand : String?
+    var price_afterSale : String?
   //  var slider_image :[String]?
     // var quality : String? //material
     var size : String?
     enum CodingKeys: String, CodingKey {
            case slider_images = "slider_image"
          case material = "quality"
-        case item_image,item_price,item_title,item_id,color,brand,size
+        case item_image,item_price,item_title,item_id,color,brand,size,price_afterSale
         
        }
   
