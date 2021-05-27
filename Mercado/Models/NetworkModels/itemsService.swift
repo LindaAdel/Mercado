@@ -15,6 +15,8 @@ class itemsService{
     var ref : DatabaseReference! = Database.database().reference()
     let userID = Auth.auth().currentUser?.uid
     let favorite : String = "favorite"
+   // var refHandle = DatabaseHandle()
+   
     
     func fetchItemsData<T:Codable>(of:T.Type,url:String,completion : @escaping (T?, Error?)->()){
 
@@ -28,7 +30,6 @@ class itemsService{
 
                        }
 
-                    
                     case .failure(let error):
                         print(error)
                         completion(nil , error)
@@ -52,4 +53,26 @@ class itemsService{
             ref?.child("favorite").child(userID!).child(itemId!).removeValue()
         }
     
+    func fetchItemIsFavoriteData(itemId : String ,completion : @escaping ( Bool , Error?)->()){
+       
+    self.ref.child("favorite").child(userID!).child(itemId).getData { (error, Datasnapshot) in
+       
+       
+            if let error = error {
+                completion(false , error)
+                print("Error getting data \(error)")
+            }
+            else {
+                completion(Datasnapshot.exists(),nil)
+            }
+        
+    }
+       
+    }
+//refHandle = self.ref.child("favorite").child(userID!).child(itemId).observe(.value, with: { (DataSnapshot) in
+//
+//    let value = DataSnapshot.exists()
+//    print(value)
+//    completion(value,nil)
+//})
 }

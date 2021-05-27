@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 class Laptops : Codable ,ItemProtocol {
-  //  var type: String?//to conform
-    
-    
+ 
     var item_image: String?
     var item_price :String?
     var item_title : String?
@@ -27,20 +25,5 @@ class Laptops : Codable ,ItemProtocol {
     var storage :String?
     var price_afterSale : String?
    
-//    enum CodingKeys: String, CodingKey {
-//
-//           case item_image,
-//                item_price ,
-//                item_title,
-//                item_id,
-//                color ,
-//                brand ,
-//                slider_images ,
-//                display_size,
-//                model ,
-//                processor ,
-//                operating_system ,
-//                ram ,
-//                storage
-//    }
+
 }

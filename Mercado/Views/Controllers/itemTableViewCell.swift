@@ -9,7 +9,7 @@ import UIKit
 
 class itemTableViewCell: UITableViewCell {
 
-    var isFavorite : Bool = false
+   // var isFavorite : Bool = false
     
     @IBOutlet weak var cellItemImage: UIImageView!
     
@@ -37,14 +37,14 @@ class itemTableViewCell: UITableViewCell {
     
     @IBAction func addToFavoriteBtnTapped(_ sender: Any) {
         
-        if isFavorite {
-            cellAddToFavorite.setImage(UIImage(named: "heart-2"), for: .normal)
-            isFavorite = false
-        }else{
-            cellAddToFavorite.setImage(UIImage(named: "heart"), for: .normal)
-            isFavorite = true
-        }
-        
+//        if isFavorite {
+//            cellAddToFavorite.setImage(UIImage(named: "unfavorite"), for: .normal)
+//            isFavorite = false
+//        }else{
+//            cellAddToFavorite.setImage(UIImage(named: "favorite"), for: .normal)
+//            isFavorite = true
+//        }
+//        
     }
     
     

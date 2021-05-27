@@ -7,11 +7,6 @@
 
 import Foundation
 
-//class mode{
-//    var arr:[ItemProtocol]
-//    arr = [HomeAppliances]
-//    print(arr.item_title)
-//}
 
 class HomeAppliances :ItemProtocol ,Codable{
     
@@ -20,12 +15,10 @@ class HomeAppliances :ItemProtocol ,Codable{
     var color : String?
     var country : String?
     var item_features : String?
-   // var item_brand : String?
     var item_capacity :String?
     var item_title : String?
     var item_image: String?
     var item_price : String?
-  //  var item_type :String?
     var model_number : String?
     var power :String?
     var slider_images :[String]?

@@ -17,10 +17,10 @@ class NewArrivalCollectionViewCell: UICollectionViewCell {
     var isFavourite : Bool = false
     @IBAction func favBtnAction(_ sender: UIButton) {
         if isFavourite{
-            favBtn.setImage(UIImage(named: "heart-2"), for: .normal)
+            favBtn.setImage(UIImage(named: "unfavorite"), for: .normal)
             isFavourite = false
         }else{
-            favBtn.setImage(UIImage(named: "heart"), for: .normal)
+            favBtn.setImage(UIImage(named: "favorite"), for: .normal)
             isFavourite = true
         }
     }

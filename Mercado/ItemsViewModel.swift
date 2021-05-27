@@ -39,20 +39,18 @@ class ItemsViewModel: NSObject
         
     }
     
-
-   
     var bindViewModelErrorToView : (()->()) = {}
+    var bindItemFavoriteToView : ((Bool,Int)->()) = {_,_ in}
     var bindItemsToView: (([ItemProtocol])->()) = {_ in }
     
 
     
     init(subCategoryObj : SubCategory) {
         super.init()
-     
+        
         self.itemService = itemsService()
         self.subCategoryObj = subCategoryObj
-       
-    
+
     }
 
     
@@ -131,6 +129,18 @@ class ItemsViewModel: NSObject
             print("no sub category found")
         }
         
+    }
+    func itemIsFavoriteValue(itemIdValue : String , index : Int){
+        itemService.fetchItemIsFavoriteData(itemId: itemIdValue) { (isFav, error) in
+            if let error : Error = error{
+                
+                let message = error.localizedDescription
+                self.showError = message
+                
+            }else{
+                self.bindItemFavoriteToView(isFav,index)
+            }
+        }
     }
   
 }

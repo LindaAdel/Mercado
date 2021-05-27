@@ -9,16 +9,14 @@ import Foundation
 import UIKit
 
 class KidsShoes : Codable ,ItemProtocol{
- //   var type: String?//to conform
-    
-    
+
+   
     var item_image: String?
     var item_price :String?
     var item_title : String?
     var item_id: String?
     var color : String?
     var brand : String?
-   // var slider_image :[String]?
     var size : String?
     var material : String?
     var slider_images: [String]?

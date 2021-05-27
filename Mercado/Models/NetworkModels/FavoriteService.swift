@@ -16,8 +16,9 @@ class FavoriteService{
 
     
     func fetchFavoriteData(completion : @escaping ([Favorite]?, Error?)->()){
-                  
+       
         self.ref.child("favorite").child(userID!).getData { (error, Datasnapshot) in
+        self.firebaseFav.removeAll()
         if let error = error {
             completion(nil , error)
         print("Error getting data \(error)")
@@ -33,14 +34,14 @@ class FavoriteService{
             favObj.subcategoryName = favDataObj["subCategory"] as? String
             print(favObj)
             self.firebaseFav.append(favObj)
-            
+     
           }
             completion(self.firebaseFav,nil)
         
         }
         else {
         print("No data available")
-           
+
            }
          }
         }

@@ -37,9 +37,10 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
    //if(tableView == FavoriteTableView){
     let favcell = FavoriteTableView.dequeueReusableCell(withIdentifier: "favcell", for: indexPath) as! FavoriteTableViewCell
         favcell.favImageCell.sd_setImage(with: URL(string: favoriteList[indexPath.row].item_image!))
+       
         favcell.favTitleCell.text = favoriteList[indexPath.row].item_title
-        favcell.favPriceCell.text = favoriteList[indexPath.row].item_price
-        favcell.unFavorite.addTarget(self, action: #selector(navigation), for: .touchUpInside)
+        favcell.favPriceCell.text = "EGP \(favoriteList[indexPath.row].item_price!)"
+        favcell.unFavorite.addTarget(self, action: #selector(unFavoriteBtn), for: .touchUpInside)
                
     return favcell
        
@@ -51,10 +52,25 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
           return 155
         
       }
-    @objc func navigation(sender : UIButton)
+    @objc func unFavoriteBtn(sender : UIButton)
     {
-        
+        let indexp = IndexPath(row: sender.tag, section: 0)
+        var cellFavoriteItem : Favorite = Favorite()
+        itemcategoryName = favoriteItemInfoArr[indexp.row].categoryName
+        cellFavoriteItem.categoryName = self.itemcategoryName
+        cellFavoriteItem.subcategoryName = subCategoryObj.itemSubCategoryName
+        cellFavoriteItem.item_id = favoriteItemInfoArr[indexp.row].item_id
+        let verifyAlert = UIAlertController(title: "Alert", message: " are you sure you want to unfavorite this item ", preferredStyle: .alert)
+        verifyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            self.itemService.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
+            self.favoriteList.remove(at: indexp.row)
+            self.favoriteItemInfoArr.remove(at: indexp.row)
+            self.FavoriteTableView.reloadData()
+        }))
+        verifyAlert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
+        self.present(verifyAlert, animated: true, completion: nil)
     }
+    
     
    
 }

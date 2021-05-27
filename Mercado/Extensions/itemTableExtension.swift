@@ -19,7 +19,9 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
         detailsVC.categoryName = self.categoryName
         detailsVC.itemDetails=itemsList[indexPath.row]
         detailsVC.subCategoryName = subCategoryObj.subcategoryName
-        self.navigationController!.pushViewController(detailsVC, animated: true)
+        //detailsVC.modalPresentationStyle = .fullScreen
+        self.present(detailsVC, animated: true, completion: nil)
+       // self.navigationController!.pushViewController(detailsVC, animated: true)
         
     }
     
@@ -40,15 +42,29 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
             cell.cellItemTitle.text = searchingItem[indexPath.row].item_title!
             cell.cellItemPrice.text = searchingItem[indexPath.row].item_price!
             cell.cellAddToFavorite.tag = indexPath.row
-            cell.cellAddToFavorite.addTarget(self, action: #selector(navigation), for: .touchUpInside)
-            cell.isFavorite = false
+            cell.cellAddToFavorite.addTarget(self, action: #selector(favoriteBtnAction), for: .touchUpInside)
+           
           } else {
             cell.cellItemImage.sd_setImage(with: URL(string: self.itemsList[indexPath.row].item_image!))
             cell.cellItemTitle.text = itemsList[indexPath.row].item_title!
-            cell.cellItemPrice.text = itemsList[indexPath.row].item_price!
+            cell.cellItemPrice.text = "EGP \(itemsList[indexPath.row].item_price!)"
             cell.cellAddToFavorite.tag = indexPath.row
-            cell.cellAddToFavorite.addTarget(self, action: #selector(navigation), for: .touchUpInside)
-            cell.isFavorite = false
+            cell.cellAddToFavorite.addTarget(self, action: #selector(favoriteBtnAction), for: .touchUpInside)
+//            if ((self.itemIsFavoriteArr[indexPath.row]?.isFavorite!) != nil){
+//                cell.cellAddToFavorite.setImage(UIImage(named: "favorite"), for: .normal)
+//
+//            }else {
+//
+//                cell.cellAddToFavorite.setImage(UIImage(named: "unfavorite"), for: .normal)
+//            }
+            if let favFlag = self.itemIsFavoriteArr[indexPath.row]{
+                if favFlag.isFavorite! {
+                    cell.cellAddToFavorite.setImage(UIImage(named: "favorite"), for: .normal)
+                }else {
+                    cell.cellAddToFavorite.setImage(UIImage(named: "unfavorite"), for: .normal)
+                }
+            }
+           
           }
  
         return cell
@@ -59,23 +75,32 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
         
       }
     
-    @objc func navigation(sender : UIButton)
+    @objc func favoriteBtnAction(sender : UIButton)
         {
            let indexp = IndexPath(row: sender.tag, section: 0)
-  
         var cellFavoriteItem : Favorite = Favorite()
         cellFavoriteItem.categoryName = self.itemcategoryName
         cellFavoriteItem.subcategoryName = subCategoryObj.itemSubCategoryName
         cellFavoriteItem.item_id = itemsList[indexp.row].item_id
-        if itemIsFavorite {
-            itemService.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
-            itemIsFavorite = false
-        }else{
-            itemService.addItemsToFavorites(favoriteItem: cellFavoriteItem)
-            itemIsFavorite = true
+        
+//        if ((self.itemIsFavoriteArr[indexp.row]?.isFavorite!) != nil){
+//            itemService.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
+//            self.itemIsFavoriteArr[indexp.row]?.isFavorite = false
+//
+//        }else{
+//            itemService.addItemsToFavorites(favoriteItem: cellFavoriteItem)
+//            self.itemIsFavoriteArr[indexp.row]?.isFavorite = true
+//        }
+        if let favFlag = self.itemIsFavoriteArr[indexp.row]{
+            if favFlag.isFavorite! {
+                itemService.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
+                self.itemIsFavoriteArr[indexp.row]?.isFavorite = false
+            }else {
+                itemService.addItemsToFavorites(favoriteItem: cellFavoriteItem)
+                self.itemIsFavoriteArr[indexp.row]?.isFavorite = true
+            }
         }
-       
-       
+        self.itemsTableView.reloadData()
         }
 }
 

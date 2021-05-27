@@ -11,11 +11,14 @@ class FavoriteTableViewController: UIViewController {
     var subCategoryObj = SubCategory(subcategoryAPI: "", subcategoryName: ""
         , itemSubCategoryName: "")
     var categoryName : String?
+    var itemcategoryName : String?
     var favoriteItemInfoArr : [Favorite]!
     var itemId : String?
+    var favoriteItem = Favorite()
     var subCategoryName : String?
     var favoriteList : [ItemProtocol]!
     var favoriteViewModel : FavoriteViewModel!
+    var itemService : itemsService!
     
  
     @IBOutlet weak var FavoriteTableView: UITableView!
@@ -30,6 +33,7 @@ class FavoriteTableViewController: UIViewController {
         favoriteViewModel = FavoriteViewModel()
         favoriteList = [ItemProtocol]()
         favoriteItemInfoArr = [Favorite]()
+        itemService = itemsService()
         
         favoriteViewModel.bindItemsToView = {
                 (favitem,item) in
@@ -64,7 +68,7 @@ class FavoriteTableViewController: UIViewController {
  }
     override func viewWillAppear(_ animated: Bool) {
         self.favoriteList.removeAll()
-       // self.FavoriteTableView.reloadData()
+        self.FavoriteTableView.reloadData()
         favoriteViewModel.fetchFavorite()
     }
     

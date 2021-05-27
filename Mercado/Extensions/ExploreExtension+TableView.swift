@@ -28,13 +28,14 @@ extension ExploreTabBarController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let itemsVC = self.storyboard?.instantiateViewController(withIdentifier: "CategoryItems") as! itemsTableViewController
-        itemsVC.modalPresentationStyle = .fullScreen
+       // itemsVC.modalPresentationStyle = .fullScreen
         itemsVC.subCategoryObj = subCatgeoryArray[indexPath.row]
         itemsVC.categoryName = self.categoryName!
         itemsVC.itemcategoryName = self.itemcategoryName!
         print("from home \(categoriesArray[indexPath.row].categoryName)")
         print(categoriesArray[indexPath.row])
-        self.navigationController!.pushViewController(itemsVC, animated: true)
+        self.present(itemsVC, animated: true, completion: nil)
+       
         
     }
     
