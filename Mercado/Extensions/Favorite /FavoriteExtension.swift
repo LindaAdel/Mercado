@@ -16,7 +16,7 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
         
         let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "productDetails") as! ProductDetailsViewController
         
-        detailsVC.categoryName = favoriteItemInfoArr[indexPath.row].categoryName
+        detailsVC.categoryName = favoriteItemInfoArr[indexPath.row].category
         detailsVC.itemDetails=favoriteList[indexPath.row]
         detailsVC.subCategoryName = subCategoryObj.itemSubCategoryName
        // detailsVC.modalPresentationStyle = .fullScreen
@@ -40,6 +40,7 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
        
         favcell.favTitleCell.text = favoriteList[indexPath.row].item_title
         favcell.favPriceCell.text = "EGP \(favoriteList[indexPath.row].item_price!)"
+        favcell.unFavorite.tag = indexPath.row
         favcell.unFavorite.addTarget(self, action: #selector(unFavoriteBtn), for: .touchUpInside)
                
     return favcell
@@ -55,19 +56,19 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
     @objc func unFavoriteBtn(sender : UIButton)
     {
         let indexp = IndexPath(row: sender.tag, section: 0)
-        var cellFavoriteItem : Favorite = Favorite()
-        itemcategoryName = favoriteItemInfoArr[indexp.row].categoryName
-        cellFavoriteItem.categoryName = self.itemcategoryName
-        cellFavoriteItem.subcategoryName = subCategoryObj.itemSubCategoryName
-        cellFavoriteItem.item_id = favoriteItemInfoArr[indexp.row].item_id
-        let verifyAlert = UIAlertController(title: "Alert", message: " are you sure you want to unfavorite this item ", preferredStyle: .alert)
+        let cellFavoriteItem : SpecialItem = SpecialItem()
+        itemcategoryName = favoriteItemInfoArr[indexp.row].category
+        cellFavoriteItem.category = self.itemcategoryName
+        cellFavoriteItem.subCategory = subCategoryObj.itemSubCategoryName
+        cellFavoriteItem.itemId = favoriteItemInfoArr[indexp.row].itemId
+        let verifyAlert = UIAlertController(title: "Alert", message: " Are you sure you want to unfavorite this item ", preferredStyle: .alert)
         verifyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-            self.itemService.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
+            self.firebaseManager.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
             self.favoriteList.remove(at: indexp.row)
             self.favoriteItemInfoArr.remove(at: indexp.row)
             self.FavoriteTableView.reloadData()
         }))
-        verifyAlert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
+        verifyAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(verifyAlert, animated: true, completion: nil)
     }
     

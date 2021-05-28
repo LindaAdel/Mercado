@@ -12,13 +12,14 @@ class FavoriteTableViewController: UIViewController {
         , itemSubCategoryName: "")
     var categoryName : String?
     var itemcategoryName : String?
-    var favoriteItemInfoArr : [Favorite]!
+    var favoriteItemInfoArr : [SpecialItem]!
     var itemId : String?
-    var favoriteItem = Favorite()
+    var favoriteItem = SpecialItem()
     var subCategoryName : String?
     var favoriteList : [ItemProtocol]!
     var favoriteViewModel : FavoriteViewModel!
-    var itemService : itemsService!
+    //var itemService : itemsService!
+    var firebaseManager : DinaFirebaseManager!
     
  
     @IBOutlet weak var FavoriteTableView: UITableView!
@@ -32,8 +33,9 @@ class FavoriteTableViewController: UIViewController {
         
         favoriteViewModel = FavoriteViewModel()
         favoriteList = [ItemProtocol]()
-        favoriteItemInfoArr = [Favorite]()
-        itemService = itemsService()
+        favoriteItemInfoArr = [SpecialItem]()
+        //itemService = itemsService()
+        firebaseManager = DinaFirebaseManager()
         
         favoriteViewModel.bindItemsToView = {
                 (favitem,item) in

@@ -11,9 +11,9 @@ import Firebase
 class ExclusiveOffersService : FirebaseProtocol{
     
     var ref: DatabaseReference! = Database.database().reference()
-    var offersArray = [NewArrival]()
+    var offersArray = [SpecialItem]()
     
-    func fetchArrayOfItems(completion: @escaping ([NewArrival]?, Error?) -> ()) {
+    func fetchArrayOfSpecialItems(completion: @escaping ([SpecialItem]?, Error?) -> ()) {
         self.ref.child("offers").getData { (error, snapshot) in
                 if let error = error {
                     print("Error getting data \(error)")
@@ -23,12 +23,12 @@ class ExclusiveOffersService : FirebaseProtocol{
                     data!.forEach{ item in
                         let itemObj =  item.value
                         
-                        let newArrivalObj = NewArrival()
-                        newArrivalObj.category = itemObj["category"] as? String
-                        newArrivalObj.itemId = itemObj["itemId"] as? String
-                        newArrivalObj.subCategory = itemObj["subCategory"] as? String
+                        let exclusiveOffersObj = SpecialItem()
+                        exclusiveOffersObj.category = itemObj["category"] as? String
+                        exclusiveOffersObj.itemId = itemObj["itemId"] as? String
+                        exclusiveOffersObj.subCategory = itemObj["subCategory"] as? String
                         
-                        self.offersArray.append(newArrivalObj)
+                        self.offersArray.append(exclusiveOffersObj)
                         
                     }
                     print(self.offersArray.count)
@@ -42,38 +42,4 @@ class ExclusiveOffersService : FirebaseProtocol{
             }
         }
     
-    
-    
-       
-    
-//    func fetchNewArrivalItem(newArrivalItem : NewArrival, completion : @escaping (NSDictionary?, Error?)->()){
-//    
-//        self.ref.child("categories")
-//            .child(newArrivalItem.category!)
-//            .child(newArrivalItem.subCategory!)
-//            .child(newArrivalItem.itemId!)
-//            .getData { (error, snapshot) in
-//                
-//            if let error = error {
-//                print("Error getting data \(error)")
-//            }
-//            else if snapshot.exists() {
-//                let data = snapshot.value as? NSDictionary
-//                print(data!)
-//                
-////                pojoClass.item_title = data!["item_title"] as? String
-////                newArrivalObj.itemId = itemObj["itemId"] as? String
-////                newArrivalObj.subCategory = itemObj["subCategory"] as? String
-//
-////                self.newArrival_array.append(newArrivalObj)
-//
-//                completion(data,nil)
-//            }
-//            else {
-//                print("No data available")
-//                completion(nil,error)
-//
-//            }
-//        }
-//    }
 }

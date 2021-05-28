@@ -11,7 +11,8 @@ import Firebase
 class FavoriteViewModel : NSObject {
     
     var favoriteService : FavoriteService!
-    var favArray : [Favorite]?
+    var favArray : [SpecialItem]?
+    var firebaseManager : DinaFirebaseManager!
     var ref : DatabaseReference! = Database.database().reference()
     
     var showError : String! {
@@ -23,14 +24,15 @@ class FavoriteViewModel : NSObject {
         
     }
     var bindViewModelErrorToView : (()->()) = {}
-    var bindItemsToView: ((Favorite?,ItemProtocol?)->()) = {_,_  in }
+    var bindItemsToView: ((SpecialItem?,ItemProtocol?)->()) = {_,_  in }
     
     override init() {
         super.init()
         favoriteService = FavoriteService()
+        firebaseManager = DinaFirebaseManager()
     }
     func fetchFavorite(){
-       favoriteService.fetchFavoriteData(completion: {(favoriteArray ,error)  in
+       favoriteService.fetchArrayOfSpecialItems(completion: {(favoriteArray ,error)  in
            if let error : Error = error{
                
                let message = error.localizedDescription
@@ -44,12 +46,12 @@ class FavoriteViewModel : NSObject {
                }
                
            }
-   func switchOnFavorite(favItem : Favorite){
+   func switchOnFavorite(favItem : SpecialItem){
                
-       switch favItem.subcategoryName{
+       switch favItem.subCategory{
       
        case "beautyEquipment","hairStylers":
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : PersonalCare!
@@ -66,7 +68,7 @@ class FavoriteViewModel : NSObject {
        }
 
        case "microwaves","blendersAndMixers":
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             //let item = decoder.decode(PersonalCare.self, from: items as Data)
             let item = items as! Dictionary <String, Any>
@@ -83,8 +85,8 @@ class FavoriteViewModel : NSObject {
 
        }
        case "clothing":
-       if favItem.categoryName == "Girl's Fashion" || favItem.categoryName == "boy's fashion"{
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+       if favItem.category == "Girl's Fashion" || favItem.category == "boy's fashion"{
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : KidsClothing!
@@ -99,8 +101,8 @@ class FavoriteViewModel : NSObject {
 
        }
        }
-       if  favItem.categoryName ==  "Women's Fashion"{
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+       if  favItem.category ==  "Women's Fashion"{
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : WomenClothing!
@@ -115,8 +117,8 @@ class FavoriteViewModel : NSObject {
        }
        }
        case "shoes":
-       if  favItem.categoryName == "Girl's Fashion" || favItem.categoryName ==  "boy's fashion"{
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+       if  favItem.category == "Girl's Fashion" || favItem.category ==  "boy's fashion"{
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : KidsShoes!
@@ -130,7 +132,7 @@ class FavoriteViewModel : NSObject {
        }
        }
        case "bags":
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : WomenBags!
@@ -143,7 +145,7 @@ class FavoriteViewModel : NSObject {
 
        }
        case "makeUp":
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : MakeUp!
@@ -156,7 +158,7 @@ class FavoriteViewModel : NSObject {
 
        }
        case "skinCare":
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : SkinCare!
@@ -169,7 +171,7 @@ class FavoriteViewModel : NSObject {
 
        }
        case "laptops":
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : Laptops!
@@ -183,7 +185,7 @@ class FavoriteViewModel : NSObject {
 
        }
        case "laptopBags":
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : LaptopBags!
@@ -196,7 +198,7 @@ class FavoriteViewModel : NSObject {
 
        }
        case "mobiles","tablets":
-        self.favoriteService.searchForItemData(favoriteItem: favItem) { (items, error) in
+        self.firebaseManager.searchForItem(specialItem: favItem) { (items, error) in
             let decoder = JSONDecoder()
             let item = items as! Dictionary <String, Any>
             var data : TabletsAndMobiles!

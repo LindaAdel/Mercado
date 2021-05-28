@@ -28,7 +28,7 @@ extension ExploreTabBarController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let itemsVC = self.storyboard?.instantiateViewController(withIdentifier: "CategoryItems") as! itemsTableViewController
-       // itemsVC.modalPresentationStyle = .fullScreen
+        itemsVC.modalPresentationStyle = .fullScreen
         itemsVC.subCategoryObj = subCatgeoryArray[indexPath.row]
         itemsVC.categoryName = self.categoryName!
         itemsVC.itemcategoryName = self.itemcategoryName!

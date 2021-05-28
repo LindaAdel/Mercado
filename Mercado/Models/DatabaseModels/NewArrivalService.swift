@@ -11,9 +11,9 @@ import Firebase
 class NewArrivalService : FirebaseProtocol{
     
     var ref: DatabaseReference! = Database.database().reference()
-    var newArrival_array = [NewArrival]()
+    var newArrival_array = [SpecialItem]()
     
-    func fetchArrayOfItems(completion: @escaping ([NewArrival]?, Error?) -> ()) {
+    func fetchArrayOfSpecialItems(completion: @escaping ([SpecialItem]?, Error?) -> ()) {
         self.ref.child("new arrival").getData { (error, snapshot) in
             if let error = error {
                 print("Error getting data \(error)")
@@ -23,7 +23,7 @@ class NewArrivalService : FirebaseProtocol{
                 data!.forEach{ item in
                     let itemObj =  item.value
                     
-                    let newArrivalObj = NewArrival()
+                    let newArrivalObj = SpecialItem()
                     newArrivalObj.category = itemObj["category"] as? String
                     newArrivalObj.itemId = itemObj["itemId"] as? String
                     newArrivalObj.subCategory = itemObj["subCategory"] as? String
@@ -41,31 +41,6 @@ class NewArrivalService : FirebaseProtocol{
             }
         }
     }
-    
-//    func fetchNewArrivalItem(newArrivalItem : NewArrival, completion : @escaping (NSDictionary?, Error?)->()){
-//
-//        self.ref.child("categories")
-//            .child(newArrivalItem.category!)
-//            .child(newArrivalItem.subCategory!)
-//            .child(newArrivalItem.itemId!)
-//            .getData { (error, snapshot) in
-//
-//            if let error = error {
-//                print("Error getting data \(error)")
-//            }
-//            else if snapshot.exists() {
-//                let data = snapshot.value as? NSDictionary
-//                print(data!)
-//
-//
-//                completion(data,nil)
-//            }
-//            else {
-//                print("No data available")
-//                completion(nil,error)
-//
-//            }
-//        }
-//    }
+
 }
 

@@ -17,15 +17,19 @@ class itemsTableViewController: UIViewController {
     var itemIsFavoriteArr : [ItemIsFavorite?]!
     var searchingItem = [ItemProtocol]()
     var isSearching : Bool = false
-    var favoriteItem = Favorite()
+    var favoriteItem = SpecialItem()
     var itemsList: [ItemProtocol]!
     var itemsViewModel : ItemsViewModel!
-    var itemService : itemsService!
+    //var itemService : itemsService!
+    var firebaseManager : DinaFirebaseManager!
  
     
     
     @IBOutlet weak var itemsSearchBar: UISearchBar!
     @IBOutlet weak var itemsTableView: UITableView!
+    @IBAction func backNavBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
  
     override func viewDidLoad() {
@@ -36,7 +40,8 @@ class itemsTableViewController: UIViewController {
         
         itemsViewModel = ItemsViewModel(subCategoryObj: self.subCategoryObj)
         itemsList = [ItemProtocol]()
-        itemService = itemsService()
+        firebaseManager = DinaFirebaseManager()
+       // itemService = itemsService()
        
         itemsViewModel.fetchItemsDataFromAPI()
        

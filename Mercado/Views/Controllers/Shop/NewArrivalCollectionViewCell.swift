@@ -16,13 +16,13 @@ class NewArrivalCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var favBtn: UIButton!
     var isFavourite : Bool = false
     @IBAction func favBtnAction(_ sender: UIButton) {
-        if isFavourite{
-            favBtn.setImage(UIImage(named: "unfavorite"), for: .normal)
-            isFavourite = false
-        }else{
-            favBtn.setImage(UIImage(named: "favorite"), for: .normal)
-            isFavourite = true
-        }
+//        if isFavourite{
+//            favBtn.setImage(UIImage(named: "unfavorite"), for: .normal)
+//            isFavourite = false
+//        }else{
+//            favBtn.setImage(UIImage(named: "favorite"), for: .normal)
+//            isFavourite = true
+//        }
     }
     
     override func layoutSubviews() {

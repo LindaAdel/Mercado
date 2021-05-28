@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FirebaseProtocol {
-    func fetchArrayOfItems(completion : @escaping ([NewArrival]?, Error?)->())
+    func fetchArrayOfSpecialItems(completion : @escaping ([SpecialItem]?, Error?)->())
 }

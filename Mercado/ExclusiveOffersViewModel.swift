@@ -9,12 +9,12 @@ import Foundation
 
 class ExclusiveOffersViewModel : NSObject{
     
-    var itemsData = [NewArrival]()
+    var itemsData = [SpecialItem]()
     var firebaseManager : DinaFirebaseManager!
     var exclusiveOffersService : ExclusiveOffersService!
     
     var bindViewModelErrorToView : (()->()) = {}
-    var bindItemsToView: ((NewArrival?,ItemProtocol?)->()) = {_,_ in }
+    var bindItemsToView: ((SpecialItem?,ItemProtocol?)->()) = {_,_ in }
     
     var showError : String! {
         
@@ -32,7 +32,7 @@ class ExclusiveOffersViewModel : NSObject{
     
     func fetchAllExclusiveOffersItems (){
     
-            exclusiveOffersService.fetchArrayOfItems(completion: { (itemsData, error) in
+            exclusiveOffersService.fetchArrayOfSpecialItems(completion: { (itemsData, error) in
            
                 if let error : Error = error{
     
@@ -44,7 +44,6 @@ class ExclusiveOffersViewModel : NSObject{
     
                     self.itemsData = itemsData!
                     self.itemsData.forEach{ item in
-                        //print(item.subCategory)
                         self.subcategorySwitch(newArrivalItem: item)
                     }
     
@@ -53,13 +52,12 @@ class ExclusiveOffersViewModel : NSObject{
             })
         }
     
-    func subcategorySwitch (newArrivalItem : NewArrival){
+    func subcategorySwitch (newArrivalItem : SpecialItem){
         
         switch newArrivalItem.subCategory {
                 case "beautyEquipment","hairStylers":
-                    firebaseManager.searchForItem(newArrivalItem: newArrivalItem) { (items, error) in
+                    firebaseManager.searchForItem(specialItem: newArrivalItem) { (items, error) in
                         let decoder = JSONDecoder()
-                        //let item = decoder.decode(PersonalCare.self, from: items as Data)
                         let item = items as! Dictionary <String, Any>
                         var data : PersonalCare!
                         do{
@@ -74,9 +72,8 @@ class ExclusiveOffersViewModel : NSObject{
                     }
 
                 case "microwaves","blendersAndMixers":
-                    firebaseManager.searchForItem(newArrivalItem: newArrivalItem) { (items, error) in
+                    firebaseManager.searchForItem(specialItem: newArrivalItem) { (items, error) in
                         let decoder = JSONDecoder()
-                        //let item = decoder.decode(PersonalCare.self, from: items as Data)
                         let item = items as! Dictionary <String, Any>
                         var data : HomeAppliances!
                         do{
@@ -91,9 +88,8 @@ class ExclusiveOffersViewModel : NSObject{
                     }
                 case "clothing":
                     if newArrivalItem.category == "Girl's Fashion" || newArrivalItem.category == "boy's fashion"{
-                        firebaseManager.searchForItem(newArrivalItem: newArrivalItem) { (items, error) in
+                        firebaseManager.searchForItem(specialItem: newArrivalItem) { (items, error) in
                             let decoder = JSONDecoder()
-                            //let item = decoder.decode(PersonalCare.self, from: items as Data)
                             let item = items as! Dictionary <String, Any>
                             var data : KidsClothing!
                             do{
@@ -108,9 +104,8 @@ class ExclusiveOffersViewModel : NSObject{
                         }
                     
                         else if newArrivalItem.category == "Women's Fashion"{
-                            firebaseManager.searchForItem(newArrivalItem: newArrivalItem) { (items, error) in
+                        firebaseManager.searchForItem(specialItem: newArrivalItem) { (items, error) in
                             let decoder = JSONDecoder()
-                            //let item = decoder.decode(PersonalCare.self, from: items as Data)
                             let item = items as! Dictionary <String, Any>
                             var data : WomenClothing!
                             do{
@@ -125,9 +120,8 @@ class ExclusiveOffersViewModel : NSObject{
                     }
                 case "shoes":
                         if newArrivalItem.category == "Girl's Fashion" || newArrivalItem.category == "boy's fashion"{
-                                firebaseManager.searchForItem(newArrivalItem: newArrivalItem) { (items, error) in
+                            firebaseManager.searchForItem(specialItem: newArrivalItem) { (items, error) in
                                 let decoder = JSONDecoder()
-                                //let item = decoder.decode(PersonalCare.self, from: items as Data)
                                 let item = items as! Dictionary <String, Any>
                                 var data : KidsClothing!
                                 do{
@@ -140,9 +134,8 @@ class ExclusiveOffersViewModel : NSObject{
                         }
                     }
                 case "bags":
-                    firebaseManager.searchForItem(newArrivalItem: newArrivalItem) { (items, error) in
+                    firebaseManager.searchForItem(specialItem: newArrivalItem) { (items, error) in
                         let decoder = JSONDecoder()
-                        //let item = decoder.decode(PersonalCare.self, from: items as Data)
                         let item = items as! Dictionary <String, Any>
                         var data : WomenBags!
                         do{
@@ -155,9 +148,8 @@ class ExclusiveOffersViewModel : NSObject{
 
                     }
                 case "makeUp":
-                    firebaseManager.searchForItem(newArrivalItem: newArrivalItem) { (items, error) in
+                    firebaseManager.searchForItem(specialItem: newArrivalItem) { (items, error) in
                         let decoder = JSONDecoder()
-                        //let item = decoder.decode(PersonalCare.self, from: items as Data)
                         let item = items as! Dictionary <String, Any>
                         var data : MakeUp!
                         do{
@@ -170,9 +162,8 @@ class ExclusiveOffersViewModel : NSObject{
 
                     }
                 case "skinCare":
-                    firebaseManager.searchForItem(newArrivalItem: newArrivalItem) { (items, error) in
+                    firebaseManager.searchForItem(specialItem: newArrivalItem) { (items, error) in
                         let decoder = JSONDecoder()
-                        //let item = decoder.decode(PersonalCare.self, from: items as Data)
                         let item = items as! Dictionary <String, Any>
                         var data : SkinCare!
                         do{
@@ -185,9 +176,8 @@ class ExclusiveOffersViewModel : NSObject{
 
                     }
                 case "laptops":
-                    firebaseManager.searchForItem( newArrivalItem: newArrivalItem) { (items, error) in
+                    firebaseManager.searchForItem( specialItem: newArrivalItem) { (items, error) in
                         let decoder = JSONDecoder()
-                        //let item = decoder.decode(PersonalCare.self, from: items as Data)
                         let item = items as! Dictionary <String, Any>
                         var data : Laptops!
                         do{
@@ -200,9 +190,8 @@ class ExclusiveOffersViewModel : NSObject{
 
                     }
                 case "laptopBags":
-                    firebaseManager.searchForItem( newArrivalItem: newArrivalItem) { (items, error) in
+                    firebaseManager.searchForItem( specialItem: newArrivalItem) { (items, error) in
                         let decoder = JSONDecoder()
-                        //let item = decoder.decode(PersonalCare.self, from: items as Data)
                         let item = items as! Dictionary <String, Any>
                         var data : LaptopBags!
                         do{
@@ -215,9 +204,8 @@ class ExclusiveOffersViewModel : NSObject{
 
                     }
                 case "mobiles","tablets":
-                   firebaseManager.searchForItem( newArrivalItem: newArrivalItem) { (items, error) in
+                    firebaseManager.searchForItem( specialItem: newArrivalItem) { (items, error) in
                         let decoder = JSONDecoder()
-                        //let item = decoder.decode(PersonalCare.self, from: items as Data)
                         let item = items as! Dictionary <String, Any>
                         var data : TabletsAndMobiles!
                         do{

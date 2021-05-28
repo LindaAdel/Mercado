@@ -27,6 +27,7 @@ class ItemsViewModel: NSObject
 {
     var subCategoryObj : SubCategory!
     var itemService:itemsService!
+    var firebaseManager : DinaFirebaseManager!
    
 
 
@@ -49,6 +50,7 @@ class ItemsViewModel: NSObject
         super.init()
         
         self.itemService = itemsService()
+        self.firebaseManager = DinaFirebaseManager()
         self.subCategoryObj = subCategoryObj
 
     }
@@ -130,8 +132,9 @@ class ItemsViewModel: NSObject
         }
         
     }
+    
     func itemIsFavoriteValue(itemIdValue : String , index : Int){
-        itemService.fetchItemIsFavoriteData(itemId: itemIdValue) { (isFav, error) in
+        firebaseManager.fetchItemIsFavoriteData(itemId: itemIdValue) { (isFav, error) in
             if let error : Error = error{
                 
                 let message = error.localizedDescription

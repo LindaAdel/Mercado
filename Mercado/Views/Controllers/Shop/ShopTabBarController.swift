@@ -18,14 +18,16 @@ class ShopTabBarController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var newArrivalCollectionView: UICollectionView!
     @IBOutlet weak var exclusiveOffersCollectionView: UICollectionView!
-    var images = [InputSource]()
     
+    var images = [InputSource]()
     var newArrival_array : [ItemProtocol]!
-    var newArrival_infoArray : [NewArrival]!
-    var exclusive0ffers_infoArray : [NewArrival]!
+    var newArrival_infoArray : [SpecialItem]!
+    var exclusive0ffers_infoArray : [SpecialItem]!
     var exclusiveOffers_array : [ItemProtocol]!
     var newArrivalViewModel : NewArrivalViewModel!
     var exclusiveViewModel : ExclusiveOffersViewModel!
+    var firebaseManager : DinaFirebaseManager!
+    var itemIsFavoriteArr : [ItemIsFavorite?]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,24 +49,56 @@ class ShopTabBarController: UIViewController {
 
         newArrivalViewModel.fetchAllNewArrivalItems()
         newArrival_array = [ItemProtocol]()
-        newArrival_infoArray = [NewArrival]()
-        exclusive0ffers_infoArray = [NewArrival]()
+        newArrival_infoArray = [SpecialItem]()
+        exclusive0ffers_infoArray = [SpecialItem]()
+        firebaseManager = DinaFirebaseManager()
+        itemIsFavoriteArr = [ItemIsFavorite?]()
+       // itemIsFavoriteArr =
+        
 
         newArrivalViewModel.bindItemsToView = {
                 (newArrrivalInfo,data) in
             if let itemData = data{
                 //print(itemData.item_price)
                 self.newArrival_array.append(itemData)
+                
                 DispatchQueue.main.async {
                     self.newArrivalCollectionView.reloadData()
                 }
+//                for i in 0...self.newArrival_array.count-1 {
+//                    self.newArrivalViewModel.itemIsFavoriteValue(itemIdValue: itemData.item_id!, index: i)
+//
+//                }
+                
             }
 
             if let itemDetails = newArrrivalInfo{
                 self.newArrival_infoArray.append(itemDetails)
             }
+            
+//            self.itemIsFavoriteArr = [ItemIsFavorite?](repeating: nil, count: self.newArrival_array.count)
+//            DispatchQueue.main.async {
+//                self.newArrivalCollectionView.reloadData()
+//            }
+//
+//            for i in 0...self.newArrival_array.count-1 {
+//                    self.newArrivalViewModel.itemIsFavoriteValue(itemIdValue: self.newArrival_array[i].item_id!, index: i)
+//
+//                }
 
        }
+        
+        
+        
+//            self.newArrivalViewModel.bindItemFavoriteToView = {
+//                (isFav,index) in
+//            self.itemIsFavoriteArr[index] = ItemIsFavorite(isFavorite: isFav)
+//              print(index , isFav)
+//                DispatchQueue.main.async {
+//                    self.newArrivalCollectionView.reloadData()
+//                }
+//        }
+                
 
         exclusiveViewModel.fetchAllExclusiveOffersItems()
         exclusiveOffers_array = [ItemProtocol]()

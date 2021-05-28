@@ -78,25 +78,17 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
     @objc func favoriteBtnAction(sender : UIButton)
         {
            let indexp = IndexPath(row: sender.tag, section: 0)
-        var cellFavoriteItem : Favorite = Favorite()
-        cellFavoriteItem.categoryName = self.itemcategoryName
-        cellFavoriteItem.subcategoryName = subCategoryObj.itemSubCategoryName
-        cellFavoriteItem.item_id = itemsList[indexp.row].item_id
+            let cellFavoriteItem : SpecialItem = SpecialItem()
+        cellFavoriteItem.category = self.itemcategoryName
+        cellFavoriteItem.subCategory = subCategoryObj.itemSubCategoryName
+        cellFavoriteItem.itemId = itemsList[indexp.row].item_id
         
-//        if ((self.itemIsFavoriteArr[indexp.row]?.isFavorite!) != nil){
-//            itemService.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
-//            self.itemIsFavoriteArr[indexp.row]?.isFavorite = false
-//
-//        }else{
-//            itemService.addItemsToFavorites(favoriteItem: cellFavoriteItem)
-//            self.itemIsFavoriteArr[indexp.row]?.isFavorite = true
-//        }
         if let favFlag = self.itemIsFavoriteArr[indexp.row]{
             if favFlag.isFavorite! {
-                itemService.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
+                firebaseManager.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
                 self.itemIsFavoriteArr[indexp.row]?.isFavorite = false
             }else {
-                itemService.addItemsToFavorites(favoriteItem: cellFavoriteItem)
+                firebaseManager.addItemsToFavorites(favoriteItem: cellFavoriteItem)
                 self.itemIsFavoriteArr[indexp.row]?.isFavorite = true
             }
         }
