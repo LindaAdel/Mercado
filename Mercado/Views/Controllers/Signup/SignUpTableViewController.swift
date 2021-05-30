@@ -40,7 +40,7 @@ class SignUpTableViewController: UITableViewController {
     }
     @IBAction func navigateToLogIn(_ sender: Any) {
         
-        if let logInVC = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LoginTableViewController{
+        if let logInVC = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LoginViewController{
             logInVC.modalPresentationStyle = .fullScreen
             self.present(logInVC, animated: true, completion: nil)}
     }

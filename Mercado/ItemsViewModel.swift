@@ -27,7 +27,7 @@ class ItemsViewModel: NSObject
 {
     var subCategoryObj : SubCategory!
     var itemService:itemsService!
-    var firebaseManager : DinaFirebaseManager!
+    var firebaseManager : FirebaseManager!
    
 
 
@@ -50,7 +50,7 @@ class ItemsViewModel: NSObject
         super.init()
         
         self.itemService = itemsService()
-        self.firebaseManager = DinaFirebaseManager()
+        self.firebaseManager = FirebaseManager.shared
         self.subCategoryObj = subCategoryObj
 
     }

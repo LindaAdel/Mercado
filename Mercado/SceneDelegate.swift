@@ -37,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
 
                 } else {
-                    initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "login")as! LoginTableViewController
+                    initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "login")as! LoginViewController
                 }
         }
 

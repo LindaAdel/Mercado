@@ -21,7 +21,7 @@ class itemsTableViewController: UIViewController {
     var itemsList: [ItemProtocol]!
     var itemsViewModel : ItemsViewModel!
     //var itemService : itemsService!
-    var firebaseManager : DinaFirebaseManager!
+    var firebaseManager : FirebaseManager!
  
     
     
@@ -40,7 +40,7 @@ class itemsTableViewController: UIViewController {
         
         itemsViewModel = ItemsViewModel(subCategoryObj: self.subCategoryObj)
         itemsList = [ItemProtocol]()
-        firebaseManager = DinaFirebaseManager()
+        firebaseManager = FirebaseManager.shared
        // itemService = itemsService()
        
         itemsViewModel.fetchItemsDataFromAPI()

@@ -12,7 +12,7 @@ class FavoriteViewModel : NSObject {
     
     var favoriteService : FavoriteService!
     var favArray : [SpecialItem]?
-    var firebaseManager : DinaFirebaseManager!
+    var firebaseManager : FirebaseManager!
     var ref : DatabaseReference! = Database.database().reference()
     
     var showError : String! {
@@ -29,7 +29,7 @@ class FavoriteViewModel : NSObject {
     override init() {
         super.init()
         favoriteService = FavoriteService()
-        firebaseManager = DinaFirebaseManager()
+        firebaseManager = FirebaseManager.shared
     }
     func fetchFavorite(){
        favoriteService.fetchArrayOfSpecialItems(completion: {(favoriteArray ,error)  in

@@ -103,6 +103,7 @@ class AccountViewController: UIViewController
         let logoutAction = Alert().addAlertAction(alertActionTitle: "Logout", titleColor: .red, alertActionStyle: .default, alertActionhandler: self.logoutHandler(_:))
         Alert().showAlert(alertTitle: "Logout", alertMessage: "Are you sure you want to logout?", alertActionOne: cancelAction, alertActionTwo: logoutAction,Self:self)
         
+        
 
     }
     

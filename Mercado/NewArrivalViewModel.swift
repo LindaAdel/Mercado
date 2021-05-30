@@ -11,7 +11,7 @@ class NewArrivalViewModel : NSObject{
     
     var itemsData = [SpecialItem]()
     var newArrivalService : NewArrivalService!
-    var firebaseManager : DinaFirebaseManager!
+    var firebaseManager : FirebaseManager!
     var exclusiveOffersService : ExclusiveOffersService!
     
     var bindViewModelErrorToView : (()->()) = {}
@@ -31,7 +31,7 @@ class NewArrivalViewModel : NSObject{
     override init() {
         self.newArrivalService = NewArrivalService()
         self.exclusiveOffersService = ExclusiveOffersService()
-        self.firebaseManager = DinaFirebaseManager()
+        self.firebaseManager = FirebaseManager.shared
     }
     
         func fetchAllNewArrivalItems (){

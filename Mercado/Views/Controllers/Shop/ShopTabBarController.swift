@@ -26,7 +26,7 @@ class ShopTabBarController: UIViewController {
     var exclusiveOffers_array : [ItemProtocol]!
     var newArrivalViewModel : NewArrivalViewModel!
     var exclusiveViewModel : ExclusiveOffersViewModel!
-    var firebaseManager : DinaFirebaseManager!
+    var firebaseManager : FirebaseManager!
     var itemIsFavoriteArr : [ItemIsFavorite?]!
 
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class ShopTabBarController: UIViewController {
         newArrival_array = [ItemProtocol]()
         newArrival_infoArray = [SpecialItem]()
         exclusive0ffers_infoArray = [SpecialItem]()
-        firebaseManager = DinaFirebaseManager()
+        firebaseManager = FirebaseManager.shared
         itemIsFavoriteArr = [ItemIsFavorite?]()
        // itemIsFavoriteArr =
         

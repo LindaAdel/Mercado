@@ -278,7 +278,6 @@
 		2F3C59B72653F3A600D704D5 /* NetworkModels */ = {
 			isa = PBXGroup;
 			children = (
-				961657B6265DA75600177C12 /* Account */,
 				A9916B8D265419050030ADDA /* CategoriesService.swift */,
 				2F3C59832653E06F00D704D5 /* itemsService.swift */,
 			);
@@ -375,20 +374,20 @@
 			path = AddAddress;
 			sourceTree = "<group>";
 		};
-		961657B6265DA75600177C12 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				965A45092659C15700BF3DAE /* FirebaseManager.swift */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
 		961657BA265DAB0C00177C12 /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				961657BB265DAB2000177C12 /* AccountViewModel.swift */,
 			);
 			name = Account;
+			sourceTree = "<group>";
+		};
+		9625E82626644BB700F52E44 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		9632B31A265CC08700D32D2F /* AddAddress */ = {
@@ -555,6 +554,7 @@
 		96B8C1C9263B769A008CCA50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9625E82626644BB700F52E44 /* Home */,
 				A9F3B92D26613C3900BD40AA /* Get Started */,
 				A9F3B92C26613C1E00BD40AA /* Signup */,
 				A9F3B92926613BFC00BD40AA /* ItemsList */,
@@ -565,7 +565,6 @@
 				96F9E0AF265ACA6E008C47A2 /* Login */,
 				96AE44F626597C29000BD1FB /* Account */,
 				968F2AAC2655C19000441252 /* ProductDetails */,
-				2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -632,6 +631,7 @@
 		A9ACF963265F0F3B00A2ABF7 /* DatabaseModels */ = {
 			isa = PBXGroup;
 			children = (
+				965A45092659C15700BF3DAE /* FirebaseManager.swift */,
 				A9ACF964265F0F6200A2ABF7 /* ExclusiveOffersService.swift */,
 				A9ACF966265F0F6700A2ABF7 /* NewArrivalService.swift */,
 				2FC100C1265EF6EE00BF97A5 /* FavoriteService.swift */,

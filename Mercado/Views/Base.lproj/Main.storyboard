@@ -720,7 +720,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3k-1j-Q6u">
-                                <rect key="frame" x="0.0" y="88" width="414" height="309.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="290"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76w-PY-EGv">
                                         <rect key="frame" x="24" y="21" width="103" height="34"/>
@@ -766,7 +766,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yP6-ge-TOE">
-                                <rect key="frame" x="32" y="297" width="350" height="470"/>
+                                <rect key="frame" x="32" y="277.5" width="350" height="440.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountTableViewCell" rowHeight="73" id="WoC-d4-ds5" customClass="AccountTableViewCell" customModule="Mercado" customModuleProvider="target">
@@ -823,7 +823,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-Yf-Pny">
-                                <rect key="frame" x="32" y="769" width="350" height="56"/>
+                                <rect key="frame" x="32" y="720" width="350" height="56"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="qSG-Rw-YIO"/>
@@ -845,6 +845,12 @@
                                     <action selector="logoutButton:" destination="hOC-i4-rFe" eventType="touchUpInside" id="J6U-mp-RoX"/>
                                 </connections>
                             </button>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLZ-VO-zYw">
+                                <rect key="frame" x="0.0" y="825" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items/>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="okD-LA-pMm"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
@@ -1032,11 +1038,13 @@
             </objects>
             <point key="canvasLocation" x="6231.884057971015" y="162.72321428571428"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Account-->
         <scene sceneID="PPD-F3-JFd">
             <objects>
-                <navigationController storyboardIdentifier="navigationBar" automaticallyAdjustsScrollViewInsets="NO" id="pyh-Z9-Fza" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="accountNavigationBar" automaticallyAdjustsScrollViewInsets="NO" id="pyh-Z9-Fza" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person.circle.fill" catalog="system" selectedImage="person.circle.fill" id="htA-Fo-B10"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nUD-w8-jDL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1267,6 +1275,7 @@
         <image name="location.circle" catalog="system" width="128" height="121"/>
         <image name="logout" width="24" height="24"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="shopping" width="64" height="64"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

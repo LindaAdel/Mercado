@@ -10,7 +10,7 @@ import Foundation
 class ExclusiveOffersViewModel : NSObject{
     
     var itemsData = [SpecialItem]()
-    var firebaseManager : DinaFirebaseManager!
+    var firebaseManager : FirebaseManager!
     var exclusiveOffersService : ExclusiveOffersService!
     
     var bindViewModelErrorToView : (()->()) = {}
@@ -27,7 +27,7 @@ class ExclusiveOffersViewModel : NSObject{
     
     override init() {
         self.exclusiveOffersService = ExclusiveOffersService()
-        self.firebaseManager = DinaFirebaseManager()
+        self.firebaseManager = FirebaseManager.shared
     }
     
     func fetchAllExclusiveOffersItems (){

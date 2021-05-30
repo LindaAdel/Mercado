@@ -35,6 +35,9 @@ extension AccountViewController:UIImagePickerControllerDelegate,UINavigationCont
     //when user click logout
     func logoutHandler(_ action:UIAlertAction){
         try! Auth.auth().signOut()
+        let loginVc = storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
+        loginVc.modalPresentationStyle = .fullScreen
+        self.present(loginVc, animated: true, completion: nil)
     }
     //when user click remove photo
     func removeCurrentPhotoHandler(_ action:UIAlertAction){

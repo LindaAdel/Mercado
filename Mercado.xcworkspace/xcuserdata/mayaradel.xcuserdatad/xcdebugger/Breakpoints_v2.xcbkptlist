@@ -142,8 +142,8 @@
             filePath = "Mercado/Extensions/Account/AccountViewExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "AccountViewController"
             landmarkType = "21">
          </BreakpointContent>

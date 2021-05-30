@@ -19,7 +19,7 @@ class FavoriteTableViewController: UIViewController {
     var favoriteList : [ItemProtocol]!
     var favoriteViewModel : FavoriteViewModel!
     //var itemService : itemsService!
-    var firebaseManager : DinaFirebaseManager!
+    var firebaseManager : FirebaseManager!
     
  
     @IBOutlet weak var FavoriteTableView: UITableView!
@@ -35,7 +35,7 @@ class FavoriteTableViewController: UIViewController {
         favoriteList = [ItemProtocol]()
         favoriteItemInfoArr = [SpecialItem]()
         //itemService = itemsService()
-        firebaseManager = DinaFirebaseManager()
+        firebaseManager = FirebaseManager.shared
         
         favoriteViewModel.bindItemsToView = {
                 (favitem,item) in

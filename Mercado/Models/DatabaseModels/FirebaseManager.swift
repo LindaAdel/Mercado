@@ -12,24 +12,13 @@ class FirebaseManager
 {
     var dbreference: DatabaseReference!
     let currentUser :User!
+    let favorite : String = "favorite"
     private init(){
         dbreference = Database.database().reference().ref
         currentUser = Auth.auth().currentUser
     }
     static let shared = FirebaseManager()
-    
-    
-//    let currentUser = Auth.auth().currentUser
     let userID = Auth.auth().currentUser?.uid
-//    func getCurrentUser(completion:@escaping ((User?)->())){
-//        guard currentUser != nil else {
-//            print("no user")
-//            return
-//        }
-//        print("current \(currentUser?.email)")
-//        completion(currentUser)
-//    }
-    
     //MARK:- get uploaded image
     func getUploadedImage(completion:@escaping ((String?)->())){
         dbreference.child("users")
@@ -130,5 +119,63 @@ class FirebaseManager
        .updateChildValues(["photo": String(describing: imageURL)])
         print("uploadated to db")
     }
+//MARK:- dina
+   
+        
+        func searchForItem(specialItem : SpecialItem, completion : @escaping (NSDictionary?, Error?)->()){
+        
+            self.dbreference.child("categories")
+                .child(specialItem.category!)
+                .child(specialItem.subCategory!)
+                .child(specialItem.itemId!)
+                .getData { (error, snapshot) in
+                    
+                if let error = error {
+                    print("Error getting data \(error)")
+                }
+                else if snapshot.exists() {
+                    let data = snapshot.value as? NSDictionary
+                    print(data!)
 
+                    completion(data,nil)
+                }
+                else {
+                    print("No data available")
+                    completion(nil,error)
+
+                }
+            }
+        }
+    
+    func  addItemsToFavorites(favoriteItem : SpecialItem){
+       
+        let itemId = favoriteItem.itemId
+        let category = favoriteItem.category
+        let subCategory = favoriteItem.subCategory
+        self.dbreference.child("\(favorite)/\(userID!)/\(itemId!)/itemId").setValue(itemId!)
+        self.dbreference.child("\(favorite)/\(userID!)/\(itemId!)/category").setValue(category!)
+        self.dbreference.child("\(favorite)/\(userID!)/\(itemId!)/subCategory").setValue(subCategory!)
+      
+    }
+    func  removeItemsFromFavorites(favoriteItem : SpecialItem){
+            let itemId = favoriteItem.itemId
+        dbreference?.child("favorite").child(userID!).child(itemId!).removeValue()
+        }
+    
+    func fetchItemIsFavoriteData(itemId : String ,completion : @escaping ( Bool , Error?)->()){
+       
+        self.dbreference.child("favorite").child(userID!).child(itemId).getData { (error, Datasnapshot) in
+       
+            if let error = error {
+                completion(false , error)
+                print("Error getting data \(error)")
+            }
+            else {
+                completion(Datasnapshot.exists(),nil)
+            }
+        
+    }
+       
+    }
+    
 }
