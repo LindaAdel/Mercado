@@ -30,7 +30,7 @@ class PasswordTextField: UITextField {
     }
 
 }
-extension LoginTableViewController
+extension  LoginViewController
 {
     func showAndHidePasswordIcon()
     {
@@ -65,12 +65,7 @@ extension LoginTableViewController
         }
 
     }
-//    //alert dialog
-//    func showAlert(title:String,message:String){
-//        let resetFailedAlert = UIAlertController(title: title, message: "\( String(describing: message))", preferredStyle: .alert)
-//        resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//        self.present(resetFailedAlert, animated: true, completion: nil)
-//    }
+
 //firebase resetpassword
 func firebaseResetPassword()
 {
@@ -116,9 +111,10 @@ func firebaseResetPassword()
         //check empty fields
         if ((passwordTextField.text!.isEmpty) &&  (emailTextField.text!.isEmpty  ) )
         {
-
+              
             self.passwordTextField.attributedPlaceholder =  TextFieldErrors().showTextFieldError(placeholderValue: "required!")
             self.emailTextField.attributedPlaceholder = TextFieldErrors().showTextFieldError(placeholderValue: "required!")
+          //  self.passwordTextField.addBottomBorder(color: .red)
         }
         else{
         if (passwordTextField.text!.isEmpty){

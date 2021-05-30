@@ -77,6 +77,7 @@ class FirebaseManager
                 //if user loged froom google acc
                 else
                 {
+                    print("man\(self.currentUser)")
                     completion(nil, self.currentUser)
                 }
                 
