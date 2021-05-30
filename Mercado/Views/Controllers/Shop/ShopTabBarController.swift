@@ -1,0 +1,155 @@
+//
+//  ShopTabBarController.swift
+//  Mercado
+//
+//  Created by Dina ElShabassy on 5/19/21.
+//
+
+import UIKit
+import ImageSlideshow
+import Firebase
+
+class ShopTabBarController: UIViewController {
+
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var imageSlider: ImageSlideshow!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var newArrivalCollectionView: UICollectionView!
+    @IBOutlet weak var exclusiveOffersCollectionView: UICollectionView!
+    
+    var images = [InputSource]()
+    var newArrival_array : [ItemProtocol]!
+    var newArrival_infoArray : [SpecialItem]!
+    var exclusive0ffers_infoArray : [SpecialItem]!
+    var exclusiveOffers_array : [ItemProtocol]!
+    var newArrivalViewModel : NewArrivalViewModel!
+    var exclusiveViewModel : ExclusiveOffersViewModel!
+    var firebaseManager : DinaFirebaseManager!
+    var itemIsFavoriteArr : [ItemIsFavorite?]!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        newArrivalViewModel = NewArrivalViewModel()
+        exclusiveViewModel = ExclusiveOffersViewModel()
+
+        scrollView.isScrollEnabled = true
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
+
+        showSliderImages()
+
+        newArrivalCollectionView.delegate = self
+        newArrivalCollectionView.dataSource = self
+
+        exclusiveOffersCollectionView.delegate = self
+        exclusiveOffersCollectionView.dataSource = self
+
+        newArrivalViewModel.fetchAllNewArrivalItems()
+        newArrival_array = [ItemProtocol]()
+        newArrival_infoArray = [SpecialItem]()
+        exclusive0ffers_infoArray = [SpecialItem]()
+        firebaseManager = DinaFirebaseManager()
+        itemIsFavoriteArr = [ItemIsFavorite?]()
+       // itemIsFavoriteArr =
+        
+
+        newArrivalViewModel.bindItemsToView = {
+                (newArrrivalInfo,data) in
+            if let itemData = data{
+                //print(itemData.item_price)
+                self.newArrival_array.append(itemData)
+                
+                DispatchQueue.main.async {
+                    self.newArrivalCollectionView.reloadData()
+                }
+//                for i in 0...self.newArrival_array.count-1 {
+//                    self.newArrivalViewModel.itemIsFavoriteValue(itemIdValue: itemData.item_id!, index: i)
+//
+//                }
+                
+            }
+
+            if let itemDetails = newArrrivalInfo{
+                self.newArrival_infoArray.append(itemDetails)
+            }
+            
+//            self.itemIsFavoriteArr = [ItemIsFavorite?](repeating: nil, count: self.newArrival_array.count)
+//            DispatchQueue.main.async {
+//                self.newArrivalCollectionView.reloadData()
+//            }
+//
+//            for i in 0...self.newArrival_array.count-1 {
+//                    self.newArrivalViewModel.itemIsFavoriteValue(itemIdValue: self.newArrival_array[i].item_id!, index: i)
+//
+//                }
+
+       }
+        
+        
+        
+//            self.newArrivalViewModel.bindItemFavoriteToView = {
+//                (isFav,index) in
+//            self.itemIsFavoriteArr[index] = ItemIsFavorite(isFavorite: isFav)
+//              print(index , isFav)
+//                DispatchQueue.main.async {
+//                    self.newArrivalCollectionView.reloadData()
+//                }
+//        }
+                
+
+        exclusiveViewModel.fetchAllExclusiveOffersItems()
+        exclusiveOffers_array = [ItemProtocol]()
+
+         exclusiveViewModel.bindItemsToView = {
+                 (exclusiveOffersInfo,item) in
+             if let itemData = item{
+                 //print(itemData.item_price)
+                 self.exclusiveOffers_array.append(itemData)
+                 DispatchQueue.main.async {
+                     self.exclusiveOffersCollectionView.reloadData()
+                 }
+             }
+
+            if let itemInfo = exclusiveOffersInfo{
+                self.exclusive0ffers_infoArray.append(itemInfo)
+            }
+        }
+
+
+               
+    }
+    
+    func showSliderImages() {
+        
+        //loop in images slider array and get it from alamofire
+        URLs.flashSaleImages.forEach{
+            image in
+          let img =  AlamofireSource(urlString: image)
+           
+            images.append(img!)
+        
+        }
+        //fit size of image
+        imageSlider.contentScaleMode = UIViewContentMode.scaleAspectFill
+        //set image to slider
+        imageSlider.setImageInputs(images)
+        //Images Slide show
+        imageSlider.slideshowInterval = 5
+        pageControl.numberOfPages = images.count
+        imageSlider.pageIndicator = pageControl
+    }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

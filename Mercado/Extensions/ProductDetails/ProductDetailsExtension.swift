@@ -26,13 +26,17 @@ extension ProductDetailsViewController
         
         }
         //fit size of image
-        slideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
+        slideShow.contentScaleMode = UIViewContentMode.scaleAspectFit
         //set image to slider
         slideShow.setImageInputs(images)
         //Images Slide show
         slideShow.slideshowInterval = 5
         pageControl.numberOfPages = images.count
         slideShow.pageIndicator = pageControl
+    }
+    
+    @objc func didTap() {
+        slideShow.presentFullScreenController(from: self)
     }
     
 }

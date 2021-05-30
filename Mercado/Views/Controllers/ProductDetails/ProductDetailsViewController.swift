@@ -33,6 +33,9 @@ class ProductDetailsViewController: UIViewController
         //send item details to scrollabe container view
         self.postItemsNotifier()
         
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProductDetailsViewController.didTap))
+        slideShow.addGestureRecognizer(gestureRecognizer)
+        
     }
     
 

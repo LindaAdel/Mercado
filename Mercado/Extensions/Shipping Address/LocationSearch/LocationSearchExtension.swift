@@ -35,9 +35,9 @@ extension LocationSearchTableViewController : UISearchResultsUpdating
             self.matchingItemsArray = regionResponseResult.mapItems
             self.tableView.reloadData()
             //update searchbar text with selected place
-            if  let place = selectedPlace
+            if  let place = self.selectedPlace
            {
-                selectedPlace = nil
+            self.selectedPlace = nil
                 searchController.searchBar.text = place
            }
         

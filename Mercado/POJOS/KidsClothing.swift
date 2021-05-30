@@ -11,7 +11,7 @@ import UIKit
 class KidsClothing : Codable ,ItemProtocol {
     
     
-    var type: String?//to conform
+    var type: String?
     
     var slider_images: [String]?
     
@@ -22,13 +22,12 @@ class KidsClothing : Codable ,ItemProtocol {
     var item_id: String?
     var color : String?
     var brand : String?
-  //  var slider_image :[String]?
-    // var quality : String? //material
+    var price_afterSale : String?
     var size : String?
     enum CodingKeys: String, CodingKey {
            case slider_images = "slider_image"
          case material = "quality"
-        case item_image,item_price,item_title,item_id,color,brand,size
+        case item_image,item_price,item_title,item_id,color,brand,size,price_afterSale
         
        }
   

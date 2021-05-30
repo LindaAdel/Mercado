@@ -94,10 +94,11 @@ func firebaseResetPassword()
                print(error.localizedDescription)
                } else {
                print("Login Successful.")
-//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
-//                self.present(vc, animated: true, completion: nil)
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "account") as! AccountViewController
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
+                vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
+//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "account") as! AccountViewController
+//                self.present(vc, animated: true, completion: nil)
                
                }
            
@@ -158,10 +159,11 @@ func firebaseResetPassword()
                        }
                      } else {
                        print("User signs in successfully")
-//                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
-//                        self.present(vc, animated: true, completion: nil)
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "account") as! AccountViewController
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
+                            vc.modalPresentationStyle = .fullScreen
                         self.present(vc, animated: true, completion: nil)
+//                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "account") as! AccountViewController
+//                        self.present(vc, animated: true, completion: nil)
                       // let userInfo = Auth.auth().currentUser
                     //   let email = userInfo?.email
                      }

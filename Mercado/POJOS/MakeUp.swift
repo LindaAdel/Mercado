@@ -9,9 +9,8 @@ import Foundation
 import  UIKit
 
 class MakeUp :ItemProtocol , Codable{
-//    var type: String? // to conform
-    
-    
+
+
     var item_image: String?
     var item_price :String?
     var item_rating :String?
@@ -23,11 +22,7 @@ class MakeUp :ItemProtocol , Codable{
     var slider_images :[String]?
     var weight : String?
     var dimensions : String?
+    var price_afterSale : String?
     
-//    enum CodingKeys: String, CodingKey {
-//
-//           case item_rating,item_title, item_image, item_price,
-//                brand,slider_images,item_id,item_description,dimensions
-//        ,weight,color
-//    }
+
 }

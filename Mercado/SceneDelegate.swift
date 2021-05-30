@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             {
                 print(Auth.auth().currentUser?.email!)
                 //open home screen
-                initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "navigationBar")
+                initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
 
                 } else {
                     initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "login")as! LoginTableViewController

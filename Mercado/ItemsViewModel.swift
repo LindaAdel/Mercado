@@ -6,32 +6,30 @@
 //
 
 import Foundation
+import Firebase
+
+
+
 class my<T>
 {
     var myArray : [T]!
  
     func myFunc()  {
-        //self.myArray = arr
-        print(myArray)
+        
+        //print(myArray)
     }
     var bindhomeAppliancesViewModelToView: (([T])->()) = {_ in }
 
 }
 
+
 class ItemsViewModel: NSObject
 {
     var subCategoryObj : SubCategory!
-//    var itemArray : [ItemProtocol]!
-  //  var c :my<>!
-//    func my<T>(of:T.Type,arr:T)
-//    {
-//    let myArray : T = arr
-//      //  self.itemArray = myArray
-//        print("myarraaay\(type(of: myArray)) ")
-//        print(myArray)
-//    }
-
     var itemService:itemsService!
+    var firebaseManager : DinaFirebaseManager!
+   
+
 
     var showError : String! {
         
@@ -42,22 +40,24 @@ class ItemsViewModel: NSObject
         
     }
     
-
-   
     var bindViewModelErrorToView : (()->()) = {}
+    var bindItemFavoriteToView : ((Bool,Int)->()) = {_,_ in}
     var bindItemsToView: (([ItemProtocol])->()) = {_ in }
+    
 
     
     init(subCategoryObj : SubCategory) {
         super.init()
-       // self.itemsData = []
+        
         self.itemService = itemsService()
+        self.firebaseManager = DinaFirebaseManager()
         self.subCategoryObj = subCategoryObj
-       
+
     }
 
     
     func fetchItemsDataFromAPI()  {
+        
         print("detch\(subCategoryObj.subcategoryName)")
         switch subCategoryObj.subcategoryName {
         case "Beauty Equipment","Hair Stylers":
@@ -66,9 +66,8 @@ class ItemsViewModel: NSObject
                 self.bindItemsToView(items!)
                 
             }
-//          itemArray = [PersonalCare]()
+
         case "Microwaves","Blenders and Mixers":
-            print("")
             itemService.fetchItemsData(of: [HomeAppliances].self, url: subCategoryObj.subcategoryAPI){ [self]
                 (items,error) in
                 self.bindItemsToView(items!)
@@ -131,23 +130,23 @@ class ItemsViewModel: NSObject
         default:
             print("no sub category found")
         }
-//    func fetchItemsDataFromAPI (){
-//        
-//        itemService.fetchItemsData(completion: { (itemsData, error) in
-//            
-//            if let error : Error = error{
-//                
-//                let message = error.localizedDescription
-//                print(message)
-//                self.showError = message
-//                
-//            }else{
-//                
-//                self.itemsData = itemsData
-//                
-//            }
-//           
-//        })
-//    }
+        
+    }
+    
+    func itemIsFavoriteValue(itemIdValue : String , index : Int){
+        firebaseManager.fetchItemIsFavoriteData(itemId: itemIdValue) { (isFav, error) in
+            if let error : Error = error{
+                
+                let message = error.localizedDescription
+                self.showError = message
+                
+            }else{
+                self.bindItemFavoriteToView(isFav,index)
+            }
+        }
+    }
+  
 }
-}
+
+
+
