@@ -271,8 +271,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsv-IK-CIv">
                                 <rect key="frame" x="33" y="1067" width="348" height="56"/>
                                 <color key="backgroundColor" red="0.3241435587" green="0.69462406639999996" blue="0.45845073460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
-                                <state key="normal" title="Add To Cart" image="add-to-cart-B">
+                                <state key="normal" title="Add To Cart" image="cart.badge.plus.fill" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -282,7 +283,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPathclipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="emailSignIn:" destination="a8O-kN-ysf" eventType="touchUpInside" id="Hdm-Zd-qBB"/>
+                                    <action selector="addToCartButton:" destination="JVu-JC-zvp" eventType="touchUpInside" id="GrI-Nm-Juu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -722,14 +723,14 @@
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3k-1j-Q6u">
                                 <rect key="frame" x="0.0" y="88" width="414" height="290"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76w-PY-EGv">
-                                        <rect key="frame" x="24" y="21" width="103" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76w-PY-EGv">
+                                        <rect key="frame" x="24" y="21" width="103" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jX2-rb-5Gb">
-                                        <rect key="frame" x="24" y="66.5" width="100" height="99"/>
+                                        <rect key="frame" x="24" y="61.5" width="100" height="99"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="jX2-rb-5Gb" secondAttribute="height" multiplier="1:1" id="OMF-Fw-vAb"/>
@@ -752,13 +753,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.30784919859999998" green="0.68311303850000005" blue="0.45849901440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="76w-PY-EGv" firstAttribute="leading" secondItem="Q3k-1j-Q6u" secondAttribute="leading" constant="28" id="7VF-LQ-n2s"/>
+                                    <constraint firstItem="76w-PY-EGv" firstAttribute="leading" secondItem="Q3k-1j-Q6u" secondAttribute="leading" constant="24" id="7VF-LQ-n2s"/>
                                     <constraint firstItem="MsS-jn-SPe" firstAttribute="top" secondItem="Q3k-1j-Q6u" secondAttribute="top" constant="84" id="9mJ-no-RCx"/>
                                     <constraint firstItem="76w-PY-EGv" firstAttribute="top" secondItem="Q3k-1j-Q6u" secondAttribute="top" constant="21" id="A6K-zL-pwP"/>
                                     <constraint firstItem="vw1-8s-mfc" firstAttribute="leading" secondItem="MsS-jn-SPe" secondAttribute="leading" id="Ega-7P-phe"/>
                                     <constraint firstItem="76w-PY-EGv" firstAttribute="trailing" secondItem="jX2-rb-5Gb" secondAttribute="trailing" constant="3" id="J4D-Av-NWy"/>
                                     <constraint firstItem="jX2-rb-5Gb" firstAttribute="leading" secondItem="Q3k-1j-Q6u" secondAttribute="leading" constant="24" id="QwW-kn-fo4"/>
-                                    <constraint firstItem="jX2-rb-5Gb" firstAttribute="top" secondItem="76w-PY-EGv" secondAttribute="bottom" constant="16" id="RB7-Qe-Nmd"/>
+                                    <constraint firstItem="jX2-rb-5Gb" firstAttribute="top" secondItem="76w-PY-EGv" secondAttribute="bottom" constant="11" id="RB7-Qe-Nmd"/>
                                     <constraint firstItem="MsS-jn-SPe" firstAttribute="leading" secondItem="jX2-rb-5Gb" secondAttribute="trailing" constant="10" id="YGo-lT-WEX"/>
                                     <constraint firstAttribute="trailing" secondItem="MsS-jn-SPe" secondAttribute="trailing" constant="16" id="en8-ec-Olw"/>
                                     <constraint firstItem="vw1-8s-mfc" firstAttribute="top" secondItem="MsS-jn-SPe" secondAttribute="bottom" constant="18" id="vgN-rH-dU2"/>
@@ -1038,6 +1039,55 @@
             </objects>
             <point key="canvasLocation" x="6231.884057971015" y="162.72321428571428"/>
         </scene>
+        <!--Cart-->
+        <scene sceneID="MyI-LW-pee">
+            <objects>
+                <viewController storyboardIdentifier="CartViewController" id="odE-VP-CVf" customClass="CartViewController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Itp-2w-ZqI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uht-kQ-1NW">
+                                <rect key="frame" x="20" y="44" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kBN-Te-isU">
+                                <rect key="frame" x="0.0" y="82" width="414" height="594"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cartCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="v7C-Qh-PWm" customClass="CartTableViewCell" customModule="Mercado" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v7C-Qh-PWm" id="Lt7-Vd-rPH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ito-BZ-9ch">
+                                                    <rect key="frame" x="156" y="68" width="73" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button" image="checkmark" catalog="system"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1b3-ln-eMa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cart" image="cart.fill" catalog="system" selectedImage="cart.fill" id="22I-B9-3J1"/>
+                    <navigationItem key="navigationItem" id="bWO-iJ-NDo"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haD-Vx-jpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="959"/>
+        </scene>
         <!--Account-->
         <scene sceneID="PPD-F3-JFd">
             <objects>
@@ -1269,7 +1319,9 @@
     </scenes>
     <color key="tintColor" red="0.3241435587" green="0.69462406639999996" blue="0.45845073460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="add-to-cart-B" width="24" height="24"/>
+        <image name="cart.badge.plus.fill" catalog="system" width="128" height="106"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="google" width="18" height="18"/>
         <image name="location.circle" catalog="system" width="128" height="121"/>

@@ -39,5 +39,20 @@ class ProductDetailsViewController: UIViewController
     }
     
 
-
+    @IBAction func addToCartButton(_ sender: UIButton)
+    {
+        if sender.backgroundColor !=  #colorLiteral(red: 0.9529411765, green: 0.3764705882, blue: 0.2470588235, alpha: 1){
+            sender.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.3764705882, blue: 0.2470588235, alpha: 1)
+            sender.setImage(UIImage(systemName: "checkmark"), for: .normal)
+        }
+        else
+        {
+            sender.backgroundColor = #colorLiteral(red: 0.3254901961, green: 0.6941176471, blue: 0.4588235294, alpha: 1)
+        //    sender.tintColor = .white
+            sender.setImage(UIImage(systemName: "cart.badge.plus.fill"), for: .normal)
+        }
+       
+    
+    }
+    
 }
