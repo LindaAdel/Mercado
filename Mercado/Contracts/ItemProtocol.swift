@@ -11,7 +11,7 @@ import Foundation
     var item_image: String?{get}
     var item_price : String?{get}
     var slider_images :[String]? {get}
-    var item_id: String? {get}
+    var item_id: String? {get set}
     var brand : String? {get}
     @objc optional var item_description : String?{get}
     @objc optional var texture : String?{get}

@@ -48,8 +48,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -144,8 +144,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
             endingLineNumber = "117"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "AccountViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -193,6 +193,391 @@
             startingLineNumber = "40"
             endingLineNumber = "40"
             landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "697EF2EF-5AEE-4EC5-ABB5-463C8B1F0BCF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/Views/Controllers/Favorite/FavoriteTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E06264E3-C8F6-4B03-804F-87528217DC8E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/CartTableViewExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D93B1EC-354E-483A-8A3E-3A89A536B4BC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/CartViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "searchItemInCartDetails(cartItemsArray:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9D93B1EC-354E-483A-8A3E-3A89A536B4BC - 38b05aab41390893"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1081">
+               </Location>
+               <Location
+                  uuid = "9D93B1EC-354E-483A-8A3E-3A89A536B4BC - 38b05aab41390893"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1291">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8995B1B2-03F9-4B94-83A5-35FD161C47DE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/Models/DatabaseModels/FirebaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "searchForItemsInCart(of:cartItem:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F90568B-B622-4E04-8809-690DE966B3B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/CartViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "searchItemInCartDetails(cartItemsArray:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "917">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "929">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1135">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1720">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1930">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "2515">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "2725">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "3310">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "3520">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "4105">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "4690">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "5275">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "5860">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "6445">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "7030">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "7615">
+               </Location>
+               <Location
+                  uuid = "4F90568B-B622-4E04-8809-690DE966B3B1 - 38b05aab41390855"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.CartViewModel.searchItemInCartDetails(cartItemsArray: Swift.Array&lt;Mercado.CartItem&gt;) -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mayaradel/Desktop/Mercado/Mercado/CartViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "7825">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E632BDC-F5B5-4CFF-8A4E-496B39274648"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/Extensions/ItemList/itemTableExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "addToCartButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

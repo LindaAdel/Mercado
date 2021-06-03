@@ -90,13 +90,16 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
         if collectionView == newArrivalCollectionView{
             
             detailsVC.categoryName = newArrival_infoArray[indexPath.row].category
+            print("shop\(newArrival_array[indexPath.row].item_id)")
+            newArrival_array[indexPath.row].item_id = newArrival_infoArray[indexPath.row].itemId
             detailsVC.itemDetails = newArrival_array[indexPath.row]
             detailsVC.subCategoryName = newArrival_infoArray[indexPath.row].subCategory
         
         }
         else if collectionView == exclusiveOffersCollectionView{
-            
+//            print("shop\(newArrival_array[indexPath.row].item_id)")
             detailsVC.categoryName = exclusive0ffers_infoArray[indexPath.row].category
+            exclusiveOffers_array[indexPath.row].item_id = exclusive0ffers_infoArray[indexPath.row].itemId
             detailsVC.itemDetails = exclusiveOffers_array[indexPath.row]
             detailsVC.subCategoryName = exclusive0ffers_infoArray[indexPath.row].subCategory
             

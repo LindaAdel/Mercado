@@ -11,5 +11,6 @@ target 'Mercado' do
  pod 'ImageSlideshow'
  pod "ImageSlideshow/Alamofire"
  pod 'Firebase/Storage'
+ pod 'CodableFirebase'
 
 end

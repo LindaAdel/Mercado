@@ -8,13 +8,36 @@
 import UIKit
 
 class CartViewController: UIViewController {
-
+    
+    @IBOutlet weak var subTotalLabel: UILabel!
+  
+    @IBOutlet weak var shippingLabel: UILabel!
+    @IBOutlet weak var totalValueLabel: UILabel!
+    var cartViewModel :CartViewModel!
+    var itemsArray :[ItemProtocol]!
+    var cartItemsArray :[CartItem]!
+    @IBOutlet weak var tableView: UITableView!
+    var subTotalValue :Float!
+    var quantityLabelValue :Int!
+    var totalValue : Float!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        cartViewModel = CartViewModel()
+        subTotalValue = 0.0
+        
+       
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView(_:)), name: NSNotification.Name(rawValue: "countObserver"), object: nil)
+       
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+       
+        itemsArray = []
+        shippingLabel.text = "\(200) EGP"
+        cartViewModel.getCartItems()
+        self.reloadCartData()
+        print("will \(itemsArray.count)")
+    }
 
     /*
     // MARK: - Navigation

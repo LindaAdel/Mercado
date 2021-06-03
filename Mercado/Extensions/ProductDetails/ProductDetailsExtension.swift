@@ -9,6 +9,23 @@ import Foundation
 import ImageSlideshow
 extension ProductDetailsViewController
 {
+//    //to change button color
+//    func checkIfItemInCart()   {
+//        productDetailsViewModel.bindIfItemInCartToDetailsView = {
+//            itemExist in
+//            if itemExist {
+//                DispatchQueue.main.async {
+//                    
+//                    self.cartButton.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.3764705882, blue: 0.2470588235, alpha: 1)
+//                    self.cartButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
+//                }
+//                
+//            }
+//            else{
+//                print("details view not found in cart")
+//            }
+//        }
+//    }
     //post item details to scrollable container view to update data
     func postItemsNotifier(){
         

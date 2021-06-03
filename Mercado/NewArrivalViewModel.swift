@@ -92,7 +92,7 @@ class NewArrivalViewModel : NSObject{
                             print(error)
                         }
                         print(data.item_title!)
-                        
+                        print("model \(data.item_id)")
                         self.bindItemsToView(newArrivalItem,data)
                         
                     }
