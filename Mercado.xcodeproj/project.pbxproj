@@ -111,6 +111,11 @@
 		96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8F9FC262F4C9E001984A2 /* ViewController.swift */; };
 		96F9E0B1265ACADF008C47A2 /* AccountTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9E0B0265ACADF008C47A2 /* AccountTableViewExtension.swift */; };
 		96F9E0CF265AD648008C47A2 /* ConfirmAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9E0CE265AD648008C47A2 /* ConfirmAddressViewController.swift */; };
+		A93ECFCD2668F7AE0067E102 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECFCC2668F7AE0067E102 /* RoundShadowView.swift */; };
+		A93ECFD12668F7D20067E102 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECFCF2668F7D20067E102 /* CheckoutViewController.swift */; };
+		A93ECFD22668F7D20067E102 /* CheckoutItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECFD02668F7D20067E102 /* CheckoutItemTableViewCell.swift */; };
+		A93ECFD52668F7EE0067E102 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECFD42668F7EE0067E102 /* PlaceOrderViewController.swift */; };
+		A93ECFD82668F8140067E102 /* CheckoutExtension+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECFD72668F8140067E102 /* CheckoutExtension+TableView.swift */; };
 		A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */; };
 		A9916B8E265419050030ADDA /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8D265419050030ADDA /* CategoriesService.swift */; };
 		A9916B9026542C720030ADDA /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */; };
@@ -232,6 +237,11 @@
 		96E8F9FC262F4C9E001984A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96F9E0B0265ACADF008C47A2 /* AccountTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewExtension.swift; sourceTree = "<group>"; };
 		96F9E0CE265AD648008C47A2 /* ConfirmAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmAddressViewController.swift; sourceTree = "<group>"; };
+		A93ECFCC2668F7AE0067E102 /* RoundShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
+		A93ECFCF2668F7D20067E102 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		A93ECFD02668F7D20067E102 /* CheckoutItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutItemTableViewCell.swift; sourceTree = "<group>"; };
+		A93ECFD42668F7EE0067E102 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
+		A93ECFD72668F8140067E102 /* CheckoutExtension+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CheckoutExtension+TableView.swift"; sourceTree = "<group>"; };
 		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
 		A9916B8D265419050030ADDA /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
@@ -576,7 +586,11 @@
 		96B8C1BC263B6A04008CCA50 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+
 				965A8494266562EA00004F08 /* Cart */,
+
+				A93ECFD62668F8140067E102 /* Checkout */,
+
 				A9F3B93126613D3700BD40AA /* Shop */,
 				A9F3B93026613D2800BD40AA /* ItemList */,
 				A9F3B92F26613D1700BD40AA /* Explore */,
@@ -592,6 +606,7 @@
 		96B8C1C2263B6C2D008CCA50 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				A93ECFCC2668F7AE0067E102 /* RoundShadowView.swift */,
 				96B8C1C3263B6C53008CCA50 /* TextFieldErrors.swift */,
 				2FE74B4126519400005D6AEA /* StyleSheet.swift */,
 				A9FE90192653FF1800B039D2 /* URLs.swift */,
@@ -606,6 +621,8 @@
 		96B8C1C9263B769A008CCA50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A93ECFD32668F7EE0067E102 /* Place Order */,
+				A93ECFCE2668F7D20067E102 /* Checkout */,
 				965A848826654F1A00004F08 /* Cart */,
 				9625E82626644BB700F52E44 /* Home */,
 				A9F3B92D26613C3900BD40AA /* Get Started */,
@@ -681,6 +698,31 @@
 				963AF844265B25A200C4E51A /* LocationSearch */,
 			);
 			path = "Shipping Address";
+			sourceTree = "<group>";
+		};
+		A93ECFCE2668F7D20067E102 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				A93ECFCF2668F7D20067E102 /* CheckoutViewController.swift */,
+				A93ECFD02668F7D20067E102 /* CheckoutItemTableViewCell.swift */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
+		A93ECFD32668F7EE0067E102 /* Place Order */ = {
+			isa = PBXGroup;
+			children = (
+				A93ECFD42668F7EE0067E102 /* PlaceOrderViewController.swift */,
+			);
+			path = "Place Order";
+			sourceTree = "<group>";
+		};
+		A93ECFD62668F8140067E102 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				A93ECFD72668F8140067E102 /* CheckoutExtension+TableView.swift */,
+			);
+			path = Checkout;
 			sourceTree = "<group>";
 		};
 		A9ACF963265F0F3B00A2ABF7 /* DatabaseModels */ = {
@@ -1033,6 +1075,7 @@
 				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
 				A9ACF95E265F0EF700A2ABF7 /* DinaFirebaseManager.swift in Sources */,
 				964BB7E526598C090087EFB3 /* AccountViewExtension.swift in Sources */,
+				A93ECFD12668F7D20067E102 /* CheckoutViewController.swift in Sources */,
 				96B8C1C4263B6C53008CCA50 /* TextFieldErrors.swift in Sources */,
 				2FA30FB62652D79300E59A77 /* SkinCare.swift in Sources */,
 				96633A21265C51D100FB1625 /* confirmAddressExtension.swift in Sources */,
@@ -1041,7 +1084,9 @@
 				2FA30FE62652F86600E59A77 /* KidsShoes.swift in Sources */,
 				9632B31C265CC0B000D32D2F /* AddAddress.swift in Sources */,
 				2FC100C7265EF74600BF97A5 /* FavoriteViewModel.swift in Sources */,
+				A93ECFD52668F7EE0067E102 /* PlaceOrderViewController.swift in Sources */,
 				96633A53265C789200FB1625 /* locationManagerExtension.swift in Sources */,
+				A93ECFCD2668F7AE0067E102 /* RoundShadowView.swift in Sources */,
 				A9ACF96B265F10B100A2ABF7 /* ExclusiveOffersViewModel.swift in Sources */,
 				96633A69265CB00F00FB1625 /* AddAddressTableViewController.swift in Sources */,
 				2FC100D6265EF81B00BF97A5 /* FavoriteTableViewController.swift in Sources */,
@@ -1063,6 +1108,7 @@
 				96CD37412651B7D5007B945F /* LoginViewController.swift in Sources */,
 				A9FE6DE52653371600C6624C /* ExploreExtention+CollectionView.swift in Sources */,
 				2FC100D1265EF80900BF97A5 /* FavoriteTableViewCell.swift in Sources */,
+				A93ECFD82668F8140067E102 /* CheckoutExtension+TableView.swift in Sources */,
 				A9FE6DE7265341B700C6624C /* ExploreExtension+TableView.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				96F9E0CF265AD648008C47A2 /* ConfirmAddressViewController.swift in Sources */,
@@ -1088,6 +1134,7 @@
 				A9ACF96D265F10C300A2ABF7 /* NewArrivalViewModel.swift in Sources */,
 				968F2AA52655AD3200441252 /* ScrollableProductDetailsViewController.swift in Sources */,
 				964FB38B265B68C3009D008D /* LocationSearchExtension.swift in Sources */,
+				A93ECFD22668F7D20067E102 /* CheckoutItemTableViewCell.swift in Sources */,
 				96633A64265C818C00FB1625 /* ParseAddress.swift in Sources */,
 				2F3C59C12653F5D600D704D5 /* ItemsViewModel.swift in Sources */,
 				A9ACF96F265F115100A2ABF7 /* SpecialItem.swift in Sources */,

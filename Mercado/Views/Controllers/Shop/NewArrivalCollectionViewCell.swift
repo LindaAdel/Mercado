@@ -13,6 +13,9 @@ class NewArrivalCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var itemTitle: UILabel!
     @IBOutlet weak var price_beforeSale: UILabel!
     
+    @IBOutlet weak var addToCartBtn: UIButton!
+    @IBAction func addToCartBtnAction(_ sender: Any) {
+    }
     @IBOutlet weak var favBtn: UIButton!
     var isFavourite : Bool = false
     @IBAction func favBtnAction(_ sender: UIButton) {
