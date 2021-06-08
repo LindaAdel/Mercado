@@ -52,7 +52,7 @@ extension AccountViewController:UIImagePickerControllerDelegate,UINavigationCont
         if UIImagePickerController.isSourceTypeAvailable(sourceType) {
             let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
-                imagePicker.sourceType = .photoLibrary;
+                imagePicker.sourceType = sourceType;
                 imagePicker.allowsEditing = allowEditing
             self.present(imagePicker, animated: true, completion: nil)
             }

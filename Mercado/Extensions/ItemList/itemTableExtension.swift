@@ -16,10 +16,11 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "productDetails") as! ProductDetailsViewController
-        detailsVC.categoryName = self.categoryName
+        detailsVC.categoryName = self.itemcategoryName
+        print("items id \(itemsList[indexPath.row].item_id)")
         detailsVC.itemDetails=itemsList[indexPath.row]
-        detailsVC.subCategoryName = subCategoryObj.subcategoryName
-        //detailsVC.modalPresentationStyle = .fullScreen
+        detailsVC.subCategoryName = subCategoryObj.itemSubCategoryName
+        detailsVC.modalPresentationStyle = .fullScreen
         self.present(detailsVC, animated: true, completion: nil)
        // self.navigationController!.pushViewController(detailsVC, animated: true)
         
@@ -35,7 +36,10 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = itemsTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! itemTableViewCell
-        
+        //MARK:- Cart
+        cell.cellAddToCart.addTarget(self, action: #selector(addToCartButton), for: .touchUpInside)
+        cell.cellAddToCart.tag = indexPath.row
+      //  Cart().checkIfItemInCart(button :cell.cellAddToCart,itemId:itemsList[indexPath.row].item_id!)
         if isSearching {
             
             cell.cellItemImage.sd_setImage(with: URL(string: self.searchingItem[indexPath.row].item_image!))
@@ -74,10 +78,17 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
           return 155
         
       }
-    
+    //MARK:- Cart
+    @objc func addToCartButton(_ sender :UIButton)
+    {
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        let item = CartItem(category: itemcategoryName, itemId: itemsList[indexPath.row].item_id, subCategory: subCategoryObj.itemSubCategoryName, count: 1)
+        Cart().addToCart(sender: sender, item: item, itemId: itemsList[indexPath.row].item_id!, currentView: self)
+    }
     @objc func favoriteBtnAction(sender : UIButton)
         {
            let indexp = IndexPath(row: sender.tag, section: 0)
+        print("fav \(indexp)")
             let cellFavoriteItem : SpecialItem = SpecialItem()
         cellFavoriteItem.category = self.itemcategoryName
         cellFavoriteItem.subCategory = subCategoryObj.itemSubCategoryName

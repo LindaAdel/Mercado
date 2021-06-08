@@ -32,7 +32,20 @@ class PasswordTextField: UITextField {
 }
 extension  LoginViewController
 {
-    func showAndHidePasswordIcon()
+    //MARK:- Eye Button
+    func addEyeButtonToPassword()
+    {
+        passwordTextField.rightViewMode = .always
+        showPasswordButton = UIButton()
+
+        let image = UIImage(systemName: "eye.slash" )
+        showPasswordButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: -24, bottom: 5, right: 15)
+        showPasswordButton.setImage(image, for: .normal)
+        passwordTextField.rightView = showPasswordButton
+        showPasswordButton.addTarget(self, action: #selector(showAndHidePasswordIcon), for: .touchUpInside)
+       
+    }
+    @objc func showAndHidePasswordIcon()
     {
         print("outsidedd\(passwordTextField.clearsOnBeginEditing)")
         if !passwordTextField.text!.isEmpty
@@ -43,13 +56,8 @@ extension  LoginViewController
         //check if user show password
         if(!passwordTextField.isSecureTextEntry)
         {
-//            if passwordTextField.isSecureTextEntry
-//            {
-//                passwordTextField.clearsOnBeginEditing = false;
-//                passwordTextField.clearsOnInsertion = false
-//            }
             print("show\(passwordTextField.clearsOnBeginEditing)")
-            showPasswordButton.setImage(UIImage(named: "showPassword"),for: .normal)
+            showPasswordButton.setImage(UIImage(systemName: "eye"),for: .normal)
         }
         //hide password
         else
@@ -60,7 +68,7 @@ extension  LoginViewController
 //                passwordTextField.clearsOnInsertion = false
 //            }
             print("hide \(passwordTextField.clearsOnBeginEditing)")
-            showPasswordButton.setImage(UIImage(named: "securePassword"),for: .normal)
+            showPasswordButton.setImage(UIImage(systemName: "eye.slash"),for: .normal)
         }
         }
 

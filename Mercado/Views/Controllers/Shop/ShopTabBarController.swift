@@ -28,30 +28,44 @@ class ShopTabBarController: UIViewController {
     var exclusiveViewModel : ExclusiveOffersViewModel!
     var firebaseManager : FirebaseManager!
     var itemIsFavoriteArr : [ItemIsFavorite?]!
-    var flashSaleViewModel : FlashSaleViewModel!
-    var flashSaleArray : [FlashSale]!
+    var collectionView :UICollectionView!
 
+    override func viewWillAppear(_ animated: Bool) {
+        print("shop will appear")
+        //update cart badge
+        CartHandlerViewModel().getNumbersOfItemsInCart()
+        NotificationCenter.default.addObserver(self,selector:#selector(updateBadgeValue(_:)),name:NSNotification.Name(rawValue: "cartBadge"),object:nil)
+    }
+    @objc func updateBadgeValue(_ notifications:Notification)
+    {
+        if let data = notifications.userInfo
+        {
+            let numberOfItemsInCart = data["numberOfItems"] as? Int
+            if numberOfItemsInCart == 0
+            {
+                DispatchQueue.main.async {
+                self.tabBarController!.viewControllers![2].tabBarItem.badgeValue = nil
+                }
+            }
+            else{
+            DispatchQueue.main.async {
+                self.tabBarController!.viewControllers![2].tabBarItem.badgeValue = String(numberOfItemsInCart!)
+            }}
+            print("badgee from shop\(numberOfItemsInCart!)")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         
+      
         // Do any additional setup after loading the view.
         newArrivalViewModel = NewArrivalViewModel()
         exclusiveViewModel = ExclusiveOffersViewModel()
-        flashSaleViewModel = FlashSaleViewModel()
-        flashSaleArray = [FlashSale]()
-        
-        flashSaleViewModel.bindFlashSaleViewModelToView = {
-            self.onSuccessUpdateView()
-        }
-        
-        flashSaleViewModel.bindViewModelErrorToView = {
-            self.onFailUpdateView()
-        }
 
         scrollView.isScrollEnabled = true
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
 
-        
+        showSliderImages()
 
         newArrivalCollectionView.delegate = self
         newArrivalCollectionView.dataSource = self
@@ -134,34 +148,12 @@ class ShopTabBarController: UIViewController {
                
     }
     
-    func onSuccessUpdateView(){
-        
-        flashSaleArray = flashSaleViewModel.flashSaleArray
-        DispatchQueue.main.async {
-            self.showSliderImages()
-        }
-    }
-    
-    func onFailUpdateView(){
-        
-       
-        let alert = UIAlertController(title: "Error", message: flashSaleViewModel.showError, preferredStyle: .alert)
-        
-        let okAction  = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
-            
-        }
-        
-        alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
-        
-    }
-    
     func showSliderImages() {
         
         //loop in images slider array and get it from alamofire
-        flashSaleArray.forEach{
-            item in
-            let img =  AlamofireSource(urlString: item.image!)
+        URLs.flashSaleImages.forEach{
+            image in
+          let img =  AlamofireSource(urlString: image)
            
             images.append(img!)
         

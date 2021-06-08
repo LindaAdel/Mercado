@@ -32,7 +32,9 @@ class itemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func AddToCartBtnTapped(_ sender: Any) {
+    @IBAction func AddToCartBtnTapped(_ sender: Any)
+    {
+        
     }
     
     @IBAction func addToFavoriteBtnTapped(_ sender: Any) {

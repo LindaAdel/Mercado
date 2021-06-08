@@ -10,6 +10,5 @@ import Foundation
 class SpecialItem : Codable{
     var category : String?
     var itemId : String?
-    var subCategory : String?
-    
+    var subCategory : String?    
 }

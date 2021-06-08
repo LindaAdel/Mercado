@@ -22,7 +22,6 @@ class itemsTableViewController: UIViewController {
     var itemsViewModel : ItemsViewModel!
     //var itemService : itemsService!
     var firebaseManager : FirebaseManager!
- 
     
     
     @IBOutlet weak var itemsSearchBar: UISearchBar!

@@ -8,22 +8,57 @@
 import UIKit
 
 class CartViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var cartTabBarIcon: UITabBarItem!
+    @IBOutlet weak var subTotalLabel: UILabel!
+    @IBOutlet weak var shippingLabel: UILabel!
+    @IBOutlet weak var totalValueLabel: UILabel!
+    var cartViewModel :CartViewModel!
+    var itemsArray :[ItemProtocol]!
+    var cartItemsArray :[CartItem]!
+    @IBOutlet weak var tableView: UITableView!
+    var subTotalValue :Float!
+    var quantityLabelValue :Int!
+    var totalValue : Float!
+    var shippingValue : Float!
+   var emptyCartbackgroundImage :UIImageView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //initialize variable
+        cartViewModel = CartViewModel()
+        itemsArray = []
+        cartItemsArray = []
+        subTotalValue = 0.0
+        shippingValue = 100.0
+        shippingLabel.text = "\(shippingValue!) EGP"
+        emptyCartbackgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        
+        //binding with cart view model
+        self.reloadCartData()
+        //binding empty cart frim cart view model
+        self.emptyCart()   
+       //add obsever when count value change
+        self.observeToCountValue()
+        
+        self.observeToCartBadge()
+        cartTabBarIcon.badgeColor = #colorLiteral(red: 0.9529411765, green: 0.3764705882, blue: 0.2470588235, alpha: 1)
+      
+       
     }
-    */
+  
+   
+    override func viewWillAppear(_ animated: Bool) {
+        CartHandlerViewModel().getNumbersOfItemsInCart()
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     
+        cartViewModel.getCartItems()
+        print("cart will appear \(itemsArray.count)")
+
+    }
+
+    
 
 }

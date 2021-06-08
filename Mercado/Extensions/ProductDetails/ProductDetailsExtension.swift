@@ -9,6 +9,7 @@ import Foundation
 import ImageSlideshow
 extension ProductDetailsViewController
 {
+
     //post item details to scrollable container view to update data
     func postItemsNotifier(){
         
