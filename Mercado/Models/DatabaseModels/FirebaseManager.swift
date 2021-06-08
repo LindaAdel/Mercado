@@ -44,13 +44,13 @@ class FirebaseManager
                 }
             }
     }
-    func updateCountValue(countValue:Int,currentCartId:String)
+    func updateCountValue(countValue:Int,currentItemId:String)
     {
         dbreference.child("cart")
             .child(userID)
-            .child(currentCartId)
+            .child(currentItemId)
             .updateChildValues(["count":countValue])
-        print("updated count \(currentCartId)")
+        print(" count updated \(currentItemId)")
     }
     func addItemToFirebaseCart(cartItem :CartItem)   {
         let item = [
@@ -101,7 +101,7 @@ class FirebaseManager
                 }
             }
     }
-    func getCartItemsFromFirebase(completion :@escaping ([CartItem])->()){
+    func getCartItemsFromFirebase(completion :@escaping ([CartItem]?)->()){
         dbreference.child("cart")
             .child(userID).getData(){
                 (error,snapshot)in
@@ -118,8 +118,14 @@ class FirebaseManager
                         let itemDecoded = try! FirebaseDecoder().decode(CartItem.self, from: (item as AnyObject).value!)
                         cartItemsArray.append(itemDecoded)
                     }
+                    print("fb \(cartItemsArray.count)")
                     completion(cartItemsArray)
                    
+                }
+                else{
+                    print("empty cart \(snapshot.value!)")
+                    completion(nil)
+                    
                 }
                 
                 

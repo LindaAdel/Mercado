@@ -28,10 +28,36 @@ class ShopTabBarController: UIViewController {
     var exclusiveViewModel : ExclusiveOffersViewModel!
     var firebaseManager : FirebaseManager!
     var itemIsFavoriteArr : [ItemIsFavorite?]!
+    var collectionView :UICollectionView!
 
+    override func viewWillAppear(_ animated: Bool) {
+        print("shop will appear")
+        //update cart badge
+        CartHandlerViewModel().getNumbersOfItemsInCart()
+        NotificationCenter.default.addObserver(self,selector:#selector(updateBadgeValue(_:)),name:NSNotification.Name(rawValue: "cartBadge"),object:nil)
+    }
+    @objc func updateBadgeValue(_ notifications:Notification)
+    {
+        if let data = notifications.userInfo
+        {
+            let numberOfItemsInCart = data["numberOfItems"] as? Int
+            if numberOfItemsInCart == 0
+            {
+                DispatchQueue.main.async {
+                self.tabBarController!.viewControllers![2].tabBarItem.badgeValue = nil
+                }
+            }
+            else{
+            DispatchQueue.main.async {
+                self.tabBarController!.viewControllers![2].tabBarItem.badgeValue = String(numberOfItemsInCart!)
+            }}
+            print("badgee from shop\(numberOfItemsInCart!)")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         
+      
         // Do any additional setup after loading the view.
         newArrivalViewModel = NewArrivalViewModel()
         exclusiveViewModel = ExclusiveOffersViewModel()

@@ -9,25 +9,33 @@ import Foundation
 class CartViewModel {
     var firebaseManager : FirebaseManager!
     var cartItems:[ItemProtocol]!
+    var bindCartItemsToView :(([ItemProtocol],[CartItem])->())!
+    var bindEmptyCartToView :(()->())!
     init() {
         firebaseManager = FirebaseManager.shared
         cartItems = []
     }
-    var bindCartItemsToView :(([ItemProtocol],[CartItem])->())!
-    
+  
     func removeCartItemFromFirebase(itemId:String)  {
         firebaseManager.removeItemfromFirebaseCart(itemId: itemId)
     }
-    
+    //get current items exists in firebase
     func getCartItems()
     {
         firebaseManager.getCartItemsFromFirebase()
         {
             cartItemsArray in
-        //    print("vmCart \(cartItemsArray[0].category!)")
-            self.searchItemInCartDetails(cartItemsArray: cartItemsArray)
+            guard cartItemsArray != nil
+            else
+            {
+                print("vm empty cart")
+                self.bindEmptyCartToView()
+                return
+            }
+            self.searchItemInCartDetails(cartItemsArray: cartItemsArray!)
         }
     }
+    //get every item in cart details
     func searchItemInCartDetails(cartItemsArray : [CartItem])
     {
         cartItems = []
@@ -147,8 +155,8 @@ class CartViewModel {
                 
                 
             default:
-                print("no sub category found \(itemData.subCategory) \(itemData.category)")
-            // print(item.subCategory)
+                print("no sub category found from cart vm \(itemData.subCategory!) \(itemData.category!)")
+           
             }
            
            

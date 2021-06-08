@@ -15,7 +15,7 @@ class LoginViewController: UIViewController,GIDSignInDelegate, UIScrollViewDeleg
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var showPasswordButton: UIButton!
+    var showPasswordButton: UIButton!
     
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        if scrollView.contentOffset.x != 0 {
@@ -32,6 +32,8 @@ class LoginViewController: UIViewController,GIDSignInDelegate, UIScrollViewDeleg
          GIDSignIn.sharedInstance()?.presentingViewController=self
          GIDSignIn.sharedInstance().delegate = self
          self.scrollView.contentOffset.x = 0
+        self.addEyeButtonToPassword()
+        
          emailTextField.addBottomBorder(color: self.view.tintColor)
          emailTextField.placeholder = "Email"
          passwordTextField.addBottomBorder(color: self.view.tintColor)
@@ -42,10 +44,7 @@ class LoginViewController: UIViewController,GIDSignInDelegate, UIScrollViewDeleg
         
         
      }
-    @IBAction func showPasswordButton(_ sender: Any)
-    {
-        self.showAndHidePasswordIcon()
-    }
+ 
     
     @IBAction func forgotPasswordButton(_ sender: Any)
     {

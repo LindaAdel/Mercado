@@ -17,9 +17,10 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
         let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "productDetails") as! ProductDetailsViewController
         
         detailsVC.categoryName = favoriteItemInfoArr[indexPath.row].category
+        favoriteList[indexPath.row].item_id =  favoriteItemInfoArr[indexPath.row].itemId!
         detailsVC.itemDetails=favoriteList[indexPath.row]
         detailsVC.subCategoryName = subCategoryObj.itemSubCategoryName
-       // detailsVC.modalPresentationStyle = .fullScreen
+        detailsVC.modalPresentationStyle = .fullScreen
         self.present(detailsVC, animated: true, completion: nil)
     
         

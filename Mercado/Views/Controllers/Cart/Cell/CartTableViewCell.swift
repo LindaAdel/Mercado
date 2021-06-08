@@ -46,7 +46,7 @@ class CartTableViewCell: UITableViewCell {
         
         //    print("quantity\(quantityValue)")
         quantityLabel.text = String(quantityValue)
-        FirebaseManager.shared.updateCountValue(countValue:quantityValue, currentCartId: self.currentCartId)
+        FirebaseManager.shared.updateCountValue(countValue:quantityValue, currentItemId: self.currentCartId)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "countObserver"), object: nil, userInfo: nil)
     }
     @IBAction func minusButton(_ sender: Any) {
@@ -56,7 +56,7 @@ class CartTableViewCell: UITableViewCell {
         }
         
         quantityLabel.text = String(quantityValue)
-        FirebaseManager.shared.updateCountValue(countValue:quantityValue, currentCartId: self.currentCartId)
+        FirebaseManager.shared.updateCountValue(countValue:quantityValue, currentItemId: self.currentCartId)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "countObserver"), object: nil, userInfo: nil)
      //   print(quantityValue)
 
