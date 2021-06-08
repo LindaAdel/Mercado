@@ -11,5 +11,7 @@ target 'Mercado' do
  pod 'ImageSlideshow'
  pod "ImageSlideshow/Alamofire"
  pod 'Firebase/Storage'
+ pod 'AIFlatSwitch'
+ pod 'lottie-ios'
 
 end

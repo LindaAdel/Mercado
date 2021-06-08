@@ -28,6 +28,8 @@ class ShopTabBarController: UIViewController {
     var exclusiveViewModel : ExclusiveOffersViewModel!
     var firebaseManager : FirebaseManager!
     var itemIsFavoriteArr : [ItemIsFavorite?]!
+    var flashSaleViewModel : FlashSaleViewModel!
+    var flashSaleArray : [FlashSale]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +37,21 @@ class ShopTabBarController: UIViewController {
         // Do any additional setup after loading the view.
         newArrivalViewModel = NewArrivalViewModel()
         exclusiveViewModel = ExclusiveOffersViewModel()
+        flashSaleViewModel = FlashSaleViewModel()
+        flashSaleArray = [FlashSale]()
+        
+        flashSaleViewModel.bindFlashSaleViewModelToView = {
+            self.onSuccessUpdateView()
+        }
+        
+        flashSaleViewModel.bindViewModelErrorToView = {
+            self.onFailUpdateView()
+        }
 
         scrollView.isScrollEnabled = true
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
 
-        showSliderImages()
+        
 
         newArrivalCollectionView.delegate = self
         newArrivalCollectionView.dataSource = self
@@ -122,12 +134,34 @@ class ShopTabBarController: UIViewController {
                
     }
     
+    func onSuccessUpdateView(){
+        
+        flashSaleArray = flashSaleViewModel.flashSaleArray
+        DispatchQueue.main.async {
+            self.showSliderImages()
+        }
+    }
+    
+    func onFailUpdateView(){
+        
+       
+        let alert = UIAlertController(title: "Error", message: flashSaleViewModel.showError, preferredStyle: .alert)
+        
+        let okAction  = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
+            
+        }
+        
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     func showSliderImages() {
         
         //loop in images slider array and get it from alamofire
-        URLs.flashSaleImages.forEach{
-            image in
-          let img =  AlamofireSource(urlString: image)
+        flashSaleArray.forEach{
+            item in
+            let img =  AlamofireSource(urlString: item.image!)
            
             images.append(img!)
         

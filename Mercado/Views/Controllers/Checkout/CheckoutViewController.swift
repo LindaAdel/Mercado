@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class CheckoutViewController: UIViewController {
 
@@ -17,10 +16,10 @@ class CheckoutViewController: UIViewController {
     }
     
     @IBAction func placeOrderBtn(_ sender: Any) {
-        let placeOrderVC = storyboard?.instantiateViewController(identifier: "placeOrder") as! PlaceOrderViewController
+        
+        let placeOrderVC = storyboard?.instantiateViewController(identifier: "PlaceOrder") as! PlaceOrderViewController
         placeOrderVC.modalPresentationStyle = .fullScreen
         self.present(placeOrderVC, animated: true, completion: nil)
-        
     }
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -41,7 +40,9 @@ class CheckoutViewController: UIViewController {
         scrollView.isScrollEnabled = true
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
         
-        cashOnDeliveryImg.sd_setImage(with: URL(string: URLs.cashOnDeliveryURLImage))
+        NotificationCenter.default.addObserver(self, selector: #selector(presentNoConnectionVC(_:)), name: .InternetNotification, object: nil)
+        
+        cashOnDeliveryImg.image = UIImage(named: "cash_on_delivery")
         
         checkoutItemsTableView.delegate = self
         checkoutItemsTableView.dataSource = self

@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Mercado/Pods-Mercado-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AIFlatSwitch/AIFlatSwitch.framework
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework
 ${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework
@@ -15,4 +16,5 @@ ${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework
 ${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework
 ${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework

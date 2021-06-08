@@ -1,4 +1,5 @@
 PODS:
+  - AIFlatSwitch (1.0.7)
   - Alamofire (5.4.1)
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
@@ -72,6 +73,7 @@ PODS:
     - ImageSlideshow/Core
   - ImageSlideshow/Core (1.9.2)
   - leveldb-library (1.22.1)
+  - lottie-ios (3.2.3)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -83,6 +85,7 @@ PODS:
   - SDWebImage/Core (5.10.4)
 
 DEPENDENCIES:
+  - AIFlatSwitch
   - Alamofire
   - Firebase/Auth
   - Firebase/Database
@@ -90,10 +93,12 @@ DEPENDENCIES:
   - GoogleSignIn
   - ImageSlideshow
   - ImageSlideshow/Alamofire
+  - lottie-ios
   - SDWebImage
 
 SPEC REPOS:
   trunk:
+    - AIFlatSwitch
     - Alamofire
     - AlamofireImage
     - AppAuth
@@ -110,11 +115,13 @@ SPEC REPOS:
     - GTMSessionFetcher
     - ImageSlideshow
     - leveldb-library
+    - lottie-ios
     - nanopb
     - PromisesObjC
     - SDWebImage
 
 SPEC CHECKSUMS:
+  AIFlatSwitch: fd56a5e6ab8769f0b52cef815c4f071e83050352
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
@@ -131,10 +138,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
 
-PODFILE CHECKSUM: f6be30f8d55669611115949e153cebbd6044b13a
+PODFILE CHECKSUM: ac0a6447d476c0356b3a1f56ff0bdc36fd2b35cb
 
 COCOAPODS: 1.10.1
