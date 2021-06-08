@@ -37,7 +37,7 @@ class itemsTableViewController: UIViewController {
         itemsTableView.delegate = self
         itemsTableView.dataSource = self
         
-        itemsViewModel = ItemsViewModel(subCategoryObj: self.subCategoryObj)
+        itemsViewModel = ItemsViewModel(subCategoryObj: self.subCategoryObj, categoryName: self.itemcategoryName!)
         itemsList = [ItemProtocol]()
         firebaseManager = FirebaseManager.shared
        // itemService = itemsService()

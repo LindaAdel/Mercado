@@ -20,5 +20,84 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78C31129-12BC-42C5-B1A2-D05AAF8ED7C3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/Extensions/Checkout/CheckoutExtension+TableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84B341FA-9B63-4D9D-AAD0-27B3B4D2B162"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/ItemsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "fetchItemsDataFromAPI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "84B341FA-9B63-4D9D-AAD0-27B3B4D2B162 - 4c4b3405d82008f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.ItemsViewModel.fetchItemsDataFromAPI() -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/ItemsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "12767">
+               </Location>
+               <Location
+                  uuid = "84B341FA-9B63-4D9D-AAD0-27B3B4D2B162 - 4c4b3405d82008f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mercado.ItemsViewModel.fetchItemsDataFromAPI() -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/ItemsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "13246">
+               </Location>
+               <Location
+                  uuid = "84B341FA-9B63-4D9D-AAD0-27B3B4D2B162 - 52c5e3d2f1d056fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #10 (Swift.Optional&lt;Swift.Array&lt;Mercado.LaptopBags&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Mercado.ItemsViewModel.fetchItemsDataFromAPI() -&gt; ()"
+                  moduleName = "Mercado"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/ItemsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "130">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

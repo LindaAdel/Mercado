@@ -13,5 +13,6 @@ target 'Mercado' do
  pod 'Firebase/Storage'
  pod 'AIFlatSwitch'
  pod 'lottie-ios'
+ pod 'CodableFirebase'
 
 end

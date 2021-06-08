@@ -699,8 +699,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOc-FE-6hc">
-                                                <rect key="frame" x="340.5" y="981.5" width="53.5" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOc-FE-6hc">
+                                                <rect key="frame" x="330" y="981.5" width="64" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -842,6 +842,8 @@
                         <outlet property="checkoutItemsTableView" destination="4xt-u6-dTp" id="S28-Ae-glN"/>
                         <outlet property="itemsCount" destination="O5G-gG-YI2" id="0Zg-1b-Tbh"/>
                         <outlet property="scrollView" destination="6yF-dB-arI" id="yTn-pp-1sU"/>
+                        <outlet property="subTotalPrice" destination="hJs-lr-XjE" id="Uk0-3f-9DU"/>
+                        <outlet property="total" destination="kEK-Sm-W8y" id="jbQ-ST-fYz"/>
                         <outlet property="userAddress" destination="YYG-10-Tc4" id="MJ7-vJ-bTK"/>
                     </connections>
                 </viewController>
@@ -1111,6 +1113,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waz-pF-2du" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7200.0000000000009" y="53.571428571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cM7-sq-kRr">
+            <objects>
+                <viewController storyboardIdentifier="OrdersList" id="0lx-DD-F8a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fto-GW-HiJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uUk-Ge-za5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRP-Er-vVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8032" y="51"/>
         </scene>
     </scenes>
     <resources>

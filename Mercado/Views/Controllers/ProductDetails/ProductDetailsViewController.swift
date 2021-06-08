@@ -29,7 +29,7 @@ class ProductDetailsViewController: UIViewController
         
         self.navItem.title =
             "Item Details"
-        itemPriceLabel.text =  itemDetails.item_price!
+        itemPriceLabel.text =  "EGP \(itemDetails.item_price!)"
         itemTitleLabel.text = itemDetails.item_title!
 
         //show image slider

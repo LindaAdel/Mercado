@@ -527,7 +527,6 @@
 			children = (
 				965A848E26654F4800004F08 /* Cell */,
 				965A848926654F4100004F08 /* CartViewController.swift */,
-				9625E82626644BB700F52E44 /* Home */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -616,12 +615,9 @@
 		96B8C1BC263B6A04008CCA50 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-
 				A9517C97266D592700FC5079 /* View Controller */,
 				A9517C94266D585D00FC5079 /* Notification Names */,
-
 				965A8494266562EA00004F08 /* Cart */,
-
 				A93ECFD62668F8140067E102 /* Checkout */,
 				A9F3B93126613D3700BD40AA /* Shop */,
 				A9F3B93026613D2800BD40AA /* ItemList */,
@@ -645,12 +641,9 @@
 				964BB7EC26599E4E0087EFB3 /* AccountDetails.swift */,
 				965A45112659D8EB00BF3DAE /* Alert.swift */,
 				96633A63265C818C00FB1625 /* ParseAddress.swift */,
-
 				A913806C266984350078B181 /* CheckmarkView.swift */,
-
 				96BDCE98266873FF00CF5C9B /* Cart.swift */,
 				961EEA37266C0AF8008731EF /* Toast.swift */,
-
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -661,6 +654,7 @@
 				A9D84C6B266C4DC5000FF46D /* No Internet Connection */,
 				A93ECFD32668F7EE0067E102 /* Place Order */,
 				A93ECFCE2668F7D20067E102 /* Checkout */,
+				9625E82626644BB700F52E44 /* Home */,
 				965A848826654F1A00004F08 /* Cart */,
 				A9F3B92D26613C3900BD40AA /* Get Started */,
 				A9F3B92C26613C1E00BD40AA /* Signup */,
@@ -693,11 +687,8 @@
 				A9FE901C2654005000B039D2 /* Categories.swift */,
 				A9ACF96E265F115000A2ABF7 /* SpecialItem.swift */,
 				2F03C4252660294E005DB6AA /* ItemIsFavorite.swift */,
-
 				A9CE3E98266B0B8D00BE9A81 /* FlashSale.swift */,
-
 				9615D93F26668E2F000D369F /* CartItem.swift */,
-
 			);
 			path = POJOs;
 			sourceTree = "<group>";

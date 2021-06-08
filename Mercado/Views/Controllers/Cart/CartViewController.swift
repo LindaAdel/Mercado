@@ -17,6 +17,16 @@ class CartViewController: UIViewController {
     var cartViewModel :CartViewModel!
     var itemsArray :[ItemProtocol]!
     var cartItemsArray :[CartItem]!
+    @IBAction func checkoutBtnAction(_ sender: Any) {
+        
+        let checkoutVC = storyboard?.instantiateViewController(identifier: "Checkout") as! CheckoutViewController
+        checkoutVC.modalPresentationStyle = .fullScreen
+        checkoutVC.itemsArray = itemsArray!
+        checkoutVC.cartItemsArray = cartItemsArray!
+        checkoutVC.subTotal = subTotalValue!
+        checkoutVC.totalPrice = totalValue!
+        self.present(checkoutVC, animated: true, completion: nil)
+    }
     @IBOutlet weak var tableView: UITableView!
     var subTotalValue :Float!
     var quantityLabelValue :Int!

@@ -60,7 +60,7 @@ extension ScrollableProductDetailsViewController
                // print(itemSizeLabelValue.text)
             }
             switch data["categoryName"] as! String{
-            case "Personal Care":
+            case "personalCare":
                 itemSizeLabel.text = "Features"
                 itemTypeLabel.text = "Model Number"
                 itemSizeLabelValue.text = item.item_features as? String
@@ -69,7 +69,7 @@ extension ScrollableProductDetailsViewController
                 itemMaterialLabelValue.isHidden = true
                 itemBrandLabel.text = item.brand
                 itemColorLabelValue.text = item.color as? String
-            case "Beauty Care":
+            case "beautyCare":
                 itemBrandLabel.text = item.brand
                 itemTypeLabel.text = "size"
                 itemSizeLabel.text = "Description"
@@ -97,7 +97,7 @@ extension ScrollableProductDetailsViewController
             
                 itemMaterialLabel.isHidden = true
                 itemMaterialLabelValue.isHidden = true
-            case "Home Appliances":
+            case "homeAppliances":
                 print("home")
                 showLabels()
                 itemCountryLabelValue.text = item.country as? String
@@ -112,7 +112,7 @@ extension ScrollableProductDetailsViewController
                 itemTypeLabelValue.text = item.type as? String
                 itemBrandLabel.text = item.brand
                 itemColorLabelValue.text = item.color as? String
-            case "Mobiles and Tablets":
+            case "mobilesAndTablets":
                 self.showLabels()
                 itemTypeLabel.text = "Battery Capacity"
                 itemTypeLabelValue.text = item.battery_capacity as? String
@@ -128,9 +128,9 @@ extension ScrollableProductDetailsViewController
                 itemCapacityLabelValue.text = item.rear_camera as? String
                 itemBrandLabel.text = item.brand
                 itemColorLabelValue.text = item.color as? String
-            case "Laptops and PCs":
+            case "laptopAndPC":
                 switch data["subCategoryName"] as! String {
-                case "Laptops":
+                case "laptops":
                     showLabels()
                     itemBrandLabel.text = item.brand
                     itemColorLabelValue.text = item.color as? String
@@ -147,7 +147,7 @@ extension ScrollableProductDetailsViewController
                     itemPowerLabelValue.text = item.storage as? String
                     itemCapacityLabel.text = "Display Size"
                     itemCapacityLabelValue.text = item.display_size as? String
-                case "Laptop Bags":
+                case "laptopBags":
                     showLabels()
                     itemBrandLabel.text = item.brand
                     itemColorLabelValue.text = item.color as? String
@@ -175,7 +175,7 @@ extension ScrollableProductDetailsViewController
                 itemSizeLabelValue.text = item.size as? String
                 itemTypeLabelValue.text = item.type as? String
             }
-            print("category name")
+            //print("category name")
         //    print(data["categoryName"])
 //            let item=data["items"] as! ItemProtocol
 //            if let _ = item.type

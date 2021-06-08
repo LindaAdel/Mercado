@@ -47,21 +47,21 @@ extension CartViewController : UITableViewDelegate,UITableViewDataSource
             self.itemsArray.remove(at: indexPath.row)
             // Delete the row from tableview
             tableView.deleteRows(at: [indexPath], with: .fade)
-            cartViewModel.removeCartItemFromFirebase(itemId: self.cartItemsArray[indexPath.row].itemId!)
+            self.cartViewModel.removeCartItemFromFirebase(itemId: self.cartItemsArray[indexPath.row].itemId!)
             
-            cartItemsArray.remove(at: indexPath.row)
-            print("remove cart \(cartItemsArray.count)")
-            print("remove items \(itemsArray.count)")
+            self.cartItemsArray.remove(at: indexPath.row)
+            print("remove cart \(self.cartItemsArray.count)")
+            print("remove items \(self.itemsArray.count)")
            
-            if(itemsArray.count == 0)
+            if(self.itemsArray.count == 0)
             {
-                cartTabBarIcon.badgeValue = nil
+                self.cartTabBarIcon.badgeValue = nil
                 print("show image from delete")
                 self.updateEmptyCartUI()
             }
             else{
-                cartTabBarIcon.badgeValue = String(itemsArray.count)
-            cartViewModel.getCartItems()
+                self.cartTabBarIcon.badgeValue = String(self.itemsArray.count)
+                self.cartViewModel.getCartItems()
             }
            // print("will \(itemsArray.count)")
             completionHandler(true)

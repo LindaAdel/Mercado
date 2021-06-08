@@ -20,6 +20,7 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
         favoriteList[indexPath.row].item_id =  favoriteItemInfoArr[indexPath.row].itemId!
         detailsVC.itemDetails=favoriteList[indexPath.row]
         detailsVC.subCategoryName = subCategoryObj.itemSubCategoryName
+       // print("\(itemcategoryName)")
         detailsVC.modalPresentationStyle = .fullScreen
         self.present(detailsVC, animated: true, completion: nil)
     

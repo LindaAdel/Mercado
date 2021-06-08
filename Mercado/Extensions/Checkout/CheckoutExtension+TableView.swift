@@ -10,17 +10,18 @@ import UIKit
 
 extension CheckoutViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return itemsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.layer.cornerRadius = 15
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CheckoutItemTableViewCell
-        cell?.itemImage.sd_setImage(with: URL(string: "https://m.media-amazon.com/images/I/61FQOmp8x-L._AC_UL320_.jpg"))
-        cell?.itemTitle.text = "Revlon ColorStay 16 Hour Eyeshadow Quad with Dual-Ended Applicator Brush, Longwear, Intense Color Smooth Eye Makeup for Day & Night, Moonlit (555), 0.16 oz"
-        cell?.itemAmount.text = "x\(2)"
-        cell?.itemPrice.text = "EGP \(83.32)"
+        cell?.itemImage.sd_setImage(with: URL(string: "https://media.btech.com/media/catalog/product/cache/ead4866c641338b50cadbc0815eacb19/n/l/nl_mc455tbrcsr-eu_018_001_black.jpg"))
+        print("\(itemsArray[indexPath.row].item_image!)")
+        cell?.itemTitle.text =  "\(itemsArray[indexPath.row].item_title!)"
+        cell?.itemAmount.text = "x\(cartItemsArray[indexPath.row].count!)"
+        cell?.itemPrice.text = "EGP \(itemsArray[indexPath.row].item_price!)"
         
         return cell!
     }

@@ -24,7 +24,7 @@ class AddAddressTableViewController: UITableViewController
         self.showFloatingButton()
         
         self.navigationItem.title = "Addresses"
-        self.navigationItem.backButtonTitle = "Back"
+        //self.navigationItem.backButtonTitle = "Back"
        
         //show no address label
         self.showNoAddressLabel()

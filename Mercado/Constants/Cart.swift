@@ -38,8 +38,8 @@ struct Cart {
         cartHandlerViewModel.bindIfItemInCartToView = {
                    itemExist in
                    if itemExist {
-                    cartHandlerViewModel.removeItemFromCart(itemId:itemId)
-                       cartHandlerViewModel.getNumbersOfItemsInCart()
+                    self.cartHandlerViewModel.removeItemFromCart(itemId:itemId)
+                    self.cartHandlerViewModel.getNumbersOfItemsInCart()
                     print("not found in cart from struct")
                 //    sender.backgroundColor = #colorLiteral(red: 0.3254901961, green: 0.6941176471, blue: 0.4588235294, alpha: 1)
                     DispatchQueue.main.async {
@@ -53,8 +53,8 @@ struct Cart {
                    else{
                     
                     print("item exist")
-                    cartHandlerViewModel.addItemToCart(cartItem: item)
-                    cartHandlerViewModel.getNumbersOfItemsInCart()
+                    self.cartHandlerViewModel.addItemToCart(cartItem: item)
+                    self.cartHandlerViewModel.getNumbersOfItemsInCart()
                     DispatchQueue.main.async {
                         currentView.showToast(message: "item added to cart", font:  .systemFont(ofSize: 16.0))
                     }

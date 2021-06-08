@@ -12,7 +12,7 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var checkoutItemsTableView: UITableView!
     
     @IBAction func backNavBar(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func placeOrderBtn(_ sender: Any) {
@@ -33,6 +33,14 @@ class CheckoutViewController: UIViewController {
     
     @IBOutlet weak var userAddress: UILabel!
     
+    var itemsArray :[ItemProtocol]!
+    var cartItemsArray :[CartItem]!
+    var subTotal : Float!
+    var totalPrice : Float!
+    @IBOutlet weak var subTotalPrice: UILabel!
+    
+    @IBOutlet weak var total: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,8 +54,12 @@ class CheckoutViewController: UIViewController {
         
         checkoutItemsTableView.delegate = self
         checkoutItemsTableView.dataSource = self
+        print("\(itemsArray)")
         
-        itemsCount.text = "3"
+        itemsCount.text = "\(itemsArray.count)"
+        subTotalPrice.text = "EGP \(subTotal!)"
+        total.text = "EGP \(totalPrice!)"
+        
         
         userAddress.text = "755 Crumm Rd, Cowansville, PA, 16218"
 
