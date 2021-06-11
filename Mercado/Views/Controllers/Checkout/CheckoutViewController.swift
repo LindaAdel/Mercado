@@ -9,12 +9,17 @@ import UIKit
 
 class CheckoutViewController: UIViewController {
 
+    @IBOutlet weak var orderNo: UILabel?
+    @IBOutlet weak var orderTimeStamp: UILabel?
     @IBOutlet weak var checkoutItemsTableView: UITableView!
     
     @IBAction func backNavBar(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    @IBOutlet weak var placeOrder: UIButton!
+    @IBOutlet weak var placeOrderBottomConstraint: NSLayoutConstraint!
     @IBAction func placeOrderBtn(_ sender: Any) {
         
         let placeOrderVC = storyboard?.instantiateViewController(identifier: "PlaceOrder") as! PlaceOrderViewController
@@ -33,13 +38,16 @@ class CheckoutViewController: UIViewController {
     
     @IBOutlet weak var userAddress: UILabel!
     
+    @IBOutlet weak var subTotalPrice: UILabel!
+    
+    @IBOutlet weak var total: UILabel!
+    
     var itemsArray :[ItemProtocol]!
     var cartItemsArray :[CartItem]!
     var subTotal : Float!
     var totalPrice : Float!
-    @IBOutlet weak var subTotalPrice: UILabel!
-    
-    @IBOutlet weak var total: UILabel!
+    var orderNumber : String!
+    var timeStamp : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,14 +62,20 @@ class CheckoutViewController: UIViewController {
         
         checkoutItemsTableView.delegate = self
         checkoutItemsTableView.dataSource = self
-        print("\(itemsArray)")
+        //print("\(itemsArray)")
         
-        itemsCount.text = "\(itemsArray.count)"
+//        itemsCount.text = "\(itemsArray.count)"
         subTotalPrice.text = "EGP \(subTotal!)"
         total.text = "EGP \(totalPrice!)"
         
-        
         userAddress.text = "755 Crumm Rd, Cowansville, PA, 16218"
+        
+        if navigationBar.title == "Order Details"
+            {
+                orderNo!.text = "Order #\(orderNumber!)"
+                orderTimeStamp!.text = "Placed on \(timeStamp!)"
+            }
+               
 
     }
     

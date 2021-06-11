@@ -39,15 +39,13 @@ extension AccountViewController:UITableViewDelegate,UITableViewDataSource
             
             self.navigationController?.pushViewController(confrimAddressVc, animated: true)
 //            self.present(confrimAddressVc, animated: true, completion: nil)
-       // case "Orders":
+        case "My Orders":
 
-                        // In the above, you replaced the navigation controller with your destVC.
-//                        let orders = storyboard?.instantiateViewController(identifier: String(describing: AddAddressTableViewController.self)) as! AddAddressTableViewController
-//                      //  confrimAddressVc.modalPresentationStyle = .fullScreen
-//                        print(self.navigationController)
-//
-//                        self.navigationController?.pushViewController(confrimAddressVc, animated: true)
-            //            self.present(confrimAddressVc, animated: true, completion: nil)
+                         //In the above, you replaced the navigation controller with your destVC.
+                        let ordersVC = storyboard?.instantiateViewController(identifier: String("OrdersList")) as! OrdersViewController
+                        ordersVC.modalPresentationStyle = .fullScreen
+                        self.present(ordersVC, animated: true, completion: nil)
+                        //self.navigationController?.pushViewController(ordersVC, animated: true)
         case "Help" :
             print("helppp")
 //            let userID = Auth.auth().currentUser?.uid
