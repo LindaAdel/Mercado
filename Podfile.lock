@@ -40,6 +40,7 @@ PODS:
   - FirebaseStorage (7.11.0):
     - FirebaseCore (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
+  - FittedSheets (2.4.0)
   - GoogleDataTransport (8.4.0):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - FittedSheets
   - GoogleSignIn
   - ImageSlideshow
   - ImageSlideshow/Alamofire
@@ -111,6 +113,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseDatabase
     - FirebaseStorage
+    - FittedSheets
     - GoogleDataTransport
     - GoogleSignIn
     - GoogleUtilities
@@ -135,6 +138,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 68ad972f99206cef818230f3f3179d52ccfb7f8c
   FirebaseDatabase: 6c39fbf1c8514a2f32e610f9bf9ef30c535dc15a
   FirebaseStorage: 8542711850ca181a3931c0ed483006a7b46039e7
+  FittedSheets: 470a7740a083156d711ab6ccd37d1d539005e6aa
   GoogleDataTransport: cd9db2180fcecd8da1b561aea31e3e56cf834aa7
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: 284cddc7fffc14ae1907efb6f78ab95c1fccaedc
@@ -147,6 +151,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
 
-PODFILE CHECKSUM: dee2ee12a67626f183a22ccbcbafb10cb2a12b86
+PODFILE CHECKSUM: 12cdc1a4347139161cd2d5edaa911e7f1d5c5ab7
 
 COCOAPODS: 1.10.1

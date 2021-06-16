@@ -14,5 +14,7 @@ target 'Mercado' do
  pod 'AIFlatSwitch'
  pod 'lottie-ios'
  pod 'CodableFirebase'
+ pod 'FittedSheets'
+
 
 end

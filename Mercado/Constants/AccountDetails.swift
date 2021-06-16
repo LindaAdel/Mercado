@@ -21,10 +21,6 @@ struct AccountDetails {
             "icon" :"location.circle"
         ],
         [
-            "name" : "Help",
-            "icon" :"questionmark.circle"
-        ],
-        [
             "name" : "About",
             "icon" :"exclamationmark.octagon"
         ]

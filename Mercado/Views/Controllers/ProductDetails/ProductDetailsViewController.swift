@@ -9,6 +9,7 @@ import UIKit
 import ImageSlideshow
 class ProductDetailsViewController: UIViewController
 {
+    @IBOutlet weak var favoriteIcon: UIBarButtonItem!
     @IBOutlet weak var cartButton: UIButton!
     
     @IBOutlet weak var pageControl: UIPageControl!
@@ -54,5 +55,8 @@ class ProductDetailsViewController: UIViewController
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func favoriteButton(_ sender: UIBarButtonItem) {
     }
 }

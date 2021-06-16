@@ -61,6 +61,7 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
 //
 //                cell.cellAddToFavorite.setImage(UIImage(named: "unfavorite"), for: .normal)
 //            }
+           
             if let favFlag = self.itemIsFavoriteArr[indexPath.row]{
                 if favFlag.isFavorite! {
                     cell.cellAddToFavorite.setImage(UIImage(named: "favorite"), for: .normal)
@@ -70,7 +71,7 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
             }
            
           }
- 
+          
         return cell
     }
     
