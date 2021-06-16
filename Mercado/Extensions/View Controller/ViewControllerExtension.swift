@@ -27,4 +27,19 @@ extension UIViewController {
          }
       }
     }
+    
+    func showLoading(activityIndicator : UIActivityIndicatorView) {
+           
+           activityIndicator.hidesWhenStopped = true
+           activityIndicator.center = self.view.center
+           self.view.addSubview(activityIndicator)
+           activityIndicator.startAnimating()
+           
+       }
+       
+       func hideLoading(activityIndicator : UIActivityIndicatorView) {
+           
+           activityIndicator.stopAnimating()
+           
+       }
 }

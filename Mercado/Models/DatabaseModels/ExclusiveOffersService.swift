@@ -15,6 +15,7 @@ class ExclusiveOffersService : FirebaseProtocol{
     
     func fetchArrayOfSpecialItems(completion: @escaping ([SpecialItem]?, Error?) -> ()) {
         self.ref.child("offers").getData { (error, snapshot) in
+            self.offersArray.removeAll()
                 if let error = error {
                     print("Error getting data \(error)")
                 }

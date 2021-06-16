@@ -10,8 +10,12 @@ import UIKit
 
 extension CheckoutViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return itemsArray.count
-        return 5
+        if navigationBar.title == "Order Details"{
+            return ordersItemsArray.count
+        }else{
+            return itemsArray.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -22,10 +26,20 @@ extension CheckoutViewController : UITableViewDelegate, UITableViewDataSource{
         tableView.layer.cornerRadius = 15
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CheckoutItemTableViewCell
-//        cell?.itemImage.sd_setImage(with: URL(string: "\(itemsArray[indexPath.row].item_image!)"))
-//        cell?.itemTitle.text =  "\(itemsArray[indexPath.row].item_title!)"
-//        cell?.itemAmount.text = "x\(cartItemsArray[indexPath.row].count!)"
-//        cell?.itemPrice.text = "EGP \(itemsArray[indexPath.row].item_price!)"
+
+        if navigationBar.title == "Order Details"{
+        
+            cell?.itemImage.sd_setImage(with: URL(string: "\(ordersItemsArray[indexPath.row].item_image!)"))
+            cell?.itemTitle.text =  "\(ordersItemsArray[indexPath.row].item_title!)"
+            cell?.itemPrice.text = "EGP \(ordersItemsArray[indexPath.row].item_price!)"
+        }
+        else{
+            cell?.itemImage.sd_setImage(with: URL(string: "\(itemsArray[indexPath.row].item_image!)"))
+            cell?.itemTitle.text =  "\(itemsArray[indexPath.row].item_title!)"
+            cell?.itemPrice.text = "EGP \(itemsArray[indexPath.row].item_price!)"
+                    
+        }
+        cell?.itemAmount.text = "x\(cartItemsArray[indexPath.row].count!)"
         
         return cell!
     }

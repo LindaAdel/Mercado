@@ -28,21 +28,22 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
             cell.addToCartBtn.addTarget(self, action: #selector(addToCartNewArrivalButton), for: .touchUpInside)
             print("id \(newArrival_infoArray .count)")
             print("id \(newArrival_array .count)")
-            
+
             cell.addToCartBtn.tag = indexPath.row
 //            Cart().checkIfItemInCart(button :cell.addToCartBtn,itemId:newArrival_infoArray [indexPath.row].itemId!)
             cell.itemTitle.text = newArrival_array[indexPath.row].item_title!
             cell.itemImage.sd_setImage(with: URL(string: newArrival_array[indexPath.row].item_image!))
             cell.itemPrice.text = "EGP \(newArrival_array[indexPath.row].item_price!)"
-//            cell.favBtn.addTarget(self, action: #selector(favoriteBtnAction), for: .touchUpInside)
-//            
-//                        if let favFlag = self.itemIsFavoriteArr[indexPath.row]{
-//                            if favFlag.isFavorite! {
-//                                cell.favBtn.setImage(UIImage(named: "favorite"), for: .normal)
-//                            }else {
-//                                cell.favBtn.setImage(UIImage(named: "unfavorite"), for: .normal)
-//                            }
-//                        }
+            cell.favBtn.tag = indexPath.row
+            cell.favBtn.addTarget(self, action: #selector(newArrivalFavoriteBtnAction), for: .touchUpInside)
+
+            if let favFlag = self.newArrivalIsFavoriteArr[indexPath.row]{
+                if favFlag.isFavorite! {
+                    cell.favBtn.setImage(UIImage(named: "favorite"), for: .normal)
+                }else {
+                    cell.favBtn.setImage(UIImage(named: "unfavorite"), for: .normal)
+                }
+            }
 
             return cell
         }
@@ -54,10 +55,22 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
 //            Cart().checkIfItemInCart(button :cell.addToCartBtn,itemId:exclusive0ffers_infoArray [indexPath.row].itemId!)
             cell.itemTitle.text = exclusiveOffers_array[indexPath.row].item_title!
             cell.itemImage.sd_setImage(with: URL(string: exclusiveOffers_array[indexPath.row].item_image!))
-            cell.itemPrice.text = "EGP \(exclusiveOffers_array[indexPath.row].price_afterSale!!)"
+            cell.itemPrice.text = "EGP \(exclusiveOffers_array[indexPath.row].item_price!)"
+            
+            //favorite
+            cell.favBtn.tag = indexPath.row
+            cell.favBtn.addTarget(self, action: #selector(exclusiveOffersFavoriteBtnAction), for: .touchUpInside)
+
+            if let favFlag = self.exclusiveOffersIsFavoriteArr[indexPath.row]{
+                if favFlag.isFavorite! {
+                    cell.favBtn.setImage(UIImage(named: "favorite"), for: .normal)
+                }else {
+                    cell.favBtn.setImage(UIImage(named: "unfavorite"), for: .normal)
+                }
+            }
             
             //stikeThrough Text
-            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "EGP \(exclusiveOffers_array[indexPath.row].item_price!)")
+            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "EGP \(exclusiveOffers_array[indexPath.row].oldPrice!!)")
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
             attributeString.addAttribute(NSAttributedString.Key.strikethroughColor, value: UIColor.red, range: NSMakeRange(0, attributeString.length))
             
@@ -72,25 +85,47 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
     }
     
     
-    @objc func favoriteBtnAction(sender : UIButton)
+    @objc func newArrivalFavoriteBtnAction(sender : UIButton)
             {
-//               let indexp = IndexPath(row: sender.tag, section: 0)
-//            var cellFavoriteItem : Favorite = Favorite()
-//                cellFavoriteItem.categoryName = newArrival_infoArray[indexp.row].category
-//            cellFavoriteItem.subcategoryName = newArrival_infoArray[indexp.row].subCategory
-//            cellFavoriteItem.item_id = newArrival_array[indexp.row].item_id
-//
-//            if let favFlag = self.itemIsFavoriteArr[indexp.row]{
-//                if favFlag.isFavorite! {
-//                    firebaseManager.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
-//                    self.itemIsFavoriteArr[indexp.row]?.isFavorite = false
-//                }else {
-//                    firebaseManager.addItemsToFavorites(favoriteItem: cellFavoriteItem)
-//                    self.itemIsFavoriteArr[indexp.row]?.isFavorite = true
-//                }
-//            }
-//            self.newArrivalCollectionView.reloadData()
+               let indexp = IndexPath(row: sender.tag, section: 0)
+                let cellFavoriteItem : SpecialItem = SpecialItem()
+            cellFavoriteItem.category = newArrival_infoArray[indexp.row].category
+            cellFavoriteItem.subCategory = newArrival_infoArray[indexp.row].subCategory
+            newArrival_array[indexp.row].item_id = newArrival_infoArray[indexp.row].itemId
+            cellFavoriteItem.itemId = newArrival_array[indexp.row].item_id
+
+            if let favFlag = self.newArrivalIsFavoriteArr[indexp.row]{
+                if favFlag.isFavorite! {
+                    firebaseManager.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
+                    self.newArrivalIsFavoriteArr[indexp.row]?.isFavorite = false
+                }else {
+                    firebaseManager.addItemsToFavorites(favoriteItem: cellFavoriteItem)
+                    self.newArrivalIsFavoriteArr[indexp.row]?.isFavorite = true
+                }
             }
+            self.newArrivalCollectionView.reloadData()
+            }
+    
+    @objc func exclusiveOffersFavoriteBtnAction(sender : UIButton)
+    {
+       let indexp = IndexPath(row: sender.tag, section: 0)
+        let cellFavoriteItem : SpecialItem = SpecialItem()
+    cellFavoriteItem.category = exclusive0ffers_infoArray[indexp.row].category
+    cellFavoriteItem.subCategory = exclusive0ffers_infoArray[indexp.row].subCategory
+    exclusiveOffers_array[indexp.row].item_id = exclusive0ffers_infoArray[indexp.row].itemId
+    cellFavoriteItem.itemId = exclusiveOffers_array[indexp.row].item_id
+
+    if let favFlag = self.exclusiveOffersIsFavoriteArr[indexp.row]{
+        if favFlag.isFavorite! {
+            firebaseManager.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
+            self.exclusiveOffersIsFavoriteArr[indexp.row]?.isFavorite = false
+        }else {
+            firebaseManager.addItemsToFavorites(favoriteItem: cellFavoriteItem)
+            self.exclusiveOffersIsFavoriteArr[indexp.row]?.isFavorite = true
+        }
+    }
+    self.exclusiveOffersCollectionView.reloadData()
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "productDetails") as! ProductDetailsViewController
@@ -125,7 +160,14 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 227)
+        
+        if collectionView == newArrivalCollectionView{
+            return CGSize(width: collectionView.bounds.width, height: 258)
+        }
+        else{
+            return CGSize(width: collectionView.bounds.width, height: 227)
+        }
+        
     }
 
     func collectionView(_ collectionView: UICollectionView,

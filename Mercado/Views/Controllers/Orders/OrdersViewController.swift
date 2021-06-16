@@ -13,12 +13,46 @@ class OrdersViewController: UIViewController {
     @IBAction func backNavBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBOutlet weak var noOrdersLabel: UILabel!
+    
+    @IBOutlet weak var goShoppingBtn: UIButton!
+    @IBOutlet weak var noOrdersImage: UIImageView!
+    var ordersViewModel : OrdersViewModel!
+    var ordersArray : [Order]!
+    var itemsInfoArray : [AllItems]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         orderTableView.delegate = self
         orderTableView.dataSource = self
+        
+        ordersViewModel = OrdersViewModel()
+        ordersArray = [Order]()
+        itemsInfoArray = [AllItems]()
+        
+        ordersViewModel.bindOrdersViewModelToView = {
+            self.onSuccessUpdateView()
+        }
+        
+        ordersViewModel.bindItemInfoViewModelToView = {
+            (item) in
+            if let itemData = item{
+                    self.itemsInfoArray.append(itemData)
+            
+            }
+            print(self.itemsInfoArray)
+        }
+        
+        ordersViewModel.bindViewModelErrorToView = {
+            self.onFailUpdateView()
+        }
+        
+        ordersViewModel.bindEmptyOrdersToView = {
+            self.onEmptyOrderView()
+        }
     }
     
 

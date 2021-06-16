@@ -15,6 +15,7 @@ class NewArrivalService : FirebaseProtocol{
     
     func fetchArrayOfSpecialItems(completion: @escaping ([SpecialItem]?, Error?) -> ()) {
         self.ref.child("new arrival").getData { (error, snapshot) in
+            self.newArrival_array.removeAll()
             if let error = error {
                 print("Error getting data \(error)")
             }

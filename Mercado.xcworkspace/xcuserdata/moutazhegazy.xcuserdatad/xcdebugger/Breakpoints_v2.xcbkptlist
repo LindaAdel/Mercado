@@ -23,69 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "84B341FA-9B63-4D9D-AAD0-27B3B4D2B162"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mercado/ItemsViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "fetchItemsDataFromAPI()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "84B341FA-9B63-4D9D-AAD0-27B3B4D2B162 - 4c4b3405d82008f9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.ItemsViewModel.fetchItemsDataFromAPI() -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/ItemsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "117"
-                  endingLineNumber = "117"
-                  offsetFromSymbolStart = "13340">
-               </Location>
-               <Location
-                  uuid = "84B341FA-9B63-4D9D-AAD0-27B3B4D2B162 - 4c4b3405d82008f9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.ItemsViewModel.fetchItemsDataFromAPI() -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/ItemsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "117"
-                  endingLineNumber = "117"
-                  offsetFromSymbolStart = "13819">
-               </Location>
-               <Location
-                  uuid = "84B341FA-9B63-4D9D-AAD0-27B3B4D2B162 - 52c5e3d2f1d056fa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #10 (Swift.Optional&lt;Swift.Array&lt;Mercado.LaptopBags&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Mercado.ItemsViewModel.fetchItemsDataFromAPI() -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/ItemsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "130">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "201DF184-BABB-40E5-BB7E-6FAD85AA2876"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -134,229 +71,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5"
-            shouldBeEnabled = "Yes"
+            uuid = "6F3E05CF-A1C7-4A40-B0B9-A91E15832A94"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Mercado/SearchItemViewModel.swift"
+            filePath = "Mercado/Views/Controllers/Favorite/FavoriteTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "getItemDetails(filteredItem:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "111">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "123">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "360">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "924">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "1138">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "1720">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "3279">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "4300">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "4885">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "5470">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "6055">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "6640">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "7225">
-               </Location>
-               <Location
-                  uuid = "FF06BAF9-A14D-4B49-A795-AEBCB45F52F5 - bd9c4564e7b21ce5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mercado.SearchItemViewModel.getItemDetails(filteredItem: Mercado.SpecialItem) -&gt; ()"
-                  moduleName = "Mercado"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/moutazhegazy/Documents/GitHubMercado/Mercado/Mercado/SearchItemViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "7460">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4EFACFF-DB7D-4B13-A9BB-8AEF5042904F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/Views/Controllers/Favorite/FavoriteTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28178196-50F3-4617-9D22-8782846BDC77"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/Extensions/Checkout/CheckoutExtension+TableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95756C39-DE88-4199-948A-71608367E4E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/Extensions/Shop/ShopExtension+CollecionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "newArrivalFavoriteBtnAction(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6FB610D-4672-48BC-97C3-A1F0C6160D42"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/Extensions/Shop/ShopExtension+CollecionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "newArrivalFavoriteBtnAction(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46A98DEC-DB33-4AFA-A814-454860380BFA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/Views/Controllers/Shop/ShopTabBarController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

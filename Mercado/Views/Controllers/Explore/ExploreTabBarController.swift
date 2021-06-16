@@ -17,6 +17,7 @@ class ExploreTabBarController: UIViewController{
     var categoriesViewModel : CategoriesViewModel!
     var categoryName : String?
     var itemcategoryName : String?
+    var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class ExploreTabBarController: UIViewController{
         // Do any additional setup after loading the view.
         categoriesCollectionView.dataSource = self
         categoriesCollectionView.delegate = self
+        showLoading(activityIndicator: activityIndicator)
         
         subCategoriesTableView.dataSource = self
         subCategoriesTableView.delegate = self
@@ -31,13 +33,13 @@ class ExploreTabBarController: UIViewController{
         categoriesViewModel = CategoriesViewModel()
         
         categoriesViewModel.bindCategoriesViewModelToView = {
-                    
+            
             self.onSuccessUpdateView()
             
         }
         
         categoriesViewModel.bindViewModelErrorToView = {
-                    
+            
             self.onFailUpdateView()
             
         }
@@ -45,7 +47,7 @@ class ExploreTabBarController: UIViewController{
     }
     
     func onSuccessUpdateView(){
-        
+        hideLoading(activityIndicator: activityIndicator)
         categoriesArray = categoriesViewModel.categoryData
         self.categoriesCollectionView.reloadData()
         
@@ -53,7 +55,7 @@ class ExploreTabBarController: UIViewController{
     
     func onFailUpdateView(){
         
-       
+       hideLoading(activityIndicator: activityIndicator)
         let alert = UIAlertController(title: "Error", message: categoriesViewModel.showError, preferredStyle: .alert)
         
         let okAction  = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in

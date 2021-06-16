@@ -16,7 +16,7 @@ final class NetworkMonitor {
     
     public private(set) var isConnected : Bool = false{
         didSet{
-            NotificationCenter.default.post(name: .InternetNotification, object: nil, userInfo:["isConnected":isConnected])
+            NotificationCenter.default.post(name: .internetNotification, object: nil, userInfo:["isConnected":isConnected])
         }
     }
     

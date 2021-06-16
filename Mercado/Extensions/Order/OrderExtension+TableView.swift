@@ -10,11 +10,11 @@ import UIKit
 
 extension OrdersViewController : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return ordersArray.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 7
+        return 1
     }
     
     // Make the background color show through
@@ -32,6 +32,9 @@ extension OrdersViewController : UITableViewDelegate , UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? OrderTableViewCell
         cell?.layer.cornerRadius = 15
+        
+        cell?.orderNo.text = "Order #\(ordersArray[indexPath.row].orderNumber!)"
+        cell?.orderTotalPrice.text = "EGP \(ordersArray[indexPath.row].totalPrice!)"
 
         return cell!
     }
@@ -39,14 +42,23 @@ extension OrdersViewController : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let checkoutVC = storyboard?.instantiateViewController(identifier: "OrderDetails") as! CheckoutViewController
         checkoutVC.modalPresentationStyle = .fullScreen
-//        checkoutVC.total.text = "Order"
-//        checkoutVC.itemsArray = itemsArray!
-//        checkoutVC.cartItemsArray = cartItemsArray!
-        checkoutVC.subTotal = 554.3
-        checkoutVC.totalPrice = 3.4
-        checkoutVC.orderNumber = "jjwijei9873he"
-        checkoutVC.timeStamp = "Nov 4,1997"
-        self.present(checkoutVC, animated: true, completion: nil)
+        
+        checkoutVC.orderObj = ordersArray[indexPath.row]
+        checkoutVC.subTotal = ordersArray[indexPath.row].totalPrice! - 100.0
+        checkoutVC.totalPrice = ordersArray[indexPath.row].totalPrice!
+        checkoutVC.cartItemsArray = ordersArray[indexPath.row].items
+        
+        let itemsArray = ordersArray[indexPath.row].items
+        for item in itemsArray! {
+            self.ordersViewModel.getItemInfo(itemId: item.itemId!)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            checkoutVC.ordersItemsArray = self.itemsInfoArray
+            self.present(checkoutVC, animated: true, completion: nil)
+            self.itemsInfoArray.removeAll()
+        }
+        
     }
     
 }

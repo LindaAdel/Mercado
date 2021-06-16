@@ -26,17 +26,31 @@ class ShopTabBarController: UIViewController {
     var newArrivalViewModel : NewArrivalViewModel!
     var exclusiveViewModel : ExclusiveOffersViewModel!
     var firebaseManager : FirebaseManager!
-    var itemIsFavoriteArr : [ItemIsFavorite?]!
+    var newArrivalIsFavoriteArr : [ItemIsFavorite?]!
+    var exclusiveOffersIsFavoriteArr : [ItemIsFavorite?]!
     var collectionView :UICollectionView!
     var flashSaleViewModel : FlashSaleViewModel!
     var flashSaleArray : [FlashSale]!
     var searchController : UISearchController? = nil
+    var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
 
     override func viewWillAppear(_ animated: Bool) {
         print("shop will appear")
         //update cart badge
         CartHandlerViewModel().getNumbersOfItemsInCart()
         NotificationCenter.default.addObserver(self,selector:#selector(updateBadgeValue(_:)),name:NSNotification.Name(rawValue: "cartBadge"),object:nil)
+        
+        newArrival_array.removeAll()
+        newArrival_infoArray.removeAll()
+        newArrivalIsFavoriteArr.removeAll()
+        newArrivalCollectionView.reloadData()
+        newArrivalViewModel.fetchAllNewArrivalItems()
+        
+        exclusiveOffers_array.removeAll()
+        exclusive0ffers_infoArray.removeAll()
+        exclusiveOffersIsFavoriteArr.removeAll()
+        exclusiveOffersCollectionView.reloadData()
+        exclusiveViewModel.fetchAllExclusiveOffersItems()
     }
    
     override func viewDidLoad() {
@@ -44,6 +58,7 @@ class ShopTabBarController: UIViewController {
          
       
         // Do any additional setup after loading the view.
+        //showLoading(activityIndicator: activityIndicator)
         
         //search
         self.showSearchBar()
@@ -73,74 +88,57 @@ class ShopTabBarController: UIViewController {
         exclusiveOffersCollectionView.delegate = self
         exclusiveOffersCollectionView.dataSource = self
 
-        newArrivalViewModel.fetchAllNewArrivalItems()
         newArrival_array = [ItemProtocol]()
         newArrival_infoArray = [SpecialItem]()
         exclusive0ffers_infoArray = [SpecialItem]()
         firebaseManager = FirebaseManager.shared
-        itemIsFavoriteArr = [ItemIsFavorite?]()
-       // itemIsFavoriteArr =
+        newArrivalIsFavoriteArr = [ItemIsFavorite?]()
+        exclusiveOffersIsFavoriteArr = [ItemIsFavorite?]()
+        exclusiveOffers_array = [ItemProtocol]()
         
 
         newArrivalViewModel.bindItemsToView = {
                 (newArrrivalInfo,data) in
-            if let itemData = data{
-                //print(itemData.item_price)
+            if let itemData = data , let itemDetails = newArrrivalInfo{
+                
                 self.newArrival_array.append(itemData)
+                self.newArrival_infoArray.append(itemDetails)
                 
                 DispatchQueue.main.async {
                     self.newArrivalCollectionView.reloadData()
                 }
-//                for i in 0...self.newArrival_array.count-1 {
-//                    self.newArrivalViewModel.itemIsFavoriteValue(itemIdValue: itemData.item_id!, index: i)
-//
-//                }
-                
             }
-
-            if let itemDetails = newArrrivalInfo{
-                self.newArrival_infoArray.append(itemDetails)
-            }
-            
-//            self.itemIsFavoriteArr = [ItemIsFavorite?](repeating: nil, count: self.newArrival_array.count)
-//            DispatchQueue.main.async {
-//                self.newArrivalCollectionView.reloadData()
-//            }
-//
-//            for i in 0...self.newArrival_array.count-1 {
-//                    self.newArrivalViewModel.itemIsFavoriteValue(itemIdValue: self.newArrival_array[i].item_id!, index: i)
-//
-//                }
-
-       }
-        
-        
-        
-//            self.newArrivalViewModel.bindItemFavoriteToView = {
-//                (isFav,index) in
-//            self.itemIsFavoriteArr[index] = ItemIsFavorite(isFavorite: isFav)
-//              print(index , isFav)
-//                DispatchQueue.main.async {
-//                    self.newArrivalCollectionView.reloadData()
-//                }
-//        }
                 
-
-        exclusiveViewModel.fetchAllExclusiveOffersItems()
-        exclusiveOffers_array = [ItemProtocol]()
+        }
+        
+        newArrivalViewModel.bindItemFavoriteToView = {
+                (isFav) in
+            self.newArrivalIsFavoriteArr.append(ItemIsFavorite(isFavorite: isFav))
+            print(isFav)
+            DispatchQueue.main.async {
+                self.newArrivalCollectionView.reloadData()
+            }
+        }
 
          exclusiveViewModel.bindItemsToView = {
                  (exclusiveOffersInfo,item) in
-             if let itemData = item{
-                 //print(itemData.item_price)
+             if let itemData = item, let itemInfo = exclusiveOffersInfo{
+                
                  self.exclusiveOffers_array.append(itemData)
+                 self.exclusive0ffers_infoArray.append(itemInfo)
                  DispatchQueue.main.async {
                      self.exclusiveOffersCollectionView.reloadData()
                  }
              }
 
-            if let itemInfo = exclusiveOffersInfo{
-                self.exclusive0ffers_infoArray.append(itemInfo)
+        }
+        
+        exclusiveViewModel.bindItemFavoriteToView = {
+                (isFav) in
+            self.exclusiveOffersIsFavoriteArr.append(ItemIsFavorite(isFavorite: isFav))
+            print(isFav)
+            DispatchQueue.main.async {
+                self.exclusiveOffersCollectionView.reloadData()
             }
         }
 

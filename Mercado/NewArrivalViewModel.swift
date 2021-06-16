@@ -15,7 +15,7 @@ class NewArrivalViewModel : NSObject{
     var exclusiveOffersService : ExclusiveOffersService!
     
     var bindViewModelErrorToView : (()->()) = {}
-    var bindItemFavoriteToView : ((Bool,Int)->()) = {_,_ in}
+    var bindItemFavoriteToView : ((Bool)->()) = {_ in}
     var bindItemsToView: ((SpecialItem?,ItemProtocol?)->()) = {_,_ in }
    
     
@@ -30,7 +30,6 @@ class NewArrivalViewModel : NSObject{
     
     override init() {
         self.newArrivalService = NewArrivalService()
-        self.exclusiveOffersService = ExclusiveOffersService()
         self.firebaseManager = FirebaseManager.shared
     }
     
@@ -48,28 +47,7 @@ class NewArrivalViewModel : NSObject{
     
                     self.itemsData = itemsData!
                     self.itemsData.forEach{ item in
-                        self.subcategorySwitch(newArrivalItem: item)
-                    }
-    
-                }
-    
-            })
-        }
-    
-    func fetchAllExclusiveOffersItems (){
-    
-            exclusiveOffersService.fetchArrayOfSpecialItems(completion: { (itemsData, error) in
-           
-                if let error : Error = error{
-    
-                    let message = error.localizedDescription
-                    print(message)
-                    self.showError = message
-    
-                }else{
-    
-                    self.itemsData = itemsData!
-                    self.itemsData.forEach{ item in
+                        self.itemIsFavoriteValue(itemIdValue: item.itemId!)
                         self.subcategorySwitch(newArrivalItem: item)
                     }
     
@@ -156,7 +134,7 @@ class NewArrivalViewModel : NSObject{
                                     print(error)
                                 }
                                 print(data.item_title!)
-                                self.bindItemsToView(newArrivalItem,data)
+                            self.bindItemsToView(newArrivalItem,data)
                         }
                     }
                 case "bags":
@@ -251,7 +229,7 @@ class NewArrivalViewModel : NSObject{
         
     }
     
-    func itemIsFavoriteValue(itemIdValue : String , index : Int){
+    func itemIsFavoriteValue(itemIdValue : String ){
         firebaseManager.fetchItemIsFavoriteData(itemId: itemIdValue) { (isFav, error) in
             if let error : Error = error{
                 
@@ -259,7 +237,7 @@ class NewArrivalViewModel : NSObject{
                 self.showError = message
                 
             }else{
-                self.bindItemFavoriteToView(isFav,index)
+                self.bindItemFavoriteToView(isFav)
             }
         }
     }

@@ -23,7 +23,7 @@ class WomenClothing :ItemProtocol, Codable {
     var type :String?
     var fabric : String?
     var length : String?
-    var price_afterSale : String?
+    var oldPrice : String?
    
  
     

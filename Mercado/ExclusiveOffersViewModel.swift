@@ -14,6 +14,7 @@ class ExclusiveOffersViewModel : NSObject{
     var exclusiveOffersService : ExclusiveOffersService!
     
     var bindViewModelErrorToView : (()->()) = {}
+    var bindItemFavoriteToView : ((Bool)->()) = {_ in}
     var bindItemsToView: ((SpecialItem?,ItemProtocol?)->()) = {_,_ in }
     
     var showError : String! {
@@ -44,6 +45,7 @@ class ExclusiveOffersViewModel : NSObject{
     
                     self.itemsData = itemsData!
                     self.itemsData.forEach{ item in
+                        self.itemIsFavoriteValue(itemIdValue: item.itemId!)
                         self.subcategorySwitch(newArrivalItem: item)
                     }
     
@@ -223,5 +225,18 @@ class ExclusiveOffersViewModel : NSObject{
                     print("no sub category found")
                 }
         
+    }
+    
+    func itemIsFavoriteValue(itemIdValue : String ){
+        firebaseManager.fetchItemIsFavoriteData(itemId: itemIdValue) { (isFav, error) in
+            if let error : Error = error{
+                
+                let message = error.localizedDescription
+                self.showError = message
+                
+            }else{
+                self.bindItemFavoriteToView(isFav)
+            }
+        }
     }
 }

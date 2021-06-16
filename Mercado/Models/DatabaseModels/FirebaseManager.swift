@@ -15,6 +15,7 @@ class FirebaseManager
     let currentUser :User!
     let userID :String!
     let favorite : String = "favorite"
+    let order : String = "orders"
     static let shared = FirebaseManager()
     private init(){
         dbreference = Database.database().reference().ref
@@ -291,6 +292,34 @@ class FirebaseManager
             
         }
         
+    }
+    
+    //Add order to firebase
+    func addOrder(orderItem : Order){
+        
+        let shippingAddress = orderItem.shippingAddress
+        let totalPrice = orderItem.totalPrice
+        
+        let ordersRef = self.dbreference.child("\(order)/\(userID!)")
+        let pushRef = ordersRef.childByAutoId()
+    
+        pushRef.child("shippingAddress").setValue(shippingAddress!)
+        pushRef.child("totalPrice").setValue(totalPrice!)
+        
+        let itemsArray = orderItem.items
+        for item in itemsArray! {
+       
+            let itemId = item.itemId
+            let count = item.count
+            pushRef.child("items/\(itemId!)/itemId").setValue(itemId!)
+            pushRef.child("items/\(itemId!)/count").setValue(count!)
+            
+        }
+        
+    }
+    
+    func removeCartItems(){
+        dbreference?.child("cart").child(userID!).removeValue()
     }
     
 }

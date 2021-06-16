@@ -42,10 +42,12 @@ class FavoriteViewModel : NSObject {
                 
                 self.favArray = favoriteArray
                 self.favArray?.forEach{ favItem in
-                    switchOnFavorite(favItem: favItem)
+                    self.switchOnFavorite(favItem: favItem)
                 }
                 
             }
+        })
+    }
             func switchOnFavorite(favItem : SpecialItem){
                 
                 switch favItem.subCategory{
@@ -218,9 +220,7 @@ class FavoriteViewModel : NSObject {
                 
             }
             
-        })
-        
-    }
+    
 }
 
 

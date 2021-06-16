@@ -8,5 +8,5 @@
 import Foundation
 
 extension  Notification.Name {
-    public static let InternetNotification = Notification.Name("Internet Connection")
+    public static let internetNotification = Notification.Name("Internet Connection")
 }

@@ -40,14 +40,12 @@ class FavoriteTableViewController: UIViewController {
         favoriteViewModel.bindItemsToView = {
                 (favitem,item) in
             DispatchQueue.main.async {
-            if let itemData = item {
+                if let itemData = item,  let favitemData = favitem {
                 self.favoriteList.append(itemData)
+                self.favoriteItemInfoArr.append(favitemData)
                 self.FavoriteTableView.reloadData()
                 }
             }
-            if let favitemData = favitem {
-                self.favoriteItemInfoArr.append(favitemData)
-               }
     }
    
         favoriteViewModel.bindViewModelErrorToView = {
@@ -70,6 +68,7 @@ class FavoriteTableViewController: UIViewController {
  }
     override func viewWillAppear(_ animated: Bool) {
         self.favoriteList.removeAll()
+        self.favoriteItemInfoArr.removeAll()
         self.FavoriteTableView.reloadData()
         favoriteViewModel.fetchFavorite()
     }

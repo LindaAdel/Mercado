@@ -19,8 +19,7 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
         detailsVC.categoryName = favoriteItemInfoArr[indexPath.row].category
         favoriteList[indexPath.row].item_id =  favoriteItemInfoArr[indexPath.row].itemId!
         detailsVC.itemDetails=favoriteList[indexPath.row]
-        detailsVC.subCategoryName = subCategoryObj.itemSubCategoryName
-       // print("\(itemcategoryName)")
+        detailsVC.subCategoryName = favoriteItemInfoArr[indexPath.row].subCategory
         detailsVC.modalPresentationStyle = .fullScreen
         self.present(detailsVC, animated: true, completion: nil)
     
@@ -44,6 +43,9 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
         favcell.favPriceCell.text = "EGP \(favoriteList[indexPath.row].item_price!)"
         favcell.unFavorite.tag = indexPath.row
         favcell.unFavorite.addTarget(self, action: #selector(unFavoriteBtn), for: .touchUpInside)
+        //MARK:- Cart
+        favcell.addToCart.addTarget(self, action: #selector(addToCartButton), for: .touchUpInside)
+        favcell.addToCart.tag = indexPath.row
                
     return favcell
        
@@ -72,6 +74,14 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
         }))
         verifyAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(verifyAlert, animated: true, completion: nil)
+    }
+    
+     //MARK:- Cart
+    @objc func addToCartButton(_ sender :UIButton)
+    {
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        let item = CartItem(category: favoriteItemInfoArr[indexPath.row].category, itemId: favoriteItemInfoArr[indexPath.row].itemId, subCategory: favoriteItemInfoArr[indexPath.row].subCategory, count: 1)
+        Cart().addToCart(sender: sender, item: item, itemId: favoriteItemInfoArr[indexPath.row].itemId!, currentView: self)
     }
     
     

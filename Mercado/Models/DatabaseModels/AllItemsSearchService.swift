@@ -16,7 +16,7 @@ class AllItemsSearchService {
      //filterAllItemsArray
         func filterAllItemsArray(searchName : String,completion: @escaping ([AllItems]?, Error?) -> ()) {
            
-            let dbReference = ref.child("allItems").queryOrdered(byChild: "item_title").queryStarting(atValue: searchName.uppercased()).queryEnding(atValue: searchName.lowercased()).queryLimited(toFirst: 5)
+            let dbReference = ref.child("allItems").queryOrdered(byChild: "item_title").queryStarting(atValue: searchName.uppercased()).queryEnding(atValue: searchName.lowercased()).queryLimited(toFirst: 10)
 
             dbReference.observe(.value, with:{ (snapshot: DataSnapshot) in
                 self.filteredArray.removeAll()

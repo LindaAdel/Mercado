@@ -22,6 +22,11 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var placeOrderBottomConstraint: NSLayoutConstraint!
     @IBAction func placeOrderBtn(_ sender: Any) {
         
+        var orderObj = Order(items: cartItemsArray, shippingAddress: shippingAddress, totalPrice: totalPrice)
+        
+        firebaseManager.addOrder(orderItem: orderObj)
+        firebaseManager.removeCartItems()
+        
         let placeOrderVC = storyboard?.instantiateViewController(identifier: "PlaceOrder") as! PlaceOrderViewController
         placeOrderVC.modalPresentationStyle = .fullScreen
         self.present(placeOrderVC, animated: true, completion: nil)
@@ -46,35 +51,43 @@ class CheckoutViewController: UIViewController {
     var cartItemsArray :[CartItem]!
     var subTotal : Float!
     var totalPrice : Float!
-    var orderNumber : String!
-    var timeStamp : String!
+    var orderObj : Order!
+    var shippingAddress : String!
+    var firebaseManager : FirebaseManager!
+    var ordersItemsArray : [AllItems]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        firebaseManager = FirebaseManager.shared
+        
         scrollView.isScrollEnabled = true
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(presentNoConnectionVC(_:)), name: .InternetNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(presentNoConnectionVC(_:)), name: .internetNotification, object: nil)
         
         cashOnDeliveryImg.image = UIImage(named: "cash_on_delivery")
         
         checkoutItemsTableView.delegate = self
-        checkoutItemsTableView.dataSource = self
-        //print("\(itemsArray)")
+        checkoutItemsTableView.dataSource = self        
         
-//        itemsCount.text = "\(itemsArray.count)"
         subTotalPrice.text = "EGP \(subTotal!)"
         total.text = "EGP \(totalPrice!)"
         
-        userAddress.text = "755 Crumm Rd, Cowansville, PA, 16218"
+        shippingAddress = "755 Crumm Rd, Cowansville, PA, 16218"
+        userAddress.text = shippingAddress
         
         if navigationBar.title == "Order Details"
             {
-                orderNo!.text = "Order #\(orderNumber!)"
-                orderTimeStamp!.text = "Placed on \(timeStamp!)"
+                orderNo!.text = "Order #\(orderObj.orderNumber!)"
+                userAddress.text = orderObj.shippingAddress
+                itemsCount.text = "\(ordersItemsArray.count)"
+                //orderTimeStamp!.text = "Placed on \(orderObj.timeStamp!)"
             }
+        else{
+            itemsCount.text = "\(itemsArray.count)"
+        }
                
 
     }

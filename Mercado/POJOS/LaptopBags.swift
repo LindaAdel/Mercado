@@ -22,7 +22,7 @@ class LaptopBags : Codable ,ItemProtocol{
     var compatible_with : String?
     var warranty_years : String?
     var water_resistant : String?
-    var price_afterSale : String?
+    var oldPrice : String?
  
 
 
