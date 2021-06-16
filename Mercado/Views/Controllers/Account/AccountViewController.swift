@@ -33,7 +33,7 @@ class AccountViewController: UIViewController
         
         //rounded image
         userImage.layer.masksToBounds = true
-        self.userImage.layer.cornerRadius = self.userImage.bounds.width / 2
+        self.userImage.layer.cornerRadius = 50
       //  self.userImage.clipsToBounds = true;
         
         
