@@ -1554,6 +1554,21 @@
             </objects>
             <point key="canvasLocation" x="9986.9565217391319" y="183.48214285714286"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3ie-82-yw4">
+            <objects>
+                <viewController storyboardIdentifier="About" id="sYG-1i-Lpz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kQg-Bg-18H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IL4-Sw-0pc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEf-p6-eav" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10845" y="131"/>
+        </scene>
         <!--Shop-->
         <scene sceneID="Zoz-6F-hqJ">
             <objects>
