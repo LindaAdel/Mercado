@@ -33,7 +33,21 @@ static func showTextFieldError(placeholderValue:String)->NSAttributedString?
             .font: UIFont.boldSystemFont(ofSize: 15.0),
         ])
     }
-  
+    static func styleHollowButton(_ button:UIButton) {
+           
+           // Hollow rounded corner style 
+        button.layer.borderWidth = 0.5
+        button.layer.borderColor = UIColor.init(red: 83/255, green: 177/255, blue: 117/255, alpha: 1).cgColor
+        button.layer.cornerRadius = 15.0
+//           button.tintColor = UIColor.init(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
+       }
+    static func roundImage(_ image : UIImageView)
+    {
+        
+        image.clipsToBounds = true
+        image.layer.cornerRadius = (image.bounds.width)/2
+    }
+
         
 }
 

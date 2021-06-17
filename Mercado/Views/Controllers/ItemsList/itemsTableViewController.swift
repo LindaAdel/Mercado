@@ -28,6 +28,7 @@ class itemsTableViewController: UIViewController {
     
     @IBOutlet weak var itemsSearchBar: UISearchBar!
     @IBOutlet weak var itemsTableView: UITableView!
+    
     @IBAction func backNavBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

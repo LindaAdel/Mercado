@@ -13,14 +13,20 @@ class FirebaseManager
 {
     var dbreference: DatabaseReference!
     let currentUser :User!
-    let userID :String!
+    let userID : String!
+    let userEmail : String!
+   // var credential: AuthCredential!
+   // var credential: AuthCredential
     let favorite : String = "favorite"
     let order : String = "orders"
     static let shared = FirebaseManager()
+    
     private init(){
         dbreference = Database.database().reference().ref
         currentUser = Auth.auth().currentUser
         userID = currentUser.uid
+        userEmail = currentUser.email
+        //credential = EmailAuthProvider.credential(withEmail: userEmail, password: )
     }
     //MARK:- cart
     func checkItemInCart(currentCartId:String ,completion:@escaping ((Bool)->())) {
@@ -321,5 +327,32 @@ class FirebaseManager
     func removeCartItems(){
         dbreference?.child("cart").child(userID!).removeValue()
     }
-    
+    //MARK:- update user name
+    func updateUserName(_ name : String){
+        self.dbreference?.child("users").child("\(self.userID!)/username").setValue(name)
+    }
+    //MARK:- update user mail
+    func updateUserEmail(_ email : String){
+    self.dbreference?.child("users").child("\(self.userID!)/userEmail").setValue(email)
+        if email != userEmail{
+         //  changeEmail()
+        }
+   
+    }
+//    func changeEmail() {
+//        if (currentUser != nil) {
+//            // re authenticate the user
+//            currentUser.reauthenticate(with: credential) { error,arg  in
+//                if let error = error {
+//                    // An error happened.
+//                    print(error)
+//                } else {
+//                    // User re-authenticated.
+//                    self.currentUser.updateEmail(to: "email") { (error) in
+//                        // email updated
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
