@@ -332,27 +332,52 @@ class FirebaseManager
         self.dbreference?.child("users").child("\(self.userID!)/username").setValue(name)
     }
     //MARK:- update user mail
-    func updateUserEmail(_ email : String){
+    func updateUserEmail(_ email : String , _ password : String){
     self.dbreference?.child("users").child("\(self.userID!)/userEmail").setValue(email)
         if email != userEmail{
-         //  changeEmail()
+            
+        let credential: AuthCredential = EmailAuthProvider.credential(withEmail: userEmail, password: password)
+            changeEmail(credential,email)
         }
    
     }
-//    func changeEmail() {
-//        if (currentUser != nil) {
-//            // re authenticate the user
-//            currentUser.reauthenticate(with: credential) { error,arg  in
-//                if let error = error {
-//                    // An error happened.
-//                    print(error)
-//                } else {
-//                    // User re-authenticated.
-//                    self.currentUser.updateEmail(to: "email") { (error) in
-//                        // email updated
-//                    }
-//                }
-//            }
-//        }
-//    }
+    func changeEmail(_ credential : AuthCredential , _ email : String) {
+        if (currentUser != nil) {
+            // re authenticate the user
+            currentUser.reauthenticate(with: credential) { error,arg  in
+                if let error = error {
+                    // An error happened.
+                    print(error)
+                } else {
+                    // User re-authenticated.
+                    self.currentUser.updateEmail(to: email ) { (error) in
+                        // email updated
+                    }
+                }
+            }
+        }
+    }
+    //MARK:- update user password
+    func updateUserPassword(_ oldPassword : String , _ newPassword : String){
+  
+        let credential: AuthCredential = EmailAuthProvider.credential(withEmail: userEmail, password: oldPassword)
+            changePassword(credential,newPassword)
+  
+    }
+    func changePassword(_ credential : AuthCredential, _ newPassword : String) {
+        if (currentUser != nil) {
+            // re authenticate the user
+            currentUser.reauthenticate(with: credential) { error,arg  in
+                if let error = error {
+                    // An error happened.
+                    print(error)
+                } else {
+                    // User re-authenticated.
+                    self.currentUser.updatePassword(to: newPassword) { (error) in
+                        // email updated
+                    }
+                }
+            }
+        }
+    }
 }

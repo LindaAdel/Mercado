@@ -83,7 +83,9 @@ class MyAccountDetailsViewController: UIViewController {
     }
     
     @IBAction func doneButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
+    
     
     @IBAction func userNameEditTapped(_ sender: Any) {
         let alert = UIAlertController(title: "Edit Your username", message: "Enter your New username", preferredStyle: .alert)
@@ -92,7 +94,7 @@ class MyAccountDetailsViewController: UIViewController {
         alert.addTextField { (textField) in
             textField.text = ""
         }
-
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [weak alert] (_) in
             let TextField = alert?.textFields![0]
@@ -111,17 +113,27 @@ class MyAccountDetailsViewController: UIViewController {
         let alert = UIAlertController(title: "Edit Your Email Address", message: "Enter your New Email", preferredStyle: .alert)
 
         //2. Add the text field. You can configure it however you need.
-        alert.addTextField { (textField) in
-            textField.text = ""
+        alert.addTextField { (passwordTextField) in
+            passwordTextField.text = ""
+            passwordTextField.placeholder = "password"
+            passwordTextField.isSecureTextEntry = true
         }
-
+        alert.addTextField { (emailTextField) in
+            emailTextField.text = ""
+            emailTextField.placeholder = "new Email"
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [weak alert] (_) in
-            let TextField = alert?.textFields![0]
-            let newEmail = TextField?.text
-            self.firebaseManger.updateUserEmail(newEmail!)
+           
+            let emailTextField = alert?.textFields![1]
+            let newEmail = emailTextField?.text
+            let passwordTextField = alert?.textFields![0]
+            let pass = passwordTextField?.text
+            self.firebaseManger.updateUserEmail(newEmail!, pass!)
             self.userEmail.text = newEmail
             print("Text field: \(String(describing: newEmail))")
+            
         }))
 
         // 4. Present the alert.
@@ -129,5 +141,32 @@ class MyAccountDetailsViewController: UIViewController {
     }
     
     @IBAction func userPasswordEditTapped(_ sender: Any) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Edit Your Password", message: "Enter your New Password", preferredStyle: .alert)
+
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (oldPasswordTextField) in
+            oldPasswordTextField.text = ""
+            oldPasswordTextField.placeholder = "old password"
+            oldPasswordTextField.isSecureTextEntry = true
+        }
+        
+        alert.addTextField { (newPasswordTextField) in
+            newPasswordTextField.text = ""
+            newPasswordTextField.placeholder = "new password"
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [weak alert] (_) in
+            let oldPasswordTextField = alert?.textFields![0]
+            let oldPass = oldPasswordTextField?.text
+            let newPasswordTextField = alert?.textFields![1]
+            let newPass = newPasswordTextField?.text
+            self.firebaseManger.updateUserPassword(oldPass!, newPass!)
+            print("Text field: \(String(describing: newPass))")
+        }))
+
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
     }
 }
