@@ -15,8 +15,6 @@ class FirebaseManager
     let currentUser :User!
     let userID : String!
     let userEmail : String!
-   // var credential: AuthCredential!
-   // var credential: AuthCredential
     let favorite : String = "favorite"
     let order : String = "orders"
     static let shared = FirebaseManager()
@@ -26,7 +24,7 @@ class FirebaseManager
         currentUser = Auth.auth().currentUser
         userID = currentUser.uid
         userEmail = currentUser.email
-        //credential = EmailAuthProvider.credential(withEmail: userEmail, password: )
+        
     }
     //MARK:- cart
     func checkItemInCart(currentCartId:String ,completion:@escaping ((Bool)->())) {
@@ -333,24 +331,30 @@ class FirebaseManager
     }
     //MARK:- update user mail
     func updateUserEmail(_ email : String , _ password : String){
-    self.dbreference?.child("users").child("\(self.userID!)/userEmail").setValue(email)
+       
         if email != userEmail{
             
         let credential: AuthCredential = EmailAuthProvider.credential(withEmail: userEmail, password: password)
-            changeEmail(credential,email)
+           
+          
+           changeEmail(credential,email)
+           
         }
    
     }
     func changeEmail(_ credential : AuthCredential , _ email : String) {
         if (currentUser != nil) {
             // re authenticate the user
-            currentUser.reauthenticate(with: credential) { error,arg  in
+            currentUser.reauthenticate(with: credential) { userID,error  in
                 if let error = error {
                     // An error happened.
                     print(error)
+                    print("there is an error")
                 } else {
                     // User re-authenticated.
                     self.currentUser.updateEmail(to: email ) { (error) in
+                    self.dbreference?.child("users").child("\(self.userID!)/userEmail").setValue(email)
+                        print("mail updated")
                         // email updated
                     }
                 }
@@ -361,20 +365,22 @@ class FirebaseManager
     func updateUserPassword(_ oldPassword : String , _ newPassword : String){
   
         let credential: AuthCredential = EmailAuthProvider.credential(withEmail: userEmail, password: oldPassword)
+        
             changePassword(credential,newPassword)
   
     }
     func changePassword(_ credential : AuthCredential, _ newPassword : String) {
         if (currentUser != nil) {
             // re authenticate the user
-            currentUser.reauthenticate(with: credential) { error,arg  in
+            currentUser.reauthenticate(with: credential) { userID,error    in
+               
                 if let error = error {
                     // An error happened.
                     print(error)
                 } else {
                     // User re-authenticated.
                     self.currentUser.updatePassword(to: newPassword) { (error) in
-                        // email updated
+                        // password updated
                     }
                 }
             }
