@@ -44,31 +44,14 @@ extension FilterViewController:UITableViewDelegate,UITableViewDataSource
     }
     @objc func priceCheckBoxButton(_ sender:UIButton)
     {
-        print(sender.tag)
-        print(priceRadioButtonsArray[0].tag)
+        
         let indexPath = IndexPath(row: sender.tag, section: 0)
-        switch sender.tag {
-        case 0:
-            self.updateRadioButton(sender: sender , diselectButtons :[1,2])
-            selectedPriceValue = priceArray[indexPath.row]
-            
-
-        case 1 :
-            self.updateRadioButton(sender: sender , diselectButtons :[0,2])
-            selectedPriceValue = priceArray[indexPath.row]
-
-        case 2 :
-
-            self.updateRadioButton(sender: sender , diselectButtons :[0,1])
-            selectedPriceValue = priceArray[indexPath.row]
-
-        default:
-            print("no tag")
-        }
-
-       
-        print(selectedPriceValue!)
-  
+        //set filter by price value
+        selectedPriceValue = priceArray[indexPath.row]
+        //radio buttons updates
+        self.updateRadioButton(currentRadioButton: sender)
+        
+        
     }
     @objc func brandCheckBoxButton(_ sender:UIButton,tableView:UITableView)
     {
