@@ -32,7 +32,9 @@ class CartViewController: UIViewController {
     var quantityLabelValue :Int!
     var totalValue : Float!
     var shippingValue : Float!
-   var emptyCartbackgroundImage :UIImageView!
+    var emptyCartbackgroundImage :UIImageView!
+    var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,6 +62,7 @@ class CartViewController: UIViewController {
   
    
     override func viewWillAppear(_ animated: Bool) {
+        showLoading(activityIndicator: activityIndicator)
         CartHandlerViewModel().getNumbersOfItemsInCart()
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)

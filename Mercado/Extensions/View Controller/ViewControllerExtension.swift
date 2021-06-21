@@ -38,8 +38,9 @@ extension UIViewController {
        }
        
        func hideLoading(activityIndicator : UIActivityIndicatorView) {
-           
-           activityIndicator.stopAnimating()
+            DispatchQueue.main.async {
+                activityIndicator.stopAnimating()
+            }
            
        }
 }

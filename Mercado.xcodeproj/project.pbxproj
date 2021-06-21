@@ -129,7 +129,6 @@
 		A90B55752672A7F200B89CFA /* AllItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B55742672A7F200B89CFA /* AllItems.swift */; };
 		A90B55782672A9C400B89CFA /* SearchItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B55772672A9C400B89CFA /* SearchItemViewModel.swift */; };
 		A913806D266984350078B181 /* CheckmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913806C266984350078B181 /* CheckmarkView.swift */; };
-		A91380702669B58B0078B181 /* PlaceOrderFailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913806F2669B58B0078B181 /* PlaceOrderFailedViewController.swift */; };
 		A93ECFCD2668F7AE0067E102 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECFCC2668F7AE0067E102 /* RoundShadowView.swift */; };
 		A93ECFD12668F7D20067E102 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECFCF2668F7D20067E102 /* CheckoutViewController.swift */; };
 		A93ECFD22668F7D20067E102 /* CheckoutItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECFD02668F7D20067E102 /* CheckoutItemTableViewCell.swift */; };
@@ -138,6 +137,10 @@
 		A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */; };
 		A9517C96266D588700FC5079 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517C95266D588700FC5079 /* NotificationNameExtension.swift */; };
 		A9517C99266D594000FC5079 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517C98266D594000FC5079 /* ViewControllerExtension.swift */; };
+		A96A4CB4267BFD8C0079C3B8 /* launch_screen.json in Resources */ = {isa = PBXBuildFile; fileRef = A96A4CB3267BFD8B0079C3B8 /* launch_screen.json */; };
+		A96A4CB7267BFE340079C3B8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A4CB6267BFE340079C3B8 /* LaunchScreenViewController.swift */; };
+		A9741647267A587E00C218DD /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9741646267A587E00C218DD /* ProductDetailsViewModel.swift */; };
+		A974164A267A719700C218DD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9741649267A719700C218DD /* AboutViewController.swift */; };
 		A9916B8E265419050030ADDA /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8D265419050030ADDA /* CategoriesService.swift */; };
 		A9916B9026542C720030ADDA /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */; };
 		A9ACF95E265F0EF700A2ABF7 /* DinaFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACF95D265F0EF700A2ABF7 /* DinaFirebaseManager.swift */; };
@@ -290,7 +293,6 @@
 		A90B55742672A7F200B89CFA /* AllItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllItems.swift; path = Mercado/POJOS/AllItems.swift; sourceTree = SOURCE_ROOT; };
 		A90B55772672A9C400B89CFA /* SearchItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemViewModel.swift; sourceTree = "<group>"; };
 		A913806C266984350078B181 /* CheckmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkView.swift; sourceTree = "<group>"; };
-		A913806F2669B58B0078B181 /* PlaceOrderFailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderFailedViewController.swift; sourceTree = "<group>"; };
 		A93ECFCC2668F7AE0067E102 /* RoundShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
 		A93ECFCF2668F7D20067E102 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		A93ECFD02668F7D20067E102 /* CheckoutItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -299,6 +301,10 @@
 		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
 		A9517C95266D588700FC5079 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		A9517C98266D594000FC5079 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		A96A4CB3267BFD8B0079C3B8 /* launch_screen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launch_screen.json; sourceTree = "<group>"; };
+		A96A4CB6267BFE340079C3B8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		A9741646267A587E00C218DD /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		A9741649267A719700C218DD /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A9916B8D265419050030ADDA /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		A9A7C21A26540DE700F8B214 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -727,6 +733,8 @@
 		96B8C1C9263B769A008CCA50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A96A4CB5267BFE0B0079C3B8 /* Launch Screen */,
+				A9741648267A716700C218DD /* About */,
 				96645BDE2675419900B1CBAF /* Filter */,
 				A9EC06312672852500F32A6A /* Search */,
 				A90797EA26712C4600F60AFE /* Orders */,
@@ -777,6 +785,7 @@
 		96CD37542651C8BF007B945F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A9741645267A578A00C218DD /* ProductDetails */,
 				A9FC98CC267564E7006F29FC /* Orders */,
 				A90B55762672A99E00B89CFA /* Search */,
 				9615D93B26667C59000D369F /* Cart */,
@@ -863,7 +872,6 @@
 			isa = PBXGroup;
 			children = (
 				A93ECFD42668F7EE0067E102 /* PlaceOrderViewController.swift */,
-				A913806F2669B58B0078B181 /* PlaceOrderFailedViewController.swift */,
 			);
 			path = "Place Order";
 			sourceTree = "<group>";
@@ -892,6 +900,30 @@
 			path = "View Controller";
 			sourceTree = "<group>";
 		};
+		A96A4CB5267BFE0B0079C3B8 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A96A4CB6267BFE340079C3B8 /* LaunchScreenViewController.swift */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		A9741645267A578A00C218DD /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A9741646267A587E00C218DD /* ProductDetailsViewModel.swift */,
+			);
+			name = ProductDetails;
+			sourceTree = "<group>";
+		};
+		A9741648267A716700C218DD /* About */ = {
+			isa = PBXGroup;
+			children = (
+				A9741649267A719700C218DD /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		A9ACF963265F0F3B00A2ABF7 /* DatabaseModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -911,6 +943,7 @@
 			children = (
 				A9D84C6E266C5245000FF46D /* checkmark.json */,
 				A9D84C69266C42AE000FF46D /* noConnection.json */,
+				A96A4CB3267BFD8B0079C3B8 /* launch_screen.json */,
 			);
 			path = "Animation Json Files";
 			sourceTree = "<group>";
@@ -1188,6 +1221,7 @@
 				96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */,
 				2F4533E52629F7FB000FE74E /* Assets.xcassets in Resources */,
 				A9D84C6A266C42AE000FF46D /* noConnection.json in Resources */,
+				A96A4CB4267BFD8C0079C3B8 /* launch_screen.json in Resources */,
 				2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */,
 				2F4533E02629F7FB000FE74E /* Main.storyboard in Resources */,
 				A9D84C6F266C5246000FF46D /* checkmark.json in Resources */,
@@ -1292,6 +1326,7 @@
 				961EEA38266C0AF8008731EF /* Toast.swift in Sources */,
 				9615D94026668E2F000D369F /* CartItem.swift in Sources */,
 				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
+				A96A4CB7267BFE340079C3B8 /* LaunchScreenViewController.swift in Sources */,
 				A9ACF95E265F0EF700A2ABF7 /* DinaFirebaseManager.swift in Sources */,
 				964BB7E526598C090087EFB3 /* AccountViewExtension.swift in Sources */,
 				A93ECFD12668F7D20067E102 /* CheckoutViewController.swift in Sources */,
@@ -1312,6 +1347,7 @@
 				A93ECFCD2668F7AE0067E102 /* RoundShadowView.swift in Sources */,
 				A9ACF96B265F10B100A2ABF7 /* ExclusiveOffersViewModel.swift in Sources */,
 				96633A69265CB00F00FB1625 /* AddAddressTableViewController.swift in Sources */,
+				A9741647267A587E00C218DD /* ProductDetailsViewModel.swift in Sources */,
 				2FC100D6265EF81B00BF97A5 /* FavoriteTableViewController.swift in Sources */,
 				2FA30F972652CAAC00E59A77 /* HomeAppliances.swift in Sources */,
 				A9ACF967265F0F6700A2ABF7 /* NewArrivalService.swift in Sources */,
@@ -1343,6 +1379,7 @@
 				A9FE6DE7265341B700C6624C /* ExploreExtension+TableView.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
 				A9F8C2DA267165190052FBE5 /* UIViewExtension.swift in Sources */,
+				A974164A267A719700C218DD /* AboutViewController.swift in Sources */,
 				96F9E0CF265AD648008C47A2 /* ConfirmAddressViewController.swift in Sources */,
 				965A45122659D8EB00BF3DAE /* Alert.swift in Sources */,
 				96AE44F22659722B000BD1FB /* AccountViewController.swift in Sources */,
@@ -1362,7 +1399,6 @@
 				A90B55732672A6A400B89CFA /* AllItemsSearchService.swift in Sources */,
 				A913806D266984350078B181 /* CheckmarkView.swift in Sources */,
 				A9FC98CB26755CBC006F29FC /* OrdersService.swift in Sources */,
-				A91380702669B58B0078B181 /* PlaceOrderFailedViewController.swift in Sources */,
 				965A848A26654F4100004F08 /* CartViewController.swift in Sources */,
 				A9517C96266D588700FC5079 /* NotificationNameExtension.swift in Sources */,
 				A9517C99266D594000FC5079 /* ViewControllerExtension.swift in Sources */,

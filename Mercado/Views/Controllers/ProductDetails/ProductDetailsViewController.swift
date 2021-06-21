@@ -25,8 +25,30 @@ class ProductDetailsViewController: UIViewController
 
     @IBOutlet weak var navItem: UINavigationItem!
     var images = [InputSource]()
+    
+    var productDetailsViewModel : ProductDetailsViewModel!
+    var isFavorite : Bool!
+    var firebaseManager : FirebaseManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firebaseManager = FirebaseManager.shared
+        productDetailsViewModel = ProductDetailsViewModel()
+        productDetailsViewModel.itemIsFavoriteValue(itemIdValue: itemDetails.item_id!)
+        
+        productDetailsViewModel.bindItemFavoriteToView = {
+              (isFav) in
+            DispatchQueue.main.async {
+                self.isFavorite = isFav
+                if isFav{
+                    self.favoriteIcon.image = UIImage(named: "favorite")
+                }
+                else{
+                     self.favoriteIcon.image = UIImage(named: "unfavorite")
+                }
+            }
+        }
         
         self.navItem.title =
             "Item Details"
@@ -58,5 +80,27 @@ class ProductDetailsViewController: UIViewController
     }
     
     @IBAction func favoriteButton(_ sender: UIBarButtonItem) {
-    }
+        
+        let cellFavoriteItem : SpecialItem = SpecialItem()
+        cellFavoriteItem.category = categoryName!
+        cellFavoriteItem.subCategory = subCategoryName!
+        cellFavoriteItem.itemId = itemDetails.item_id!
+
+            if isFavorite {
+                let verifyAlert = UIAlertController(title: "Alert", message: " Are you sure you want to unfavorite this item ", preferredStyle: .alert)
+                verifyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+                    self.favoriteIcon.image = UIImage(named: "unfavorite")
+                    self.firebaseManager.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
+                    self.isFavorite = false
+                }))
+                verifyAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                self.present(verifyAlert, animated: true, completion: nil)
+                
+            }else {
+                self.favoriteIcon.image = UIImage(named: "favorite")
+                firebaseManager.addItemsToFavorites(favoriteItem: cellFavoriteItem)
+                isFavorite = true
+            }
+        }
+    
 }

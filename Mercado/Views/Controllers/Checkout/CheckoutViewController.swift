@@ -55,6 +55,7 @@ class CheckoutViewController: UIViewController {
     var shippingAddress : String!
     var firebaseManager : FirebaseManager!
     var ordersItemsArray : [AllItems]!
+    var orderTimestamp : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +84,7 @@ class CheckoutViewController: UIViewController {
                 orderNo!.text = "Order #\(orderObj.orderNumber!)"
                 userAddress.text = orderObj.shippingAddress
                 itemsCount.text = "\(ordersItemsArray.count)"
-                //orderTimeStamp!.text = "Placed on \(orderObj.timeStamp!)"
+                orderTimeStamp!.text = "Placed on \(orderTimestamp!)"
             }
         else{
             itemsCount.text = "\(itemsArray.count)"

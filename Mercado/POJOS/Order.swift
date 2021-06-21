@@ -11,7 +11,7 @@ class Order : Codable{
     var items : [CartItem]?
     var shippingAddress : String?
     var totalPrice : Float?
-    var timeStamp : String?
+    var timeStamp : Int?
     var orderNumber : String?
     
     internal init(items: [CartItem]? = nil, shippingAddress: String? = nil, totalPrice: Float? = nil) {

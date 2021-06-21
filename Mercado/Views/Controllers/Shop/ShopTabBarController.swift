@@ -37,6 +37,7 @@ class ShopTabBarController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         print("shop will appear")
         //update cart badge
+        showLoading(activityIndicator: activityIndicator)
         CartHandlerViewModel().getNumbersOfItemsInCart()
         NotificationCenter.default.addObserver(self,selector:#selector(updateBadgeValue(_:)),name:NSNotification.Name(rawValue: "cartBadge"),object:nil)
         
@@ -58,7 +59,7 @@ class ShopTabBarController: UIViewController {
          
       
         // Do any additional setup after loading the view.
-        //showLoading(activityIndicator: activityIndicator)
+        
         
         //search
         self.showSearchBar()
@@ -100,11 +101,11 @@ class ShopTabBarController: UIViewController {
         newArrivalViewModel.bindItemsToView = {
                 (newArrrivalInfo,data) in
             if let itemData = data , let itemDetails = newArrrivalInfo{
-                
                 self.newArrival_array.append(itemData)
                 self.newArrival_infoArray.append(itemDetails)
                 
                 DispatchQueue.main.async {
+                    self.hideLoading(activityIndicator: self.activityIndicator)
                     self.newArrivalCollectionView.reloadData()
                 }
             }
@@ -116,6 +117,7 @@ class ShopTabBarController: UIViewController {
             self.newArrivalIsFavoriteArr.append(ItemIsFavorite(isFavorite: isFav))
             print(isFav)
             DispatchQueue.main.async {
+                self.hideLoading(activityIndicator: self.activityIndicator)
                 self.newArrivalCollectionView.reloadData()
             }
         }
@@ -127,6 +129,7 @@ class ShopTabBarController: UIViewController {
                  self.exclusiveOffers_array.append(itemData)
                  self.exclusive0ffers_infoArray.append(itemInfo)
                  DispatchQueue.main.async {
+                    self.hideLoading(activityIndicator: self.activityIndicator)
                      self.exclusiveOffersCollectionView.reloadData()
                  }
              }
@@ -138,6 +141,7 @@ class ShopTabBarController: UIViewController {
             self.exclusiveOffersIsFavoriteArr.append(ItemIsFavorite(isFavorite: isFav))
             print(isFav)
             DispatchQueue.main.async {
+                self.hideLoading(activityIndicator: self.activityIndicator)
                 self.exclusiveOffersCollectionView.reloadData()
             }
         }

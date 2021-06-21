@@ -14,6 +14,7 @@ class SearchTableViewController: UITableViewController{
     var filteredItemsArray : [AllItems]!
     var itemDetailsArray : [ItemProtocol]!
     var firebaseManager : FirebaseManager!
+    var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
 
     override func viewDidLoad() {
         super.viewDidLoad()

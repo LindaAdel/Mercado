@@ -20,6 +20,7 @@ class FavoriteTableViewController: UIViewController {
     var favoriteViewModel : FavoriteViewModel!
     //var itemService : itemsService!
     var firebaseManager : FirebaseManager!
+    var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
     
  
     @IBOutlet weak var FavoriteTableView: UITableView!
@@ -40,6 +41,7 @@ class FavoriteTableViewController: UIViewController {
         favoriteViewModel.bindItemsToView = {
                 (favitem,item) in
             DispatchQueue.main.async {
+                self.hideLoading(activityIndicator: self.activityIndicator)
                 if let itemData = item,  let favitemData = favitem {
                 self.favoriteList.append(itemData)
                 self.favoriteItemInfoArr.append(favitemData)
@@ -56,6 +58,7 @@ class FavoriteTableViewController: UIViewController {
   
         
         func onFailUpdateView(){
+            hideLoading(activityIndicator: activityIndicator)
             let alert = UIAlertController(title: "Error", message: favoriteViewModel.showError, preferredStyle: .alert)
 
             let okAction  = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
@@ -67,6 +70,7 @@ class FavoriteTableViewController: UIViewController {
 
  }
     override func viewWillAppear(_ animated: Bool) {
+        showLoading(activityIndicator: activityIndicator)
         self.favoriteList.removeAll()
         self.favoriteItemInfoArr.removeAll()
         self.FavoriteTableView.reloadData()

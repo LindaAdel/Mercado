@@ -24,6 +24,7 @@ class itemsTableViewController: UIViewController {
     var itemsViewModel : ItemsViewModel!
     //var itemService : itemsService!
     var firebaseManager : FirebaseManager!
+    var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
     
     
     @IBOutlet weak var itemsSearchBar: UISearchBar!
@@ -42,6 +43,15 @@ class itemsTableViewController: UIViewController {
             self.itemsTableView.reloadData()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showLoading(activityIndicator: activityIndicator)
+        itemsList.removeAll()
+        itemIsFavoriteArr.removeAll()
+        itemsTableView.reloadData()
+        itemsViewModel.fetchItemsDataFromAPI()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +61,7 @@ class itemsTableViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateFilteredArray(_:)), name: NSNotification.Name(rawValue: "filter"), object: nil)
         
         itemsViewModel = ItemsViewModel(subCategoryObj: self.subCategoryObj, categoryName: self.itemcategoryName!)
-        itemsViewModel.fetchItemsDataFromAPI()
+        //itemsViewModel.fetchItemsDataFromAPI()
         
         
         
@@ -59,6 +69,7 @@ class itemsTableViewController: UIViewController {
         itemsViewModel.bindItemsToView = {
             (items) in
             
+            self.hideLoading(activityIndicator: self.activityIndicator)
             self.itemsList = items
             self.allItemsToFilter = items
             
@@ -74,6 +85,7 @@ class itemsTableViewController: UIViewController {
             self.itemIsFavoriteArr[index] = ItemIsFavorite(isFavorite: isFav)
             print(index , isFav)
             DispatchQueue.main.async {
+                self.hideLoading(activityIndicator: self.activityIndicator)
                 self.itemsTableView.reloadData()
             }
             
@@ -89,6 +101,7 @@ class itemsTableViewController: UIViewController {
     
     
     func onFailUpdateView(){
+        hideLoading(activityIndicator: activityIndicator)
         let alert = UIAlertController(title: "Error", message: itemsViewModel.showError, preferredStyle: .alert)
         
         let okAction  = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in

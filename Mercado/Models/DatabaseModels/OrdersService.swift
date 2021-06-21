@@ -30,16 +30,18 @@ class OrdersService {
                     let orderObj = Order()
                     orderObj.totalPrice = itemObj["totalPrice"] as? Float
                     orderObj.shippingAddress = itemObj["shippingAddress"] as? String
+                    orderObj.timeStamp = itemObj["timestamp"] as? Int
                     orderObj.orderNumber = item.key
-                    let orderItemsArray = itemObj["items"] as? [String:NSDictionary]
+                    let orderItemsArray = itemObj["items"] as? [NSDictionary]
+                    
                     orderItemsArray!.forEach { item in
-                        let itemObj = item.value
+                       // let itemObj = item.value
                         let orderItemObj = CartItem()
-                        orderItemObj.count = itemObj["count"] as? Int
-                        orderItemObj.itemId = itemObj["itemId"] as? String
+                        orderItemObj.count = item["count"] as? Int
+                        orderItemObj.itemId = item["itemId"] as? String
                         self.orderItemsArray.append(orderItemObj)
                     }
-                    
+
                     orderObj.items = self.orderItemsArray
                     self.orderItemsArray.removeAll()
                     print(self.orderItemsArray)

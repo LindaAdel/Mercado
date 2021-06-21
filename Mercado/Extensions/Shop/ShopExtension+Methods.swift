@@ -34,13 +34,14 @@ extension ShopTabBarController{
         
         flashSaleArray = flashSaleViewModel.flashSaleArray
         DispatchQueue.main.async {
+            self.hideLoading(activityIndicator: self.activityIndicator)
             self.showSliderImages()
         }
     }
     
     func onFailUpdateView(){
         
-       
+        hideLoading(activityIndicator: activityIndicator)
         let alert = UIAlertController(title: "Error", message: flashSaleViewModel.showError, preferredStyle: .alert)
         
         let okAction  = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in

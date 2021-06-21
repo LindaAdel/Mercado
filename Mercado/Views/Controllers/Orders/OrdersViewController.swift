@@ -21,11 +21,13 @@ class OrdersViewController: UIViewController {
     var ordersViewModel : OrdersViewModel!
     var ordersArray : [Order]!
     var itemsInfoArray : [AllItems]!
+    var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        showLoading(activityIndicator: activityIndicator)
         orderTableView.delegate = self
         orderTableView.dataSource = self
         
@@ -40,7 +42,8 @@ class OrdersViewController: UIViewController {
         ordersViewModel.bindItemInfoViewModelToView = {
             (item) in
             if let itemData = item{
-                    self.itemsInfoArray.append(itemData)
+                self.hideLoading(activityIndicator: self.activityIndicator)
+                self.itemsInfoArray.append(itemData)
             
             }
             print(self.itemsInfoArray)
