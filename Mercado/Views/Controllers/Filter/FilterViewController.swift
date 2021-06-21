@@ -103,7 +103,8 @@ class FilterViewController: UIViewController {
             
         }
         
-        print(filteredItemsArray)
+//        print(filteredItemsArray.count)
+//        print(selectedPriceValue)
         
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "filter"), object: nil, userInfo: ["filteredArray":filteredItemsArray])

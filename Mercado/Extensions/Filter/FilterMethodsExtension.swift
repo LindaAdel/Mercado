@@ -60,15 +60,20 @@ extension FilterViewController
         }
     }
     //MARK:- price radio button
-    func updateRadioButton(sender:UIButton , diselectButtons :[Int]) {
-        
-        guard sender.currentImage == nil else {
-            sender.setImage(nil, for: .normal)
+    func updateRadioButton(currentRadioButton:UIButton )
+    {
+        //to diselect radio button
+        guard currentRadioButton.currentImage == nil else {
+            currentRadioButton.setImage(nil, for: .normal)
+            selectedPriceValue = nil
             return
         }
-        sender.setImage(UIImage(systemName: "circle.fill"), for: .normal)
-        priceRadioButtonsArray[diselectButtons[0]].setImage(nil, for: .normal)
-        priceRadioButtonsArray[diselectButtons[1]].setImage(nil, for: .normal)
+        
+        for radioButton in priceRadioButtonsArray {
+            radioButton.setImage(nil, for: .normal)
+        }
+        currentRadioButton.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+ 
     }
     
     func getPricesValue()

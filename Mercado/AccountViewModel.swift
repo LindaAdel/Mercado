@@ -11,13 +11,7 @@ import Firebase
 class AccountViewModel
 {
     let firebaseManager : FirebaseManager!
-//    var username :String! {
-//        didSet{
-//            
-//            self.bindUserNameToAccountView(username)
-//        }
-//        
-//    }
+
     
     var bindUserNameToAccountView :((String?,User?)->())!
     var bindCurrentUserToAccountView :((User?)->())!
@@ -61,6 +55,7 @@ class AccountViewModel
             }
         }
     }
+    //MARK:- update user
 //    func getCurrentUserFromFb()
 //    {
 //        

@@ -29,6 +29,11 @@ extension AccountViewController:UITableViewDelegate,UITableViewDataSource
         print(accountDetailsArray[indexPath.row]["name"])
         let name = accountDetailsArray[indexPath.row]["name"]!
         switch name {
+        case "My Account" :
+            let MyAccountVC = storyboard?.instantiateViewController(identifier: String("MyAccountDetails")) as! MyAccountDetailsViewController
+            MyAccountVC.modalPresentationStyle = .fullScreen
+            self.present(MyAccountVC, animated: true, completion: nil)
+            
         case "Shipping Address":
             print("shipping selectend")
 

@@ -69,6 +69,9 @@
 		2FE74B4226519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FE74B4326519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
 		2FE74B4426519400005D6AEA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE74B4126519400005D6AEA /* StyleSheet.swift */; };
+		2FE79405267B7C58002082D2 /* MyAccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE79404267B7C58002082D2 /* MyAccountDetailsViewController.swift */; };
+		2FE7940B267B7CF0002082D2 /* MyAccountDetailsVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7940A267B7CF0002082D2 /* MyAccountDetailsVCExtension.swift */; };
+		2FE79419267B9D10002082D2 /* MyAccountDetailsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE79418267B9D10002082D2 /* MyAccountDetailsInfo.swift */; };
 		2FEB0B8C264EBBDB003D5CAE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */; };
 		9615D94026668E2F000D369F /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9615D93F26668E2F000D369F /* CartItem.swift */; };
 		9615D94B2666D8C8000D369F /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9615D94A2666D8C8000D369F /* CartViewModel.swift */; };
@@ -234,6 +237,9 @@
 		2FC100D0265EF80900BF97A5 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		2FC100D5265EF81B00BF97A5 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		2FE74B4126519400005D6AEA /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
+		2FE79404267B7C58002082D2 /* MyAccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountDetailsViewController.swift; sourceTree = "<group>"; };
+		2FE7940A267B7CF0002082D2 /* MyAccountDetailsVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountDetailsVCExtension.swift; sourceTree = "<group>"; };
+		2FE79418267B9D10002082D2 /* MyAccountDetailsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountDetailsInfo.swift; sourceTree = "<group>"; };
 		2FEB0B8B264EBBDB003D5CAE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		41444C1DBE14A501F8108FFA /* Pods-Mercado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercado.debug.xcconfig"; path = "Target Support Files/Pods-Mercado/Pods-Mercado.debug.xcconfig"; sourceTree = "<group>"; };
 		9615D93F26668E2F000D369F /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartItem.swift; path = Mercado/POJOS/CartItem.swift; sourceTree = SOURCE_ROOT; };
@@ -459,6 +465,23 @@
 				96B8C1C9263B769A008CCA50 /* Controllers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2FE79400267B7C0D002082D2 /* MyAccountDetails */ = {
+			isa = PBXGroup;
+			children = (
+				2FE79404267B7C58002082D2 /* MyAccountDetailsViewController.swift */,
+			);
+			name = MyAccountDetails;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		2FE79409267B7CAD002082D2 /* MyAccountDetails */ = {
+			isa = PBXGroup;
+			children = (
+				2FE7940A267B7CF0002082D2 /* MyAccountDetailsVCExtension.swift */,
+			);
+			path = MyAccountDetails;
 			sourceTree = "<group>";
 		};
 		77703BC71335E2C1B20171DA /* Pods */ = {
@@ -692,6 +715,7 @@
 		96B8C1BC263B6A04008CCA50 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2FE79409267B7CAD002082D2 /* MyAccountDetails */,
 				9678B13C26766C0700E72265 /* Filter */,
 				A90B556F2672A48900B89CFA /* Search */,
 				A9F8C2D8267164DA0052FBE5 /* UIView */,
@@ -726,6 +750,7 @@
 				96BDCE98266873FF00CF5C9B /* Cart.swift */,
 				961EEA37266C0AF8008731EF /* Toast.swift */,
 				A90797E8267109D800F60AFE /* SelfSizedTableView.swift */,
+				2FE79418267B9D10002082D2 /* MyAccountDetailsInfo.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -733,8 +758,12 @@
 		96B8C1C9263B769A008CCA50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+
 				A96A4CB5267BFE0B0079C3B8 /* Launch Screen */,
 				A9741648267A716700C218DD /* About */,
+
+				2FE79400267B7C0D002082D2 /* MyAccountDetails */,
+
 				96645BDE2675419900B1CBAF /* Filter */,
 				A9EC06312672852500F32A6A /* Search */,
 				A90797EA26712C4600F60AFE /* Orders */,
@@ -1322,6 +1351,7 @@
 				9678B138267668FE00E72265 /* BrandCell.swift in Sources */,
 				96CD37462651B7DC007B945F /* SignUpTableViewController.swift in Sources */,
 				2F3C59542653DDEA00D704D5 /* itemTableExtension.swift in Sources */,
+				2FE79419267B9D10002082D2 /* MyAccountDetailsInfo.swift in Sources */,
 				2FA30FCB2652E6F400E59A77 /* Laptops.swift in Sources */,
 				961EEA38266C0AF8008731EF /* Toast.swift in Sources */,
 				9615D94026668E2F000D369F /* CartItem.swift in Sources */,
@@ -1341,6 +1371,7 @@
 				2FA30FE62652F86600E59A77 /* KidsShoes.swift in Sources */,
 				9632B31C265CC0B000D32D2F /* AddAddress.swift in Sources */,
 				2FC100C7265EF74600BF97A5 /* FavoriteViewModel.swift in Sources */,
+				2FE79405267B7C58002082D2 /* MyAccountDetailsViewController.swift in Sources */,
 				A93ECFD52668F7EE0067E102 /* PlaceOrderViewController.swift in Sources */,
 				96633A53265C789200FB1625 /* locationManagerExtension.swift in Sources */,
 				A90680352673A50500EAF3C5 /* ShopExtension+Methods.swift in Sources */,
@@ -1378,6 +1409,7 @@
 				A93ECFD82668F8140067E102 /* CheckoutExtension+TableView.swift in Sources */,
 				A9FE6DE7265341B700C6624C /* ExploreExtension+TableView.swift in Sources */,
 				2F4533D92629F7FB000FE74E /* AppDelegate.swift in Sources */,
+				2FE7940B267B7CF0002082D2 /* MyAccountDetailsVCExtension.swift in Sources */,
 				A9F8C2DA267165190052FBE5 /* UIViewExtension.swift in Sources */,
 				A974164A267A719700C218DD /* AboutViewController.swift in Sources */,
 				96F9E0CF265AD648008C47A2 /* ConfirmAddressViewController.swift in Sources */,
