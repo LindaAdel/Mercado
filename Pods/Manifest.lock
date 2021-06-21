@@ -74,6 +74,7 @@ PODS:
     - AlamofireImage (~> 4.0)
     - ImageSlideshow/Core
   - ImageSlideshow/Core (1.9.2)
+  - IQKeyboardManager (6.5.6)
   - leveldb-library (1.22.1)
   - lottie-ios (3.2.3)
   - nanopb (2.30908.0):
@@ -97,6 +98,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - ImageSlideshow
   - ImageSlideshow/Alamofire
+  - IQKeyboardManager
   - lottie-ios
   - SDWebImage
 
@@ -120,6 +122,7 @@ SPEC REPOS:
     - GTMAppAuth
     - GTMSessionFetcher
     - ImageSlideshow
+    - IQKeyboardManager
     - leveldb-library
     - lottie-ios
     - nanopb
@@ -145,12 +148,13 @@ SPEC CHECKSUMS:
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
 
-PODFILE CHECKSUM: 12cdc1a4347139161cd2d5edaa911e7f1d5c5ab7
+PODFILE CHECKSUM: ab0f6e8f0407413b7ca158b9194d80faa1a64746
 
 COCOAPODS: 1.10.1

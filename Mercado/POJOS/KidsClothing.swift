@@ -11,10 +11,9 @@ import UIKit
 class KidsClothing : Codable ,ItemProtocol {
     
     
-    var type: String?
+
     
     var slider_images: [String]?
-    
     var material : String?
     var item_image: String?
     var item_price :String?

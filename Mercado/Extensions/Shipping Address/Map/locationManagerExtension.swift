@@ -46,17 +46,21 @@ extension ConfirmAddressViewController:CLLocationManagerDelegate
             self.getPlace(for: location)
                 {
                 (pla) in
+               
                 let streetNumber = pla?.subThoroughfare ?? ""
                 let street = pla?.thoroughfare ?? ""
-                let state = pla?.subLocality ?? ""
-                let city = pla?.locality ?? ""
-                self.address = streetNumber + " " + street + " " + state + ", " + city
+                let city = pla?.administrativeArea ?? ""
+                let area = pla?.locality ?? ""
+//                self.address = streetNumber + " " + street + " " + state + ", " + city
                 
-                print("add : \(self.address!)")
+                //print("add : \(self.address!)")
                 print("ni : \(streetNumber)")
                 print("(stre\(street)")
-                print("state \(state)")
+                print("area \(area)")
                 print("cit\(city)")
+                self.address.street = streetNumber + street
+                self.address.governorate = city
+                self.address.area = area
             }
                 }
 

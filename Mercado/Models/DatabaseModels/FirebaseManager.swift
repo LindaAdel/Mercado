@@ -26,6 +26,50 @@ class FirebaseManager
         userEmail = currentUser.email
         
     }
+    //MARK:- Address
+    func addAddressToFB(address :Address) {
+        let address = [
+            "apartment" :address.apartment,
+            "area" :address.area,
+            "building":address.building,
+            "country":address.country,
+            "floor":address.floor,
+            "governorate":address.governorate,
+            "mobileNumber" :address.mobileNumber,
+            "nearestLandmark":address.nearestLandmark,
+            "street":address.street
+        ]
+        dbreference.child("users")
+            .child(userID)
+            .child("address")
+            .updateChildValues(address as [AnyHashable : Any])
+    }
+    func getUserAddress(completion :@escaping (Address?)->())  {
+        dbreference.child("users")
+            .child(userID)
+            .child("address")
+            .getData { (error, snapshot) in
+                guard error == nil
+                else
+                {
+                    print("firebase no address found")
+                    completion(nil)
+                    return
+                }
+                if snapshot.exists()
+                {
+                    let address = try! FirebaseDecoder().decode(Address.self, from: snapshot.value!)
+                    completion(address)
+                    print("address from firebase ")
+                }
+            }
+        
+    }
+    func removeAddressFromFB()  {
+        dbreference.child("users")
+            .child(userID)
+            .child("address").removeValue()
+    }
     //MARK:- cart
     func checkItemInCart(currentCartId:String ,completion:@escaping ((Bool)->())) {
         dbreference.child("cart")
@@ -142,7 +186,7 @@ class FirebaseManager
     func getUploadedImage(completion:@escaping ((String?)->())){
         dbreference.child("users")
             .child(userID!)
-            .child("photo")
+            .child("profilePicture")
             .getData(){
                 (error,snapShot) in
                 
@@ -165,7 +209,7 @@ class FirebaseManager
     func removeUploadedImage() {
         dbreference.child("users")
             .child(userID!)
-            .child("photo").removeValue()
+            .child("profilePicture").removeValue()
         
     }
     //MARK:- get current user
@@ -236,7 +280,7 @@ class FirebaseManager
         dbreference
             .child("users")
             .child(userID! )
-            .updateChildValues(["photo": String(describing: imageURL)])
+            .updateChildValues(["profilePicture": String(describing: imageURL)])
         print("uploadated to db")
     }
     //MARK:- dina Favorite

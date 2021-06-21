@@ -121,22 +121,22 @@ func firebaseResetPassword()
         if ((passwordTextField.text!.isEmpty) &&  (emailTextField.text!.isEmpty  ) )
         {
               
-            self.passwordTextField.attributedPlaceholder =  TextFieldErrors().showTextFieldError(placeholderValue: "required!")
-            self.emailTextField.attributedPlaceholder = TextFieldErrors().showTextFieldError(placeholderValue: "required!")
+            self.passwordTextField.attributedPlaceholder =  passwordTextField.showTextFieldError(placeholderValue: "required!")
+            self.emailTextField.attributedPlaceholder = emailTextField.showTextFieldError(placeholderValue: "required!")
           //  self.passwordTextField.addBottomBorder(color: .red)
         }
         else{
         if (passwordTextField.text!.isEmpty){
             print("emty pass")
             self.passwordTextField.text?.removeAll()
-            self.passwordTextField.attributedPlaceholder = TextFieldErrors().showTextFieldError(placeholderValue: "required!")
+            self.passwordTextField.attributedPlaceholder = passwordTextField.showTextFieldError(placeholderValue: "required!")
             return
         }
         if (emailTextField.text!.isEmpty )
         {
             print("empty maill")
             self.emailTextField.text?.removeAll()
-            self.emailTextField.attributedPlaceholder = TextFieldErrors().showTextFieldError(placeholderValue: "required!")
+            self.emailTextField.attributedPlaceholder = emailTextField.showTextFieldError(placeholderValue: "required!")
             return
         }
         else{
@@ -149,20 +149,20 @@ func firebaseResetPassword()
                        case.userNotFound:
                         self.emailTextField.text?.removeAll()
                         self.emailTextField.attributedPlaceholder =
-                            TextFieldErrors().showTextFieldError(placeholderValue:  "Email not found!")
+                            self.emailTextField.showTextFieldError(placeholderValue:  "Email not found!")
                        //incorrect password
                        case .wrongPassword:
                            print("wrong pass")
                         self.passwordTextField.text?.removeAll()
                         self.passwordTextField.attributedPlaceholder =
-                            TextFieldErrors().showTextFieldError(placeholderValue:  "Incorrect Password!")
+                            self.passwordTextField.showTextFieldError(placeholderValue:  "Incorrect Password!")
 
                        default:
 //                           print("Error: \(error.localizedDescription)")
 //                           print("Email not found")
                         self.emailTextField.text?.removeAll()
                         self.emailTextField.attributedPlaceholder =
-                            TextFieldErrors().showTextFieldError(placeholderValue: "Invalid Email!")
+                            self.emailTextField.showTextFieldError(placeholderValue: "Invalid Email!")
                         
                        }
                      } else {

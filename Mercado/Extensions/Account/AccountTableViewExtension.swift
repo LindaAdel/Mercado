@@ -22,7 +22,7 @@ extension AccountViewController:UITableViewDelegate,UITableViewDataSource
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-          return 100
+          return 110
         
       }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -38,11 +38,11 @@ extension AccountViewController:UITableViewDelegate,UITableViewDataSource
             print("shipping selectend")
 
             // In the above, you replaced the navigation controller with your destVC.
-            let confrimAddressVc = storyboard?.instantiateViewController(identifier: String(describing: AddAddressTableViewController.self)) as! AddAddressTableViewController
+            let addAddressVc = storyboard?.instantiateViewController(identifier: String(describing: AddAddressTableViewController.self)) as! AddAddressTableViewController
           //  confrimAddressVc.modalPresentationStyle = .fullScreen
             print(self.navigationController)
             
-            self.navigationController?.pushViewController(confrimAddressVc, animated: true)
+            self.navigationController?.pushViewController(addAddressVc , animated: true)
 //            self.present(confrimAddressVc, animated: true, completion: nil)
         case "My Orders":
 

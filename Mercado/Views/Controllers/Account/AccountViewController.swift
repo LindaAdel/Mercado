@@ -18,6 +18,7 @@ class AccountViewController: UIViewController
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var curvedView: UIView!
     
+    @IBOutlet weak var cameraIcon: UIButton!
     var accountViewModel :AccountViewModel!
     let accountDetailsArray = AccountDetails().accountDetailsArray
     
@@ -25,7 +26,10 @@ class AccountViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
           
-        
+        cameraIcon.layer.cornerRadius = cameraIcon.frame.width / 2
+        cameraIcon.layer.borderWidth = 1
+        cameraIcon.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        cameraIcon.clipsToBounds = true
         self.showCurvedView()
         accountViewModel = AccountViewModel()
         accountViewModel.getUploadedImageFromFB()
@@ -35,7 +39,7 @@ class AccountViewController: UIViewController
         userImage.layer.masksToBounds = true
         self.userImage.layer.cornerRadius = 50
       //  self.userImage.clipsToBounds = true;
-        
+        self.navigationItem.backButtonTitle = ""
         
         
     accountViewModel.bindUploadedImageToAccountVIew =
@@ -78,7 +82,7 @@ class AccountViewController: UIViewController
     }
 
         //add gesture to image user tapped
-        self.userImageClicked()
+    //    self.userImageClicked()
     
     }
     override func viewWillAppear(_ animated: Bool)
@@ -95,7 +99,11 @@ class AccountViewController: UIViewController
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
+    
+    @IBAction func changeProfilePictureButton(_ sender: UIButton) {
+        self.showSheetToChangeImage()
+    }
+    
     @IBAction func logoutButton(_ sender: Any)
     {
         //add alert to confirm or cancel logout

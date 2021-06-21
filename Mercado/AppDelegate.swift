@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
+import IQKeyboardManager
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         //handling user uninstallation
         userUninstallation()
+        //keyboard handling
+        IQKeyboardManager.shared().isEnabled = true
         return true
     }
     //handle url of google signin

@@ -69,7 +69,7 @@ extension AddAddressTableViewController : IAddAddress
 {
     //MARK:- confrom add Address protocol
     func setLocation(address: String) {
-        addressesArray.append(address)
+//        addressesArray.append(address)
         noAddressesLabel.isHidden = true
         self.tableView.reloadData()
         print("all address \(addressesArray)")

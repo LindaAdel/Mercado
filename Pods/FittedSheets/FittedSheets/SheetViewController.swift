@@ -230,9 +230,9 @@ public class SheetViewController: UIViewController {
     }
     
     /// Handle a scroll view in the child view controller by watching for the offset for the scrollview and taking priority when at the top (so pulling up/down can grow/shrink the sheet instead of bouncing the child's scroll view)
-    public func handleScrollView(_ scrollView: UIScrollView) {
-        scrollView.panGestureRecognizer.require(toFail: panGestureRecognizer)
-        self.childScrollView = scrollView
+    public func handleScrollView(_ scrolling: UIScrollView) {
+        scrolling.panGestureRecognizer.require(toFail: panGestureRecognizer)
+        self.childScrollView = scrolling
     }
     
     /// Change the sizes the sheet should try to pin to

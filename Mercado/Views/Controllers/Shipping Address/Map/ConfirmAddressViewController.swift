@@ -12,9 +12,9 @@ class ConfirmAddressViewController: UIViewController,MKMapViewDelegate {
     
     var resultSearchController:UISearchController? = nil
     var place : MKPlacemark!
-    var address :String!
+   // var address :String!
  
-    
+    var address:Address!
     
     //gives access to the location manager
     var locationManager:CLLocationManager!
@@ -24,7 +24,8 @@ class ConfirmAddressViewController: UIViewController,MKMapViewDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-       
+        self.navigationItem.backButtonTitle = ""
+       address = Address()
         //add search bar to the view
         self.showSearchBar()
         //initialize location manager var
@@ -42,20 +43,68 @@ class ConfirmAddressViewController: UIViewController,MKMapViewDelegate {
 
     @IBAction func confirmAddressButton(_ sender: Any)
     {
-        if let placee = place {
-            address = ParseAddress().parseAddressToString(selectedAddress: placee)
-            print("add \(address)")
-            print(addAddressDelegate)
-            
-            print("placee \(ParseAddress().parseAddressToString(selectedAddress: placee))")
-            print("place admin : \(String(describing: placee.administrativeArea))")
-            print("place subt: \(String(describing: placee.subAdministrativeArea))")
-            print("loc: \(String(describing: placee.locality))")
-          }
+        let addressDetailsVC = storyboard?.instantiateViewController(withIdentifier: String(describing: AddressDetailsViewController.self)) as! AddressDetailsViewController
         if let _ = address
         {
-        self.addAddressDelegate.setLocation(address: self.address)
+      //  add.country = address
+            
+            addressDetailsVC.address = address
+        }else
+        {
+            print("nil address")
         }
-        self.navigationController?.popViewController(animated: true)
+        if let _ = place {
+            print(place.locality)
+            address.street = "\(place.subThoroughfare ?? "") \(place.thoroughfare ?? "")"
+            address.area = place.locality!
+            address.governorate = place.administrativeArea!
+            addressDetailsVC.address = address
+        }
+        else
+        {
+            print("nil place")
+        }
+        self.navigationController?.pushViewController(addressDetailsVC, animated: true)
+//        if let placee = place {
+//            address = ParseAddress().parseAddressToString(selectedAddress: placee)
+//            print("add \(address)")
+//            print(addAddressDelegate)
+//
+//            print("placee \(ParseAddress().parseAddressToString(selectedAddress: placee))")
+//            print("place admin : \(String(describing: placee.administrativeArea))")
+//            print("place subt: \(String(describing: placee.subAdministrativeArea))")
+//            print("loc: \(String(describing: placee.locality))")
+//          }
+//        if let _ = address
+//        {
+//        self.addAddressDelegate.setLocation(address: self.address)
+//        }
+//        self.navigationController?.popViewController(animated: true)
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+//        let addressDetailsVC = segue.destination as! AddressDetailsViewController
+//        var add = Address()
+//        if let _ = address
+//        {
+//      //  add.country = address
+//
+//            addressDetailsVC.address = address
+//        }else
+//        {
+//            print("nil address")
+//        }
+//        if let _ = place {
+//            print(place.locality)
+//            address.street = "\(place.subThoroughfare ?? "") \(place.thoroughfare ?? "")"
+//            address.area = place.locality
+//            address.governorate = place.administrativeArea
+//            addressDetailsVC.address = address
+//        }
+//        else
+//        {
+//            print("nil place")
+//        }
+//
+//    }
 }

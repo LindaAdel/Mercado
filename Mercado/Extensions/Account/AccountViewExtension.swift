@@ -11,14 +11,14 @@ import Firebase
 extension AccountViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
 
-    //add gesture to image
-    func userImageClicked(){
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(userImageTappedGestureAction(tapGestureRecognizer:)))
-           userImage.isUserInteractionEnabled = true
-           userImage.addGestureRecognizer(tapGestureRecognizer)
-    }
+//    //add gesture to image
+//    func userImageClicked(){
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(userImageTappedGestureAction(tapGestureRecognizer:)))
+//           userImage.isUserInteractionEnabled = true
+//           userImage.addGestureRecognizer(tapGestureRecognizer)
+//    }
     //open action sheet when user tapped on user image
-    @objc func userImageTappedGestureAction(tapGestureRecognizer: UITapGestureRecognizer)
+    func showSheetToChangeImage()
     {
         print("image tapped")
         //set title to action sheet

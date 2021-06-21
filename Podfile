@@ -15,6 +15,7 @@ target 'Mercado' do
  pod 'lottie-ios'
  pod 'CodableFirebase'
  pod 'FittedSheets'
+ pod 'IQKeyboardManager'
 
 
 end
