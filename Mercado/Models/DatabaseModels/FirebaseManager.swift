@@ -348,20 +348,19 @@ class FirebaseManager
         let shippingAddress = orderItem.shippingAddress
         let totalPrice = orderItem.totalPrice
         
-        let ordersRef = self.dbreference.child("\(order)/\(userID!)")
-        let pushRef = ordersRef.childByAutoId()
+        let pushRef = self.dbreference.child("\(order)/\(userID!)").childByAutoId()
     
         pushRef.child("shippingAddress").setValue(shippingAddress!)
         pushRef.child("totalPrice").setValue(totalPrice!)
         
         let itemsArray = orderItem.items
-        for item in itemsArray! {
-       
-            let itemId = item.itemId
-            let count = item.count
-            pushRef.child("items/\(itemId!)/itemId").setValue(itemId!)
-            pushRef.child("items/\(itemId!)/count").setValue(count!)
-            
+        for i in 0...itemsArray!.count-1{
+
+            let itemId = itemsArray![i].itemId
+            let count = itemsArray![i].count
+            pushRef.child("items/\(i)/itemId").setValue(itemId!)
+            pushRef.child("items/\(i)/count").setValue(count!)
+
         }
         
     }

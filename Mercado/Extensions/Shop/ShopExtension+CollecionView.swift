@@ -108,24 +108,24 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
     
     @objc func exclusiveOffersFavoriteBtnAction(sender : UIButton)
     {
-       let indexp = IndexPath(row: sender.tag, section: 0)
-        let cellFavoriteItem : SpecialItem = SpecialItem()
-    cellFavoriteItem.category = exclusive0ffers_infoArray[indexp.row].category
-    cellFavoriteItem.subCategory = exclusive0ffers_infoArray[indexp.row].subCategory
-    exclusiveOffers_array[indexp.row].item_id = exclusive0ffers_infoArray[indexp.row].itemId
-    cellFavoriteItem.itemId = exclusiveOffers_array[indexp.row].item_id
+           let indexp = IndexPath(row: sender.tag, section: 0)
+            let cellFavoriteItem : SpecialItem = SpecialItem()
+        cellFavoriteItem.category = exclusive0ffers_infoArray[indexp.row].category
+        cellFavoriteItem.subCategory = exclusive0ffers_infoArray[indexp.row].subCategory
+        exclusiveOffers_array[indexp.row].item_id = exclusive0ffers_infoArray[indexp.row].itemId
+        cellFavoriteItem.itemId = exclusiveOffers_array[indexp.row].item_id
 
-    if let favFlag = self.exclusiveOffersIsFavoriteArr[indexp.row]{
-        if favFlag.isFavorite! {
-            firebaseManager.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
-            self.exclusiveOffersIsFavoriteArr[indexp.row]?.isFavorite = false
-        }else {
-            firebaseManager.addItemsToFavorites(favoriteItem: cellFavoriteItem)
-            self.exclusiveOffersIsFavoriteArr[indexp.row]?.isFavorite = true
+        if let favFlag = self.exclusiveOffersIsFavoriteArr[indexp.row]{
+            if favFlag.isFavorite! {
+                firebaseManager.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
+                self.exclusiveOffersIsFavoriteArr[indexp.row]?.isFavorite = false
+            }else {
+                firebaseManager.addItemsToFavorites(favoriteItem: cellFavoriteItem)
+                self.exclusiveOffersIsFavoriteArr[indexp.row]?.isFavorite = true
+            }
         }
-    }
-    self.exclusiveOffersCollectionView.reloadData()
-    }
+        self.exclusiveOffersCollectionView.reloadData()
+        }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "productDetails") as! ProductDetailsViewController

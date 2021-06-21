@@ -51,6 +51,12 @@ extension AccountViewController:UITableViewDelegate,UITableViewDataSource
                         ordersVC.modalPresentationStyle = .fullScreen
                         self.present(ordersVC, animated: true, completion: nil)
                         //self.navigationController?.pushViewController(ordersVC, animated: true)
+        case "About":
+             //In the above, you replaced the navigation controller with your destVC.
+            let aboutVC = storyboard?.instantiateViewController(identifier: String("About")) as! AboutViewController
+            aboutVC.modalPresentationStyle = .fullScreen
+            self.present(aboutVC, animated: true, completion: nil)
+            
         case "Help" :
             print("helppp")
 //            let userID = Auth.auth().currentUser?.uid

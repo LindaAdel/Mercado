@@ -51,6 +51,7 @@ extension CartViewController
             { [self] in
                 print("empty cart view")
                 DispatchQueue.main.async {
+                    self.hideLoading(activityIndicator: self.activityIndicator)
                     self.updateEmptyCartUI()
                 }
             
@@ -62,6 +63,7 @@ extension CartViewController
         cartViewModel.bindCartItemsToView =
             {
                 [self](items,cartItems) in
+                
                 
                 self.itemsArray = items
                 self.cartItemsArray = cartItems
@@ -82,6 +84,7 @@ extension CartViewController
                 
                 print("before total \(self.subTotalValue)")
                 DispatchQueue.main.async {
+                    self.hideLoading(activityIndicator: self.activityIndicator)
                     self.emptyCartbackgroundImage.isHidden = true
                     self.tableView.reloadData()
                     print("cart table view reloaded")

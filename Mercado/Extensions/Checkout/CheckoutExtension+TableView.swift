@@ -31,16 +31,17 @@ extension CheckoutViewController : UITableViewDelegate, UITableViewDataSource{
         
             cell?.itemImage.sd_setImage(with: URL(string: "\(ordersItemsArray[indexPath.row].item_image!)"))
             cell?.itemTitle.text =  "\(ordersItemsArray[indexPath.row].item_title!)"
+            cell?.itemAmount.text = "x\(cartItemsArray[indexPath.row].count!)"
             cell?.itemPrice.text = "EGP \(ordersItemsArray[indexPath.row].item_price!)"
         }
         else{
             cell?.itemImage.sd_setImage(with: URL(string: "\(itemsArray[indexPath.row].item_image!)"))
             cell?.itemTitle.text =  "\(itemsArray[indexPath.row].item_title!)"
+            cell?.itemAmount.text = "x\(cartItemsArray[indexPath.row].count!)"
             cell?.itemPrice.text = "EGP \(itemsArray[indexPath.row].item_price!)"
                     
         }
-        cell?.itemAmount.text = "x\(cartItemsArray[indexPath.row].count!)"
-        
+                
         return cell!
     }
     

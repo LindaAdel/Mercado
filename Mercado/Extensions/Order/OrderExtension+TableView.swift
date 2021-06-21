@@ -34,6 +34,8 @@ extension OrdersViewController : UITableViewDelegate , UITableViewDataSource{
         cell?.layer.cornerRadius = 15
         
         cell?.orderNo.text = "Order #\(ordersArray[indexPath.row].orderNumber!)"
+        let orderDate = convertTimestampToDate(timeStamp: ordersArray[indexPath.row].timeStamp!)
+        cell?.orderTimeStamp.text = "Placed on \(orderDate)"
         cell?.orderTotalPrice.text = "EGP \(ordersArray[indexPath.row].totalPrice!)"
 
         return cell!
@@ -42,11 +44,14 @@ extension OrdersViewController : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let checkoutVC = storyboard?.instantiateViewController(identifier: "OrderDetails") as! CheckoutViewController
         checkoutVC.modalPresentationStyle = .fullScreen
+        showLoading(activityIndicator: activityIndicator)
         
         checkoutVC.orderObj = ordersArray[indexPath.row]
         checkoutVC.subTotal = ordersArray[indexPath.row].totalPrice! - 100.0
         checkoutVC.totalPrice = ordersArray[indexPath.row].totalPrice!
         checkoutVC.cartItemsArray = ordersArray[indexPath.row].items
+        let orderDate = convertTimestampToDate(timeStamp: ordersArray[indexPath.row].timeStamp!)
+        checkoutVC.orderTimestamp = orderDate
         
         let itemsArray = ordersArray[indexPath.row].items
         for item in itemsArray! {

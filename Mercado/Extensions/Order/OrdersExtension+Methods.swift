@@ -14,11 +14,13 @@ extension OrdersViewController{
         ordersArray = ordersViewModel.ordersArray
         //print(ordersArray)
         DispatchQueue.main.async {
+            self.hideLoading(activityIndicator: self.activityIndicator)
             self.orderTableView.reloadData()
         }
     }
     
     func onFailUpdateView(){
+        self.hideLoading(activityIndicator: self.activityIndicator)
         let alert = UIAlertController(title: "Error", message: ordersViewModel.showError, preferredStyle: .alert)
 
         let okAction  = UIAlertAction(title: "Ok", style: .default) { (UIAlertAction) in
@@ -32,9 +34,20 @@ extension OrdersViewController{
     
     func onEmptyOrderView(){
          DispatchQueue.main.async {
+            self.hideLoading(activityIndicator: self.activityIndicator)
             self.noOrdersImage.isHidden = false
             self.noOrdersLabel.isHidden = false
         }
+    }
+    
+    func convertTimestampToDate(timeStamp : Int) -> String {
+        
+        let date = Date(timeIntervalSince1970: TimeInterval(timeStamp))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
+        dateFormatter.timeZone = .current
+        let localDate = dateFormatter.string(from: date)
+        return localDate
     }
     
 }
