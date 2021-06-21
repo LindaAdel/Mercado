@@ -26,14 +26,9 @@ func showCurvedView()
     maskLayer.masksToBounds = true
     AccountCurvedView.layer.mask = maskLayer
 }
-    //add gesture to image
-    func userImageClicked(){
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(userImageTappedGestureAction(tapGestureRecognizer:)))
-        userProfileImage.isUserInteractionEnabled = true
-        userProfileImage.addGestureRecognizer(tapGestureRecognizer)
-    }
+ 
     //open action sheet when user tapped on user image
-    @objc func userImageTappedGestureAction(tapGestureRecognizer: UITapGestureRecognizer)
+    func showSheetToChangeImage()
     {
     
         //set title to action sheet

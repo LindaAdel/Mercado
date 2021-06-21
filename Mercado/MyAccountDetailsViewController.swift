@@ -12,6 +12,7 @@ import Firebase
 
 class MyAccountDetailsViewController: UIViewController {
 
+    @IBOutlet weak var cameraIcon: UIButton!
     @IBOutlet weak var userProfileImage: UIImageView!
     @IBOutlet weak var doneBtn: UIButton!
     @IBOutlet weak var AccountCurvedView: UIView!
@@ -27,6 +28,11 @@ class MyAccountDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cameraIcon.layer.cornerRadius = cameraIcon.frame.width / 2
+        cameraIcon.layer.borderWidth = 1
+        cameraIcon.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        
         
         self.showCurvedView()
         StyleSheet.roundImage(userProfileImage)
@@ -73,8 +79,7 @@ class MyAccountDetailsViewController: UIViewController {
        }
     }
 
-        //add gesture to image user tapped
-        self.userImageClicked()
+ 
     }
     
 
@@ -168,5 +173,9 @@ class MyAccountDetailsViewController: UIViewController {
 
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func changeProfilePictureButton(_ sender: UIButton) {
+        self.showSheetToChangeImage()
     }
 }

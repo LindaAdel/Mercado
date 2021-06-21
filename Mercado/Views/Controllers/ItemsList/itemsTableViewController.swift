@@ -11,8 +11,9 @@ import FittedSheets
 class itemsTableViewController: UIViewController {
     
     
+    @IBOutlet weak var navItem: UINavigationItem!
     var subCategoryObj = SubCategory(subcategoryAPI: "", subcategoryName: "" ,itemSubCategoryName: "" )
-    
+  
     var categoryName : String?
     var itemcategoryName : String?
     var itemIsFavoriteArr : [ItemIsFavorite?] = []
@@ -55,7 +56,7 @@ class itemsTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navItem.title = subCategoryObj.subcategoryName
         itemsTableView.delegate = self
         itemsTableView.dataSource = self
         firebaseManager = FirebaseManager.shared
