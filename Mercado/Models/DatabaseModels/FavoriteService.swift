@@ -40,7 +40,7 @@ class FavoriteService : FirebaseProtocol{
               }
               else {
               print("No data available")
-
+                completion(nil,nil)
                  }
                }
        }

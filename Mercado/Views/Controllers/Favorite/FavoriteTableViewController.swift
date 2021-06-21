@@ -8,6 +8,10 @@
 import UIKit
 
 class FavoriteTableViewController: UIViewController {
+    
+    
+    @IBOutlet weak var noFavImage: UIImageView!
+    @IBOutlet weak var noFavLabel: UILabel!
     var subCategoryObj = SubCategory(subcategoryAPI: "", subcategoryName: ""
         , itemSubCategoryName: "")
     var categoryName : String?
@@ -28,6 +32,7 @@ class FavoriteTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
        
         FavoriteTableView.delegate = self
         FavoriteTableView.dataSource = self
@@ -37,10 +42,20 @@ class FavoriteTableViewController: UIViewController {
         favoriteItemInfoArr = [SpecialItem]()
         //itemService = itemsService()
         firebaseManager = FirebaseManager.shared
-        
+        favoriteViewModel.bindEmptyFavToView = {
+            DispatchQueue.main.async {[self] in
+                print("no fav")
+               hideLoading(activityIndicator: activityIndicator)
+               noFavLabel.isHidden
+                 = false
+                noFavImage.isHidden = false
+                FavoriteTableView.isHidden = true
+            }
+        }
         favoriteViewModel.bindItemsToView = {
                 (favitem,item) in
             DispatchQueue.main.async {
+                self.FavoriteTableView.isHidden = false
                 self.hideLoading(activityIndicator: self.activityIndicator)
                 if let itemData = item,  let favitemData = favitem {
                 self.favoriteList.append(itemData)
@@ -70,6 +85,7 @@ class FavoriteTableViewController: UIViewController {
 
  }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         showLoading(activityIndicator: activityIndicator)
         self.favoriteList.removeAll()
         self.favoriteItemInfoArr.removeAll()

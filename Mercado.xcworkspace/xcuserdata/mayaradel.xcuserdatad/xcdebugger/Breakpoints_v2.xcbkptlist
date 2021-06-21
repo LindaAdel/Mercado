@@ -206,8 +206,8 @@
             filePath = "Mercado/Views/Controllers/Favorite/FavoriteTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -658,6 +658,22 @@
             startingLineNumber = "62"
             endingLineNumber = "62"
             landmarkName = "updateScrollableViewWithItemDetails(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D346AD1-4CE9-41E3-B076-87740EE41FF6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mercado/FavoriteViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "fetchFavorite()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

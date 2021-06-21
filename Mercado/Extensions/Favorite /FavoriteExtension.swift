@@ -66,11 +66,20 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
         cellFavoriteItem.subCategory = subCategoryObj.itemSubCategoryName
         cellFavoriteItem.itemId = favoriteItemInfoArr[indexp.row].itemId
         let verifyAlert = UIAlertController(title: "Alert", message: " Are you sure you want to unfavorite this item ", preferredStyle: .alert)
-        verifyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+        verifyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [self] (UIAlertAction) in
             self.firebaseManager.removeItemsFromFavorites(favoriteItem: cellFavoriteItem)
             self.favoriteList.remove(at: indexp.row)
             self.favoriteItemInfoArr.remove(at: indexp.row)
             self.FavoriteTableView.reloadData()
+            if favoriteList.count == 0
+            {
+                DispatchQueue.main.async {
+                noFavLabel.isHidden
+                  = false
+                 noFavImage.isHidden = false
+                 FavoriteTableView.isHidden = true
+                }
+            }
         }))
         verifyAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(verifyAlert, animated: true, completion: nil)
