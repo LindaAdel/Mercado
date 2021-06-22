@@ -20,7 +20,17 @@ class AddressDetailsViewController: UIViewController {
     @IBOutlet weak var countryTextField: UITextField!
     var address :Address!
     var addressViewModel :AddressViewModel!
+    var isFromCheckout : Bool = false
     @IBOutlet weak var scrolling: UIScrollView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scrolling.contentOffset.x = 0
@@ -28,7 +38,7 @@ class AddressDetailsViewController: UIViewController {
         
         //change textfields style
         self.showTextFieldsStyle()
-        self.navigationItem.backButtonTitle = ""
+        //self.navigationItem.backButtonTitle = ""
         title = "Add Address"
         guard address.street != nil ,
               address.governorate != nil,
@@ -100,6 +110,9 @@ class AddressDetailsViewController: UIViewController {
                 address.mobileNumber = mobileTextField.text
                 addressViewModel.addAddressToFB(address: self.address)
                 addAddressVc.addressesArray.append(address)
+                if isFromCheckout{
+                    addAddressVc.isFromCheckout = true
+                }
                 self.navigationController?.pushViewController(addAddressVc , animated: true)
             }
             

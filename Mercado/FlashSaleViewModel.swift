@@ -37,7 +37,6 @@ class FlashSaleViewModel : NSObject{
         
         super .init()
         self.flashSaleService = FlashSaleService()
-        self.fetchFlashSaleArray()
     }
     
     

@@ -37,7 +37,6 @@ class CategoriesViewModel : NSObject{
         
         super .init()
         self.categoriesService = CategoriesService()
-        self.fetchCategoryDataFromAPI()
     }
     
     

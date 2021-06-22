@@ -49,6 +49,9 @@ extension AddAddressTableViewController
     //open confirmed address view 
         let confirmAddressVc = storyboard?.instantiateViewController(identifier: String(describing: ConfirmAddressViewController.self)) as! ConfirmAddressViewController
         confirmAddressVc.addAddressDelegate = self
+        if isFromCheckout{
+            confirmAddressVc.isFromCheckout = true
+        }
         self.navigationController?.pushViewController(confirmAddressVc, animated: true)
 
        }

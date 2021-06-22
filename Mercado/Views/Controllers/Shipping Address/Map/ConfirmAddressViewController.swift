@@ -18,13 +18,23 @@ class ConfirmAddressViewController: UIViewController,MKMapViewDelegate {
     
     //gives access to the location manager
     var locationManager:CLLocationManager!
+    var isFromCheckout : Bool = false
     
     weak var addAddressDelegate : IAddAddress!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     // MARK: - didload
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.navigationItem.backButtonTitle = ""
+        //self.navigationItem.backButtonTitle = ""
        address = Address()
         //add search bar to the view
         self.showSearchBar()
@@ -64,6 +74,10 @@ class ConfirmAddressViewController: UIViewController,MKMapViewDelegate {
         {
             print("nil place")
         }
+        if isFromCheckout{
+            addressDetailsVC.isFromCheckout = true
+        }
+        
         self.navigationController?.pushViewController(addressDetailsVC, animated: true)
 //        if let placee = place {
 //            address = ParseAddress().parseAddressToString(selectedAddress: placee)

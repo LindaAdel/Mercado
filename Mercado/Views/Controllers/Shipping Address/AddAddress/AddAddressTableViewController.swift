@@ -12,14 +12,34 @@ class AddAddressTableViewController: UITableViewController
     var addAddressFloatingButton : UIButton!
     var addressesArray : [Address] = []
     var noAddressesLabel: UILabel!
+    var isFromCheckout : Bool = false
     var addressViewModel :AddressViewModel!
     @objc func backButton() {
-        self.navigationController?.popToRootViewController(animated: true)
+        if isFromCheckout {
+            let viewControllers: [UIViewController] = self.navigationController!.viewControllers
+            for aViewController in viewControllers {
+                if aViewController is CheckoutViewController {
+                    self.navigationController!.popToViewController(aViewController, animated: true)
+                }
+            }
+        }
+        else{
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkConnectivity()
         
         self.showNoAddressLabel()
         if addressesArray.count != 0
@@ -39,9 +59,9 @@ class AddAddressTableViewController: UITableViewController
                 
                 DispatchQueue.main.async {
                     
-                    addressesArray.append(address!)
+                    self.addressesArray.append(address!)
                     self.tableView.reloadData()
-                    noAddressesLabel.isHidden = true
+                    self.noAddressesLabel.isHidden = true
                     
                 }
             }
@@ -53,7 +73,7 @@ class AddAddressTableViewController: UITableViewController
         self.showFloatingButton()
         
         self.navigationItem.title = "Addresses"
-        self.navigationItem.backButtonTitle = ""
+        //self.navigationItem.backButtonTitle = ""
         let newBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward") , style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButton))
         
         self.navigationItem.leftBarButtonItem = newBackButton
@@ -118,6 +138,9 @@ class AddAddressTableViewController: UITableViewController
     {
         let addressDetailsVC = storyboard?.instantiateViewController(withIdentifier: String(describing: AddressDetailsViewController.self)) as! AddressDetailsViewController
         addressDetailsVC.address = addressesArray[indexPath.row]
+        if isFromCheckout {
+            addressDetailsVC.isFromCheckout = true
+        }
         self.navigationController?.pushViewController(addressDetailsVC, animated: true)
     }
 }

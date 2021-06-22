@@ -14,7 +14,12 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var checkoutItemsTableView: UITableView!
     
     @IBAction func backNavBar(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        if navigationBar.title == "Order Details"{
+            self.dismiss(animated: true, completion: nil)
+        }
+        else{
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -38,7 +43,8 @@ class CheckoutViewController: UIViewController {
     
     @IBAction func editShippingAddressBtn(_ sender: Any) {
         let confrimAddressVc = storyboard?.instantiateViewController(identifier: String(describing: AddAddressTableViewController.self)) as! AddAddressTableViewController
-        self.present(confrimAddressVc, animated: true, completion: nil)
+        confrimAddressVc.isFromCheckout = true
+        self.navigationController?.pushViewController(confrimAddressVc, animated: true)
     }
     
     @IBOutlet weak var userAddress: UILabel!
@@ -56,6 +62,38 @@ class CheckoutViewController: UIViewController {
     var firebaseManager : FirebaseManager!
     var ordersItemsArray : [AllItems]!
     var orderTimestamp : String!
+    var addressViewModel : AddressViewModel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.tabBarController?.tabBar.isHidden = true
+        
+        if navigationBar.title == "Order Details"
+        {
+            self.userAddress.text = orderObj.shippingAddress
+        }
+        else{
+            checkConnectivity()
+            addressViewModel = AddressViewModel()
+            addressViewModel.getAddressFromFB()
+            addressViewModel.bindAddressToAddAddressView = {
+                address in
+                self.shippingAddress = "\(address!.street!) \(address!.area!),\(address!.apartment!) floor \(address!.floor!), \(address!.country!), \(address!.governorate!)"
+                DispatchQueue.main.async {
+                    self.userAddress.text = self.shippingAddress
+                }
+            }
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,13 +114,10 @@ class CheckoutViewController: UIViewController {
         subTotalPrice.text = "EGP \(subTotal!)"
         total.text = "EGP \(totalPrice!)"
         
-        shippingAddress = "755 Crumm Rd, Cowansville, PA, 16218"
-        userAddress.text = shippingAddress
         
         if navigationBar.title == "Order Details"
             {
                 orderNo!.text = "Order #\(orderObj.orderNumber!)"
-                userAddress.text = orderObj.shippingAddress
                 itemsCount.text = "\(ordersItemsArray.count)"
                 orderTimeStamp!.text = "Placed on \(orderTimestamp!)"
             }

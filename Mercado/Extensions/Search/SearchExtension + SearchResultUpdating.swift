@@ -11,7 +11,7 @@ import UIKit
 extension SearchTableViewController : UISearchResultsUpdating{
     
     func updateSearchResults(for searchController: UISearchController) {
-        
+        checkConnectivity()
         let searchBarTextValue = searchController.searchBar.text
         showLoading(activityIndicator: activityIndicator)
         allItemsViewModel.fetchFilteredItemsArray(searchKey: searchBarTextValue!)

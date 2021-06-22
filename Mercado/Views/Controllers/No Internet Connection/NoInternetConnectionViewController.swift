@@ -15,6 +15,7 @@ class NoInternetConnectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NotificationCenter.default.addObserver(self, selector: #selector(presentNoConnectionVC(_:)), name: .internetNotification, object: nil)
         // Do any additional setup after loading the view.
         noConnectionView!.contentMode = .scaleAspectFit
         

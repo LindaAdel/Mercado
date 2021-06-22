@@ -30,16 +30,21 @@ class ShopTabBarController: UIViewController {
     var exclusiveOffersIsFavoriteArr : [ItemIsFavorite?]!
     var collectionView :UICollectionView!
     var flashSaleViewModel : FlashSaleViewModel!
-    var flashSaleArray : [FlashSale]!
+    var flashSaleArray : [FlashSale] = [FlashSale]()
     var searchController : UISearchController? = nil
     var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
 
     override func viewWillAppear(_ animated: Bool) {
+        checkConnectivity()
         print("shop will appear")
         //update cart badge
         showLoading(activityIndicator: activityIndicator)
         CartHandlerViewModel().getNumbersOfItemsInCart()
         NotificationCenter.default.addObserver(self,selector:#selector(updateBadgeValue(_:)),name:NSNotification.Name(rawValue: "cartBadge"),object:nil)
+        
+        flashSaleArray.removeAll()
+        images.removeAll()
+        flashSaleViewModel.fetchFlashSaleArray()
         
         newArrival_array.removeAll()
         newArrival_infoArray.removeAll()
@@ -68,7 +73,6 @@ class ShopTabBarController: UIViewController {
         exclusiveViewModel = ExclusiveOffersViewModel()
         
         flashSaleViewModel = FlashSaleViewModel()
-        flashSaleArray = [FlashSale]()
         
         flashSaleViewModel.bindFlashSaleViewModelToView = {
             self.onSuccessUpdateView()
@@ -81,7 +85,7 @@ class ShopTabBarController: UIViewController {
         scrollView.isScrollEnabled = true
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
 
-        showSliderImages()
+        
 
         newArrivalCollectionView.delegate = self
         newArrivalCollectionView.dataSource = self

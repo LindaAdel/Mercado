@@ -31,7 +31,6 @@ extension ShopTabBarController{
        }
     
     func onSuccessUpdateView(){
-        
         flashSaleArray = flashSaleViewModel.flashSaleArray
         DispatchQueue.main.async {
             self.hideLoading(activityIndicator: self.activityIndicator)
@@ -56,6 +55,7 @@ extension ShopTabBarController{
     func showSliderImages() {
         
         //loop in images slider array and get it from alamofire
+        images.removeAll()
         flashSaleArray.forEach{
             item in
             let img =  AlamofireSource(urlString: item.image!)

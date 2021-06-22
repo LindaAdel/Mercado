@@ -43,13 +43,13 @@ class FavoriteTableViewController: UIViewController {
         //itemService = itemsService()
         firebaseManager = FirebaseManager.shared
         favoriteViewModel.bindEmptyFavToView = {
-            DispatchQueue.main.async {[self] in
+            DispatchQueue.main.async {
                 print("no fav")
-               hideLoading(activityIndicator: activityIndicator)
-               noFavLabel.isHidden
+                self.hideLoading(activityIndicator: self.activityIndicator)
+                self.noFavLabel.isHidden
                  = false
-                noFavImage.isHidden = false
-                FavoriteTableView.isHidden = true
+                self.noFavImage.isHidden = false
+                self.FavoriteTableView.isHidden = true
             }
         }
         favoriteViewModel.bindItemsToView = {
@@ -86,11 +86,14 @@ class FavoriteTableViewController: UIViewController {
  }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        checkConnectivity()
         showLoading(activityIndicator: activityIndicator)
         self.favoriteList.removeAll()
         self.favoriteItemInfoArr.removeAll()
         self.FavoriteTableView.reloadData()
-        favoriteViewModel.fetchFavorite()
+        if Connectivity.isConnectedToInternet{
+            favoriteViewModel.fetchFavorite()
+        }
     }
     
     

@@ -47,6 +47,7 @@ class itemsTableViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        checkConnectivity()
         showLoading(activityIndicator: activityIndicator)
         itemsList.removeAll()
         itemIsFavoriteArr.removeAll()

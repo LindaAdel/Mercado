@@ -25,7 +25,7 @@ class CartViewController: UIViewController {
         checkoutVC.cartItemsArray = cartItemsArray!
         checkoutVC.subTotal = subTotalValue!
         checkoutVC.totalPrice = totalValue!
-        self.present(checkoutVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(checkoutVC, animated: true)
     }
     @IBOutlet weak var tableView: UITableView!
     var subTotalValue :Float!
@@ -62,14 +62,22 @@ class CartViewController: UIViewController {
   
    
     override func viewWillAppear(_ animated: Bool) {
+        checkConnectivity()
         showLoading(activityIndicator: activityIndicator)
         CartHandlerViewModel().getNumbersOfItemsInCart()
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-     
-        cartViewModel.getCartItems()
+        if Connectivity.isConnectedToInternet{
+            cartViewModel.getCartItems()
+        }
         print("cart will appear \(itemsArray.count)")
 
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     

@@ -32,14 +32,12 @@ class AccountViewController: UIViewController
         cameraIcon.clipsToBounds = true
         self.showCurvedView()
         accountViewModel = AccountViewModel()
-        accountViewModel.getUploadedImageFromFB()
-        accountViewModel.getgetCurrentUserFromFB()
         
         //rounded image
         userImage.layer.masksToBounds = true
         self.userImage.layer.cornerRadius = 50
       //  self.userImage.clipsToBounds = true;
-        self.navigationItem.backButtonTitle = ""
+       // self.navigationItem.backButtonTitle = ""
         
         
     accountViewModel.bindUploadedImageToAccountVIew =
@@ -88,6 +86,9 @@ class AccountViewController: UIViewController
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
+        checkConnectivity()
+        accountViewModel.getUploadedImageFromFB()
+        accountViewModel.getgetCurrentUserFromFB()
 
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)

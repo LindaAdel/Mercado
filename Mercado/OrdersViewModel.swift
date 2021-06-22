@@ -40,7 +40,6 @@ class OrdersViewModel : NSObject{
         
         super .init()
         self.ordersService = OrdersService()
-        self.fetchOrdersArray()
     }
     
     

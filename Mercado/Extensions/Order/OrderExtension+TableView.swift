@@ -49,19 +49,22 @@ extension OrdersViewController : UITableViewDelegate , UITableViewDataSource{
         checkoutVC.orderObj = ordersArray[indexPath.row]
         checkoutVC.subTotal = ordersArray[indexPath.row].totalPrice! - 100.0
         checkoutVC.totalPrice = ordersArray[indexPath.row].totalPrice!
-        checkoutVC.cartItemsArray = ordersArray[indexPath.row].items
         let orderDate = convertTimestampToDate(timeStamp: ordersArray[indexPath.row].timeStamp!)
         checkoutVC.orderTimestamp = orderDate
         
         let itemsArray = ordersArray[indexPath.row].items
-        for item in itemsArray! {
-            self.ordersViewModel.getItemInfo(itemId: item.itemId!)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            checkoutVC.ordersItemsArray = self.itemsInfoArray
-            self.present(checkoutVC, animated: true, completion: nil)
-            self.itemsInfoArray.removeAll()
+        checkConnectivity()
+        if Connectivity.isConnectedToInternet{
+            for item in itemsArray! {
+                self.ordersViewModel.getItemInfo(itemId: item.itemId!)
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                checkoutVC.cartItemsArray = self.ordersArray[indexPath.row].items
+                checkoutVC.ordersItemsArray = self.itemsInfoArray
+                self.present(checkoutVC, animated: true, completion: nil)
+                self.itemsInfoArray.removeAll()
+            }
         }
         
     }

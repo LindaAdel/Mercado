@@ -26,6 +26,12 @@ class MyAccountDetailsViewController: UIViewController {
     var firebaseManger : FirebaseManager!
     var googoleUserPhotoChanged :Bool! = false
     
+    override func viewWillAppear(_ animated: Bool) {
+        checkConnectivity()
+        accountViewModel.getUploadedImageFromFB()
+        accountViewModel.getgetCurrentUserFromFB()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraIcon.layer.cornerRadius = cameraIcon.frame.width / 2
@@ -38,8 +44,6 @@ class MyAccountDetailsViewController: UIViewController {
         StyleSheet.roundImage(userProfileImage)
         firebaseManger = FirebaseManager.shared
         accountViewModel = AccountViewModel()
-        accountViewModel.getUploadedImageFromFB()
-        accountViewModel.getgetCurrentUserFromFB()
         
     accountViewModel.bindUploadedImageToAccountVIew =
     {

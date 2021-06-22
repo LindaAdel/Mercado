@@ -18,13 +18,13 @@ extension UIViewController {
                  self.dismiss(animated: true, completion: nil)
              }
          }
-         else{
-             DispatchQueue.main.async {
-                 let noConnectionVC = self.storyboard?.instantiateViewController(identifier: "NoConnection") as! NoInternetConnectionViewController
-             noConnectionVC.modalPresentationStyle = .fullScreen
-             self.present(noConnectionVC, animated: true, completion: nil)
-             }
-         }
+//         else{
+//             DispatchQueue.main.async {
+//                 let noConnectionVC = self.storyboard?.instantiateViewController(identifier: "NoConnection") as! NoInternetConnectionViewController
+//             noConnectionVC.modalPresentationStyle = .fullScreen
+//             self.present(noConnectionVC, animated: true, completion: nil)
+//             }
+//         }
       }
     }
     
@@ -43,4 +43,12 @@ extension UIViewController {
             }
            
        }
+    
+    func checkConnectivity(){
+        if !Connectivity.isConnectedToInternet{
+            let noConnectionVC = self.storyboard?.instantiateViewController(identifier: "NoConnection") as! NoInternetConnectionViewController
+            noConnectionVC.modalPresentationStyle = .fullScreen
+            self.present(noConnectionVC, animated: true, completion: nil)
+        }
+    }
 }

@@ -19,30 +19,36 @@ class ExploreTabBarController: UIViewController{
     var itemcategoryName : String?
     var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
     
+    override func viewWillAppear(_ animated: Bool) {
+        checkConnectivity()
+        showLoading(activityIndicator: activityIndicator)
+        categoriesArray.removeAll()
+        subCatgeoryArray.removeAll()
+        categoriesViewModel.fetchCategoryDataFromAPI()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         categoriesCollectionView.dataSource = self
         categoriesCollectionView.delegate = self
-        showLoading(activityIndicator: activityIndicator)
         
         subCategoriesTableView.dataSource = self
         subCategoriesTableView.delegate = self
         
         categoriesViewModel = CategoriesViewModel()
-        
         categoriesViewModel.bindCategoriesViewModelToView = {
-            
-            self.onSuccessUpdateView()
-            
-        }
-        
-        categoriesViewModel.bindViewModelErrorToView = {
-            
-            self.onFailUpdateView()
-            
-        }
+                   
+                   self.onSuccessUpdateView()
+                   
+               }
+               
+               categoriesViewModel.bindViewModelErrorToView = {
+                   
+                   self.onFailUpdateView()
+                   
+               }
         
     }
     

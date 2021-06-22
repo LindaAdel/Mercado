@@ -16,18 +16,25 @@ class OrdersViewController: UIViewController {
     
     @IBOutlet weak var noOrdersLabel: UILabel!
     
-    @IBOutlet weak var goShoppingBtn: UIButton!
     @IBOutlet weak var noOrdersImage: UIImageView!
     var ordersViewModel : OrdersViewModel!
     var ordersArray : [Order]!
     var itemsInfoArray : [AllItems]!
     var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
     
+    override func viewWillAppear(_ animated: Bool) {
+        checkConnectivity()
+        showLoading(activityIndicator: activityIndicator)
+        ordersArray.removeAll()
+        itemsInfoArray.removeAll()
+        orderTableView.reloadData()
+        ordersViewModel.fetchOrdersArray()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        showLoading(activityIndicator: activityIndicator)
         orderTableView.delegate = self
         orderTableView.dataSource = self
         

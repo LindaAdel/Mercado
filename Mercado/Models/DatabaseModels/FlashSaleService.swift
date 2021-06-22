@@ -15,6 +15,7 @@ class FlashSaleService {
     
     func fetchFlashSaleArraycompletion(completion: @escaping ([FlashSale]?, Error?) -> ()) {
     self.ref.child("flashSale").getData { (error, snapshot) in
+        self.flashSaleArray.removeAll()
         if let error = error {
             print("Error getting data \(error)")
         }
