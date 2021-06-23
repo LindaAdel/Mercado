@@ -38,7 +38,7 @@ class AddressDetailsViewController: UIViewController {
         
         //change textfields style
         self.showTextFieldsStyle()
-        //self.navigationItem.backButtonTitle = ""
+        self.navigationItem.backButtonTitle = ""
         title = "Add Address"
         guard address.street != nil ,
               address.governorate != nil,
@@ -70,6 +70,7 @@ class AddressDetailsViewController: UIViewController {
         countryTextField.text = address.country
         landmarkTextField.text = address.nearestLandmark
         mobileTextField.text = address.mobileNumber
+
     }
     
     
@@ -108,6 +109,9 @@ class AddressDetailsViewController: UIViewController {
                 address.country = countryTextField.text
                 address.nearestLandmark = landmarkTextField.text
                 address.mobileNumber = mobileTextField.text
+                address.street =  streetTextField.text
+               address.governorate =  governorateTextField.text
+                address.area = areaTextField.text
                 addressViewModel.addAddressToFB(address: self.address)
                 addAddressVc.addressesArray.append(address)
                 if isFromCheckout{

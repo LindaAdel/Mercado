@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         userUninstallation()
         //keyboard handling
         IQKeyboardManager.shared().isEnabled = true
+        IQKeyboardManager.shared().isEnableAutoToolbar = false
+        IQKeyboardManager.shared().shouldResignOnTouchOutside = true
         return true
     }
     //handle url of google signin
