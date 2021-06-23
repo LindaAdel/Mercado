@@ -54,7 +54,7 @@ class MyAccountDetailsViewController: UIViewController {
         DispatchQueue.main.async {
             print("url \(String(describing: url))")
             self.googoleUserPhotoChanged = true
-        self.userProfileImage.sd_setImage(with: url, completed: nil)
+        self.userProfileImage.sd_setImage(with: url, placeholderImage: UIImage(systemName: "person.circle"), completed: nil)
         }
         }
 
@@ -74,7 +74,7 @@ class MyAccountDetailsViewController: UIViewController {
             {
                 if self.googoleUserPhotoChanged == false
                 {
-                self.userProfileImage.sd_setImage(with: image, completed: nil)
+                self.userProfileImage.sd_setImage(with: image, placeholderImage: UIImage(systemName: "person.circle"), completed: nil)
                     print(self.googoleUserPhotoChanged!)
                 }
             }

@@ -145,8 +145,6 @@
 		A93F94342630FD7100BFCBA2 /* DinaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */; };
 		A9517C96266D588700FC5079 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517C95266D588700FC5079 /* NotificationNameExtension.swift */; };
 		A9517C99266D594000FC5079 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517C98266D594000FC5079 /* ViewControllerExtension.swift */; };
-		A96A4CB4267BFD8C0079C3B8 /* launch_screen.json in Resources */ = {isa = PBXBuildFile; fileRef = A96A4CB3267BFD8B0079C3B8 /* launch_screen.json */; };
-		A96A4CB7267BFE340079C3B8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A4CB6267BFE340079C3B8 /* LaunchScreenViewController.swift */; };
 		A9741647267A587E00C218DD /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9741646267A587E00C218DD /* ProductDetailsViewModel.swift */; };
 		A974164A267A719700C218DD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9741649267A719700C218DD /* AboutViewController.swift */; };
 		A9916B8E265419050030ADDA /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8D265419050030ADDA /* CategoriesService.swift */; };
@@ -317,8 +315,6 @@
 		A93F94332630FD7100BFCBA2 /* DinaStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinaStoryboard.storyboard; sourceTree = "<group>"; };
 		A9517C95266D588700FC5079 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		A9517C98266D594000FC5079 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
-		A96A4CB3267BFD8B0079C3B8 /* launch_screen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launch_screen.json; sourceTree = "<group>"; };
-		A96A4CB6267BFE340079C3B8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		A9741646267A587E00C218DD /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 		A9741649267A719700C218DD /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A9916B8D265419050030ADDA /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
@@ -779,7 +775,6 @@
 		96B8C1C9263B769A008CCA50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A96A4CB5267BFE0B0079C3B8 /* Launch Screen */,
 				A9741648267A716700C218DD /* About */,
 				2FE79400267B7C0D002082D2 /* MyAccountDetails */,
 				96645BDE2675419900B1CBAF /* Filter */,
@@ -949,14 +944,6 @@
 			path = "View Controller";
 			sourceTree = "<group>";
 		};
-		A96A4CB5267BFE0B0079C3B8 /* Launch Screen */ = {
-			isa = PBXGroup;
-			children = (
-				A96A4CB6267BFE340079C3B8 /* LaunchScreenViewController.swift */,
-			);
-			path = "Launch Screen";
-			sourceTree = "<group>";
-		};
 		A9741645267A578A00C218DD /* ProductDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -992,7 +979,6 @@
 			children = (
 				A9D84C6E266C5245000FF46D /* checkmark.json */,
 				A9D84C69266C42AE000FF46D /* noConnection.json */,
-				A96A4CB3267BFD8B0079C3B8 /* launch_screen.json */,
 			);
 			path = "Animation Json Files";
 			sourceTree = "<group>";
@@ -1270,7 +1256,6 @@
 				96603626262E39A900653D91 /* GoogleService-Info.plist in Resources */,
 				2F4533E52629F7FB000FE74E /* Assets.xcassets in Resources */,
 				A9D84C6A266C42AE000FF46D /* noConnection.json in Resources */,
-				A96A4CB4267BFD8C0079C3B8 /* launch_screen.json in Resources */,
 				2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */,
 				2F4533E02629F7FB000FE74E /* Main.storyboard in Resources */,
 				A9D84C6F266C5246000FF46D /* checkmark.json in Resources */,
@@ -1377,7 +1362,6 @@
 				961EEA38266C0AF8008731EF /* Toast.swift in Sources */,
 				9615D94026668E2F000D369F /* CartItem.swift in Sources */,
 				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
-				A96A4CB7267BFE340079C3B8 /* LaunchScreenViewController.swift in Sources */,
 				A9ACF95E265F0EF700A2ABF7 /* DinaFirebaseManager.swift in Sources */,
 				964BB7E526598C090087EFB3 /* AccountViewExtension.swift in Sources */,
 				A93ECFD12668F7D20067E102 /* CheckoutViewController.swift in Sources */,
@@ -1742,7 +1726,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MercadoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1763,7 +1747,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MercadoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1783,6 +1767,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MercadoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1802,6 +1787,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MercadoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

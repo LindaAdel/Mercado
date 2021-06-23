@@ -190,7 +190,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coD-nG-Ka8" userLabel="logo view">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping" translatesAutoresizingMaskIntoConstraints="NO" id="Q1U-oa-EDH">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carts" translatesAutoresizingMaskIntoConstraints="NO" id="Q1U-oa-EDH">
                                                 <rect key="frame" x="167" y="23" width="80" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="ROF-p2-eHJ"/>
@@ -1792,6 +1792,7 @@
         <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="cart.badge.plus.fill" catalog="system" width="64" height="48"/>
         <image name="cart.fill" catalog="system" width="64" height="50"/>
+        <image name="carts" width="512" height="512"/>
         <image name="chevron.right" catalog="system" width="48" height="64"/>
         <image name="google" width="18" height="18"/>
         <image name="location.circle" catalog="system" width="64" height="60"/>

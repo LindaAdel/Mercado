@@ -26,6 +26,17 @@ class NoInternetConnectionViewController: UIViewController {
         noConnectionView!.play()
     }
     
+    @objc func presentNoConnectionVC(_ notification : Notification) {
+        if let data = notification.userInfo{
+         let isConnected : Bool = data["isConnected"]! as! Bool
+         if isConnected{
+             DispatchQueue.main.async {
+                 self.dismiss(animated: true, completion: nil)
+             }
+         }
+      }
+    }
+    
 
     /*
     // MARK: - Navigation

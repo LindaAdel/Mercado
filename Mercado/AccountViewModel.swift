@@ -45,7 +45,7 @@ class AccountViewModel
             {
                self.bindUserNameToAccountView(name,user)
                 //   self.username = name
-                print(name)
+                print("get current user \(name)")
             }
             else
             {

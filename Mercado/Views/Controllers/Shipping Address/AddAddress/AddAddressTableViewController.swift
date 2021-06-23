@@ -14,6 +14,8 @@ class AddAddressTableViewController: UITableViewController
     var noAddressesLabel: UILabel!
     var isFromCheckout : Bool = false
     var addressViewModel :AddressViewModel!
+    var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
+    
     @objc func backButton() {
         if isFromCheckout {
             let viewControllers: [UIViewController] = self.navigationController!.viewControllers
@@ -29,10 +31,13 @@ class AddAddressTableViewController: UITableViewController
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showLoading(activityIndicator: activityIndicator)
         self.tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         self.tabBarController?.tabBar.isHidden = false
     }
    
@@ -44,6 +49,7 @@ class AddAddressTableViewController: UITableViewController
         self.showNoAddressLabel()
         if addressesArray.count != 0
         {
+            self.hideLoading(activityIndicator: self.activityIndicator)
             noAddressesLabel.isHidden = true
         }
         //initialize address vm
@@ -59,6 +65,7 @@ class AddAddressTableViewController: UITableViewController
                 
                 DispatchQueue.main.async {
                     
+                    self.hideLoading(activityIndicator: self.activityIndicator)
                     self.addressesArray.append(address!)
                     self.tableView.reloadData()
                     self.noAddressesLabel.isHidden = true

@@ -26,6 +26,8 @@ class AccountViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
           
+        print(Auth.auth().currentUser?.email)
+        
         cameraIcon.layer.cornerRadius = cameraIcon.frame.width / 2
         cameraIcon.layer.borderWidth = 1
         cameraIcon.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -50,7 +52,8 @@ class AccountViewController: UIViewController
         DispatchQueue.main.async {
             print("url \(String(describing: url))")
             self.googoleUserPhotoChanged = true
-        self.userImage.sd_setImage(with: url, completed: nil)
+            self.userImage.sd_setImage(with: url, placeholderImage: UIImage(systemName: "person.circle"), context: nil)
+        //self.userImage.sd_setImage(with: url, completed: nil )
         }
         }
 
@@ -70,7 +73,7 @@ class AccountViewController: UIViewController
             {
                 if self.googoleUserPhotoChanged == false
                 {
-                self.userImage.sd_setImage(with: image, completed: nil)
+                self.userImage.sd_setImage(with: image , placeholderImage: UIImage(systemName: "person.circle"), completed: nil)
                     print(self.googoleUserPhotoChanged!)
                 }
             }
@@ -86,6 +89,7 @@ class AccountViewController: UIViewController
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
+        print("will appear")
         checkConnectivity()
         accountViewModel.getUploadedImageFromFB()
         accountViewModel.getgetCurrentUserFromFB()

@@ -104,7 +104,6 @@ class CheckoutViewController: UIViewController {
         scrollView.isScrollEnabled = true
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(presentNoConnectionVC(_:)), name: .internetNotification, object: nil)
         
         cashOnDeliveryImg.image = UIImage(named: "cash_on_delivery")
         

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xrF-Bi-sgq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rkg-Df-FtI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -8,14 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--login-->
-        <scene sceneID="yZN-C0-mwf">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Main" referencedIdentifier="login" id="msN-Bv-1Js" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FQ7-mk-HEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1349" y="183"/>
-        </scene>
         <!--Get Started View Controller-->
         <scene sceneID="msq-Ac-Igy">
             <objects>
@@ -1500,38 +1492,13 @@
             </objects>
             <point key="canvasLocation" x="2751" y="7"/>
         </scene>
-        <!--Launch Screen View Controller-->
-        <scene sceneID="OfA-Q2-Yty">
+        <!--login-->
+        <scene sceneID="h4C-nr-bzu">
             <objects>
-                <viewController storyboardIdentifier="launch" id="xrF-Bi-sgq" customClass="LaunchScreenViewController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Nq-mo-aAa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxy-x2-NfA" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="launch_screen"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="tje-Wx-THD" firstAttribute="trailing" secondItem="hxy-x2-NfA" secondAttribute="trailing" constant="20" id="U3d-KX-Xhb"/>
-                            <constraint firstItem="tje-Wx-THD" firstAttribute="bottom" secondItem="hxy-x2-NfA" secondAttribute="bottom" id="jfT-E8-wr5"/>
-                            <constraint firstItem="hxy-x2-NfA" firstAttribute="top" secondItem="tje-Wx-THD" secondAttribute="top" id="lZC-vR-Hm2"/>
-                            <constraint firstItem="hxy-x2-NfA" firstAttribute="leading" secondItem="tje-Wx-THD" secondAttribute="leading" constant="20" id="z7P-YR-BwB"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="tje-Wx-THD"/>
-                    </view>
-                    <connections>
-                        <outlet property="launchScreenView" destination="hxy-x2-NfA" id="IxS-dZ-7Qi"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zTB-do-h7K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Main" referencedIdentifier="login" id="DmD-kA-m0a" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZL5-NN-MDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855.07246376811599" y="6.6964285714285712"/>
+            <point key="canvasLocation" x="-1312" y="318"/>
         </scene>
     </scenes>
     <resources>
