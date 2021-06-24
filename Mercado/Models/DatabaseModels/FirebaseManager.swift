@@ -12,18 +12,36 @@ import CodableFirebase
 class FirebaseManager
 {
     var dbreference: DatabaseReference!
-    let currentUser :User!
-    let userID : String!
-    let userEmail : String!
+    var currentUser :User!
+    var userID : String!
+    var userEmail : String!
     let favorite : String = "favorite"
     let order : String = "orders"
     static let shared = FirebaseManager()
-    
-    private init(){
-        dbreference = Database.database().reference().ref
+    func updateUserData() {
         currentUser = Auth.auth().currentUser
         userID = currentUser.uid
         userEmail = currentUser.email
+    }
+    private init(){
+        dbreference = Database.database().reference().ref
+       updateUserData()
+        //add listener to check if user signout
+        Auth.auth().addStateDidChangeListener
+        { [self] auth, user in
+            if let user = user {
+                // User is signed in.
+                currentUser = user
+                userID = currentUser.uid
+                userEmail = currentUser.email
+                print("fb current user listener \(String(describing: userEmail))")
+            } else {
+                // No user is signed in.
+                print("fb user signout")
+            }
+        }
+        
+        
         
     }
     //MARK:- Address
@@ -169,7 +187,7 @@ class FirebaseManager
                     }
                     print("fb \(cartItemsArray.count)")
                     completion(cartItemsArray)
-                   
+                    
                 }
                 else{
                     print("empty cart \(snapshot.value!)")
@@ -215,6 +233,7 @@ class FirebaseManager
     //MARK:- get current user
     func getCurrentUser( completion: @escaping ((String?,User?)->()))
     {
+        
         dbreference.child("users").child(userID! ).child("username").getData { (error, snapshot) in
             if let error = error {
                 print("Error getting data \(error)")
@@ -230,7 +249,7 @@ class FirebaseManager
                 //if user loged froom google acc
                 else
                 {
-                    print("man\(self.currentUser)")
+                    
                     completion(nil, self.currentUser)
                 }
                 
@@ -349,18 +368,18 @@ class FirebaseManager
         let totalPrice = orderItem.totalPrice
         
         let pushRef = self.dbreference.child("\(order)/\(userID!)").childByAutoId()
-    
+        
         pushRef.child("shippingAddress").setValue(shippingAddress!)
         pushRef.child("totalPrice").setValue(totalPrice!)
         
         let itemsArray = orderItem.items
         for i in 0...itemsArray!.count-1{
-
+            
             let itemId = itemsArray![i].itemId
             let count = itemsArray![i].count
             pushRef.child("items/\(i)/itemId").setValue(itemId!)
             pushRef.child("items/\(i)/count").setValue(count!)
-
+            
         }
         
     }
@@ -374,16 +393,16 @@ class FirebaseManager
     }
     //MARK:- update user mail
     func updateUserEmail(_ email : String , _ password : String){
-       
+        
         if email != userEmail{
             
-        let credential: AuthCredential = EmailAuthProvider.credential(withEmail: userEmail, password: password)
-           
-          
-           changeEmail(credential,email)
-           
+            let credential: AuthCredential = EmailAuthProvider.credential(withEmail: userEmail, password: password)
+            
+            
+            changeEmail(credential,email)
+            
         }
-   
+        
     }
     func changeEmail(_ credential : AuthCredential , _ email : String) {
         if (currentUser != nil) {
@@ -396,7 +415,7 @@ class FirebaseManager
                 } else {
                     // User re-authenticated.
                     self.currentUser.updateEmail(to: email ) { (error) in
-                    self.dbreference?.child("users").child("\(self.userID!)/userEmail").setValue(email)
+                        self.dbreference?.child("users").child("\(self.userID!)/userEmail").setValue(email)
                         print("mail updated")
                         // email updated
                     }
@@ -406,17 +425,17 @@ class FirebaseManager
     }
     //MARK:- update user password
     func updateUserPassword(_ oldPassword : String , _ newPassword : String){
-  
+        
         let credential: AuthCredential = EmailAuthProvider.credential(withEmail: userEmail, password: oldPassword)
         
-            changePassword(credential,newPassword)
-  
+        changePassword(credential,newPassword)
+        
     }
     func changePassword(_ credential : AuthCredential, _ newPassword : String) {
         if (currentUser != nil) {
             // re authenticate the user
             currentUser.reauthenticate(with: credential) { userID,error    in
-               
+                
                 if let error = error {
                     // An error happened.
                     print(error)
