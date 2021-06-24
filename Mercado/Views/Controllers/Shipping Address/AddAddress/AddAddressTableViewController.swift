@@ -32,7 +32,6 @@ class AddAddressTableViewController: UITableViewController
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        showLoading(activityIndicator: activityIndicator)
         self.tabBarController?.tabBar.isHidden = true
     }
     
@@ -49,7 +48,6 @@ class AddAddressTableViewController: UITableViewController
         self.showNoAddressLabel()
         if addressesArray.count != 0
         {
-            self.hideLoading(activityIndicator: self.activityIndicator)
             noAddressesLabel.isHidden = true
         }
         //initialize address vm
@@ -80,7 +78,7 @@ class AddAddressTableViewController: UITableViewController
         self.showFloatingButton()
         
         self.navigationItem.title = "Addresses"
-        //self.navigationItem.backButtonTitle = ""
+        self.navigationItem.backButtonTitle = ""
         let newBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward") , style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButton))
         
         self.navigationItem.leftBarButtonItem = newBackButton
