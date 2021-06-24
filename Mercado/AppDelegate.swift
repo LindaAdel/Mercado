@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         FirebaseApp.configure()
        //firebase google signin
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        //handling user uninstallation
+        //handling user uninstallation 
         userUninstallation()
         //keyboard handling
         IQKeyboardManager.shared().isEnabled = true

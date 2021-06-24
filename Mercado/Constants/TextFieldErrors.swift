@@ -27,9 +27,9 @@ extension UITextField {
         borderStyle = .none
         layer.addSublayer(bottomLine)
     }
-    func showTextFieldError(placeholderValue:String)->NSAttributedString?
+    func showTextFieldError(placeholderValue:String)
     {
-        return NSAttributedString(string: placeholderValue, attributes: [
+        self.attributedPlaceholder = NSAttributedString(string: placeholderValue, attributes: [
             .foregroundColor: UIColor.red,
             .font: UIFont.boldSystemFont(ofSize: 15.0),
         ])
@@ -37,7 +37,7 @@ extension UITextField {
     func isEmptyField() -> Bool{
         if self.text!.isEmpty
         {
-            self.attributedPlaceholder =  self.showTextFieldError(placeholderValue: "required")
+            showTextFieldError(placeholderValue: "required")
             return true
         }
         else
