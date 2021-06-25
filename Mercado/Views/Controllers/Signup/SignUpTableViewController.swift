@@ -49,7 +49,29 @@ class SignUpTableViewController: UITableViewController {
         let  error = validateFields()
         if error != nil{
             //there is an error
-           showError(error!)
+          // showError(error!)
+            
+            if error == "all fields are required to sign up"{
+                if UserNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+                {self.UserNameTextField.showTextFieldError(placeholderValue: "required")}
+                if E_mailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+                { self.E_mailTextField.showTextFieldError(placeholderValue: "required")}
+                if PasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+                { self.PasswordTextField.showTextFieldError(placeholderValue: "required")}}
+            if error == "Your password should contain at least 8 characters including numbers and speacial characters"{
+
+                    self.PasswordTextField.text?.removeAll()
+                    self.PasswordTextField.showTextFieldError(placeholderValue: "8 characters with numbers and characters")
+               
+              
+            }
+            if error == "Enter a valid email address to sign up "{
+                self.E_mailTextField.text?.removeAll()
+                self.E_mailTextField.showTextFieldError(placeholderValue:"Email must be valid")
+                print("oooooooooo")
+            }
+          
+            
         }
         else {
             guard let user = Auth.auth().currentUser else {

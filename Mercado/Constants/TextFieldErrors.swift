@@ -7,18 +7,8 @@
 
 import Foundation
 import UIKit
-//struct TextFieldErrors
-//{
-//
-//    
-//    func showTextFieldError(placeholderValue:String)->NSAttributedString?
-//    {
-//        return NSAttributedString(string: placeholderValue, attributes: [
-//            .foregroundColor: UIColor.red,
-//            .font: UIFont.boldSystemFont(ofSize: 15.0),
-//        ])
-//    }
-//}
+
+
 extension UITextField {
     func addBottomBorder(color: UIColor){
         let bottomLine = CALayer()

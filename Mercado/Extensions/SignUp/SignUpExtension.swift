@@ -111,7 +111,8 @@ extension SignUpTableViewController {
            // check for authError
            if authError != nil {
                  //there is an error
-             self.showError("User already exist")
+            // self.showError("User already exist")
+            self.E_mailTextField.showTextFieldError(placeholderValue: "User already exist")
             
              }
            else{
@@ -121,7 +122,7 @@ extension SignUpTableViewController {
             switch Auth.auth().currentUser?.isEmailVerified {
             case true:
                 print("users email is verified")
-                self.showToast(" email is verified")
+               // self.showToast(" email is verified")
                 break
             case false:
                 
@@ -136,10 +137,9 @@ extension SignUpTableViewController {
                             self.natigateToHome()
                         }))
                         self.present(verifyAlert, animated: true, completion: nil)
-                        self.showToast("a verification mail was sent please verify your email address")
-                        return print("user email verification sent")
-                    
-                    
+//                        self.showToast("a verification mail was sent please verify your email address")
+                      return print("user email verification sent")
+           
                     }
                     
                     self.handleError(error: error)
