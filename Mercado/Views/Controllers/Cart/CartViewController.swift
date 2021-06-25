@@ -33,7 +33,6 @@ class CartViewController: UIViewController {
     var quantityLabelValue :Int!
     var totalValue : Float!
     var shippingValue : Float!
-    var emptyCartbackgroundImage :UIImageView!
     var activityIndicator : UIActivityIndicatorView! = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
@@ -46,7 +45,6 @@ class CartViewController: UIViewController {
         subTotalValue = 0.0
         shippingValue = 100.0
         shippingLabel.text = "\(shippingValue!) EGP"
-        emptyCartbackgroundImage = UIImageView(frame: UIScreen.main.bounds)
         
         //binding with cart view model
         self.reloadCartData()

@@ -39,20 +39,13 @@ extension CartViewController
         cartViewModel.getCartItems()
         
     }
-    //MARk:- show empty cart backround
-    func updateEmptyCartUI()  {
-    
-        emptyCartbackgroundImage.isHidden = false
-        emptyCartbackgroundImage.image = UIImage(named: "emptyCartbg")
-        self.view.addSubview(emptyCartbackgroundImage)
-    }
+
     func emptyCart()   {
         cartViewModel.bindEmptyCartToView =
             { [self] in
                 print("empty cart view")
                 DispatchQueue.main.async {
                     self.hideLoading(activityIndicator: self.activityIndicator)
-                  //  self.updateEmptyCartUI()
                     self.emptyCartImage.isHidden = false
                 }
             
@@ -86,7 +79,6 @@ extension CartViewController
                 print("before total \(self.subTotalValue)")
                 DispatchQueue.main.async {
                     self.hideLoading(activityIndicator: self.activityIndicator)
-                    self.emptyCartbackgroundImage.isHidden = true
                     self.tableView.reloadData()
                     print("cart table view reloaded")
                     self.subTotalLabel.text = "\(String(describing: self.subTotalValue!)) EGP"

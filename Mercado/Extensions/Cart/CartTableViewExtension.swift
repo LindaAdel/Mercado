@@ -57,7 +57,6 @@ extension CartViewController : UITableViewDelegate,UITableViewDataSource
             {
                 self.cartTabBarIcon.badgeValue = nil
                 print("show image from delete")
-                //self.updateEmptyCartUI()
                 self.emptyCartImage.isHidden = false
             }
             else{
