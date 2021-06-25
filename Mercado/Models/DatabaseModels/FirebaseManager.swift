@@ -36,7 +36,7 @@ class FirebaseManager
                 userEmail = currentUser.email
                 print("fb current user listener \(String(describing: userEmail))")
             } else {
-                // No user is signed in.
+                // No user is signed in .
                 print("fb user signout")
             }
         }
