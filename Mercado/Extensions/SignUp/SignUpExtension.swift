@@ -154,9 +154,16 @@ extension SignUpTableViewController {
          }
     }
     func natigateToHome(){
+        if ((Auth.auth().currentUser?.isEmailVerified) != nil) {
         if let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeTabBarController{
              HomeVC.modalPresentationStyle = .fullScreen
-             self.present(HomeVC, animated: true, completion: nil)}
+            self.present(HomeVC, animated: true, completion: nil)}
+            
+        }
+        else {
+            let verifyAlert = UIAlertController(title: "Alert", message: "Email is not verified please verifiy to continue Navigation", preferredStyle: .alert)
+            verifyAlert.addAction(UIAlertAction(title: "ok", style:.default, handler: nil))
+        }
     }
     func signin(auth: Auth) {
         
@@ -174,6 +181,7 @@ extension SignUpTableViewController {
                }
                
             print("Signed in user: \(String(describing: user.email))")
+            self.natigateToHome()
                
            }
            
