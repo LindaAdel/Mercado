@@ -768,7 +768,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                 <items>
                                     <navigationItem title="Checkout" prompt=" " id="3s6-98-gzx">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" image="arrowshape.turn.up.left.fill" catalog="system" id="0Fc-KY-VCl">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" id="0Fc-KY-VCl">
                                             <color key="tintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="backNavBar:" destination="Xp1-Vf-Huv" id="2e7-WV-Kmf"/>
@@ -987,7 +987,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                 <items>
                                     <navigationItem title="Orders" prompt=" " id="GfQ-Z0-l8P">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" image="arrowshape.turn.up.backward.fill" catalog="system" id="iTq-7M-2eW">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" id="iTq-7M-2eW">
                                             <color key="tintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="backNavBtn:" destination="0lx-DD-F8a" id="J10-bB-c9c"/>
@@ -1372,7 +1372,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                 <items>
                                     <navigationItem title="Order Details" prompt=" " id="y0w-YY-m2Z">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" image="arrowshape.turn.up.left.fill" catalog="system" id="wib-vc-E6J">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" id="wib-vc-E6J">
                                             <color key="tintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="backNavBar:" destination="Fys-Su-lkO" id="M8V-og-QRu"/>
@@ -1443,17 +1443,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                 <items>
                                     <navigationItem title="About" prompt=" " id="e6M-Z0-Vxw">
-                                        <leftBarButtonItems>
-                                            <barButtonItem id="f6L-Ey-qzr">
-                                                <color key="tintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="backNavBtn:" destination="sYG-1i-Lpz" id="tnc-B9-sPN"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Item" image="arrowshape.turn.up.left.fill" catalog="system" id="Wtw-ub-Ckw">
-                                                <color key="tintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </barButtonItem>
-                                        </leftBarButtonItems>
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="f6L-Ey-qzr">
+                                            <color key="tintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="backNavBtn:" destination="sYG-1i-Lpz" id="tnc-B9-sPN"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1513,8 +1508,7 @@
         <designable name="mGt-4x-VtM"/>
     </designables>
     <resources>
-        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="doc.text.magnifyingglass" catalog="system" width="113" height="128"/>
         <image name="getStarted" width="500" height="304"/>
         <image name="hello" width="5279" height="4167"/>

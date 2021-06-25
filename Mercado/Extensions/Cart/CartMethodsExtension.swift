@@ -52,7 +52,8 @@ extension CartViewController
                 print("empty cart view")
                 DispatchQueue.main.async {
                     self.hideLoading(activityIndicator: self.activityIndicator)
-                    self.updateEmptyCartUI()
+                  //  self.updateEmptyCartUI()
+                    self.emptyCartImage.isHidden = false
                 }
             
             }

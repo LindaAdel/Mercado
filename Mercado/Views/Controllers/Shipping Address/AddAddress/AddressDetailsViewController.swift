@@ -38,7 +38,7 @@ class AddressDetailsViewController: UIViewController {
         
         //change textfields style
         self.showTextFieldsStyle()
-        //self.navigationItem.backButtonTitle = ""
+        self.navigationItem.backButtonTitle = ""
         title = "Add Address"
         guard address.street != nil ,
               address.governorate != nil,

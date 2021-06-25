@@ -10,6 +10,7 @@ import UIKit
 class CartViewController: UIViewController {
     
 
+    @IBOutlet weak var emptyCartImage: UIImageView!
     @IBOutlet weak var cartTabBarIcon: UITabBarItem!
     @IBOutlet weak var subTotalLabel: UILabel!
     @IBOutlet weak var shippingLabel: UILabel!

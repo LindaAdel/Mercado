@@ -34,7 +34,7 @@ class ConfirmAddressViewController: UIViewController,MKMapViewDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //self.navigationItem.backButtonTitle = ""
+        self.navigationItem.backButtonTitle = ""
        address = Address()
         //add search bar to the view
         self.showSearchBar()

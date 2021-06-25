@@ -99,7 +99,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                 <items>
                                     <navigationItem prompt=" " id="5Lt-XW-vXa">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.left.fill" catalog="system" style="plain" id="zyJ-wh-kea">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" style="plain" id="zyJ-wh-kea">
                                             <color key="tintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="backButton:" destination="JVu-JC-zvp" id="N4W-i4-wG2"/>
@@ -1525,11 +1525,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyCartBg" translatesAutoresizingMaskIntoConstraints="NO" id="SOu-oD-MsV">
+                                <rect key="frame" x="0.0" y="-43" width="414" height="856"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1b3-ln-eMa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kBN-Te-isU" secondAttribute="trailing" id="3aZ-bO-IKs"/>
+                            <constraint firstItem="SOu-oD-MsV" firstAttribute="leading" secondItem="1b3-ln-eMa" secondAttribute="leading" id="4ZD-LX-fZg"/>
                             <constraint firstItem="1b3-ln-eMa" firstAttribute="bottom" secondItem="ey6-ND-2Sq" secondAttribute="bottom" constant="12" id="7tC-ZF-KVE"/>
                             <constraint firstItem="9hF-I0-87X" firstAttribute="top" secondItem="OvZ-zn-gjs" secondAttribute="bottom" constant="16" id="DL3-e1-Xrt"/>
                             <constraint firstItem="ey6-ND-2Sq" firstAttribute="top" secondItem="AYB-ig-zQe" secondAttribute="bottom" constant="16" id="EHH-yl-dsS"/>
@@ -1538,6 +1542,7 @@
                             <constraint firstItem="OvZ-zn-gjs" firstAttribute="leading" secondItem="Itp-2w-ZqI" secondAttribute="leading" constant="16" id="GD6-rh-UH2"/>
                             <constraint firstAttribute="trailing" secondItem="F9h-gK-pcY" secondAttribute="trailing" constant="8" id="JMx-rY-gBO"/>
                             <constraint firstItem="kBN-Te-isU" firstAttribute="leading" secondItem="Itp-2w-ZqI" secondAttribute="leading" id="KkA-Ka-eL9"/>
+                            <constraint firstItem="SOu-oD-MsV" firstAttribute="bottom" secondItem="1b3-ln-eMa" secondAttribute="bottom" id="LOy-3D-Gke"/>
                             <constraint firstItem="ey6-ND-2Sq" firstAttribute="bottom" secondItem="rWE-eF-jeM" secondAttribute="bottom" id="MFC-5X-IwT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o9D-6a-kRo" secondAttribute="trailing" constant="2" id="PC9-gT-M8T"/>
                             <constraint firstItem="Uht-kQ-1NW" firstAttribute="top" secondItem="Itp-2w-ZqI" secondAttribute="topMargin" constant="16" id="SD6-J0-D0O"/>
@@ -1547,6 +1552,7 @@
                             <constraint firstItem="9JN-4v-2IU" firstAttribute="top" secondItem="CGh-Zo-guh" secondAttribute="bottom" constant="16" id="Yst-dk-Vrv"/>
                             <constraint firstItem="9hF-I0-87X" firstAttribute="leading" secondItem="Itp-2w-ZqI" secondAttribute="leading" constant="16" id="Zs5-k7-RkR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9JN-4v-2IU" secondAttribute="trailing" constant="16" id="b8D-Xw-9jP"/>
+                            <constraint firstItem="SOu-oD-MsV" firstAttribute="top" secondItem="1b3-ln-eMa" secondAttribute="top" constant="-131" id="cgl-m5-PRj"/>
                             <constraint firstItem="OvZ-zn-gjs" firstAttribute="top" secondItem="F9h-gK-pcY" secondAttribute="bottom" constant="35.5" id="die-rG-sxj"/>
                             <constraint firstItem="ey6-ND-2Sq" firstAttribute="leading" secondItem="Itp-2w-ZqI" secondAttribute="leading" constant="16" id="goR-6s-mxc"/>
                             <constraint firstItem="1b3-ln-eMa" firstAttribute="trailing" secondItem="rWE-eF-jeM" secondAttribute="trailing" constant="16" id="h48-Xy-EkY"/>
@@ -1556,6 +1562,7 @@
                             <constraint firstItem="9JN-4v-2IU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9hF-I0-87X" secondAttribute="trailing" constant="8" symbolic="YES" id="qGw-pE-26m"/>
                             <constraint firstItem="rWE-eF-jeM" firstAttribute="top" secondItem="9JN-4v-2IU" secondAttribute="bottom" constant="24" id="r34-YS-qrE"/>
                             <constraint firstItem="Uht-kQ-1NW" firstAttribute="leading" secondItem="Itp-2w-ZqI" secondAttribute="leadingMargin" constant="8" id="rF0-94-ukz"/>
+                            <constraint firstItem="SOu-oD-MsV" firstAttribute="trailing" secondItem="1b3-ln-eMa" secondAttribute="trailing" id="sk1-Hj-SUl"/>
                             <constraint firstItem="rWE-eF-jeM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ey6-ND-2Sq" secondAttribute="trailing" constant="8" symbolic="YES" id="we5-e8-dFw"/>
                             <constraint firstItem="F9h-gK-pcY" firstAttribute="top" secondItem="o9D-6a-kRo" secondAttribute="bottom" constant="17" id="xOK-kJ-iLg"/>
                             <constraint firstItem="CGh-Zo-guh" firstAttribute="centerY" secondItem="OvZ-zn-gjs" secondAttribute="centerY" id="ySw-od-iuh"/>
@@ -1569,6 +1576,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cartTabBarIcon" destination="h7d-kk-Pmg" id="9u1-TL-gw2"/>
+                        <outlet property="emptyCartImage" destination="SOu-oD-MsV" id="Q7U-AG-CIk"/>
                         <outlet property="shippingLabel" destination="9JN-4v-2IU" id="awD-mM-5Ml"/>
                         <outlet property="subTotalLabel" destination="CGh-Zo-guh" id="bId-ps-Q5y"/>
                         <outlet property="tableView" destination="kBN-Te-isU" id="4h7-vf-led"/>
@@ -1630,12 +1638,13 @@
     </scenes>
     <color key="tintColor" red="0.3241435587" green="0.69462406639999996" blue="0.45845073460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="cart.badge.plus.fill" catalog="system" width="128" height="106"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="carts" width="512" height="512"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="emptyCartBg" width="414" height="896"/>
         <image name="google" width="18" height="18"/>
         <image name="location.circle" catalog="system" width="128" height="121"/>
         <image name="logout" width="24" height="24"/>
