@@ -154,16 +154,29 @@ extension SignUpTableViewController {
          }
     }
     func natigateToHome(){
-        if ((Auth.auth().currentUser?.isEmailVerified) != nil) {
-        if let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeTabBarController{
-             HomeVC.modalPresentationStyle = .fullScreen
-            self.present(HomeVC, animated: true, completion: nil)}
+        
+        Auth.auth().currentUser?.reload(completion: { (error) in
             
-        }
-        else {
-            let verifyAlert = UIAlertController(title: "Alert", message: "Email is not verified please verifiy to continue Navigation", preferredStyle: .alert)
-            verifyAlert.addAction(UIAlertAction(title: "ok", style:.default, handler: nil))
-        }
+            if let error = error {
+                print(error)
+            } else {
+                if Auth.auth().currentUser != nil && Auth.auth().currentUser!.isEmailVerified {
+                    if let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeTabBarController{
+                        HomeVC.modalPresentationStyle = .fullScreen
+                        self.present(HomeVC, animated: true, completion: nil)}
+                    
+                } else {
+       
+                    print("Email is not verified please verifiy to continue Navigation")
+                    if let emailNotVerifiedVC = self.storyboard?.instantiateViewController(withIdentifier: "mailNotVerified") as? EmailNotVerifiedViewController{
+                        emailNotVerifiedVC.modalPresentationStyle = .fullScreen
+                        self.present(emailNotVerifiedVC, animated: true, completion: nil)}
+                  
+                }
+            }
+       })
+        
+
     }
     func signin(auth: Auth) {
         

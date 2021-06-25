@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2F03C4262660294E005DB6AA /* ItemIsFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F03C4252660294E005DB6AA /* ItemIsFavorite.swift */; };
 		2F1954262685432C001B6E55 /* SignUpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1954252685432C001B6E55 /* SignUpExtension.swift */; };
+		2F1E8F1126856538006DB243 /* EmailNotVerified.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F1E8F1026856538006DB243 /* EmailNotVerified.json */; };
+		2F1E8F1A26856842006DB243 /* EmailNotVerifiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E8F1926856842006DB243 /* EmailNotVerifiedViewController.swift */; };
 		2F3C594B2653DA7C00D704D5 /* itemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C594A2653DA7C00D704D5 /* itemTableViewCell.swift */; };
 		2F3C59542653DDEA00D704D5 /* itemTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */; };
 		2F3C59552653DDEA00D704D5 /* itemTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */; };
@@ -205,6 +207,8 @@
 /* Begin PBXFileReference section */
 		2F03C4252660294E005DB6AA /* ItemIsFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemIsFavorite.swift; path = Mercado/POJOS/ItemIsFavorite.swift; sourceTree = SOURCE_ROOT; };
 		2F1954252685432C001B6E55 /* SignUpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExtension.swift; sourceTree = "<group>"; };
+		2F1E8F1026856538006DB243 /* EmailNotVerified.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmailNotVerified.json; sourceTree = "<group>"; };
+		2F1E8F1926856842006DB243 /* EmailNotVerifiedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailNotVerifiedViewController.swift; sourceTree = "<group>"; };
 		2F3C594A2653DA7C00D704D5 /* itemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemTableViewCell.swift; sourceTree = "<group>"; };
 		2F3C59532653DDEA00D704D5 /* itemTableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemTableExtension.swift; sourceTree = "<group>"; };
 		2F3C59832653E06F00D704D5 /* itemsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemsService.swift; sourceTree = "<group>"; };
@@ -388,6 +392,14 @@
 				2F1954252685432C001B6E55 /* SignUpExtension.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		2F1E8F15268567EE006DB243 /* EmailNotVerified */ = {
+			isa = PBXGroup;
+			children = (
+				2F1E8F1926856842006DB243 /* EmailNotVerifiedViewController.swift */,
+			);
+			path = EmailNotVerified;
 			sourceTree = "<group>";
 		};
 		2F3C59822653E04E00D704D5 /* Models */ = {
@@ -786,6 +798,7 @@
 		96B8C1C9263B769A008CCA50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F1E8F15268567EE006DB243 /* EmailNotVerified */,
 				A9741648267A716700C218DD /* About */,
 				2FE79400267B7C0D002082D2 /* MyAccountDetails */,
 				96645BDE2675419900B1CBAF /* Filter */,
@@ -989,6 +1002,7 @@
 			isa = PBXGroup;
 			children = (
 				A9D84C6E266C5245000FF46D /* checkmark.json */,
+				2F1E8F1026856538006DB243 /* EmailNotVerified.json */,
 				A9D84C69266C42AE000FF46D /* noConnection.json */,
 			);
 			path = "Animation Json Files";
@@ -1269,6 +1283,7 @@
 				A9D84C6A266C42AE000FF46D /* noConnection.json in Resources */,
 				2F8A8B1C262F28F400128FCD /* LindaStoryboard.storyboard in Resources */,
 				2F4533E02629F7FB000FE74E /* Main.storyboard in Resources */,
+				2F1E8F1126856538006DB243 /* EmailNotVerified.json in Resources */,
 				A9D84C6F266C5246000FF46D /* checkmark.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1416,6 +1431,7 @@
 				A9FE901D2654005000B039D2 /* Categories.swift in Sources */,
 				A90797EC26712C7700F60AFE /* OrdersViewController.swift in Sources */,
 				963AF846265B25CC00C4E51A /* LocationSearchTableViewController.swift in Sources */,
+				2F1E8F1A26856842006DB243 /* EmailNotVerifiedViewController.swift in Sources */,
 				A9D84C71266C651E000FF46D /* NetworkMonitor.swift in Sources */,
 				A9C28EE72655A840005CC194 /* ShopTabBarController.swift in Sources */,
 				96CD37412651B7D5007B945F /* LoginViewController.swift in Sources */,

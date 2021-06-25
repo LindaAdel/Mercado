@@ -301,6 +301,63 @@
             </objects>
             <point key="canvasLocation" x="3328" y="745"/>
         </scene>
+        <!--Email Not Verified View Controller-->
+        <scene sceneID="eic-BV-jPd">
+            <objects>
+                <viewController storyboardIdentifier="mailNotVerified" id="cqh-Hp-45i" customClass="EmailNotVerifiedViewController" customModule="Mercado" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zws-N6-eIy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bik-5O-Gb6" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="20" y="44" width="374" height="453"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="EmailNotVerified"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops Email is not verified" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbd-kL-0Ax">
+                                <rect key="frame" x="54" y="505" width="308" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="h3L-Sd-PIS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email is not verified ! please verifiy it to enjoy our application" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcY-Kz-trQ">
+                                <rect key="frame" x="20" y="576" width="374" height="107"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vfh-HZ-jD5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bik-5O-Gb6" firstAttribute="top" secondItem="vfh-HZ-jD5" secondAttribute="top" id="5PF-O0-Pp6"/>
+                            <constraint firstItem="nbd-kL-0Ax" firstAttribute="top" secondItem="Bik-5O-Gb6" secondAttribute="bottom" constant="8" id="Hdj-ra-TGn"/>
+                            <constraint firstItem="XcY-Kz-trQ" firstAttribute="leading" secondItem="vfh-HZ-jD5" secondAttribute="leading" constant="20" id="MGU-sy-WGL"/>
+                            <constraint firstItem="Bik-5O-Gb6" firstAttribute="trailing" secondItem="XcY-Kz-trQ" secondAttribute="trailing" id="OdX-HZ-ajW"/>
+                            <constraint firstItem="Bik-5O-Gb6" firstAttribute="leading" secondItem="XcY-Kz-trQ" secondAttribute="leading" id="VMv-CN-gVv"/>
+                            <constraint firstItem="vfh-HZ-jD5" firstAttribute="trailing" secondItem="XcY-Kz-trQ" secondAttribute="trailing" constant="20" id="W2H-dS-dea"/>
+                            <constraint firstItem="vfh-HZ-jD5" firstAttribute="trailing" secondItem="nbd-kL-0Ax" secondAttribute="trailing" constant="52" id="hfl-8F-yd0"/>
+                            <constraint firstItem="vfh-HZ-jD5" firstAttribute="bottom" secondItem="XcY-Kz-trQ" secondAttribute="bottom" constant="179" id="iz8-9y-AYs"/>
+                            <constraint firstItem="Bik-5O-Gb6" firstAttribute="leading" secondItem="vfh-HZ-jD5" secondAttribute="leading" constant="20" id="nni-AG-bEN"/>
+                            <constraint firstItem="vfh-HZ-jD5" firstAttribute="trailing" secondItem="Bik-5O-Gb6" secondAttribute="trailing" constant="20" id="pnU-t3-190"/>
+                            <constraint firstAttribute="bottom" secondItem="nbd-kL-0Ax" secondAttribute="bottom" constant="340" id="vhs-GT-Aaj"/>
+                            <constraint firstItem="XcY-Kz-trQ" firstAttribute="top" secondItem="nbd-kL-0Ax" secondAttribute="bottom" constant="20" id="wDo-Ht-3qk"/>
+                            <constraint firstItem="nbd-kL-0Ax" firstAttribute="leading" secondItem="vfh-HZ-jD5" secondAttribute="leading" constant="54" id="wvi-Cx-dmR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EmailNotVerifiedView" destination="Bik-5O-Gb6" id="u23-Fp-zXK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Pd-0A-Uts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4186.9565217391309" y="916.74107142857133"/>
+        </scene>
         <!--productDetails-->
         <scene sceneID="QaG-kL-2TO">
             <objects>
@@ -881,6 +938,9 @@
             <point key="canvasLocation" x="-1312" y="124"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Bik-5O-Gb6"/>
+    </designables>
     <resources>
         <image name="add-to-cart-B" width="24" height="24"/>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
