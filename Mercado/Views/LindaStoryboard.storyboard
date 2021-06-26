@@ -22,34 +22,34 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZjW-F7-mS9">
-                                    <rect key="frame" x="40" y="188" width="334" height="618"/>
+                                    <rect key="frame" x="30" y="188" width="354" height="618"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66t-wf-iLP">
-                                            <rect key="frame" x="0.0" y="0.0" width="334" height="70.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66t-wf-iLP">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="70"/>
                                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your crendentials to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rut-GA-rla">
-                                            <rect key="frame" x="0.0" y="90.5" width="334" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="90" width="354" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX1-Th-UIe">
-                                            <rect key="frame" x="0.0" y="131" width="334" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="130.5" width="354" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jr-2W-qeE">
-                                            <rect key="frame" x="0.0" y="171.5" width="334" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="171" width="354" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-7K-2qL">
-                                            <rect key="frame" x="0.0" y="212" width="334" height="42"/>
+                                            <rect key="frame" x="0.0" y="211.5" width="354" height="42"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
@@ -63,13 +63,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E_mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-DX-yZh">
-                                            <rect key="frame" x="0.0" y="274" width="334" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="273.5" width="354" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzT-mU-e6y">
-                                            <rect key="frame" x="0.0" y="314.5" width="334" height="42"/>
+                                            <rect key="frame" x="0.0" y="314" width="354" height="42"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
@@ -83,13 +83,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ya-4N-l0i">
-                                            <rect key="frame" x="0.0" y="376.5" width="334" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="376" width="354" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtG-Dm-JTt">
-                                            <rect key="frame" x="0.0" y="417" width="334" height="42.5"/>
+                                            <rect key="frame" x="0.0" y="416.5" width="354" height="42"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             <userDefinedRuntimeAttributes>
@@ -102,14 +102,14 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-JT-bfR">
-                                            <rect key="frame" x="0.0" y="479.5" width="334" height="21.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-JT-bfR">
+                                            <rect key="frame" x="0.0" y="478.5" width="354" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" systemColor="systemRedColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9r-Eh-i5q">
-                                            <rect key="frame" x="0.0" y="521" width="334" height="42"/>
+                                            <rect key="frame" x="0.0" y="520" width="354" height="42"/>
                                             <color key="backgroundColor" red="0.32549019607843138" green="0.69411764705882351" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                             <state key="normal" title="SignUp">
@@ -126,17 +126,17 @@
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-hB-L2t">
-                                            <rect key="frame" x="0.0" y="583" width="334" height="35"/>
+                                            <rect key="frame" x="0.0" y="582" width="354" height="36"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already Have  an account ?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgC-mA-XJf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="206.5" height="35"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="237" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cn-s0-xs8">
-                                                    <rect key="frame" x="206.5" y="0.0" width="127.5" height="35"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <rect key="frame" x="237" y="0.0" width="117" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <state key="normal" title="  LogIn">
                                                         <color key="titleColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -167,10 +167,10 @@
                             <constraints>
                                 <constraint firstItem="qbx-Kf-RS5" firstAttribute="centerX" secondItem="Lbc-rP-1Tq" secondAttribute="centerX" id="3SL-bD-FDm"/>
                                 <constraint firstAttribute="bottom" secondItem="ZjW-F7-mS9" secondAttribute="bottom" constant="100" id="5XU-4n-gez"/>
-                                <constraint firstAttribute="trailing" secondItem="ZjW-F7-mS9" secondAttribute="trailing" constant="40" id="AQC-Kj-8Sg"/>
+                                <constraint firstAttribute="trailing" secondItem="ZjW-F7-mS9" secondAttribute="trailing" constant="30" id="AQC-Kj-8Sg"/>
                                 <constraint firstItem="qbx-Kf-RS5" firstAttribute="top" secondItem="Lbc-rP-1Tq" secondAttribute="topMargin" constant="30" id="WU3-3g-wye"/>
                                 <constraint firstItem="ZjW-F7-mS9" firstAttribute="top" secondItem="qbx-Kf-RS5" secondAttribute="bottom" constant="50" id="bNs-et-L14"/>
-                                <constraint firstItem="ZjW-F7-mS9" firstAttribute="leading" secondItem="Lbc-rP-1Tq" secondAttribute="leading" constant="40" id="dte-g4-7KO"/>
+                                <constraint firstItem="ZjW-F7-mS9" firstAttribute="leading" secondItem="Lbc-rP-1Tq" secondAttribute="leading" constant="30" id="dte-g4-7KO"/>
                             </constraints>
                         </view>
                         <sections/>
@@ -181,7 +181,6 @@
                     </tableView>
                     <connections>
                         <outlet property="E_mailTextField" destination="wzT-mU-e6y" id="Sgb-05-xZN"/>
-                        <outlet property="ErrorLabel" destination="JHg-JT-bfR" id="CIz-Yy-Rlf"/>
                         <outlet property="PasswordTextField" destination="OtG-Dm-JTt" id="XqD-XT-74O"/>
                         <outlet property="SignUpButton" destination="V9r-Eh-i5q" id="uEB-bg-BjJ"/>
                         <outlet property="UserNameTextField" destination="tXd-7K-2qL" id="z7g-pu-Qz0"/>

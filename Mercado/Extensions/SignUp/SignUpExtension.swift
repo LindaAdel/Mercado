@@ -68,14 +68,14 @@ extension SignUpTableViewController {
     }
     func showError(_ message:String){
         
-        ErrorLabel.text = message
-        ErrorLabel.alpha = 1
+//        ErrorLabel.text = message
+//        ErrorLabel.alpha = 1
     }
     func showToast(_ message:String)  {
         
-        ErrorLabel.textColor = UIColor.init(red: 83/255, green: 177/255, blue: 117/255, alpha: 1)
-        ErrorLabel.text = message
-        ErrorLabel.alpha = 1
+//        ErrorLabel.textColor = UIColor.init(red: 83/255, green: 177/255, blue: 117/255, alpha: 1)
+//        ErrorLabel.text = message
+//        ErrorLabel.alpha = 1
     }
     func handleError(error: Error) {
             
@@ -137,7 +137,7 @@ extension SignUpTableViewController {
                             self.natigateToHome()
                         }))
                         self.present(verifyAlert, animated: true, completion: nil)
-//                        self.showToast("a verification mail was sent please verify your email address")
+
                       return print("user email verification sent")
            
                     }
@@ -154,30 +154,36 @@ extension SignUpTableViewController {
          }
     }
     func natigateToHome(){
+        if let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeTabBarController{
+            HomeVC.modalPresentationStyle = .fullScreen
+            self.present(HomeVC, animated: true, completion: nil)}
         
-        Auth.auth().currentUser?.reload(completion: { (error) in
-            
-            if let error = error {
-                print(error)
-            } else {
-                if Auth.auth().currentUser != nil && Auth.auth().currentUser!.isEmailVerified {
-                    if let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeTabBarController{
-                        HomeVC.modalPresentationStyle = .fullScreen
-                        self.present(HomeVC, animated: true, completion: nil)}
-                    
-                } else {
-       
-                    print("Email is not verified please verifiy to continue Navigation")
-                    if let emailNotVerifiedVC = self.storyboard?.instantiateViewController(withIdentifier: "mailNotVerified") as? EmailNotVerifiedViewController{
-                        emailNotVerifiedVC.modalPresentationStyle = .fullScreen
-                        self.present(emailNotVerifiedVC, animated: true, completion: nil)}
-                  
-                }
-            }
-       })
-        
-
     }
+//    func natigateToHome(){
+//
+//        Auth.auth().currentUser?.reload(completion: { (error) in
+//
+//            if let error = error {
+//                print(error)
+//            } else {
+//                if Auth.auth().currentUser != nil && Auth.auth().currentUser!.isEmailVerified {
+//                    if let HomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeTabBarController{
+//                        HomeVC.modalPresentationStyle = .fullScreen
+//                        self.present(HomeVC, animated: true, completion: nil)}
+//
+//                } else {
+//
+//                    print("Email is not verified please verifiy to continue Navigation")
+//                    if let emailNotVerifiedVC = self.storyboard?.instantiateViewController(withIdentifier: "mailNotVerified") as? EmailNotVerifiedViewController{
+//                        emailNotVerifiedVC.modalPresentationStyle = .fullScreen
+//                        self.present(emailNotVerifiedVC, animated: true, completion: nil)}
+//
+//                }
+//            }
+//       })
+//
+//
+//    }
     func signin(auth: Auth) {
         
         let userMail = E_mailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)

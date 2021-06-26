@@ -62,6 +62,7 @@ extension CartViewController : UITableViewDelegate,UITableViewDataSource
             else{
                 self.cartTabBarIcon.badgeValue = String(self.itemsArray.count)
                 self.cartViewModel.getCartItems()
+                self.emptyCartImage.isHidden = true 
             }
            // print("will \(itemsArray.count)")
             completionHandler(true)

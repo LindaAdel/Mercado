@@ -26,15 +26,25 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var placeOrder: UIButton!
     @IBOutlet weak var placeOrderBottomConstraint: NSLayoutConstraint!
     @IBAction func placeOrderBtn(_ sender: Any) {
-        
-        var orderObj = Order(items: cartItemsArray, shippingAddress: shippingAddress, totalPrice: totalPrice)
-        
-        firebaseManager.addOrder(orderItem: orderObj)
-        firebaseManager.removeCartItems()
-        
-        let placeOrderVC = storyboard?.instantiateViewController(identifier: "PlaceOrder") as! PlaceOrderViewController
-        placeOrderVC.modalPresentationStyle = .fullScreen
-        self.present(placeOrderVC, animated: true, completion: nil)
+        if shippingAddress != nil {
+            let orderObj = Order(items: cartItemsArray, shippingAddress: shippingAddress, totalPrice: totalPrice)
+            
+            firebaseManager.addOrder(orderItem: orderObj)
+            firebaseManager.removeCartItems()
+            
+            let placeOrderVC = storyboard?.instantiateViewController(identifier: "PlaceOrder") as! PlaceOrderViewController
+            placeOrderVC.modalPresentationStyle = .fullScreen
+            self.present(placeOrderVC, animated: true, completion: nil)
+        }else{
+            let addressVerifyAlert = UIAlertController(title: "Alert", message: "There is No Shipping address,Please add a shipping address to place your order.", preferredStyle: .alert)
+            addressVerifyAlert.addAction(UIAlertAction(title: "OK", style: .default, handler:{ (UIAlertAction) in self.navigateToAddressScreen() }))
+            self.present(addressVerifyAlert, animated: true, completion: nil)
+        }
+    }
+    func navigateToAddressScreen(){
+        let AddressVc = storyboard?.instantiateViewController(identifier: String(describing: AddAddressTableViewController.self)) as! AddAddressTableViewController
+        AddressVc.isFromCheckout = true
+        self.navigationController?.pushViewController(AddressVc, animated: true)
     }
     
     @IBOutlet weak var scrollView: UIScrollView!

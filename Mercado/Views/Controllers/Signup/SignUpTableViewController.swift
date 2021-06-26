@@ -19,7 +19,7 @@ class SignUpTableViewController: UITableViewController {
     
     @IBOutlet weak var PasswordTextField: UITextField!
     
-    @IBOutlet weak var ErrorLabel: UILabel!
+
     
     
     @IBOutlet weak var SignUpButton: UIButton!
@@ -88,7 +88,7 @@ class SignUpTableViewController: UITableViewController {
     }
     func setUpElements()  {
         // hide error label
-        ErrorLabel.alpha = 0
+       // ErrorLabel.alpha = 0
         // style text field
         StyleSheet.styleTextField(UserNameTextField)
         StyleSheet.styleTextField(E_mailTextField)

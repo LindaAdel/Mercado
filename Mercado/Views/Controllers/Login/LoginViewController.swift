@@ -34,16 +34,23 @@ class LoginViewController: UIViewController,GIDSignInDelegate, UIScrollViewDeleg
          self.scrollView.contentOffset.x = 0
         self.addEyeButtonToPassword()
         
-         emailTextField.addBottomBorder(color: self.view.tintColor)
-         emailTextField.placeholder = "Email"
-         passwordTextField.addBottomBorder(color: self.view.tintColor)
-         passwordTextField.placeholder = "Password"
+       //  emailTextField.addBottomBorder(color: self.view.tintColor)
+         //emailTextField.placeholder = "Email"
+       //  passwordTextField.addBottomBorder(color: self.view.tintColor)
+        // passwordTextField.placeholder = "Password"
          //add padding to the textfields
          emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(7, 0, 0)
          passwordTextField.layer.sublayerTransform = CATransform3DMakeTranslation(7, 0, 0)
-        
+        setUpElements()
         
      }
+    func setUpElements()  {
+     
+        // style text field
+        StyleSheet.styleTextField(emailTextField)
+        StyleSheet.styleTextField(passwordTextField)
+       
+    }
  
     
     @IBAction func forgotPasswordButton(_ sender: Any)

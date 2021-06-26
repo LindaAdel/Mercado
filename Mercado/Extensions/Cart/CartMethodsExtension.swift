@@ -76,17 +76,18 @@ extension CartViewController
                     
                 }
                 
-                print("before total \(self.subTotalValue)")
+               // print("before total \(self.subTotalValue)")
                 DispatchQueue.main.async {
                     self.hideLoading(activityIndicator: self.activityIndicator)
+                    self.emptyCartImage.isHidden = true
                     self.tableView.reloadData()
-                    print("cart table view reloaded")
+                   // print("cart table view reloaded")
                     self.subTotalLabel.text = "\(String(describing: self.subTotalValue!)) EGP"
-                    print(self.shippingLabel.text!)
+                   // print(self.shippingLabel.text!)
                     self.totalValue = self.shippingValue!
                         + self.subTotalValue
                     self.totalValueLabel.text = "\(self.totalValue!) EGP"
-                    print("updata total \(self.subTotalValue!)")
+                   // print("updata total \(self.subTotalValue!)")
                 }
                 
                 
