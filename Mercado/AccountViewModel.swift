@@ -23,7 +23,7 @@ class AccountViewModel
         firebaseManager.getUploadedImage()
         {
             (imgURL) in
-            print("imgvm \(imgURL)")
+//            print("imgvm \(imgURL)")
             self.bindUploadedImageToAccountVIew(imgURL)
            
             

@@ -49,7 +49,14 @@ extension SearchTableViewController{
         
         detailsVC.categoryName = filteredItemsArray[indexPath.row].category
         detailsVC.subCategoryName = filteredItemsArray[indexPath.row].subCategory
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
+            
+            guard itemDetailsArray.count != 0
+            else
+            {
+                print("search \(itemDetailsArray.count)")
+                return
+            }
             self.itemDetailsArray[0].item_id = specialItemObj.itemId
             detailsVC.itemDetails = self.itemDetailsArray[0]
             self.present(detailsVC, animated: true, completion: nil)

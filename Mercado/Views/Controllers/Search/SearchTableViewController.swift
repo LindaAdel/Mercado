@@ -28,6 +28,7 @@ class SearchTableViewController: UITableViewController{
                  (data) in
             if let itemData = data{
                 self.itemDetailsArray.removeAll()
+                print("search binding \(itemData)")
                 self.itemDetailsArray.append(itemData)
                             
             }

@@ -79,11 +79,11 @@
                     print("beauty care")
                     itemBrandLabel.text = item.brand
                     itemTypeLabel.text = "size"
-                    itemSizeLabel.text = "Description"
+                    itemPowerLabel.text = "Description"
                     itemColorLabel.text = "Texture"
                     if let _ = item.type
                     {
-                        
+
                         itemTypeLabelValue.text = item.size as? String
                     }
                     else
@@ -100,7 +100,7 @@
                         itemColorLabel.text = " "
                         itemColorLabelValue.text = " "
                     }
-                    itemSizeLabelValue.text = item.item_description as? String
+                    itemPowerLabelValue.text = item.item_description as? String
                     
                     itemMaterialLabel.text = " "
                     itemMaterialLabelValue.text = " "
