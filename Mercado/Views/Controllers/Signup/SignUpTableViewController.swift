@@ -68,7 +68,7 @@ class SignUpTableViewController: UITableViewController {
             if error == "Enter a valid email address to sign up "{
                 self.E_mailTextField.text?.removeAll()
                 self.E_mailTextField.showTextFieldError(placeholderValue:"Email must be valid")
-                print("oooooooooo")
+               
             }
           
             

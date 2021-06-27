@@ -25,12 +25,12 @@ class CartHandlerViewModel
             guard cartItemsArray != nil
             else
             {
-                print("vm empty cart")
+           
                 self.postNumberOfItemsInCart(numberOfItems :0)
                 return
             }
             self.postNumberOfItemsInCart(numberOfItems : cartItemsArray!.count)
-            print("vmCart \(String(describing: cartItemsArray?.count))")
+         
           
         }
     }
@@ -55,10 +55,10 @@ class CartHandlerViewModel
             { itemIsExist in
             if itemIsExist
             {
-            print("found in cart")
+          
                 self.bindIfItemInCartToView(true)
             }else {
-                print("not exist in cart")
+               
                 self.bindIfItemInCartToView(false)
             }
         }

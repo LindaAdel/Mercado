@@ -125,7 +125,6 @@
 		96CD373C2651B7CA007B945F /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD373B2651B7CA007B945F /* GetStartedViewController.swift */; };
 		96CD37412651B7D5007B945F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD37402651B7D4007B945F /* LoginViewController.swift */; };
 		96CD37462651B7DC007B945F /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD37452651B7DC007B945F /* SignUpTableViewController.swift */; };
-		96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8F9FC262F4C9E001984A2 /* ViewController.swift */; };
 		96F9E0B1265ACADF008C47A2 /* AccountTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9E0B0265ACADF008C47A2 /* AccountTableViewExtension.swift */; };
 		96F9E0CF265AD648008C47A2 /* ConfirmAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9E0CE265AD648008C47A2 /* ConfirmAddressViewController.swift */; };
 		A90680332673A41F00EAF3C5 /* SearchExtension+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90680322673A41F00EAF3C5 /* SearchExtension+TableView.swift */; };
@@ -152,7 +151,6 @@
 		A974164A267A719700C218DD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9741649267A719700C218DD /* AboutViewController.swift */; };
 		A9916B8E265419050030ADDA /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8D265419050030ADDA /* CategoriesService.swift */; };
 		A9916B9026542C720030ADDA /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */; };
-		A9ACF95E265F0EF700A2ABF7 /* DinaFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACF95D265F0EF700A2ABF7 /* DinaFirebaseManager.swift */; };
 		A9ACF960265F0F0600A2ABF7 /* FirebaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACF95F265F0F0600A2ABF7 /* FirebaseProtocol.swift */; };
 		A9ACF965265F0F6200A2ABF7 /* ExclusiveOffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACF964265F0F6200A2ABF7 /* ExclusiveOffersService.swift */; };
 		A9ACF967265F0F6700A2ABF7 /* NewArrivalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ACF966265F0F6700A2ABF7 /* NewArrivalService.swift */; };
@@ -298,7 +296,6 @@
 		96CD373B2651B7CA007B945F /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		96CD37402651B7D4007B945F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		96CD37452651B7DC007B945F /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
-		96E8F9FC262F4C9E001984A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96F9E0B0265ACADF008C47A2 /* AccountTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewExtension.swift; sourceTree = "<group>"; };
 		96F9E0CE265AD648008C47A2 /* ConfirmAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmAddressViewController.swift; sourceTree = "<group>"; };
 		A90680322673A41F00EAF3C5 /* SearchExtension+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchExtension+TableView.swift"; sourceTree = "<group>"; };
@@ -326,7 +323,6 @@
 		A9916B8D265419050030ADDA /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		A9916B8F26542C720030ADDA /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		A9A7C21A26540DE700F8B214 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9ACF95D265F0EF700A2ABF7 /* DinaFirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinaFirebaseManager.swift; sourceTree = "<group>"; };
 		A9ACF95F265F0F0600A2ABF7 /* FirebaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseProtocol.swift; sourceTree = "<group>"; };
 		A9ACF964265F0F6200A2ABF7 /* ExclusiveOffersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExclusiveOffersService.swift; sourceTree = "<group>"; };
 		A9ACF966265F0F6700A2ABF7 /* NewArrivalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArrivalService.swift; sourceTree = "<group>"; };
@@ -462,7 +458,6 @@
 				2F4533E62629F7FB000FE74E /* LaunchScreen.storyboard */,
 				2F4533E92629F7FB000FE74E /* Info.plist */,
 				2F4533E12629F7FB000FE74E /* Mercado.xcdatamodeld */,
-				96E8F9FC262F4C9E001984A2 /* ViewController.swift */,
 			);
 			path = Mercado;
 			sourceTree = "<group>";
@@ -745,7 +740,6 @@
 				9632B31A265CC08700D32D2F /* AddAddress */,
 				96633A17265C4EC000FB1625 /* MapSearch */,
 				96B5DEEE2658198D00B598CF /* ItemProtocol.swift */,
-				A9ACF95D265F0EF700A2ABF7 /* DinaFirebaseManager.swift */,
 				A9ACF95F265F0F0600A2ABF7 /* FirebaseProtocol.swift */,
 			);
 			path = Contracts;
@@ -1388,8 +1382,6 @@
 				961EEA38266C0AF8008731EF /* Toast.swift in Sources */,
 				9615D94026668E2F000D369F /* CartItem.swift in Sources */,
 				2F1954262685432C001B6E55 /* SignUpExtension.swift in Sources */,
-				96E8F9FD262F4C9E001984A2 /* ViewController.swift in Sources */,
-				A9ACF95E265F0EF700A2ABF7 /* DinaFirebaseManager.swift in Sources */,
 				964BB7E526598C090087EFB3 /* AccountViewExtension.swift in Sources */,
 				A93ECFD12668F7D20067E102 /* CheckoutViewController.swift in Sources */,
 				A90B55782672A9C400B89CFA /* SearchItemViewModel.swift in Sources */,

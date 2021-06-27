@@ -66,10 +66,10 @@ class SearchItemViewModel : NSObject{
                         do{
                             data = try decoder.decode(PersonalCare.self, from: JSONSerialization.data(withJSONObject: item))
                         }catch{
-                            print(error)
+                           
                         }
-                        print(data.item_title!)
-                        print("model \(data.item_id)")
+                       
+                       
                         self.bindDetailsItemToView(data)
                         
                     }
@@ -99,7 +99,7 @@ class SearchItemViewModel : NSObject{
                             }catch{
                                 print(error)
                             }
-                            print(data.item_title!)
+                          
                             self.bindDetailsItemToView(data)
                             
                             }
@@ -115,7 +115,7 @@ class SearchItemViewModel : NSObject{
                             }catch{
                                 print(error)
                             }
-                            print(data.item_title!)
+                         
                             self.bindDetailsItemToView(data)
 
                         }
@@ -131,7 +131,7 @@ class SearchItemViewModel : NSObject{
                                 }catch{
                                     print(error)
                                 }
-                                print(data.item_title!)
+                             
                                 self.bindDetailsItemToView(data)
                         }
                     }
@@ -145,7 +145,7 @@ class SearchItemViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                     
                         self.bindDetailsItemToView(data)
 
                     }
@@ -159,7 +159,7 @@ class SearchItemViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                        
                         self.bindDetailsItemToView(data)
 
                     }
@@ -173,7 +173,7 @@ class SearchItemViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                       
                         self.bindDetailsItemToView(data)
 
                     }
@@ -187,7 +187,7 @@ class SearchItemViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                      
                         self.bindDetailsItemToView(data)
 
                     }
@@ -201,7 +201,7 @@ class SearchItemViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                     
                         self.bindDetailsItemToView(data)
 
                     }
@@ -215,7 +215,7 @@ class SearchItemViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                       
                         self.bindDetailsItemToView(data)
 
                     }

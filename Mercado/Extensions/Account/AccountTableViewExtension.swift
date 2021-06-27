@@ -26,7 +26,7 @@ extension AccountViewController:UITableViewDelegate,UITableViewDataSource
         
       }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(accountDetailsArray[indexPath.row]["name"])
+      
         let name = accountDetailsArray[indexPath.row]["name"]!
         switch name {
         case "My Account" :
@@ -35,15 +35,14 @@ extension AccountViewController:UITableViewDelegate,UITableViewDataSource
             self.present(MyAccountVC, animated: true, completion: nil)
             
         case "Shipping Address":
-            print("shipping selectend")
+       
 
             // In the above, you replaced the navigation controller with your destVC.
             let addAddressVc = storyboard?.instantiateViewController(identifier: String(describing: AddAddressTableViewController.self)) as! AddAddressTableViewController
-          //  confrimAddressVc.modalPresentationStyle = .fullScreen
-            print(self.navigationController)
+         
             
             self.navigationController?.pushViewController(addAddressVc , animated: true)
-//            self.present(confrimAddressVc, animated: true, completion: nil)
+
         case "My Orders":
 
                          //In the above, you replaced the navigation controller with your destVC.
@@ -57,12 +56,10 @@ extension AccountViewController:UITableViewDelegate,UITableViewDataSource
             aboutVC.modalPresentationStyle = .fullScreen
             self.present(aboutVC, animated: true, completion: nil)
             
-        case "Help" :
-            print("helppp")
-//            let userID = Auth.auth().currentUser?.uid
-//            Database.database().reference().child("users").child(userID! ).updateChildValues(["photo": "userName"])
+      
+  
         default:
-            print("no")
+            print("")
         }
     }
 }

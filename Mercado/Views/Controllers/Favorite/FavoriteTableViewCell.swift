@@ -33,18 +33,7 @@ class FavoriteTableViewCell: UITableViewCell {
     }
     
     @IBAction func unFavoriteTapped(_ sender: Any) {
-//        var superview = (sender as AnyObject).superview
-//        while let view = superview where !(view is UITableViewCell) {
-//            superview = view.superview
-//        }
-//        guard let cell = superview as? UITableViewCell else {
-//            print("button is not contained in a table view cell")
-//            return
-//        }
-//        guard let indexPath = myTableView.indexPathForCell(cell) else {
-//            print("failed to get index path for cell containing button")
-//            return
-//        }
+
     }
     
 }

@@ -26,7 +26,7 @@ extension ShopTabBarController{
                DispatchQueue.main.async {
                    self.tabBarController!.viewControllers![2].tabBarItem.badgeValue = String(numberOfItemsInCart!)
                }}
-               print("badgee from shop\(numberOfItemsInCart!)")
+             
            }
        }
     

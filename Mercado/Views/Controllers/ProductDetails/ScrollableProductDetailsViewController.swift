@@ -29,9 +29,8 @@ class ScrollableProductDetailsViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-         //  scrollView.isScrollEnabled = true
-        //set height ro scrollview
-//        scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: 1200)
+        
+
         scrollView.contentOffset.x = 0
         
         //add observer to listen to item details sent from product details view

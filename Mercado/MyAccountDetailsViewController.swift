@@ -52,7 +52,7 @@ class MyAccountDetailsViewController: UIViewController {
         {
             let url = URL(string: img)
         DispatchQueue.main.async {
-            print("url \(String(describing: url))")
+           
             self.googoleUserPhotoChanged = true
         self.userProfileImage.sd_setImage(with: url, placeholderImage: UIImage(systemName: "person.circle"), completed: nil)
         }
@@ -64,7 +64,7 @@ class MyAccountDetailsViewController: UIViewController {
         (userName,user) in
         DispatchQueue.main.async {
            self.userName.text = userName
-            print("done")
+         
             self.userEmail.text = user?.email!
             if let googleAccountDisplayName = user?.displayName
             {
@@ -75,7 +75,7 @@ class MyAccountDetailsViewController: UIViewController {
                 if self.googoleUserPhotoChanged == false
                 {
                 self.userProfileImage.sd_setImage(with: image, placeholderImage: UIImage(systemName: "person.circle"), completed: nil)
-                    print(self.googoleUserPhotoChanged!)
+                   
                 }
             }
          
@@ -110,7 +110,7 @@ class MyAccountDetailsViewController: UIViewController {
             let newUsername = TextField?.text
             self.firebaseManger.updateUserName(newUsername!)
             self.userName.text = newUsername
-            print("Text field: \(String(describing: newUsername))")
+           
         }))
 
         // 4. Present the alert.
@@ -141,7 +141,7 @@ class MyAccountDetailsViewController: UIViewController {
             let pass = passwordTextField?.text
             self.firebaseManger.updateUserEmail(newEmail!, pass!)
             self.userEmail.text = newEmail
-            print("Text field: \(String(describing: newEmail))")
+           
             
         }))
 
@@ -172,7 +172,7 @@ class MyAccountDetailsViewController: UIViewController {
             let newPasswordTextField = alert?.textFields![1]
             let newPass = newPasswordTextField?.text
             self.firebaseManger.updateUserPassword(oldPass!, newPass!)
-            print("Text field: \(String(describing: newPass))")
+           
         }))
 
         // 4. Present the alert.

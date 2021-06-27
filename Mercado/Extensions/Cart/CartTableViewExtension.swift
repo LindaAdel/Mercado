@@ -31,7 +31,7 @@ extension CartViewController : UITableViewDelegate,UITableViewDataSource
             cartCell.quantityValue = cartItemsArray[indexPath.row].count!
             cartCell.quantityLabel.text = String(cartItemsArray[indexPath.row].count!)
         }
-        print("cell reloaded")
+      
         cartCell.contentView.layer.shadowOpacity = 0.5
         return cartCell
     }
@@ -42,21 +42,19 @@ extension CartViewController : UITableViewDelegate,UITableViewDataSource
     -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: nil) { [self] (_, _, completionHandler) in
             // delete the item here
-            print("remove cart \(self.cartItemsArray.count)")
-            print("remove items \(self.itemsArray.count)")
+          
             self.itemsArray.remove(at: indexPath.row)
             // Delete the row from tableview
             tableView.deleteRows(at: [indexPath], with: .fade)
             self.cartViewModel.removeCartItemFromFirebase(itemId: self.cartItemsArray[indexPath.row].itemId!)
             
             self.cartItemsArray.remove(at: indexPath.row)
-            print("remove cart \(self.cartItemsArray.count)")
-            print("remove items \(self.itemsArray.count)")
+          
            
             if(self.itemsArray.count == 0)
             {
                 self.cartTabBarIcon.badgeValue = nil
-                print("show image from delete")
+         
                 self.emptyCartImage.isHidden = false
             }
             else{
@@ -64,7 +62,7 @@ extension CartViewController : UITableViewDelegate,UITableViewDataSource
                 self.cartViewModel.getCartItems()
                 self.emptyCartImage.isHidden = true 
             }
-           // print("will \(itemsArray.count)")
+          
             completionHandler(true)
         }
         let image = UIImage(systemName: "trash")?.colored(in: #colorLiteral(red: 0.3254901961, green: 0.6941176471, blue: 0.4588235294, alpha: 1))
@@ -77,7 +75,6 @@ extension CartViewController : UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailsVC = storyboard?.instantiateViewController(withIdentifier: "productDetails") as! ProductDetailsViewController
         detailsVC.categoryName = cartItemsArray[indexPath.row].category
-        print(cartItemsArray[indexPath.row].itemId!)
         detailsVC.itemDetails = itemsArray[indexPath.row]
         detailsVC.itemDetails.item_id = cartItemsArray[indexPath.row].itemId!
         detailsVC.subCategoryName = cartItemsArray[indexPath.row].subCategory

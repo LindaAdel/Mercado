@@ -35,7 +35,7 @@ class FilterViewController: UIViewController {
             brandArray.append(item.brand!)
         }
         brandArray =  Array(Set(brandArray)).sorted()
-        print(brandArray)
+        
         //set price range values for each category
         self.getPricesValue()
         
@@ -53,11 +53,11 @@ class FilterViewController: UIViewController {
     {
         
         var lessThanPriceChoosen , rangePriceChoosen,greaterThanPriceChoosen : Bool!
-        print("selected \(selectedBrandArray) \(selectedPriceValue)")
+     
         //no filter
         if selectedBrandArray.count == 0 && selectedPriceValue == nil
         {
-            print("no filter found")
+          
             filteredItemsArray = itemsArray
             
         }
@@ -69,11 +69,11 @@ class FilterViewController: UIViewController {
         
         if selectedBrandArray.contains("All Brands")
         {
-            print("all brands choosen")
-            print(itemsArray.count)
+     
+           
             //if user not choose price filter
             if selectedPriceValue == nil  {
-                print("all brands only")
+               
                 filteredItemsArray = itemsArray
             }
             else{
@@ -82,9 +82,9 @@ class FilterViewController: UIViewController {
         }
         //choose specific brands
         else if selectedBrandArray.count != 0 || selectedPriceValue != nil{
-            print("other")
+           
             if selectedPriceValue == nil  {
-                print("filter by brand only")
+                
                 filteredItemsArray = itemsArray.filter {
                     return selectedBrandArray.contains($0.brand!)
                 }
@@ -98,13 +98,13 @@ class FilterViewController: UIViewController {
         }
         //filter by price only
         if selectedPriceValue != nil && selectedBrandArray.count == 0 {
-            print("filter by price only")
+         
             filterByPriceOnly(lessThanPriceChoosen,rangePriceChoosen,greaterThanPriceChoosen)
             
         }
         
-//        print(filteredItemsArray.count)
-//        print(selectedPriceValue)
+
+
         
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "filter"), object: nil, userInfo: ["filteredArray":filteredItemsArray])

@@ -35,7 +35,7 @@ extension FavoriteTableViewController : UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-   //if(tableView == FavoriteTableView){
+ 
     let favcell = FavoriteTableView.dequeueReusableCell(withIdentifier: "favcell", for: indexPath) as! FavoriteTableViewCell
         favcell.favImageCell.sd_setImage(with: URL(string: favoriteList[indexPath.row].item_image!))
        

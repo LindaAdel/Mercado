@@ -59,8 +59,7 @@ class AddAddressTableViewController: UITableViewController
             addressViewModel.getAddressFromFB()
             addressViewModel.bindAddressToAddAddressView = {
                 [self]  address in
-                print("view address")
-                
+               
                 DispatchQueue.main.async {
                     
                     self.hideLoading(activityIndicator: self.activityIndicator)
@@ -84,7 +83,7 @@ class AddAddressTableViewController: UITableViewController
         self.navigationItem.leftBarButtonItem = newBackButton
         
         
-        print("didliad : \(addressesArray.count)")
+     
         
         
     }

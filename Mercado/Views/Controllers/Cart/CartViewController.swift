@@ -69,7 +69,7 @@ class CartViewController: UIViewController {
         if Connectivity.isConnectedToInternet{
             cartViewModel.getCartItems()
         }
-        print("cart will appear \(itemsArray.count)")
+    
 
     }
     

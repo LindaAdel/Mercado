@@ -40,7 +40,7 @@ class itemsTableViewController: UIViewController {
         if let data = notifications.userInfo
         {
             let filteredItemsArray = data["filteredArray"] as! [ItemProtocol]
-            print("filter notified")
+           
             self.itemsList = filteredItemsArray
             self.itemsTableView.reloadData()
         }
@@ -86,7 +86,7 @@ class itemsTableViewController: UIViewController {
         self.itemsViewModel.bindItemFavoriteToView = {
             (isFav,index) in
             self.itemIsFavoriteArr[index] = ItemIsFavorite(isFavorite: isFav)
-            print(index , isFav)
+          
             DispatchQueue.main.async {
                 self.hideLoading(activityIndicator: self.activityIndicator)
                 self.itemsTableView.reloadData()
@@ -119,7 +119,7 @@ class itemsTableViewController: UIViewController {
     
     @IBAction func FilterButton(_ sender: Any) {
         let filterVC = storyboard?.instantiateViewController(withIdentifier: String(describing: FilterViewController.self)) as! FilterViewController
-        print(itemsList.count)
+      
         filterVC.itemsArray = self.allItemsToFilter
         filterVC.categoryName = self.itemcategoryName
         filterVC.subCategoryName = self.subCategoryObj.itemSubCategoryName

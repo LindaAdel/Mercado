@@ -26,11 +26,10 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
         if collectionView == newArrivalCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newArrivalCell", for: indexPath) as! NewArrivalCollectionViewCell
             cell.addToCartBtn.addTarget(self, action: #selector(addToCartNewArrivalButton), for: .touchUpInside)
-            print("id \(newArrival_infoArray .count)")
-            print("id \(newArrival_array .count)")
+        
 
             cell.addToCartBtn.tag = indexPath.row
-//            Cart().checkIfItemInCart(button :cell.addToCartBtn,itemId:newArrival_infoArray [indexPath.row].itemId!)
+
             cell.itemTitle.text = newArrival_array[indexPath.row].item_title!
             cell.itemImage.sd_setImage(with: URL(string: newArrival_array[indexPath.row].item_image!))
             cell.itemPrice.text = "EGP \(newArrival_array[indexPath.row].item_price!)"
@@ -52,7 +51,7 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "offersCell", for: indexPath) as! NewArrivalCollectionViewCell
             cell.addToCartBtn.addTarget(self, action: #selector(addToCartOfferslButton), for: .touchUpInside)
             cell.addToCartBtn.tag = indexPath.row
-//            Cart().checkIfItemInCart(button :cell.addToCartBtn,itemId:exclusive0ffers_infoArray [indexPath.row].itemId!)
+
             cell.itemTitle.text = exclusiveOffers_array[indexPath.row].item_title!
             cell.itemImage.sd_setImage(with: URL(string: exclusiveOffers_array[indexPath.row].item_image!))
             cell.itemPrice.text = "EGP \(exclusiveOffers_array[indexPath.row].item_price!)"
@@ -132,14 +131,14 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
         if collectionView == newArrivalCollectionView{
             
             detailsVC.categoryName = newArrival_infoArray[indexPath.row].category
-            print("shop\(newArrival_array[indexPath.row].item_id)")
+           
             newArrival_array[indexPath.row].item_id = newArrival_infoArray[indexPath.row].itemId
             detailsVC.itemDetails = newArrival_array[indexPath.row]
             detailsVC.subCategoryName = newArrival_infoArray[indexPath.row].subCategory
         
         }
         else if collectionView == exclusiveOffersCollectionView{
-//            print("shop\(newArrival_array[indexPath.row].item_id)")
+
             detailsVC.categoryName = exclusive0ffers_infoArray[indexPath.row].category
             exclusiveOffers_array[indexPath.row].item_id = exclusive0ffers_infoArray[indexPath.row].itemId
             detailsVC.itemDetails = exclusiveOffers_array[indexPath.row]
@@ -153,8 +152,7 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath){
         
-//        let cell = collectionView.cellForItem(at: indexPath)
-//        cell?.isSelected = false
+
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -196,10 +194,7 @@ extension ShopTabBarController : UICollectionViewDelegate, UICollectionViewDataS
        
         let indexPath = IndexPath(row: sender.tag, section: 0)
         let item = CartItem(category:newArrival_infoArray[indexPath.row].category , itemId: newArrival_infoArray[indexPath.row].itemId, subCategory: newArrival_infoArray[indexPath.row].subCategory, count: 1)
-        print("id add \(newArrival_infoArray[indexPath.row].itemId!)")
-//        print(newArrival_infoArray.count)
-//        print(newArrival_array.count)
-//        print(indexPath)
+
         Cart().addToCart(sender: sender, item: item, itemId: newArrival_infoArray[indexPath.row].itemId!, currentView: self)
     }
     @objc func addToCartOfferslButton(_ sender :UIButton)

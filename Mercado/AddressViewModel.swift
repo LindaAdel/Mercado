@@ -18,7 +18,7 @@ class AddressViewModel {
     func getAddressFromFB() {
         firebaseManager.getUserAddress(){
             address in
-            print("address vm")
+          
             self.bindAddressToAddAddressView(address)
         }
     }

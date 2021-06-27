@@ -32,8 +32,6 @@ extension ExploreTabBarController: UITableViewDataSource, UITableViewDelegate {
         itemsVC.subCategoryObj = subCatgeoryArray[indexPath.row]
         itemsVC.categoryName = self.categoryName!
         itemsVC.itemcategoryName = self.itemcategoryName!
-        print("from home \(categoriesArray[indexPath.row].categoryName)")
-        print(categoriesArray[indexPath.row])
         self.present(itemsVC, animated: true, completion: nil)
        
         

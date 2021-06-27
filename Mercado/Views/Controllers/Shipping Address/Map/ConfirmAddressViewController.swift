@@ -61,10 +61,9 @@ class ConfirmAddressViewController: UIViewController,MKMapViewDelegate {
             addressDetailsVC.address = address
         }else
         {
-            print("nil address")
-        }
+                    }
         if let _ = place {
-            print(place.locality)
+       
             address.street = "\(place.subThoroughfare ?? "") \(place.thoroughfare ?? "")"
             address.area = place.locality!
             address.governorate = place.administrativeArea!
@@ -72,53 +71,14 @@ class ConfirmAddressViewController: UIViewController,MKMapViewDelegate {
         }
         else
         {
-            print("nil place")
+           
         }
         if isFromCheckout{
             addressDetailsVC.isFromCheckout = true
         }
         
         self.navigationController?.pushViewController(addressDetailsVC, animated: true)
-//        if let placee = place {
-//            address = ParseAddress().parseAddressToString(selectedAddress: placee)
-//            print("add \(address)")
-//            print(addAddressDelegate)
-//
-//            print("placee \(ParseAddress().parseAddressToString(selectedAddress: placee))")
-//            print("place admin : \(String(describing: placee.administrativeArea))")
-//            print("place subt: \(String(describing: placee.subAdministrativeArea))")
-//            print("loc: \(String(describing: placee.locality))")
-//          }
-//        if let _ = address
-//        {
-//        self.addAddressDelegate.setLocation(address: self.address)
-//        }
-//        self.navigationController?.popViewController(animated: true)
+
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-//        let addressDetailsVC = segue.destination as! AddressDetailsViewController
-//        var add = Address()
-//        if let _ = address
-//        {
-//      //  add.country = address
-//
-//            addressDetailsVC.address = address
-//        }else
-//        {
-//            print("nil address")
-//        }
-//        if let _ = place {
-//            print(place.locality)
-//            address.street = "\(place.subThoroughfare ?? "") \(place.thoroughfare ?? "")"
-//            address.area = place.locality
-//            address.governorate = place.administrativeArea
-//            addressDetailsVC.address = address
-//        }
-//        else
-//        {
-//            print("nil place")
-//        }
-//
-//    }
+
 }

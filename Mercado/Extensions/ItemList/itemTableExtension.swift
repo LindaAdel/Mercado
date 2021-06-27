@@ -17,12 +17,11 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
         
         let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "productDetails") as! ProductDetailsViewController
         detailsVC.categoryName = self.itemcategoryName
-//        print("items id \(itemsList[indexPath.row].item_id)")
         detailsVC.itemDetails=itemsList[indexPath.row]
         detailsVC.subCategoryName = subCategoryObj.itemSubCategoryName
         detailsVC.modalPresentationStyle = .fullScreen
         self.present(detailsVC, animated: true, completion: nil)
-       // self.navigationController!.pushViewController(detailsVC, animated: true)
+    
         
     }
     
@@ -39,7 +38,7 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
         //MARK:- Cart
         cell.cellAddToCart.addTarget(self, action: #selector(addToCartButton), for: .touchUpInside)
         cell.cellAddToCart.tag = indexPath.row
-      //  Cart().checkIfItemInCart(button :cell.cellAddToCart,itemId:itemsList[indexPath.row].item_id!)
+    
         if isSearching {
             
             cell.cellItemImage.sd_setImage(with: URL(string: self.searchingItem[indexPath.row].item_image!))
@@ -54,13 +53,7 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
             cell.cellItemPrice.text = "EGP \(itemsList[indexPath.row].item_price!)"
             cell.cellAddToFavorite.tag = indexPath.row
             cell.cellAddToFavorite.addTarget(self, action: #selector(favoriteBtnAction), for: .touchUpInside)
-//            if ((self.itemIsFavoriteArr[indexPath.row]?.isFavorite!) != nil){
-//                cell.cellAddToFavorite.setImage(UIImage(named: "favorite"), for: .normal)
-//
-//            }else {
-//
-//                cell.cellAddToFavorite.setImage(UIImage(named: "unfavorite"), for: .normal)
-//            }
+
            
             if let favFlag = self.itemIsFavoriteArr[indexPath.row]{
                 if favFlag.isFavorite! {
@@ -89,7 +82,7 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
     @objc func favoriteBtnAction(sender : UIButton)
         {
            let indexp = IndexPath(row: sender.tag, section: 0)
-        print("fav \(indexp)")
+       
             let cellFavoriteItem : SpecialItem = SpecialItem()
         cellFavoriteItem.category = self.itemcategoryName
         cellFavoriteItem.subCategory = subCategoryObj.itemSubCategoryName

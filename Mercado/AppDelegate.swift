@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 {
   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print("app deleagate")
+       
        
         //NetworkMonitoring
         NetworkMonitor.shared.startMonitoring()
@@ -112,12 +112,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             userDefaults.setValue(true, forKey: "getStarted")
             // signOut from firebase
                 try! Auth.auth().signOut()
-            print("getstarted true")
+       
             // go to beginning of app
         } else {
             //go to where you want
-            print("not first time")
-            print("getstarted false")
+          
           
         }
     }

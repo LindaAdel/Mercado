@@ -39,14 +39,7 @@ class itemTableViewCell: UITableViewCell {
     
     @IBAction func addToFavoriteBtnTapped(_ sender: Any) {
         
-//        if isFavorite {
-//            cellAddToFavorite.setImage(UIImage(named: "unfavorite"), for: .normal)
-//            isFavorite = false
-//        }else{
-//            cellAddToFavorite.setImage(UIImage(named: "favorite"), for: .normal)
-//            isFavorite = true
-//        }
-//        
+
     }
     
     

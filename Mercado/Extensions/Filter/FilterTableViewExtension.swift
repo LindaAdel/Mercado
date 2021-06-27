@@ -32,7 +32,7 @@ extension FilterViewController:UITableViewDelegate,UITableViewDataSource
             
             return brandCell
         default:
-            print("price cell reloaded")
+          
             let priceCell = tableView.dequeueReusableCell(withIdentifier: String(describing: PriceCell.self) ,for: indexPath)as! PriceCell
             priceCell.priceRadioButton.tag = indexPath.row
             priceCell.priceRadioButton.addTarget(self, action: #selector(priceCheckBoxButton), for: .touchUpInside)
@@ -67,13 +67,12 @@ extension FilterViewController:UITableViewDelegate,UITableViewDataSource
         else
         {
             sender.setImage(nil, for: .normal)
-            print(indexPath.row)
+      
             let index = selectedBrandArray.firstIndex(of: brandArray[indexPath.row])
             selectedBrandArray.remove(at: index!)
-            print(index!)
+           
             
         }
-        print(selectedBrandArray)
-        print(selectedBrandArray.count)
+       
     }
 }

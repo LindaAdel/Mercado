@@ -121,8 +121,6 @@ extension SignUpTableViewController {
              self.ref.child("users").child(userID! ).setValue(["username": userName])
             switch Auth.auth().currentUser?.isEmailVerified {
             case true:
-                print("users email is verified")
-               // self.showToast(" email is verified")
                 break
             case false:
                 
@@ -145,7 +143,7 @@ extension SignUpTableViewController {
                     self.handleError(error: error)
                 }
                 
-                print("verify it now")
+              
                 break
             default: break
             }

@@ -66,7 +66,7 @@ func showCurvedView()
     }
     //open camera action
     func takePhotoHandler(_ action:UIAlertAction){
-        print("camera")
+    
         self.imagePickerController(allowEditing: false, sourceType: .camera)
     }
     //call back func when user choose or take photo

@@ -23,7 +23,7 @@ class AccountViewModel
         firebaseManager.getUploadedImage()
         {
             (imgURL) in
-//            print("imgvm \(imgURL)")
+       
             self.bindUploadedImageToAccountVIew(imgURL)
            
             
@@ -44,33 +44,15 @@ class AccountViewModel
             if let name = username
             {
                self.bindUserNameToAccountView(name,user)
-                //   self.username = name
-                print("get current user \(name)")
+            
             }
             else
             {
-                print("eerror get name viewmodel")
-                //print(error?.localizedDescription)
+               
+               
                 self.bindUserNameToAccountView(nil,user)
             }
         }
     }
-    //MARK:- update user
-//    func getCurrentUserFromFb()
-//    {
-//        
-//        firebaseManager.getCurrentUser()
-//        {
-//            (user) in
-////            guard let user = user else {
-////                print("user nil")
-////                return
-////
-////            }
-//            print("user \(user)")
-//            self.bindCurrentUserToAccountView = {_ in}
-//            self.bindCurrentUserToAccountView(user)
-//        }
-//    }
-//    
+
 }

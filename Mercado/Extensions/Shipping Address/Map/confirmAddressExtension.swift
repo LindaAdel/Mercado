@@ -19,7 +19,7 @@ extension ConfirmAddressViewController:IMapSearch
         
         //configures the search bar, and embeds it within the navigation bar
         let searchBar = resultSearchController?.searchBar
-//        searchBar?.sizeToFit()
+
         searchBar?.placeholder = "search location"
         navigationItem.title = "Shipping Address"
         resultSearchController?.hidesNavigationBarDuringPresentation = false
@@ -45,8 +45,8 @@ extension ConfirmAddressViewController:IMapSearch
         let annotation = MKPointAnnotation()
         annotation.coordinate = place.coordinate
         annotation.title = place.name
-        if let city = place.locality,
-        let state = place.administrativeArea
+        if let _ = place.locality,
+           let _ = place.administrativeArea
         {
          // annotation.subtitle = "\(city) \(state)"
         }

@@ -17,7 +17,7 @@ class NewArrivalService : FirebaseProtocol{
         self.ref.child("new arrival").getData { (error, snapshot) in
             self.newArrival_array.removeAll()
             if let error = error {
-                print("Error getting data \(error)")
+                print(error)
             }
             else if snapshot.exists() {
                 let data = snapshot.value as? [String:NSDictionary]
@@ -32,11 +32,11 @@ class NewArrivalService : FirebaseProtocol{
                     self.newArrival_array.append(newArrivalObj)
                     
                 }
-                print(self.newArrival_array.count)
+               
                 completion(self.newArrival_array,nil)
             }
             else {
-                print("No data available")
+                
                 completion(nil,error)
 
             }

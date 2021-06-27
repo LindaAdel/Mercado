@@ -69,8 +69,8 @@ class NewArrivalViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
-                        print("model \(data.item_id)")
+                    
+                       
                         self.bindItemsToView(newArrivalItem,data)
                         
                     }
@@ -85,7 +85,7 @@ class NewArrivalViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                   
                         self.bindItemsToView(newArrivalItem,data)
                         
 
@@ -101,7 +101,7 @@ class NewArrivalViewModel : NSObject{
                             }catch{
                                 print(error)
                             }
-                            print(data.item_title!)
+                          
                             self.bindItemsToView(newArrivalItem,data)
                             
                             }
@@ -117,7 +117,7 @@ class NewArrivalViewModel : NSObject{
                             }catch{
                                 print(error)
                             }
-                            print(data.item_title!)
+                         
                             self.bindItemsToView(newArrivalItem,data)
 
                         }
@@ -133,7 +133,7 @@ class NewArrivalViewModel : NSObject{
                                 }catch{
                                     print(error)
                                 }
-                                print(data.item_title!)
+                              
                             self.bindItemsToView(newArrivalItem,data)
                         }
                     }
@@ -147,7 +147,7 @@ class NewArrivalViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                      
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -161,7 +161,7 @@ class NewArrivalViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                       
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -175,7 +175,7 @@ class NewArrivalViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                   
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -189,7 +189,7 @@ class NewArrivalViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                       
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -203,7 +203,7 @@ class NewArrivalViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                      
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -217,7 +217,7 @@ class NewArrivalViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                      
                         self.bindItemsToView(newArrivalItem,data)
 
                     }

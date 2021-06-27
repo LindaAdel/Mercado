@@ -51,9 +51,7 @@ class AddressDetailsViewController: UIViewController {
         streetTextField.text = address.street!
         governorateTextField.text = address.governorate!
         areaTextField.text = address.area!
-        print(address.street!)
-        print(address.governorate!)
-        print(address.area!)
+     
         guard address.apartment != nil ,
               address.building != nil,
               address.floor != nil ,
@@ -61,7 +59,7 @@ class AddressDetailsViewController: UIViewController {
               address.nearestLandmark != nil,
               address.mobileNumber != nil
         else {
-            print("no edit")
+         
             return
         }
         apartmentTextField.text =  address.apartment
@@ -76,7 +74,7 @@ class AddressDetailsViewController: UIViewController {
     
     @IBAction func saveAddressButton(_ sender: UIButton)
     {
-        print("address saved")
+      
         if
             countryTextField.isEmptyField() &&
                 governorateTextField.isEmptyField() &&
@@ -88,7 +86,7 @@ class AddressDetailsViewController: UIViewController {
                 landmarkTextField.isEmptyField() &&
                 mobileTextField.isEmptyField()
         {
-            print("all fields are empty")
+           
         }
         else{
             if countryTextField.isEmptyField() {print("country required")}

@@ -34,9 +34,7 @@ extension LocationSearchTableViewController
 
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("name \(String(describing: matchingItemsArray[indexPath.row].name))")
-        print("mark \(String(describing: matchingItemsArray[indexPath.row].placemark.thoroughfare))")
-        print("phone \(String(describing: matchingItemsArray[indexPath.row].phoneNumber))")
+       
         //to update searchbar text with selected place
         selectedPlace = matchingItemsArray[indexPath.row].placemark.name
         //drop pin in the map with the selected place

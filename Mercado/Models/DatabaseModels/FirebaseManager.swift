@@ -34,10 +34,10 @@ class FirebaseManager
                 currentUser = user
                 userID = currentUser.uid
                 userEmail = currentUser.email
-                print("fb current user listener \(String(describing: userEmail))")
+              
             } else {
                 // No user is signed in .
-                print("fb user signout")
+              
             }
         }
         
@@ -70,7 +70,7 @@ class FirebaseManager
                 guard error == nil
                 else
                 {
-                    print("firebase no address found")
+                
                     completion(nil)
                     return
                 }
@@ -78,7 +78,7 @@ class FirebaseManager
                 {
                     let address = try! FirebaseDecoder().decode(Address.self, from: snapshot.value!)
                     completion(address)
-                    print("address from firebase ")
+                    
                 }
             }
         
@@ -98,7 +98,7 @@ class FirebaseManager
                 (error,snapshot) in
                 guard error == nil
                 else{
-                    print("error check \(error?.localizedDescription)")
+                  
                     return
                 }
                 if snapshot.exists()
@@ -117,7 +117,7 @@ class FirebaseManager
             .child(userID)
             .child(currentItemId)
             .updateChildValues(["count":countValue])
-        print(" count updated \(currentItemId)")
+       
     }
     func addItemToFirebaseCart(cartItem :CartItem)   {
         let item = [
@@ -130,14 +130,14 @@ class FirebaseManager
             .child(userID)
             .child(cartItem.itemId!)
             .updateChildValues(item)
-        print("item added to cart")
+       
     }
     func removeItemfromFirebaseCart(itemId :String)   {
         dbreference.child("cart")
             .child(userID)
             .child(itemId)
             .removeValue()
-        print("item removed from cart")
+       
     }
     //get every item details in cart from db
     func searchForItemsInCart<T:Codable>(of : T.Type,cartItem:CartItem,completion:@escaping (T?)->()) {
@@ -155,10 +155,10 @@ class FirebaseManager
                 }
                 if snapshot.exists()
                 {
-                    print("firebaseSearch")
-                    //    print(snapshot.value)
+                   
+                  
                     let item = try! FirebaseDecoder().decode(T.self, from: snapshot.value!)
-                    //  print("item fb \(item)")
+                   
                     completion(item)
                     
                 }
@@ -185,12 +185,12 @@ class FirebaseManager
                         let itemDecoded = try! FirebaseDecoder().decode(CartItem.self, from: (item as AnyObject).value!)
                         cartItemsArray.append(itemDecoded)
                     }
-                    print("fb \(cartItemsArray.count)")
+               
                     completion(cartItemsArray)
                     
                 }
                 else{
-                    print("empty cart \(snapshot.value!)")
+                   
                     completion(nil)
                     
                 }
@@ -210,11 +210,10 @@ class FirebaseManager
                 
                 
                 guard error == nil else { print ("fb error img \(String(describing: error?.localizedDescription))")
-                    print(self.userID!)
+                   
                     return}
-                print("fb img : \(snapShot.value!)")
+              
                 if snapShot.exists(){
-                    print("img found")
                     completion((snapShot.value) as? String)
                 }
                 
@@ -236,11 +235,11 @@ class FirebaseManager
         
         dbreference.child("users").child(userID! ).child("username").getData { (error, snapshot) in
             if let error = error {
-                print("Error getting data \(error)")
-                // completion(nil, error.localizedDescription)
+                print(error)
+            
             }
             else  {
-                print("Got data \(snapshot.value!)")
+              
                 //check if user created acc and has user name
                 if snapshot.value! is String
                 {
@@ -264,7 +263,7 @@ class FirebaseManager
         
         guard let image = selectedImage else
         {
-            print("selected image nil")
+        
             return
         }
         guard let imageData = image.jpegData(compressionQuality: 0.5) else {
@@ -283,12 +282,12 @@ class FirebaseManager
                     (url,error) in
                     let imageURL = url?.absoluteURL
                     self.uploadImageURLToDB(imageURL: imageURL!)
-                    print("url img \(url?.absoluteString ?? nil)")
+                    
                 }
             }
             else
             {
-                print(error?.localizedDescription)
+               
             }
         }
     }
@@ -300,7 +299,7 @@ class FirebaseManager
             .child("users")
             .child(userID! )
             .updateChildValues(["profilePicture": String(describing: imageURL)])
-        print("uploadated to db")
+       
     }
     //MARK:- dina Favorite
     
@@ -318,12 +317,12 @@ class FirebaseManager
                 }
                 else if snapshot.exists() {
                     let data = snapshot.value as? NSDictionary
-                    print(data!)
+                
                     
                     completion(data,nil)
                 }
                 else {
-                    print("No data available")
+                    
                     completion(nil,error)
                     
                 }
@@ -351,7 +350,7 @@ class FirebaseManager
             
             if let error = error {
                 completion(false , error)
-                print("Error getting data \(error)")
+                print(error)
             }
             else {
                 completion(Datasnapshot.exists(),nil)
@@ -411,12 +410,12 @@ class FirebaseManager
                 if let error = error {
                     // An error happened.
                     print(error)
-                    print("there is an error")
+                  
                 } else {
                     // User re-authenticated.
                     self.currentUser.updateEmail(to: email ) { (error) in
                         self.dbreference?.child("users").child("\(self.userID!)/userEmail").setValue(email)
-                        print("mail updated")
+                      
                         // email updated
                     }
                 }

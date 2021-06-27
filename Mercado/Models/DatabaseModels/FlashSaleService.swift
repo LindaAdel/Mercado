@@ -17,7 +17,7 @@ class FlashSaleService {
     self.ref.child("flashSale").getData { (error, snapshot) in
         self.flashSaleArray.removeAll()
         if let error = error {
-            print("Error getting data \(error)")
+            print(error)
         }
         else if snapshot.exists() {
             let data = snapshot.value as? [NSDictionary]
@@ -33,7 +33,7 @@ class FlashSaleService {
             completion(self.flashSaleArray,nil)
         }
         else {
-            print("No data available")
+           
             completion(nil,error)
 
             }

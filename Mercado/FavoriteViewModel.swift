@@ -34,7 +34,7 @@ class FavoriteViewModel : NSObject {
     }
     func fetchFavorite(){
         favoriteService.fetchArrayOfSpecialItems(completion: {(favoriteArray ,error)  in
-            print(favoriteArray)
+         
             if let error : Error = error{
                 
                 let message = error.localizedDescription

@@ -12,21 +12,21 @@ extension FilterViewController
     func filterByPriceAndBrand(_ lessThanPriceChoosen:Bool,_ rangePriceChoosen:Bool,_ greaterThanPriceChoosen :Bool){
         if lessThanPriceChoosen
         {
-            print("less")
+          
             filteredItemsArray = itemsArray.filter {
                 let price = Int($0.item_price!)
                 return selectedBrandArray.contains($0.brand!) &&  price! < lessThanPrice
             }
         }
         if rangePriceChoosen {
-            print("range")
+            
             filteredItemsArray = itemsArray.filter {
                 let price = Int($0.item_price!)
                 return selectedBrandArray.contains($0.brand!) &&  (price! >= rangePrice1 && price! <= rangePrice2 )
             }
         }
         if greaterThanPriceChoosen {
-            print("greater")
+          
             filteredItemsArray = itemsArray.filter {
                 let price = Int($0.item_price!)
                 return selectedBrandArray.contains($0.brand!) &&  price! > greaterThanPrice
@@ -38,21 +38,21 @@ extension FilterViewController
     func filterByPriceOnly(_ lessThanPriceChoosen:Bool,_ rangePriceChoosen:Bool,_ greaterThanPriceChoosen :Bool) {
         if lessThanPriceChoosen
         {
-            print("less")
+           
             filteredItemsArray = itemsArray.filter {
                 let price = Int($0.item_price!)
                 return price! < lessThanPrice
             }
         }
         if rangePriceChoosen {
-            print("range")
+    
             filteredItemsArray = itemsArray.filter {
                 let price = Int($0.item_price!)
                 return (price! >= rangePrice1 && price! <= rangePrice2 )
             }
         }
         if greaterThanPriceChoosen {
-            print("greater")
+          
             filteredItemsArray = itemsArray.filter {
                 let price = Int($0.item_price!)
                 return  price! > greaterThanPrice

@@ -67,7 +67,7 @@ class ExclusiveOffersViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                     
                         
                         self.bindItemsToView(newArrivalItem,data)
                         
@@ -83,7 +83,7 @@ class ExclusiveOffersViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                     
                         self.bindItemsToView(newArrivalItem,data)
                         
 
@@ -99,7 +99,7 @@ class ExclusiveOffersViewModel : NSObject{
                             }catch{
                                 print(error)
                             }
-                            print(data.item_title!)
+                         
                             self.bindItemsToView(newArrivalItem,data)
                             
                             }
@@ -115,7 +115,7 @@ class ExclusiveOffersViewModel : NSObject{
                             }catch{
                                 print(error)
                             }
-                            print(data.item_title!)
+                      
                             self.bindItemsToView(newArrivalItem,data)
 
                         }
@@ -131,7 +131,7 @@ class ExclusiveOffersViewModel : NSObject{
                                 }catch{
                                     print(error)
                                 }
-                                print(data.item_title!)
+                              
                                 self.bindItemsToView(newArrivalItem,data)
                         }
                     }
@@ -145,7 +145,7 @@ class ExclusiveOffersViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                      
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -159,7 +159,7 @@ class ExclusiveOffersViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                     
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -173,7 +173,7 @@ class ExclusiveOffersViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                       
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -187,7 +187,7 @@ class ExclusiveOffersViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                    
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -201,7 +201,7 @@ class ExclusiveOffersViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                      
                         self.bindItemsToView(newArrivalItem,data)
 
                     }
@@ -215,7 +215,7 @@ class ExclusiveOffersViewModel : NSObject{
                         }catch{
                             print(error)
                         }
-                        print(data.item_title!)
+                       
                         self.bindItemsToView(newArrivalItem,data)
 
                     }

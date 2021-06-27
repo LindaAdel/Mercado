@@ -36,7 +36,7 @@ class ShopTabBarController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         checkConnectivity()
-        print("shop will appear")
+      
         //update cart badge
         showLoading(activityIndicator: activityIndicator)
         CartHandlerViewModel().getNumbersOfItemsInCart()
@@ -119,7 +119,7 @@ class ShopTabBarController: UIViewController {
         newArrivalViewModel.bindItemFavoriteToView = {
                 (isFav) in
             self.newArrivalIsFavoriteArr.append(ItemIsFavorite(isFavorite: isFav))
-            print(isFav)
+           
             DispatchQueue.main.async {
                 self.hideLoading(activityIndicator: self.activityIndicator)
                 self.newArrivalCollectionView.reloadData()
@@ -143,7 +143,7 @@ class ShopTabBarController: UIViewController {
         exclusiveViewModel.bindItemFavoriteToView = {
                 (isFav) in
             self.exclusiveOffersIsFavoriteArr.append(ItemIsFavorite(isFavorite: isFav))
-            print(isFav)
+            
             DispatchQueue.main.async {
                 self.hideLoading(activityIndicator: self.activityIndicator)
                 self.exclusiveOffersCollectionView.reloadData()

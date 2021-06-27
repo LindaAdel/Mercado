@@ -20,13 +20,12 @@ class OrdersService {
             self.ordersArray.removeAll()
             self.orderItemsArray.removeAll()
             if let error = error {
-                print("Error getting data \(error)")
+                print(error)
             }
             else if snapshot.exists() {
                 let data = snapshot.value as? [String:NSDictionary]
                 data!.forEach{ item in
                     let itemObj =  item.value
-                    //print(item.key)
                     let orderObj = Order()
                     orderObj.totalPrice = itemObj["totalPrice"] as? Float
                     orderObj.shippingAddress = itemObj["shippingAddress"] as? String
@@ -35,7 +34,6 @@ class OrdersService {
                     let orderItemsArray = itemObj["items"] as? [NSDictionary]
                     
                     orderItemsArray!.forEach { item in
-                       // let itemObj = item.value
                         let orderItemObj = CartItem()
                         orderItemObj.count = item["count"] as? Int
                         orderItemObj.itemId = item["itemId"] as? String
@@ -44,16 +42,15 @@ class OrdersService {
 
                     orderObj.items = self.orderItemsArray
                     self.orderItemsArray.removeAll()
-                    print(self.orderItemsArray)
+                 
                     self.ordersArray.append(orderObj)
-                    print(self.ordersArray)
+                   
                     
                 }
                 completion(self.ordersArray,nil)
             }
             else {
-                print("No data available")
-
+           
                 completion(nil,error)
 
             }
@@ -65,7 +62,7 @@ class OrdersService {
          self.ref.child("allItems").child(itemId).getData { (error, snapshot) in
                        
                        if let error = error {
-                           print("Error getting data \(error)")
+                           print(error)
                        }
                        else if snapshot.exists() {
                            let data = snapshot.value as? NSDictionary
@@ -81,7 +78,7 @@ class OrdersService {
                            completion(allItemsObj,nil)
                        }
                        else {
-                           print("No data available")
+                         
                            completion(nil,error)
                            
                        }

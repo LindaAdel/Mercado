@@ -28,7 +28,7 @@ class CartViewModel {
             guard cartItemsArray != nil
             else
             {
-                print("vm empty cart")
+              
                 self.bindEmptyCartToView()
                 return
             }
@@ -40,7 +40,7 @@ class CartViewModel {
     {
         cartItems = []
         for itemData in cartItemsArray {
-      //      print("num \(item.subCategory)")
+  
             
             switch itemData.subCategory{
             
@@ -48,7 +48,7 @@ class CartViewModel {
                 firebaseManager.searchForItemsInCart(of:PersonalCare.self, cartItem: itemData)
                 {
                     item in
-            //        print("vm \(item?.item_title!)")
+            
                     self.cartItems.append(item!)
                     self.bindCartItemsToView(self.cartItems,cartItemsArray)
                 }
@@ -57,7 +57,7 @@ class CartViewModel {
                 firebaseManager.searchForItemsInCart(of:HomeAppliances.self, cartItem: itemData)
                 {
                     item in
-        //            print("vm \(item?.item_title)")
+    
                     self.cartItems.append(item!)
                     self.bindCartItemsToView(self.cartItems,cartItemsArray)
                     
@@ -69,7 +69,7 @@ class CartViewModel {
                     firebaseManager.searchForItemsInCart(of:KidsClothing.self, cartItem: itemData)
                     {
                         item in
-                   //     print("vm \(item!)")
+                 
                         self.cartItems.append(item!)
                         self.bindCartItemsToView(self.cartItems,cartItemsArray)
                     }
@@ -78,12 +78,12 @@ class CartViewModel {
                     firebaseManager.searchForItemsInCart(of:WomenClothing.self, cartItem:itemData)
                     {
                         item in
-                     //   print("vm \(item!)")
+                 
                         self.cartItems.append(item!)
                         self.bindCartItemsToView(self.cartItems,cartItemsArray)
                     }
-                default:
-                    print("no kids")
+                default: break
+                   
                 }
             case "shoes":
                 switch itemData.category {
@@ -91,19 +91,19 @@ class CartViewModel {
                 firebaseManager.searchForItemsInCart(of:KidsShoes.self, cartItem: itemData)
                 {
                     item in
-                  //  print("vm \(item!)")
+              
                     self.cartItems.append(item!)
                     self.bindCartItemsToView(self.cartItems,cartItemsArray)
                 }
              
-                default:
-                    print("no shoes")
+                default: break
+                  
                 }
             case "bags":
                 firebaseManager.searchForItemsInCart(of:WomenBags.self, cartItem: itemData)
                 {
                     item in
-                  //  print("vm \(item!)")
+                
                     self.cartItems.append(item!)
                     self.bindCartItemsToView(self.cartItems,cartItemsArray)
                 }
@@ -111,18 +111,16 @@ class CartViewModel {
                 firebaseManager.searchForItemsInCart(of:MakeUp.self, cartItem: itemData)
                 {
                     item in
-                //    print("vm \(item!)")
+             
                     self.cartItems.append(item!)
-                    print("total \(self.cartItems.count)")
-                    print(type(of: self.cartItems))
                     self.bindCartItemsToView(self.cartItems,cartItemsArray)
                 }
             case "skinCare":
-                print("skincare")
+          
                 firebaseManager.searchForItemsInCart(of:SkinCare.self, cartItem: itemData)
                 {
                     item in
-                  //  print("vm \(item!)")
+                 
                     self.cartItems.append(item!)
                     self.bindCartItemsToView(self.cartItems,cartItemsArray)
                 }
@@ -131,7 +129,7 @@ class CartViewModel {
                 firebaseManager.searchForItemsInCart(of:Laptops.self, cartItem: itemData)
                 {
                     item in
-                   // print("vm \(item!)")
+              
                     self.cartItems.append(item!)
                     self.bindCartItemsToView(self.cartItems,cartItemsArray)
                 }
@@ -139,7 +137,7 @@ class CartViewModel {
                 firebaseManager.searchForItemsInCart(of:LaptopBags.self, cartItem: itemData)
                 {
                     item in
-                   // print("vm \(item!)")
+                 
                     self.cartItems.append(item!)
                     self.bindCartItemsToView(self.cartItems,cartItemsArray)
                 }
@@ -147,7 +145,7 @@ class CartViewModel {
                 firebaseManager.searchForItemsInCart(of:TabletsAndMobiles.self, cartItem: itemData)
                 {
                     item in
-                   // print("vm \(item!)")
+                 
                     self.cartItems.append(item!)
                     self.bindCartItemsToView(self.cartItems,cartItemsArray)
                     

@@ -14,7 +14,7 @@ struct Alert {
         if let firstAction = alertActionOne
         {
             alert.addAction(firstAction)
-            print("fires")
+    
         }
         if let secAction = alertActionTwo
         {

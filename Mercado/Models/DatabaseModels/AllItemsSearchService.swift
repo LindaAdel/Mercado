@@ -23,7 +23,7 @@ class AllItemsSearchService {
              
                 if snapshot.exists() {
                     let data = snapshot.value as? [String:NSDictionary]
-                    //print(data!)
+                
                     data!.forEach{ item in
                         let itemObj =  item.value
     
@@ -40,7 +40,7 @@ class AllItemsSearchService {
                     completion(self.filteredArray,nil)
                 }
                 else {
-                        print("No data available")
+                      
 
                     }
             

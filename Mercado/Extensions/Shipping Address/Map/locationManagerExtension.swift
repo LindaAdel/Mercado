@@ -11,7 +11,7 @@ extension ConfirmAddressViewController:CLLocationManagerDelegate
 {
     // This method gets called when the user responds to the permission dialog
      func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-         print("status \(status)")
+       
          //If the user chose Allow, the status becomes CLAuthorizationStatus.AuthorizedWhenInUse
          if status == .authorizedWhenInUse {
                     locationManager.requestLocation()
@@ -32,14 +32,13 @@ extension ConfirmAddressViewController:CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if let location = locations.first {
-            print("long :\(String(describing: location.coordinate.longitude))")
-            print("lat :\(String(describing: location.coordinate.latitude))")
+           
             
             let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
                    let region = MKCoordinateRegion(center: location.coordinate, span: span)
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
-           // annotation.coordinate = center
+          
             mapView.addAnnotation(annotation)
             mapView.selectAnnotation(mapView.annotations[0], animated: true)
             mapView.setRegion(region, animated: true)
@@ -51,13 +50,7 @@ extension ConfirmAddressViewController:CLLocationManagerDelegate
                 let street = pla?.thoroughfare ?? ""
                 let city = pla?.administrativeArea ?? ""
                 let area = pla?.locality ?? ""
-//                self.address = streetNumber + " " + street + " " + state + ", " + city
                 
-                //print("add : \(self.address!)")
-                print("ni : \(streetNumber)")
-                print("(stre\(street)")
-                print("area \(area)")
-                print("cit\(city)")
                 self.address.street = streetNumber + street
                 self.address.governorate = city
                 self.address.area = area

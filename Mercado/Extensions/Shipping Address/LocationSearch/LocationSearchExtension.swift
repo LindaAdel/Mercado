@@ -13,8 +13,7 @@ extension LocationSearchTableViewController : UISearchResultsUpdating
     
     //Set up location search api
     func updateSearchResults(for searchController: UISearchController) {
-        print("updateSearchResults")
-        print(searchController.searchBar.text!)
+       
         checkConnectivity()
         guard let mapView = mapView ,
               let searchBarTextValue = searchController.searchBar.text

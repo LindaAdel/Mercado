@@ -43,7 +43,7 @@ extension ExploreTabBarController: UICollectionViewDelegate, UICollectionViewDat
         subCategoriesTableView.reloadData()
         categoryName = categoriesArray[indexPath.row].categoryName
         itemcategoryName = categoriesArray[indexPath.row].itemsCategoryName
-       // print("hh \(itemcategoryName!)")
+      
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath){

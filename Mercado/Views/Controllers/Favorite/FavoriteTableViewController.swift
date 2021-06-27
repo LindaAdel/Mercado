@@ -44,7 +44,7 @@ class FavoriteTableViewController: UIViewController {
         firebaseManager = FirebaseManager.shared
         favoriteViewModel.bindEmptyFavToView = {
             DispatchQueue.main.async {
-                print("no fav")
+               
                 self.hideLoading(activityIndicator: self.activityIndicator)
                 self.noFavLabel.isHidden
                  = false

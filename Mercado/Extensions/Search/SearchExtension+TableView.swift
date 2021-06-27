@@ -54,7 +54,7 @@ extension SearchTableViewController{
             guard itemDetailsArray.count != 0
             else
             {
-                print("search \(itemDetailsArray.count)")
+              
                 return
             }
             self.itemDetailsArray[0].item_id = specialItemObj.itemId

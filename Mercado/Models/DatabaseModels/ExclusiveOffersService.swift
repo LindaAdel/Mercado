@@ -17,7 +17,7 @@ class ExclusiveOffersService : FirebaseProtocol{
         self.ref.child("offers").getData { (error, snapshot) in
             self.offersArray.removeAll()
                 if let error = error {
-                    print("Error getting data \(error)")
+                    print(error)
                 }
                 else if snapshot.exists() {
                     let data = snapshot.value as? [String:NSDictionary]
@@ -32,11 +32,11 @@ class ExclusiveOffersService : FirebaseProtocol{
                         self.offersArray.append(exclusiveOffersObj)
                         
                     }
-                    print(self.offersArray.count)
+                  
                     completion(self.offersArray,nil)
                 }
                 else {
-                    print("No data available")
+                   
                     completion(nil,error)
 
                 }

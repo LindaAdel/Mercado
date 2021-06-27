@@ -12,7 +12,6 @@ extension OrdersViewController{
     
     func onSuccessUpdateView(){
         ordersArray = ordersViewModel.ordersArray
-        //print(ordersArray)
         DispatchQueue.main.async {
             self.hideLoading(activityIndicator: self.activityIndicator)
             self.orderTableView.reloadData()

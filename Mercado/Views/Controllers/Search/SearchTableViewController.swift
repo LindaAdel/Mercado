@@ -28,7 +28,7 @@ class SearchTableViewController: UITableViewController{
                  (data) in
             if let itemData = data{
                 self.itemDetailsArray.removeAll()
-                print("search binding \(itemData)")
+               
                 self.itemDetailsArray.append(itemData)
                             
             }
@@ -56,23 +56,8 @@ class SearchTableViewController: UITableViewController{
 
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
 
-//Hide tab bar
-//override func viewWillAppear(_ animated: Bool) {
-//       self.tabBarController?.tabBar.isHidden = true
-//   }
-//
-//   override func viewWillDisappear(_ animated: Bool) {
-//       self.tabBarController?.tabBar.isHidden = false
-//   }
+

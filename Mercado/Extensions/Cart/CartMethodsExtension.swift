@@ -26,7 +26,7 @@ extension CartViewController
             {
             cartTabBarIcon.badgeValue = String(numberOfItemsInCart)
             }
-            print("badge \(numberOfItemsInCart)")
+         
            
         }
     }
@@ -43,7 +43,7 @@ extension CartViewController
     func emptyCart()   {
         cartViewModel.bindEmptyCartToView =
             { [self] in
-                print("empty cart view")
+              
                 DispatchQueue.main.async {
                     self.hideLoading(activityIndicator: self.activityIndicator)
                     self.emptyCartImage.isHidden = false
@@ -61,8 +61,6 @@ extension CartViewController
                 
                 self.itemsArray = items
                 self.cartItemsArray = cartItems
-                print("item array \(self.itemsArray.count)")
-                print("item cart \(cartItems.count)")
                 self.subTotalValue = 0.0
                 var count = 0
                 
@@ -76,18 +74,16 @@ extension CartViewController
                     
                 }
                 
-               // print("before total \(self.subTotalValue)")
+        
                 DispatchQueue.main.async {
                     self.hideLoading(activityIndicator: self.activityIndicator)
                     self.emptyCartImage.isHidden = true
                     self.tableView.reloadData()
-                   // print("cart table view reloaded")
                     self.subTotalLabel.text = "\(String(describing: self.subTotalValue!)) EGP"
-                   // print(self.shippingLabel.text!)
                     self.totalValue = self.shippingValue!
                         + self.subTotalValue
                     self.totalValueLabel.text = "\(self.totalValue!) EGP"
-                   // print("updata total \(self.subTotalValue!)")
+                 
                 }
                 
                 

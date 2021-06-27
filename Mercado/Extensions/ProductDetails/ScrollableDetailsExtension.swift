@@ -47,7 +47,7 @@
                 else
                 {
                     itemTypeLabelValue.text = "-"
-                    print("nil type")
+                   
                 }
                 if let _ = item.size
                 {
@@ -59,12 +59,11 @@
                     itemPowerLabel.text = "Size"
                     itemPowerLabelValue.text = "-"
 
-                    print("nil size")
-                    // print(itemSizeLabelValue.text)
+                  
                 }
                 switch data["categoryName"] as! String{
                 case "personalCare":
-                    print("persoanananananl")
+                   
                     itemBrandLabel.text = item.brand
                     itemColorLabelValue.text = item.color as? String
                     itemSizeLabel.text = "Features"
@@ -76,7 +75,7 @@
                     
                     
                 case "beautyCare":
-                    print("beauty care")
+                
                     itemBrandLabel.text = item.brand
                     itemTypeLabel.text = "size"
                     itemPowerLabel.text = "Description"
@@ -105,7 +104,7 @@
                     itemMaterialLabel.text = " "
                     itemMaterialLabelValue.text = " "
                 case "homeAppliances":
-                    print("home")
+                  
                     showLabels()
                     itemCountryLabelValue.text = item.country as? String
                     itemSizeLabel.text = "Power"
@@ -114,14 +113,13 @@
                     itemMaterialLabelValue.text = item.model_number as? String
                     itemCountryLabel.text = "Capacity"
                     itemCountryLabelValue.text = item.item_capacity as? String
-                    //      print("features\(item.item_features)")
                     itemPowerLabel.text = "Features"
                     itemPowerLabelValue.text = item.item_features as? String
                     itemTypeLabelValue.text = item.type as? String
                     itemBrandLabel.text = item.brand
                     itemColorLabelValue.text = item.color as? String
                 case "mobilesAndTablets":
-                    print("mobilesAndTablets")
+                 
                     self.showLabels()
                     itemTypeLabel.text = "Battery Capacity"
                     itemTypeLabelValue.text = item.battery_capacity as? String
@@ -138,7 +136,7 @@
                     itemBrandLabel.text = item.brand
                     itemColorLabelValue.text = item.color as? String
                 case "laptopAndPC":
-                    print("laptopAndPC")
+                   
                     switch data["subCategoryName"] as! String {
                     case "laptops":
                         showLabels()
@@ -158,7 +156,7 @@
                         itemCapacityLabel.text = "Display Size"
                         itemCapacityLabelValue.text = item.display_size as? String
                     case "laptopBags":
-                        print("laptopBags")
+                        
                         showLabels()
                         itemBrandLabel.text = item.brand
                         itemColorLabelValue.text = item.color as? String
@@ -177,10 +175,10 @@
                         itemCapacityLabel.text = " "
                         itemCapacityLabelValue.text = " "
                     default:
-                        print("not found")
+                        print(" ")
                     }
                 default:
-                    print("other category")
+                   
                     itemBrandLabel.text = item.brand
                     itemColorLabelValue.text = item.color as? String
                     itemMaterialLabelValue.text = item.material as? String

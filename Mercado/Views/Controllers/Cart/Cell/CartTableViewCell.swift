@@ -20,8 +20,8 @@ class CartTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        print("cellllll")
-//        quantityLabel.text = String(quantityValue!)
+  
+
     //set border to the quantity value
       quantityLabel.layer.borderWidth = 2
       quantityLabel.layer.borderColor = #colorLiteral(red: 0.3254901961, green: 0.6941176471, blue: 0.4588235294, alpha: 1)
@@ -44,7 +44,7 @@ class CartTableViewCell: UITableViewCell {
             return
         }
         
-        //    print("quantity\(quantityValue)")
+     
         quantityLabel.text = String(quantityValue)
         FirebaseManager.shared.updateCountValue(countValue:quantityValue, currentItemId: self.currentCartId)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "countObserver"), object: nil, userInfo: nil)
@@ -58,7 +58,7 @@ class CartTableViewCell: UITableViewCell {
         quantityLabel.text = String(quantityValue)
         FirebaseManager.shared.updateCountValue(countValue:quantityValue, currentItemId: self.currentCartId)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "countObserver"), object: nil, userInfo: nil)
-     //   print(quantityValue)
+    
 
     }
 }

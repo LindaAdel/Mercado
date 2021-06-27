@@ -20,7 +20,7 @@ extension AccountViewController:UIImagePickerControllerDelegate,UINavigationCont
     //open action sheet when user tapped on user image
     func showSheetToChangeImage()
     {
-        print("image tapped")
+      
         //set title to action sheet
         let alert = UIAlertController(title: "Change Profile Photo", message: nil, preferredStyle: .actionSheet)
         //remove photo action
@@ -63,7 +63,7 @@ extension AccountViewController:UIImagePickerControllerDelegate,UINavigationCont
     }
     //open camera action
     func takePhotoHandler(_ action:UIAlertAction){
-        print("camera")
+     
         self.imagePickerController(allowEditing: false, sourceType: .camera)
     }
     //call back func when user choose or take photo
@@ -85,7 +85,7 @@ extension AccountViewController:UIImagePickerControllerDelegate,UINavigationCont
 //        let userId = Auth.auth().currentUser?.uid
 //        guard let image = self.selectedImage else
 //        {
-//            print("selected image nil")
+//
 //            return
 //        }
 //        guard let imageData = image.jpegData(compressionQuality: 0.5) else {
@@ -104,7 +104,7 @@ extension AccountViewController:UIImagePickerControllerDelegate,UINavigationCont
 //                    (url,error) in
 //                    let imageURL = url?.absoluteURL 
 //                    self.uploadImageURLToDB(imageURL: imageURL!)
-////                    print("url img \(url?.absoluteString ?? nil)")
+////                 
 //                }
 //            }
 //        }
@@ -118,7 +118,8 @@ extension AccountViewController:UIImagePickerControllerDelegate,UINavigationCont
 //    }
     func showCurvedView()
     {
-        print("curved")
+      
+        
         let maskLayer = CAShapeLayer(layer: curvedView.layer)
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPoint(x:0, y:0))

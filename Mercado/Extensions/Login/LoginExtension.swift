@@ -47,27 +47,23 @@ extension  LoginViewController
     }
     @objc func showAndHidePasswordIcon()
     {
-        print("outsidedd\(passwordTextField.clearsOnBeginEditing)")
+       
         if !passwordTextField.text!.isEmpty
         {
-            print("inside\(passwordTextField.clearsOnBeginEditing)")
+           
           passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
             
         //check if user show password
         if(!passwordTextField.isSecureTextEntry)
         {
-            print("show\(passwordTextField.clearsOnBeginEditing)")
+            
             showPasswordButton.setImage(UIImage(systemName: "eye"),for: .normal)
         }
         //hide password
         else
         {
-//            if passwordTextField.isSecureTextEntry
-//            {
-//                passwordTextField.clearsOnBeginEditing = false;
-//                passwordTextField.clearsOnInsertion = false
-//            }
-            print("hide \(passwordTextField.clearsOnBeginEditing)")
+
+           
             showPasswordButton.setImage(UIImage(systemName: "eye.slash"),for: .normal)
         }
         }
@@ -101,13 +97,11 @@ func firebaseResetPassword()
                if let error = error {
                print(error.localizedDescription)
                } else {
-               print("Login Successful.")
+          
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
-//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "account") as! AccountViewController
-//                self.present(vc, animated: true, completion: nil)
-               
+
                }
            
         }
@@ -123,18 +117,18 @@ func firebaseResetPassword()
               
             self.passwordTextField.showTextFieldError(placeholderValue: "required!")
             self.emailTextField.showTextFieldError(placeholderValue: "required!")
-          //  self.passwordTextField.addBottomBorder(color: .red)
+       
         }
         else{
         if (passwordTextField.text!.isEmpty){
-            print("emty pass")
+         
             self.passwordTextField.text?.removeAll()
             self.passwordTextField.showTextFieldError(placeholderValue: "required!")
             return
         }
         if (emailTextField.text!.isEmpty )
         {
-            print("empty maill")
+           
             self.emailTextField.text?.removeAll()
             self.emailTextField.showTextFieldError(placeholderValue: "required!")
             return
@@ -156,21 +150,17 @@ func firebaseResetPassword()
                         self.passwordTextField.showTextFieldError(placeholderValue:  "Incorrect Password!")
 
                        default:
-//                           print("Error: \(error.localizedDescription)")
-//                           print("Email not found")
+
                         self.emailTextField.text?.removeAll()
                         self.emailTextField.showTextFieldError(placeholderValue: "Invalid Email!")
                         
                        }
                      } else {
-                       print("User signs in successfully")
+                      
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
                             vc.modalPresentationStyle = .fullScreen
                         self.present(vc, animated: true, completion: nil)
-//                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "account") as! AccountViewController
-//                        self.present(vc, animated: true, completion: nil)
-                      // let userInfo = Auth.auth().currentUser
-                    //   let email = userInfo?.email
+
                      }
                }
         }

@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions)
     {
-        print("scene delegate")
+ 
         guard let windowScnen = (scene as? UIWindowScene) else { return }
         //initialize window
         self.window = UIWindow(windowScene: windowScnen)
@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //check if user already signed in
             if Auth.auth().currentUser != nil
             {
-                print(Auth.auth().currentUser?.email!)
+               
                 //open home screen
                 initialViewController = mainStoryboard?.instantiateViewController(withIdentifier: "Home") as! HomeTabBarController
 

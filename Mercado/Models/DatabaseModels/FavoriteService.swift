@@ -20,7 +20,7 @@ class FavoriteService : FirebaseProtocol{
               self.firebaseFavArray.removeAll()
               if let error = error {
                   completion(nil , error)
-              print("Error getting data \(error)")
+              print(error)
               }
               else if Datasnapshot.exists() {
               let data = Datasnapshot.value as? [String : NSDictionary]
@@ -31,7 +31,6 @@ class FavoriteService : FirebaseProtocol{
                   favObj.category = favDataObj["category"] as? String
                   favObj.itemId = favDataObj["itemId"] as? String
                   favObj.subCategory = favDataObj["subCategory"] as? String
-                  print(favObj)
                   self.firebaseFavArray.append(favObj)
            
                 }
@@ -39,7 +38,6 @@ class FavoriteService : FirebaseProtocol{
               
               }
               else {
-              print("No data available")
                 completion(nil,nil)
                  }
                }
