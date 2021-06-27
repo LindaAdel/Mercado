@@ -26,7 +26,7 @@ class AccountViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
           
-        print(Auth.auth().currentUser?.email)
+     //   print(Auth.auth().currentUser?.email)
         
         cameraIcon.layer.cornerRadius = cameraIcon.frame.width / 2
         cameraIcon.layer.borderWidth = 1
@@ -36,16 +36,14 @@ class AccountViewController: UIViewController
         accountViewModel = AccountViewModel()
         
         //rounded image
-        userImage.layer.masksToBounds = true
-        self.userImage.layer.cornerRadius = 50
-      //  self.userImage.clipsToBounds = true;
-       // self.navigationItem.backButtonTitle = ""
+        StyleSheet.roundImage(userImage)
+     
         
         
     accountViewModel.bindUploadedImageToAccountVIew =
     {
         (img) in
-        // print("imgacc \(img)")
+       
         if let img = img
         {
             let url = URL(string: img)

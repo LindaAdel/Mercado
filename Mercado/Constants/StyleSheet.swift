@@ -26,6 +26,7 @@ class StyleSheet {
         textfield.layer.addSublayer(bottomLine)
         
     }
+    
 static func showTextFieldError(placeholderValue:String)->NSAttributedString?
     {
         return NSAttributedString(string: placeholderValue, attributes: [
@@ -33,7 +34,7 @@ static func showTextFieldError(placeholderValue:String)->NSAttributedString?
             .font: UIFont.boldSystemFont(ofSize: 15.0),
         ])
     }
-    static func styleHollowButton(_ button:UIButton) {
+static func styleHollowButton(_ button:UIButton) {
            
            // Hollow rounded corner style 
         button.layer.borderWidth = 0.5
@@ -41,11 +42,19 @@ static func showTextFieldError(placeholderValue:String)->NSAttributedString?
         button.layer.cornerRadius = 15.0
 //           button.tintColor = UIColor.init(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
        }
-    static func roundImage(_ image : UIImageView)
+    
+static func roundImage(_ image : UIImageView)
     {
         
+//        image.clipsToBounds = true
+//        image.layer.cornerRadius = (image.bounds.width)/2
+        image.contentMode = .scaleAspectFill
+        image.layer.borderWidth = 2
+        image.layer.masksToBounds = false
+        image.layer.borderColor = UIColor.white.cgColor
+        image.layer.cornerRadius = image.frame.height / 2
         image.clipsToBounds = true
-        image.layer.cornerRadius = (image.bounds.width)/2
+        
     }
 
         
