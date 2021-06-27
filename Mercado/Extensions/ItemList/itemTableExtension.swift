@@ -17,7 +17,7 @@ extension itemsTableViewController : UITableViewDelegate,UITableViewDataSource{
         
         let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "productDetails") as! ProductDetailsViewController
         detailsVC.categoryName = self.itemcategoryName
-        print("items id \(itemsList[indexPath.row].item_id)")
+//        print("items id \(itemsList[indexPath.row].item_id)")
         detailsVC.itemDetails=itemsList[indexPath.row]
         detailsVC.subCategoryName = subCategoryObj.itemSubCategoryName
         detailsVC.modalPresentationStyle = .fullScreen

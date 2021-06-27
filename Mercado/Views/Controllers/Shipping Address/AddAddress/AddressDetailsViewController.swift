@@ -35,7 +35,7 @@ class AddressDetailsViewController: UIViewController {
         super.viewDidLoad()
         self.scrolling.contentOffset.x = 0
         addressViewModel = AddressViewModel()
-        
+        countryTextField.text = "Egypt"
         //change textfields style
         self.showTextFieldsStyle()
         self.navigationItem.backButtonTitle = ""
